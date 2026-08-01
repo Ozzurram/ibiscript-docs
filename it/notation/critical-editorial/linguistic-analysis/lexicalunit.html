@@ -1,0 +1,544 @@
+<!DOCTYPE HTML>
+<html lang="it" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Annotazione linguistica di un&#x27;unità lessicale - Il linguaggio IbiScript</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../ibiscript-481452b5.min.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../../searchindex-658ac778.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../../toc-63d746d9.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Il linguaggio IbiScript</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="annotazione-linguistica-di-ununità-lessicale"><a class="header" href="#annotazione-linguistica-di-ununità-lessicale">Annotazione linguistica di un’unità lessicale</a></h1>
+<p>Annotazione di un’unità linguistico-lessicale per l’analisi approfondita, caratterizzata da una serie completa di metadati che vengono omessi dalla rappresentazione cartacea finale ma sono accessibili nei formati di output digitali.</p>
+<h4 id="delimitatori"><a class="header" href="#delimitatori">Delimitatori</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">Lato</th><th style="text-align: center">Segno</th><th style="text-align: left">Nome</th><th style="text-align: left">Unicode</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">Sinistro</td><td style="text-align: center"><code>&amp;</code></td><td style="text-align: left">E commerciale</td><td style="text-align: left"><code>U+0026</code></td></tr>
+<tr><td style="text-align: left">Destro</td><td style="text-align: center"><code>&amp;</code></td><td style="text-align: left">E commerciale</td><td style="text-align: left"><code>U+0026</code></td></tr>
+</tbody>
+</table>
+</div>
+<p></p>
+
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th></th><th style="text-align: center"><code>&amp;abc&amp;</code> ↓ Ottimizzazione del formattatore per leggibilità umana ↓ <code>&amp;abc⅋</code></th><th></th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+<p></p>
+
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">Lato</th><th style="text-align: center">Segno</th><th style="text-align: left">Nome</th><th style="text-align: left">Unicode</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">Sinistro</td><td style="text-align: center"><code>&amp;</code></td><td style="text-align: left">E commerciale</td><td style="text-align: left"><code>U+0026</code></td></tr>
+<tr><td style="text-align: left">Destro</td><td style="text-align: center"><code>⅋</code></td><td style="text-align: left">E commerciale rovesciata</td><td style="text-align: left"><code>U+214B</code></td></tr>
+</tbody>
+</table>
+</div>
+<p>Qualunque sequenza di caratteri Unicode (che esprime un qualsiasi fenomeno filologico) seguita da un punto e virgola <code>;</code> e opzionalmente da un numero qualsiasi di annotazioni linguistiche (metadati) composte da una chiave (elencate più in basso), un segno di uguale <code>=</code> e un valore; il tutto racchiuso tra e commerciali <code>&amp;…&amp;</code>.</p>
+<p>La quasi totalità delle annotazioni supporta la notazione di scale di plausibilità, permettendo di formulare interpretazioni stratificate (cf. <a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a>).</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Notazione</th><th>AST Concettuale</th><th>Resa cartacea</th></tr>
+</thead>
+<tbody>
+<tr><td><code>&amp;𝑆×𝑁;λₛ=λᵥ;…&amp;</code></td><td>`LexicalUnit([𝘜], LinguisticAnalysis[</td><td></td></tr>
+<tr><td>λₖ:λᵥ,…])`</td><td><code>𝑆×𝑁</code></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
+<li><code>λₛ</code> = etichetta (anche in forma abbreviata) per l’annotazione linguistica.</li>
+<li><code>λᵥ</code> = valore dell’annotazione linguistica (scala di plausibilità).</li>
+<li><code>λₖ</code> = chiave canonica per l’annotazione linguistica derivata dall’etichetta corrispondente.</li>
+</ul>
+<h3 id="chiavi-di-metadato-supportate"><a class="header" href="#chiavi-di-metadato-supportate">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>language</code>, <code>lang</code>, <code>l</code></td><td><code>lingua</code></td><td><code>lang</code></td><td><code>l</code></td></tr>
+<tr><td><code>lemma</code>, <code>lem</code>, <code>l</code></td><td><code>lemma</code></td><td><code>lem</code></td><td><code>l</code></td></tr>
+<tr><td><code>gloss</code>, <code>gl</code></td><td><code>glossa</code></td><td><code>gloss</code></td><td><code>gl</code></td></tr>
+<tr><td><code>etymology</code>, <code>etymo</code>, <code>etym</code>, <code>et</code></td><td><code>etimologia</code></td><td><code>etym</code></td><td><code>et</code></td></tr>
+<tr><td><code>semantic_domain</code>, <code>semantic</code>, <code>semdom</code>, <code>sema</code>, <code>sem</code></td><td><code>dominio semantico</code></td><td><code>semdom</code></td><td><code>sem</code></td></tr>
+<tr><td><code>part_of_speech</code>, <code>pos</code></td><td><code>parte del discorso</code></td><td><code>pos</code></td><td><code>pos</code></td></tr>
+<tr><td><code>notes</code>, <code>note</code></td><td><code>note</code></td><td><code>notes</code></td><td><code>note</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-1"><a class="header" href="#chiavi-di-metadato-supportate-1">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>noun</code>, <code>n</code></td><td><code>sostantivo</code></td><td><code>n</code></td><td><code>n</code></td></tr>
+<tr><td><code>verb</code>, <code>v</code></td><td><code>verbo</code></td><td><code>v</code></td><td><code>v</code></td></tr>
+<tr><td><code>adjective</code>, <code>adj</code>, <code>aj</code></td><td><code>aggettivo</code></td><td><code>adj</code></td><td><code>aj</code></td></tr>
+<tr><td><code>article</code>, <code>art</code>, <code>at</code></td><td><code>articolo</code></td><td><code>art</code></td><td><code>at</code></td></tr>
+<tr><td><code>adverb</code>, <code>adv</code>, <code>av</code></td><td><code>avverbo</code></td><td><code>adv</code></td><td><code>av</code></td></tr>
+<tr><td><code>pronoun</code>, <code>pron</code>, <code>prn</code>, <code>pn</code></td><td><code>pronome</code></td><td><code>pron</code></td><td><code>pn</code></td></tr>
+<tr><td><code>preposition</code>, <code>prep</code>, <code>pre</code>, <code>pp</code></td><td><code>preposizione</code></td><td><code>prep</code></td><td><code>pp</code></td></tr>
+<tr><td><code>conjunction</code>, <code>conj</code>, <code>cj</code>, <code>c</code></td><td><code>congiunzione</code></td><td><code>conj</code></td><td><code>c</code></td></tr>
+<tr><td><code>particle</code>, <code>part</code>, <code>prt</code>, <code>pt</code></td><td><code>particella</code></td><td><code>part</code></td><td><code>pt</code></td></tr>
+<tr><td><code>numeral</code>, <code>num</code>, <code>nu</code></td><td><code>numerale</code></td><td><code>num</code></td><td><code>nu</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-2"><a class="header" href="#chiavi-di-metadato-supportate-2">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>number</code>, <code>no</code>, <code>nr</code>, <code>num</code></td><td><code>numero</code></td><td><code>no</code></td><td><code>no</code></td></tr>
+<tr><td><code>gender</code>, <code>gen</code>, <code>g</code></td><td><code>genere</code></td><td><code>gen</code></td><td><code>g</code></td></tr>
+<tr><td><code>person</code>, <code>pers</code>, <code>p</code></td><td><code>persona</code></td><td><code>pers</code></td><td><code>p</code></td></tr>
+<tr><td><code>case</code>, <code>c</code></td><td><code>caso</code></td><td><code>case</code></td><td><code>c</code></td></tr>
+<tr><td><code>tense</code>, <code>tn</code></td><td><code>tempo</code></td><td><code>tense</code></td><td><code>tn</code></td></tr>
+<tr><td><code>mood</code>, <code>md</code></td><td><code>modo</code></td><td><code>mood</code></td><td><code>md</code></td></tr>
+<tr><td><code>diathesis</code>, <code>diath</code>, <code>dia</code>, <code>voice</code>, <code>vc</code></td><td><code>diatesi</code></td><td><code>diath</code></td><td><code>vc</code></td></tr>
+<tr><td><code>comparison</code>, <code>comp</code></td><td><code>grado di comparazione</code></td><td><code>comp</code></td><td><code>comp</code></td></tr>
+<tr><td><code>status</code>, <code>stat</code>, <code>st</code></td><td><code>stato</code></td><td><code>stat</code></td><td><code>st</code></td></tr>
+<tr><td><code>definiteness</code>, <code>def</code>, <code>df</code></td><td><code>definitezza</code></td><td><code>def</code></td><td><code>df</code></td></tr>
+<tr><td><code>declension</code>, <code>decl</code>, <code>dc</code></td><td><code>declinazione</code></td><td><code>decl</code></td><td><code>dc</code></td></tr>
+<tr><td><code>conjugation</code>, <code>conj</code>, <code>cj</code></td><td><code>coniugazione</code></td><td><code>conj</code></td><td><code>cj</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-3"><a class="header" href="#chiavi-di-metadato-supportate-3">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>masculine</code>, <code>masc</code>, <code>male</code>, <code>m</code></td><td><code>maschile</code></td><td><code>masc</code></td><td><code>m</code></td></tr>
+<tr><td><code>feminine</code>, <code>fem</code>, <code>female</code>, <code>f</code></td><td><code>femminile</code></td><td><code>fem</code></td><td><code>f</code></td></tr>
+<tr><td><code>neuter</code>, <code>neu</code>, <code>n</code></td><td><code>neutro</code></td><td><code>neu</code></td><td><code>n</code></td></tr>
+<tr><td><code>common</code>, <code>com</code>, <code>mf</code></td><td><code>comune</code></td><td><code>com</code></td><td><code>c</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-4"><a class="header" href="#chiavi-di-metadato-supportate-4">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>singular</code>, <code>sing</code>, <code>sg</code>, <code>s</code></td><td><code>singolare</code></td><td><code>sg</code></td><td><code>s</code></td></tr>
+<tr><td><code>plural</code>, <code>plur</code>, <code>pl</code>, <code>p</code></td><td><code>plurale</code></td><td><code>pl</code></td><td><code>p</code></td></tr>
+<tr><td><code>dual</code>, <code>du</code>, <code>d</code></td><td><code>duale</code></td><td><code>du</code></td><td><code>d</code></td></tr>
+<tr><td><code>collective</code>, <code>coll</code>, <code>col</code>, <code>c</code></td><td><code>collettivo</code></td><td><code>coll</code></td><td><code>c</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-5"><a class="header" href="#chiavi-di-metadato-supportate-5">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>first</code>, <code>1st</code>, <code>1</code></td><td><code>prima persona</code></td><td><code>1st</code></td><td><code>1</code></td></tr>
+<tr><td><code>second</code>, <code>2nd</code>, <code>2</code></td><td><code>seconda persona</code></td><td><code>2nd</code></td><td><code>2</code></td></tr>
+<tr><td><code>third</code>, <code>3rd</code>, <code>3</code></td><td><code>terza persona</code></td><td><code>3rd</code></td><td><code>3</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-6"><a class="header" href="#chiavi-di-metadato-supportate-6">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>nominative</code>, <code>nom</code>, <code>n</code></td><td><code>nominativo</code></td><td><code>nom</code></td><td><code>n</code></td></tr>
+<tr><td><code>genitive</code>, <code>gen</code>, <code>g</code></td><td><code>genitivo</code></td><td><code>gen</code></td><td><code>g</code></td></tr>
+<tr><td><code>dative</code>, <code>dat</code>, <code>d</code></td><td><code>dattivo</code></td><td><code>dat</code></td><td><code>d</code></td></tr>
+<tr><td><code>accusative</code>, <code>acc</code>, <code>ac</code></td><td><code>accusativo</code></td><td><code>acc</code></td><td><code>ac</code></td></tr>
+<tr><td><code>ablative</code>, <code>abl</code>, <code>ab</code></td><td><code>ablativo</code></td><td><code>abl</code></td><td><code>ab</code></td></tr>
+<tr><td><code>locative</code>, <code>loc</code>, <code>l</code></td><td><code>locativo</code></td><td><code>loc</code></td><td><code>l</code></td></tr>
+<tr><td><code>instrumental</code>, <code>instr</code>, <code>i</code></td><td><code>instrumentale</code></td><td><code>instr</code></td><td><code>i</code></td></tr>
+<tr><td><code>vocative</code>, <code>voc</code>, <code>v</code></td><td><code>vocativo</code></td><td><code>voc</code></td><td><code>v</code></td></tr>
+<tr><td><code>direct</code>, <code>dir</code>, <code>di</code></td><td><code>caso diretto</code></td><td><code>dir</code></td><td><code>di</code></td></tr>
+<tr><td><code>oblique</code>, <code>obl</code>, <code>o</code>, <code>indirect</code>, <code>indir</code></td><td><code>caso obliquo, indiretto</code></td><td><code>obl</code></td><td><code>o</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-7"><a class="header" href="#chiavi-di-metadato-supportate-7">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>present</code>, <code>pres</code>, <code>pr</code></td><td><code>presente</code></td><td><code>pres</code></td><td><code>pr</code></td></tr>
+<tr><td><code>past</code>, <code>pas</code></td><td><code>passato</code></td><td><code>pas</code></td><td><code>pa</code></td></tr>
+<tr><td><code>imperfect</code>, <code>imperf</code>, <code>imp</code>, <code>ip</code></td><td><code>imperfetto</code></td><td><code>imp</code></td><td><code>ip</code></td></tr>
+<tr><td><code>perfect</code>, <code>perf</code>, <code>pf</code></td><td><code>perfetto</code></td><td><code>perf</code></td><td><code>pf</code></td></tr>
+<tr><td><code>pluperfect</code>, <code>plupf</code>, <code>plup</code>, <code>plf</code></td><td><code>piuccheperfetto</code></td><td><code>plupf</code></td><td><code>plf</code></td></tr>
+<tr><td><code>future</code>, <code>fut</code>, <code>f</code></td><td><code>futuro</code></td><td><code>fut</code></td><td><code>f</code></td></tr>
+<tr><td><code>aorist</code>, <code>aor</code>, <code>ao</code></td><td><code>aoristo</code></td><td><code>aor</code></td><td><code>ao</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-8"><a class="header" href="#chiavi-di-metadato-supportate-8">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>indicative</code>, <code>indic</code>, <code>ind</code>, <code>id</code></td><td><code>indicativo</code></td><td><code>ind</code></td><td><code>id</code></td></tr>
+<tr><td><code>imperative</code>, <code>imper</code>, <code>imp</code>, <code>ip</code></td><td><code>imperativo</code></td><td><code>imp</code></td><td><code>ip</code></td></tr>
+<tr><td><code>subjunctive</code>, <code>subj</code>, <code>sub</code>, <code>sj</code></td><td><code>congiuntivo</code></td><td><code>subj</code></td><td><code>sj</code></td></tr>
+<tr><td><code>optative</code>, <code>opt</code>, <code>o</code></td><td><code>optativo</code></td><td><code>o</code></td><td><code>o</code></td></tr>
+<tr><td><code>infinitive</code>, <code>infin</code>, <code>inf</code>, <code>if</code></td><td><code>infinitivo</code></td><td><code>inf</code></td><td><code>if</code></td></tr>
+<tr><td><code>participle</code>, <code>part</code>, <code>pt</code>, <code>p</code></td><td><code>participio</code></td><td><code>part</code></td><td><code>p</code></td></tr>
+<tr><td><code>gerund</code>, <code>gerd</code>, <code>gd</code></td><td><code>gerundio</code></td><td><code>gerd</code></td><td><code>gd</code></td></tr>
+<tr><td><code>gerundive</code>, <code>gerv</code>, <code>gv</code></td><td><code>gerundivo</code></td><td><code>gerv</code></td><td><code>gv</code></td></tr>
+<tr><td><code>supine</code>, <code>sup</code>, <code>sp</code></td><td><code>supino</code></td><td><code>sup</code></td><td><code>sp</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-9"><a class="header" href="#chiavi-di-metadato-supportate-9">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>active</code>, <code>act</code>, <code>a</code></td><td><code>attivo</code></td><td><code>act</code></td><td><code>a</code></td></tr>
+<tr><td><code>passive</code>, <code>pass</code>, <code>p</code></td><td><code>passivo</code></td><td><code>pass</code></td><td><code>p</code></td></tr>
+<tr><td><code>middle</code>, <code>mid</code>, <code>m</code></td><td><code>medio</code></td><td><code>mid</code></td><td><code>m</code></td></tr>
+<tr><td><code>deponent</code>, <code>dep</code>, <code>d</code></td><td><code>deponente</code></td><td><code>dep</code></td><td><code>d</code></td></tr>
+<tr><td><code>medio_passive</code>, <code>mediopassive</code>, <code>mp</code></td><td><code>mediopassivo</code></td><td><code>mp</code></td><td><code>mp</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-10"><a class="header" href="#chiavi-di-metadato-supportate-10">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>positive</code>, <code>pos</code>, <code>p</code></td><td><code>positivo</code></td><td><code>pos</code></td><td><code>p</code></td></tr>
+<tr><td><code>comparative</code>, <code>comp</code>, <code>c</code></td><td><code>comparativo</code></td><td><code>comp</code></td><td><code>c</code></td></tr>
+<tr><td><code>superlative</code>, <code>super</code>, <code>sup</code>, <code>s</code></td><td><code>superlativo</code></td><td><code>sup</code></td><td><code>s</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-11"><a class="header" href="#chiavi-di-metadato-supportate-11">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>absolute</code>, <code>abs</code>, <code>a</code></td><td><code>assoluto</code></td><td><code>abs</code></td><td><code>a</code></td></tr>
+<tr><td><code>construct</code>, <code>cons</code>, <code>c</code></td><td><code>costrutto</code></td><td><code>cons</code></td><td><code>c</code></td></tr>
+<tr><td><code>emphatic</code>, <code>emph</code>, <code>e</code></td><td><code>enfatico</code></td><td><code>emph</code></td><td><code>e</code></td></tr>
+<tr><td><code>predicative</code>, <code>pred</code>, <code>p</code></td><td><code>predicativo</code></td><td><code>pred</code></td><td><code>p</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-12"><a class="header" href="#chiavi-di-metadato-supportate-12">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>definite</code>, <code>def</code>, <code>d</code></td><td><code>definito</code></td><td><code>def</code></td><td><code>d</code></td></tr>
+<tr><td><code>indefinite</code>, <code>indef</code>, <code>ind</code>, <code>i</code></td><td><code>indefinito</code></td><td><code>ind</code></td><td><code>i</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-13"><a class="header" href="#chiavi-di-metadato-supportate-13">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>diplomatic</code>, <code>diplo</code>, <code>dipl</code></td><td><code>diplomatico</code></td><td><code>dipl</code></td><td><code>dipl</code></td></tr>
+<tr><td><code>transliteration</code>, <code>transl</code>, <code>tl</code></td><td><code>translitterazione</code></td><td><code>transl</code></td><td><code>tl</code></td></tr>
+<tr><td><code>reading</code>, <code>read</code>, <code>rd</code>, <code>transcription</code>, <code>transc</code>, <code>tr</code></td><td><code>lettura</code></td><td><code>read</code></td><td><code>rd</code></td></tr>
+<tr><td><code>palaeographic</code>, <code>palaeo</code>, <code>paleographic</code>, <code>paleo</code>, <code>pal</code></td><td><code>forma paleografica</code></td><td><code>palaeo</code></td><td><code>pal</code></td></tr>
+<tr><td><code>graphic_function</code>, <code>graphic</code>, <code>function</code>, <code>grafunc</code>, <code>gf</code></td><td><code>funzione grafica</code></td><td><code>grafunc</code></td><td><code>gf</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-14"><a class="header" href="#chiavi-di-metadato-supportate-14">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>heterogram</code>, <code>hetero</code>, <code>ht</code>, <code>hg</code></td><td><code>eterogramma</code></td><td><code>hetero</code></td><td><code>hg</code></td></tr>
+<tr><td><code>logogram</code>, <code>logo</code>, <code>lg</code></td><td><code>logogramma</code></td><td><code>logo</code></td><td><code>lg</code></td></tr>
+<tr><td><code>plain</code>, <code>pl</code></td><td><code>testo puro</code></td><td><code>plain</code></td><td><code>pl</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="chiavi-di-metadato-supportate-15"><a class="header" href="#chiavi-di-metadato-supportate-15">Chiavi di metadato supportate</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>morph</code>, <code>m</code></td><td><code>namespace morfologico</code></td><td><code>morph</code></td><td><code>m</code></td></tr>
+<tr><td><code>ling</code>, <code>l</code></td><td><code>namespace linguistico</code></td><td><code>ling</code></td><td><code>l</code></td></tr>
+<tr><td><code>script</code>, <code>s</code></td><td><code>namespace glifico</code></td><td><code>script</code></td><td><code>s</code></td></tr>
+</tbody>
+</table>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../notation/critical-editorial/apparatus/apparatusnote.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../../notation/critical-editorial/referencing/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../notation/critical-editorial/apparatus/apparatusnote.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../../notation/critical-editorial/referencing/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../../mark-09e88c2c.min.js"></script>
+        <script src="../../../searcher-c2a407aa.js"></script>
+
+        <script src="../../../clipboard-1626706a.min.js"></script>
+        <script src="../../../highlight-abc7f01d.js"></script>
+        <script src="../../../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../../language-switch-3ad3eaa1.js"></script>
+
+
+
+    </div>
+    </body>
+</html>
