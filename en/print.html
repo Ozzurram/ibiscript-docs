@@ -37,10 +37,10 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-98098f1d.js";
+            window.path_to_searchindex_js = "searchindex-4abab7d6.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-93ebea8e.js"></script>
+        <script src="toc-62e63e58.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -182,8 +182,7 @@
   <img src="assets/figures/ibiscript-logo.svg" alt="Logo" style="max-width: 260px; height: auto;">
 </div>
 
-  **IbiScript** is a domain-specific markup language for epigraphic and philological editing, designed to combine the agility of Leiden Conventions with the semantic precision of EpiDoc.
-]
+<p><strong>IbiScript</strong> is a domain-specific markup language for epigraphic and philological editing, designed to combine the agility of Leiden Conventions with the semantic precision of EpiDoc.</p>
 <p>IbiScript gives the editor immediate control over the text. Developed in Rust and powered by the <strong>ANSELMUS</strong> parsing engine, it transforms the uncertainty of the artefact into solid digital data, acting as an architecture of thought that shapes the researcher’s epistemic contribution.</p>
 <ul>
 <li><strong>Fluid Hermeneutics</strong>: Encode epigraphic phenomena and critical apparatus without the visual interference of XML tags.</li>
@@ -192,10 +191,8 @@
 </ul>
 <p>The name combines the sacred Ibis of Thoth, guardian of writing, with the Latin adverb <em>ibi</em>: to interrogate the word “there, in that place,” upon the rough surface of ancient matter.</p>
 <figure>
-  <img src="assets/figures/ibiscript_pipeline_en.png" alt="IbiScript processing pipeline diagram.">
-  <figcaption>
-    IbiScript processing pipeline diagram.
-  </figcaption>
+  <img src="assets/figures/ibiscript-pipeline-en.png">
+  <figcaption>IbiScript processing pipeline diagram.</figcaption>
 </figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="notation-guide"><a class="header" href="#notation-guide">Notation Guide</a></h1>
 <p>This guide is organised according to the incremental logic of the ANSELMUS system, reflecting the transition from material data to editorial interpretation.</p>
@@ -221,10 +218,38 @@ in the sections of each phenomenon that supports it.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="atomic-textual-units"><a class="header" href="#atomic-textual-units">Atomic Textual Units</a></h1>
 <p>Minimal units of textual segmentation that cannot contain or nest other notations within themselves.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Construct</th><th>Definition</th><th>General Reference</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Plain</code></td><td>Signs used in the critical text which do not constitute the notation of phenomena.</td><td><a href="/docs/en/notation/atomic-textual-units/textual-signs/index.html">🔎 Plain</a></td></tr>
+<tr><td><code>Whitespace</code></td><td>Significant white space within the text, whether isolated or occurring between epigraphic phenomena.</td><td><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td><code>LineBreak</code></td><td>A line break within the text, optionally accompanied by explicit line numbering.</td><td><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
+<tr><td><code>WordBreak</code></td><td>Indicates a word break, marking the exact point where a sequence of signs or a word is interrupted, such as by a line break or a physical fracture in the epigraphic medium.</td><td><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td><code>Language</code></td><td>Notation used to identify the language of the inscription or part of it.</td><td><a href="/docs/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
+<tr><td><code>Direction</code></td><td>The direction of writing, essential for retrograde (right-to-left) or boustrophedon (alternating) inscriptions.</td><td><a href="/docs/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
+<tr><td><code>SectionBreak</code></td><td>Indicates that the following text is part of the subsection indicated by the notation.</td><td><a href="/docs/en/notation/atomic-textual-units/sectionbreak.html">🔎 SectionBreak</a></td></tr>
+<tr><td><code>LexicalUnit</code></td><td>The logical boundary of a lexical unit (<em>word</em>).</td><td><a href="/docs/en/notation/atomic-textual-units/lexicalunit.html">🔎 LexicalUnit</a></td></tr>
+</tbody>
+</table>
+</div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="as-written-signs"><a class="header" href="#as-written-signs">As-Written Signs</a></h1>
-<p>Signs used in the critical text which do not constitute the notation of phenomena.</p>
-<p>IbiScript supports the native rendering of any Unicode character, but each writing system benefits in its own way from the various rendering options available.</p>
+<p>Signs used in the critical text which do not constitute the notation of phenomena.
+IbiScript supports the native rendering of any Unicode character, but each writing system benefits in its own way from the various rendering options available.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Construct</th><th>Definition</th><th>General Reference</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Plain</code> (realised)</td><td>Textual signs rendered graphically within the text as Unicode glyphs.</td><td><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td><code>Plai</code> (coded)</td><td>Textual signs represented in the form of abstract notation.</td><td><a href="/docs/en/notation/atomic-textual-units/plain-coded.html">🔎 Whitespace</a></td></tr>
+</tbody>
+</table>
+</div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="realised-signs"><a class="header" href="#realised-signs">Realised Signs</a></h1>
 <p>Textual signs rendered graphically within the text as Unicode glyphs.</p>
@@ -661,7 +686,8 @@ IbiScript allows any Unicode character to be represented in encoded form, provid
 <p>However, the most convenient and reliable input method is the <code>key:value</code> system, which IbiScript supports for 111 modern and historical writing systems (cf. <a href="/docs/en/appendix/ws-iso-codes.html">Writing systems supported for <code>key:value</code> entry</a> for the full list of codes). Each Unicode character can be referred to via one or more nominal aliases that correspond to the official character names, suitably stripped of superfluous elements; numerical forms, in particular, can also be written by directly using numeric digits (cf. example 2). It is not necessary to repeat the ISO 15924 code before each nominal alias (cf. examples 3–8), as the sequence is recognised automatically (cf. example 9 for a case of explicit repetition with optional spaces after the semicolons).</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="white-space"><a class="header" href="#white-space">White Space</a></h1>
-<p>Significant white space within the text, whether isolated or occurring between epigraphic phenomena. The following rules define a white space as significant:</p>
+<p>Significant white space within the text, whether isolated or occurring between epigraphic phenomena.
+The following rules define a white space as significant:</p>
 <ul>
 <li>isolated in plain text (cf. example 1).</li>
 <li>inserted in plain text between text blocks as a word separator (cf. example 2).</li>
@@ -822,8 +848,8 @@ WS
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="line-break"><a class="header" href="#line-break">Line Break</a></h1>
-<p>A line break within the text, optionally accompanied by explicit line numbering.</p>
-<p>Standard “newline” characters are not evaluated as philologically significant line breaks; instead, they produce <code>Newline</code> units that are treated merely as notational noise. Simple carriage returns can therefore be used to format IbiScript code at will—for instance, by moving long sequences of linguistic annotations to the next line (cf. <a href="/docs/en/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Linguistic Annotation of a Lexical Unit</a>).</p>
+<p>A line break within the text, optionally accompanied by explicit line numbering.
+Standard “newline” characters are not evaluated as philologically significant line breaks; instead, they produce <code>Newline</code> units that are treated merely as notational noise. Simple carriage returns can therefore be used to format IbiScript code at will—for instance, by moving long sequences of linguistic annotations to the next line (cf. <a href="/docs/en/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Linguistic Annotation of a Lexical Unit</a>).</p>
 <p>From an epigraphic perspective, IbiScript requires that every significant line of text—that is, any line clearly identifiable on the support—be explicitly marked in the code. This is achieved by appending the notation (illustrated below) at the end of the line, as if notifying the system of a carriage return by analogy.</p>
 <p>Should the user forget to insert an explicit line break at the final line of text (e.g., in the case of single-line inscriptions), IbiScript will automatically supply it.</p>
 <h2 id="syntax-3"><a class="header" href="#syntax-3">Syntax</a></h2>
@@ -986,8 +1012,8 @@ Plain("def")
 <p>Since standard carriage returns (i.e., those inserted with the “Enter” key) are non-significant, inscriptions consisting of very short lines can be written on a single line of code, e.g., <code>line1/line2/line3/</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="word-break"><a class="header" href="#word-break">Word Break</a></h1>
-<p>Indicates a word break, marking the exact point where a sequence of signs or a word is interrupted, such as by a line break or a physical fracture in the epigraphic medium.</p>
-<p>This node solely describes a graphical or positional event and does not imply a linguistic division: the actual separation or categorisation of lexical units is instead managed using the specific notation provided by <code>LexicalUnit</code>.</p>
+<p>Indicates a word break, marking the exact point where a sequence of signs or a word is interrupted, such as by a line break or a physical fracture in the epigraphic medium.
+This node solely describes a graphical or positional event and does not imply a linguistic division: the actual separation or categorisation of lexical units is instead managed using the specific notation provided by <code>LexicalUnit</code>.</p>
 <h2 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h2>
 <p>A hyphen <code>-</code>.</p>
 <h2 id="overview-4"><a class="header" href="#overview-4">Overview</a></h2>
@@ -1251,7 +1277,7 @@ LineBreak
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="text-direction"><a class="header" href="#text-direction">Text Direction</a></h1>
-<p>Notation used to denote the direction of writing, essential for retrograde (right-to-left) or boustrophedon (alternating) inscriptions.</p>
+<p>The direction of writing, essential for retrograde (right-to-left) or boustrophedon (alternating) inscriptions.</p>
 <h2 id="syntax-6"><a class="header" href="#syntax-6">Syntax</a></h2>
 <p>A hyphen <code>-</code> followed by the greater-than sign <code>&gt;</code> for the rightward arrow, or a hyphen <code>-</code> preceded by the less-than sign <code>&lt;</code> for the leftward arrow, enclosed within the dollar-sign wrapper <code>$…$</code>.</p>
 <h2 id="overview-6"><a class="header" href="#overview-6">Overview</a></h2>
@@ -1491,7 +1517,8 @@ LineBreak
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lexical-unit-boundary"><a class="header" href="#lexical-unit-boundary">Lexical Unit Boundary</a></h1>
-<p>Represents the logical boundary of a lexical unit (word). It is used to mark the end of a word regardless of its physical layout on the support, allowing the system to reconstruct units split by fractures or line breaks.</p>
+<p>The logical boundary of a lexical unit (<em>word</em>).
+It is used to mark the end of a word regardless of its physical layout on the support, allowing the system to reconstruct units split by fractures or line breaks.</p>
 <h2 id="syntax-8"><a class="header" href="#syntax-8">Syntax</a></h2>
 <p>Any number of Unicode characters enclosed within ampersands <code>&amp;…&amp;</code>. Optionally, linguistic annotations can follow after a semicolon <code>;</code>.</p>
 <p>If the user wishes to easily identify a series of lexical units, the entire sequence can be enclosed within ampersands <code>&amp;…&amp;</code> with individual units separated by a forward slash <code>/</code>.</p>
@@ -1685,6 +1712,17 @@ abc defg  hijk l
 <tbody>
 <tr><td style="text-align: left">Left</td><td style="text-align: center"><code>[</code></td><td style="text-align: left">Left Square Bracket</td><td style="text-align: left"><code>U+005B</code></td></tr>
 <tr><td style="text-align: left">Right</td><td style="text-align: center"><code>]</code></td><td style="text-align: left">Right Square Bracket</td><td style="text-align: left"><code>U+005D</code></td></tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Construct</th><th>Definition</th><th>General Reference</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Vacat-Char</code></td><td>Uninscribed signs or spaces.</td><td><a href="/docs/en/notation/phenomena/vacat/char.html">🔎 Plain</a></td></tr>
+<tr><td><code>Vacat-Line</code></td><td>A line break within the text, optionally accompanied by explicit line numbering.</td><td><a href="/docs/en/notation/phenomena/vacat/line.html">🔎 Whitespace</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -2002,6 +2040,18 @@ abc defg  hijk l
 <tbody>
 <tr><td style="text-align: left">Left</td><td style="text-align: center"><code>[</code></td><td style="text-align: left">Left Square Bracket</td><td style="text-align: left"><code>U+005B</code></td></tr>
 <tr><td style="text-align: left">Right</td><td style="text-align: center"><code>]</code></td><td style="text-align: left">Right Square Bracket</td><td style="text-align: left"><code>U+005D</code></td></tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Construct</th><th>Definition</th><th>General Reference</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Gap-Known</code></td><td>A gap of known extent. The editor indicates a precise number of missing characters by repeating a gap sign inside square brackets.</td><td><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Plain</a></td></tr>
+<tr><td><code>Gap-Range</code></td><td>A gap whose extent is expressed as a plausible numeric range.</td><td><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Whitespace</a></td></tr>
+<tr><td><code>Gap-Unknown</code></td><td>A gap of unknown extent.</td><td><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Whitespace</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -2413,6 +2463,9 @@ abc defg  hijk l
 </thead>
 <tbody>
 <tr><td><code>{&lt;}</code></td><td><code>Fracture(Left)</code></td><td><code>⊣</code></td></tr>
+<tr><td><code>{&gt;}</code></td><td><code>Fracture(Right)</code></td><td><code>⊢</code></td></tr>
+<tr><td><code>{^}</code></td><td><code>Fracture(Top)</code></td><td><code>⟘</code></td></tr>
+<tr><td><code>{V}</code></td><td><code>Fracture(Bottom)</code></td><td><code>⟙</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -2461,7 +2514,7 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
@@ -2922,7 +2975,7 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
@@ -3089,7 +3142,7 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
@@ -3981,7 +4034,7 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/omitted/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/omitted/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/omitted/whitespace.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>LineBreak</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/omitted/linebreak.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
@@ -4448,10 +4501,16 @@ abc defg  hijk l
 <h2 id="syntax-27"><a class="header" href="#syntax-27">Syntax</a></h2>
 <p>Any number of Unicode characters (followed by the optional certainty notation) enclosed between curly brackets <code>{…}</code>.</p>
 <h2 id="overview-27"><a class="header" href="#overview-27">Overview</a></h2>
-<p>[<code>{𝑆×𝑁‽ᵟ}</code>],
-[<code>rust [Surplus { content: [Plain("𝑆×𝑁")], cert: γ }</code>],
-[<code>{𝑆×𝑁◇ᵟ}</code>],
-)</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
+</thead>
+<tbody>
+<tr><td><code>{𝑆×𝑁‽ᵟ}</code></td><td><code>[Surplus { content: [Plain("𝑆×𝑁")], cert: γ }</code></td><td><code>{𝑆×𝑁◇ᵟ}</code></td></tr>
+</tbody>
+</table>
+</div>
 <ul>
 <li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
@@ -5164,7 +5223,7 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
@@ -5604,10 +5663,16 @@ abc defg  hijk l
 <h2 id="syntax-35"><a class="header" href="#syntax-35">Syntax</a></h2>
 <p>The notation for a gap of unknwon extent enclosed between double square brackets <code>[[…]]</code>.</p>
 <h2 id="overview-35"><a class="header" href="#overview-35">Overview</a></h2>
-<p>[<code>[[[⊙‽ᵟ]]</code>],
-[<code>rust Erasure { content: [Gap { ⊙ }], cert: γ }</code>],
-[<code>⟦[⊙]◇ᵟ⟧</code>],
-)</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
+</thead>
+<tbody>
+<tr><td><code>[[[⊙‽ᵟ]]</code></td><td><code>Erasure { content: [Gap { ⊙ }], cert: γ }</code></td><td><code>⟦[⊙]◇ᵟ⟧</code></td></tr>
+</tbody>
+</table>
+</div>
 <ul>
 <li><code>⊙</code> ∈ <code>PREVIOUS_SEEN_ALLOWED</code> = the relevant gap notation.</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
@@ -6200,7 +6265,7 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
@@ -7683,7 +7748,7 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
@@ -9118,7 +9183,7 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
@@ -10589,7 +10654,7 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
@@ -11174,7 +11239,7 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/abbrevsegment-written/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/abbrevsegment-written/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
@@ -12419,7 +12484,9 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>…⊙(⊙)</code></td><td><code>Abbrev(Segmented(…, Written([ ⊙ ]), Expanded([ ⊙ ])), Complete))</code></td><td><code>…⊙(⊙)</code></td></tr>
+<tr><td><code>…⊙(⊙)</code></td><td><code>⊙</code></td><td>⊙</td></tr>
+<tr><td>[<code>…⊙(⊙)</code>],</td><td></td><td></td></tr>
+<tr><td>)</td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
@@ -12529,7 +12596,9 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>⊙(⊙)⊙…</code></td><td><code>Abbrev(Segmented(Written([ ⊙ ]), Expanded([ ⊙ ])), Written([ ⊙ ]), …, Complete))</code></td><td><code>⊙(⊙)⊙…</code></td></tr>
+<tr><td><code>⊙(⊙)⊙…</code></td><td><code>⊙</code></td><td>⊙</td></tr>
+<tr><td>[<code>⊙(⊙)⊙…</code>],</td><td></td><td></td></tr>
+<tr><td>)</td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
@@ -12659,7 +12728,9 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>…⊙(⊙)…</code></td><td><code>Abbrev(Segmented(…, Written([ ⊙ ]), Expanded([ ⊙ ])), …, Complete))</code></td><td><code>…⊙(⊙)…</code></td></tr>
+<tr><td><code>…⊙(⊙)…</code></td><td><code>⊙</code></td><td>⊙</td></tr>
+<tr><td>[<code>…⊙(⊙)…</code>],</td><td></td><td></td></tr>
+<tr><td>)</td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
@@ -12754,7 +12825,9 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>…⊙(⊙)…-</code></td><td><code>Abbrev(Segmented(…, Written([ ⊙ ]), Expanded([ ⊙ ])), …, Truncated))</code></td><td><code>…⊙(⊙)…–</code></td></tr>
+<tr><td><code>…⊙(⊙)…-</code></td><td><code>⊙</code></td><td>⊙</td></tr>
+<tr><td>[<code>…⊙(⊙)…–</code>],</td><td></td><td></td></tr>
+<tr><td>)</td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
@@ -13717,7 +13790,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Direction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
 <tr><td style="text-align: left"><code>Language</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
@@ -14316,7 +14389,7 @@ Line 1 of the example tables shows the plausibility hierarchy applied to _lectio
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Direction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
 <tr><td style="text-align: left"><code>Language</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
@@ -14460,7 +14533,7 @@ Line 1 of the example tables shows the plausibility hierarchy applied to _lectio
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realised.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
 <tr><td style="text-align: left"><code>Direction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
 <tr><td style="text-align: left"><code>Language</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
@@ -15745,16 +15818,28 @@ Options:
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="integrated-web-editor"><a class="header" href="#integrated-web-editor">Integrated web editor</a></h1>
 <p>The IbiScript Editor serves as the central environment for encoding critical editions and apparatus, seamlessly embedded within the BEDA suite. The interface is engineered to support the scholar’s workflow without disruption: the ANSELMUS parsing engine operates continuously in the background, highlighting syntactic anomalies via inline visual indicators directly within the text. Should an error occur, the live preview panel, which displays the web-rendered edition, avoids crashing; instead, it gracefully preserves the last valid state alongside a clear message to guide the user’s correction.</p>
-<div style="break-before: page; page-break-before: always;"></div>
+<figure>
+  <img src="assets/figures/ibiscript-editor.png">
+  <figcaption>IbiScript editor in full-screen mode: left panel for insertion, interactive HTML preview on the right.</figcaption>
+</figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="document-management-and-data-persistence"><a class="header" href="#document-management-and-data-persistence">Document Management and Data Persistence</a></h1>
 <p>The <code>File</code> menu handles the import and preservation of epigraphic data. The editor allows local files bearing the <code>.ibi</code> or plain text extensions to be loaded. To prevent the accidental loss of transcriptions due to abrupt browser tab closure, the environment integrates a protective safeguard: if unsaved changes are present, any attempt to navigate away from the page is intercepted, prompting the user for explicit confirmation.</p>
-<div style="break-before: page; page-break-before: always;"></div>
+<figure>
+  <img src="assets/figures/ibiscript-editor-menu-file.png">
+  <figcaption>Options contained in the File menu.</figcaption>
+</figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="syntactic-standardisation-format"><a class="header" href="#syntactic-standardisation-format">Syntactic Standardisation (Format)</a></h1>
 <p>Accessible via the <code>Edit</code> menu, the <code>Format Document</code> function acts as a formal regulariser of the source text. Without altering the semantic value of the readings or critical marks entered, the algorithm automatically reorganises the spacing, alignment, and indentation of the IbiScript code. This operation ensures maximum readability of the source file and standardises the logical layout criteria of the document.</p>
-<div style="break-before: page; page-break-before: always;"></div>
+<figure>
+  <img src="assets/figures/ibiscript-editor-menu-edit.png">
+  <figcaption>Options contained in the Edit menu.</figcaption>
+</figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="error-tolerance-in-the-dynamic-preview"><a class="header" href="#error-tolerance-in-the-dynamic-preview">Error Tolerance in the Dynamic Preview</a></h1>
 <p>The preview panel offers a real-time rendering of the web-ready edition. To prevent disruptions to the philological workflow, the interface adopts a strict error-tolerance policy during parsing: should a syntactically non-compliant string be entered, the system moves into a warning state. In this mode, the preview preserves the rendering of the last valid state intact, displaying a descriptive notification alongside it to facilitate the detection and correction of the anomaly.</p>
-<div style="break-before: page; page-break-before: always;"></div>
+<figure>
+  <img src="assets/figures/ibiscript-editor-error-message.png">
+  <figcaption>Error syntax warning: the user has entered an incomplete Unclear construct within Supplied.</figcaption>
+</figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="visual-management-and-facsimile-data-persistence"><a class="header" href="#visual-management-and-facsimile-data-persistence">Visual Management and Facsimile Data Persistence</a></h1>
 <p>The facsimile panel allows precise geometric coordinates to be mapped onto the lines of the inscription text. The user is not required to write the configuration syntax manually: the editor automatically generates and updates a dedicated metadata block as soon as a region is drawn or resized using the mouse on the image. This data block ensures the persistence and portability of the visual anchoring directly within the source file.</p>
 <p>An example of a block automatically generated by the graphical interface:</p>
@@ -15769,7 +15854,10 @@ regions = [
 $
 </code></pre>
 <p>Within this structure, the <code>url</code> field identifies the visual resource, <code>cat</code> defines the archaeological or museum category of the image, and the <code>reg</code> array stores the geometric regions (normalised on a decimal scale) indexed according to their respective inscription line number.</p>
-<div style="break-before: page; page-break-before: always;"></div>
+<figure>
+  <img src="assets/figures/ibiscript-editor-facsimile-lines.png">
+  <figcaption>Facsimile with some text lines highlighted and mapped to the lines of the inscription identified using LineBreak in IbiScript.</figcaption>
+</figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="exporting-to-scientific-dissemination-formats"><a class="header" href="#exporting-to-scientific-dissemination-formats">Exporting to Scientific Dissemination Formats</a></h1>
 <p>The <code>Export</code> menu allows the instant conversion of the IbiScript file into five standard formats for research and publishing:</p>
 <ul>
@@ -15778,7 +15866,10 @@ $
 <li>EpiDoc XML to ensure data interoperability according to international Digital Humanities criteria;</li>
 <li>Typst and PDF, the latter being compiled directly by the server from the former, delivering a high-definition, print-ready typographic document.</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div>
+<figure>
+  <img src="assets/figures/ibiscript-editor-menu-export.png">
+  <figcaption>Options contained in the Export menu.</figcaption>
+</figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="editor-keyboard-shortcuts"><a class="header" href="#editor-keyboard-shortcuts">Editor Keyboard Shortcuts</a></h1>
 <div class="table-wrapper">
 <table>
@@ -16044,7 +16135,7 @@ $
         <script src="book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="language-switch-837cc188.js"></script>
+        <script src="language-switch-1b03cfdd.js"></script>
 
         <script>
         window.addEventListener('load', function() {

@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-98098f1d.js";
+            window.path_to_searchindex_js = "../../../searchindex-4abab7d6.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-93ebea8e.js"></script>
+        <script src="../../../toc-62e63e58.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -180,10 +180,16 @@
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <p>The notation for a gap of unknwon extent enclosed between double square brackets <code>[[…]]</code>.</p>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
-<p>[<code>[[[⊙‽ᵟ]]</code>],
-[<code>rust Erasure { content: [Gap { ⊙ }], cert: γ }</code>],
-[<code>⟦[⊙]◇ᵟ⟧</code>],
-)</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
+</thead>
+<tbody>
+<tr><td><code>[[[⊙‽ᵟ]]</code></td><td><code>Erasure { content: [Gap { ⊙ }], cert: γ }</code></td><td><code>⟦[⊙]◇ᵟ⟧</code></td></tr>
+</tbody>
+</table>
+</div>
 <ul>
 <li><code>⊙</code> ∈ <code>PREVIOUS_SEEN_ALLOWED</code> = the relevant gap notation.</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
@@ -358,7 +364,7 @@
         <script src="../../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="../../../language-switch-837cc188.js"></script>
+        <script src="../../../language-switch-1b03cfdd.js"></script>
 
 
 
