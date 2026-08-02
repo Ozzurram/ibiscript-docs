@@ -37,7 +37,7 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-4abab7d6.js";
+            window.path_to_searchindex_js = "searchindex-018e5c72.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-62e63e58.js"></script>
@@ -213,7 +213,7 @@
 as a sequence of <code>label:value</code> pairs separated by semicolons. Values may
 themselves contain plausibility notation, allowing the editor to express
 graduated judgements over alternative readings — a feature documented in
-detail in the plausibility assessment section (cf. <a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a>) and referenced
+detail in the plausibility assessment section (cf. <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a>) and referenced
 in the sections of each phenomenon that supports it.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="atomic-textual-units"><a class="header" href="#atomic-textual-units">Atomic Textual Units</a></h1>
@@ -224,14 +224,14 @@ in the sections of each phenomenon that supports it.</p>
 <tr><th>Construct</th><th>Definition</th><th>General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Plain</code></td><td>Signs used in the critical text which do not constitute the notation of phenomena.</td><td><a href="/docs/en/notation/atomic-textual-units/textual-signs/index.html">🔎 Plain</a></td></tr>
-<tr><td><code>Whitespace</code></td><td>Significant white space within the text, whether isolated or occurring between epigraphic phenomena.</td><td><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td><code>LineBreak</code></td><td>A line break within the text, optionally accompanied by explicit line numbering.</td><td><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
-<tr><td><code>WordBreak</code></td><td>Indicates a word break, marking the exact point where a sequence of signs or a word is interrupted, such as by a line break or a physical fracture in the epigraphic medium.</td><td><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td><code>Language</code></td><td>Notation used to identify the language of the inscription or part of it.</td><td><a href="/docs/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
-<tr><td><code>Direction</code></td><td>The direction of writing, essential for retrograde (right-to-left) or boustrophedon (alternating) inscriptions.</td><td><a href="/docs/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
-<tr><td><code>SectionBreak</code></td><td>Indicates that the following text is part of the subsection indicated by the notation.</td><td><a href="/docs/en/notation/atomic-textual-units/sectionbreak.html">🔎 SectionBreak</a></td></tr>
-<tr><td><code>LexicalUnit</code></td><td>The logical boundary of a lexical unit (<em>word</em>).</td><td><a href="/docs/en/notation/atomic-textual-units/lexicalunit.html">🔎 LexicalUnit</a></td></tr>
+<tr><td><code>Plain</code></td><td>Signs used in the critical text which do not constitute the notation of phenomena.</td><td><a href="#as-written-signs">🔎 Plain</a></td></tr>
+<tr><td><code>Whitespace</code></td><td>Significant white space within the text, whether isolated or occurring between epigraphic phenomena.</td><td><a href="#white-space">🔎 Whitespace</a></td></tr>
+<tr><td><code>LineBreak</code></td><td>A line break within the text, optionally accompanied by explicit line numbering.</td><td><a href="#line-break">🔎 LineBreak</a></td></tr>
+<tr><td><code>WordBreak</code></td><td>Indicates a word break, marking the exact point where a sequence of signs or a word is interrupted, such as by a line break or a physical fracture in the epigraphic medium.</td><td><a href="#word-break">🔎 WordBreak</a></td></tr>
+<tr><td><code>Language</code></td><td>Notation used to identify the language of the inscription or part of it.</td><td><a href="#text-language">🔎 Language</a></td></tr>
+<tr><td><code>Direction</code></td><td>The direction of writing, essential for retrograde (right-to-left) or boustrophedon (alternating) inscriptions.</td><td><a href="#text-direction">🔎 Direction</a></td></tr>
+<tr><td><code>SectionBreak</code></td><td>Indicates that the following text is part of the subsection indicated by the notation.</td><td><a href="#text-subdivision">🔎 SectionBreak</a></td></tr>
+<tr><td><code>LexicalUnit</code></td><td>The logical boundary of a lexical unit (<em>word</em>).</td><td><a href="#lexical-unit-boundary">🔎 LexicalUnit</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -245,8 +245,8 @@ IbiScript supports the native rendering of any Unicode character, but each writi
 <tr><th>Construct</th><th>Definition</th><th>General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Plain</code> (realised)</td><td>Textual signs rendered graphically within the text as Unicode glyphs.</td><td><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td><code>Plai</code> (coded)</td><td>Textual signs represented in the form of abstract notation.</td><td><a href="/docs/en/notation/atomic-textual-units/plain-coded.html">🔎 Whitespace</a></td></tr>
+<tr><td><code>Plain</code> (realized)</td><td>Textual signs rendered graphically within the text as Unicode glyphs.</td><td><a href="#realised-signs">🔎 Plain</a></td></tr>
+<tr><td><code>Plai</code> (coded)</td><td>Textual signs represented in the form of abstract notation.</td><td><a href="#coded-signs">🔎 Whitespace</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -267,7 +267,7 @@ IbiScript supports the native rendering of any Unicode character, but each writi
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 </ul>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
@@ -683,7 +683,7 @@ IbiScript supports the native rendering of any Unicode character, but each writi
 </table>
 
 IbiScript allows any Unicode character to be represented in encoded form, provided the corresponding Unicode character code is known (cf. example 1).
-<p>However, the most convenient and reliable input method is the <code>key:value</code> system, which IbiScript supports for 111 modern and historical writing systems (cf. <a href="/docs/en/appendix/ws-iso-codes.html">Writing systems supported for <code>key:value</code> entry</a> for the full list of codes). Each Unicode character can be referred to via one or more nominal aliases that correspond to the official character names, suitably stripped of superfluous elements; numerical forms, in particular, can also be written by directly using numeric digits (cf. example 2). It is not necessary to repeat the ISO 15924 code before each nominal alias (cf. examples 3–8), as the sequence is recognised automatically (cf. example 9 for a case of explicit repetition with optional spaces after the semicolons).</p>
+<p>However, the most convenient and reliable input method is the <code>key:value</code> system, which IbiScript supports for 111 modern and historical writing systems (cf. <a href="../en/appendix/ws-iso-codes.html">Writing systems supported for <code>key:value</code> entry</a> for the full list of codes). Each Unicode character can be referred to via one or more nominal aliases that correspond to the official character names, suitably stripped of superfluous elements; numerical forms, in particular, can also be written by directly using numeric digits (cf. example 2). It is not necessary to repeat the ISO 15924 code before each nominal alias (cf. examples 3–8), as the sequence is recognised automatically (cf. example 9 for a case of explicit repetition with optional spaces after the semicolons).</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="white-space"><a class="header" href="#white-space">White Space</a></h1>
 <p>Significant white space within the text, whether isolated or occurring between epigraphic phenomena.
@@ -849,7 +849,7 @@ WS
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="line-break"><a class="header" href="#line-break">Line Break</a></h1>
 <p>A line break within the text, optionally accompanied by explicit line numbering.
-Standard “newline” characters are not evaluated as philologically significant line breaks; instead, they produce <code>Newline</code> units that are treated merely as notational noise. Simple carriage returns can therefore be used to format IbiScript code at will—for instance, by moving long sequences of linguistic annotations to the next line (cf. <a href="/docs/en/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Linguistic Annotation of a Lexical Unit</a>).</p>
+Standard “newline” characters are not evaluated as philologically significant line breaks; instead, they produce <code>Newline</code> units that are treated merely as notational noise. Simple carriage returns can therefore be used to format IbiScript code at will—for instance, by moving long sequences of linguistic annotations to the next line (cf. <a href="../en/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Linguistic Annotation of a Lexical Unit</a>).</p>
 <p>From an epigraphic perspective, IbiScript requires that every significant line of text—that is, any line clearly identifiable on the support—be explicitly marked in the code. This is achieved by appending the notation (illustrated below) at the end of the line, as if notifying the system of a carriage return by analogy.</p>
 <p>Should the user forget to insert an explicit line break at the final line of text (e.g., in the case of single-line inscriptions), IbiScript will automatically supply it.</p>
 <h2 id="syntax-3"><a class="header" href="#syntax-3">Syntax</a></h2>
@@ -1534,7 +1534,7 @@ It is used to mark the end of a word regardless of its physical layout on the su
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>λₛ</code> = label, which may also be in abbreviated form, for linguistic annotation.</li>
 <li><code>λᵥ</code> = value of the linguistic annotation (plausibility scale).</li>
@@ -1700,6 +1700,29 @@ abc defg  hijk l
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="phenomena"><a class="header" href="#phenomena">Phenomena</a></h1>
 <p>A set of notations designed to describe the state of the textual tradition, the condition of the support, and the variations that occurred during the genesis or transmission of the text.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Construct</th><th>Definition</th><th>General Reference</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Vacat</code></td><td>A space intentionally left empty by the inscriber of the text, not due to a loss of the support, but for purposes of layout or textual distinction.</td><td><a href="notation/phenomena/vacat.html">🔎 Plain</a></td></tr>
+<tr><td><code>Gap</code></td><td>Physical losses of the support that resulted in the disappearance of portions of the original text; the extent of the loss can be certain, estimated, or unknown.</td><td><a href="notation/phenomena/gap.html">🔎 Gap</a></td></tr>
+<tr><td><code>Fracture</code></td><td>Breaks in the inscribed support, with the Fracture indicated after which the text is present, without providing any details about the text that follows.</td><td><a href="#fractures">🔎 Fracture</a></td></tr>
+<tr><td><code>Unclear</code></td><td>Signs remaining on the support but difficult to read due to physical degradation or poor preservation.</td><td><a href="notation/phenomena/unclear.html">🔎 Unclear</a></td></tr>
+<tr><td><code>Supplied</code></td><td>Signs no longer visible or never inscribed, critically restored by the editor to recover the meaning of the text.</td><td><a href="notation/phenomena/supplied.html">🔎 Supplied</a></td></tr>
+<tr><td><code>PreviousSeen</code></td><td>Signs, gaps, or epigraphic phenomena no longer visible through direct autopsy on the support, but documented in earlier scholarly editions or notebooks.</td><td><a href="notation/phenomena/previousseen.html">🔎 PreviousSeen</a></td></tr>
+<tr><td><code>Omitted</code></td><td>Signs, white spaces, or line breaks added by the editor because the inscriber of the text either omitted them or mistakenly inscribed other characters in their place.</td><td><a href="notation/phenomena/omitted.html">🔎 Omitted</a></td></tr>
+<tr><td><code>Surplus</code></td><td>Signs inscribed by error which the editor considers should not be part of the text and are therefore expunged.</td><td><a href="notation/phenomena/surplus.html">🔎 Surplus</a></td></tr>
+<tr><td><code>Erasure</code></td><td>Signs or portions of text intentionally removed from the support in antiquity by scraping or chiselling.</td><td><a href="notation/phenomena/erasure.html">🔎 Erasure</a></td></tr>
+<tr><td><code>Addition</code></td><td>Signs, words, or portions of text added to the support at a later time than the original drafting, often by a different hand.</td><td><a href="notation/phenomena/addition.html">🔎 Addition</a></td></tr>
+<tr><td><code>Correction</code></td><td>Corrective interventions on the support consisting in the erasure of pre-existing signs and their replacement with new ones, carried out at a later time than the original drafting, often by a different hand.</td><td><a href="notation/phenomena/correction.html">🔎 Correction</a></td></tr>
+<tr><td><code>Ligature</code></td><td>Two or more letters whose strokes have been merged or joined by the inscriber into a single graphic sign, usually sharing a common stem.</td><td><a href="notation/phenomena/ligature.html">🔎 Ligature</a></td></tr>
+<tr><td><code>Abbreviation</code></td><td>Phenomena relating to words or formulas abbreviated by the inscriber, including abbreviation marks, omitted letters, and the critical expansion (or resolution) provided by the editor.</td><td><a href="#abbreviations-and-their-expansions">🔎 Abbreviation</a></td></tr>
+<tr><td><code>LexicalUnit</code></td><td>#logogram-meta.desc</td><td><a href="#logograms-conventional-symbols-and-heterograms">🔎 LexicalUnit</a></td></tr>
+</tbody>
+</table>
+</div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="vacat"><a class="header" href="#vacat">Vacat</a></h1>
 <p>A space intentionally left empty by the inscriber of the text, not due to a loss of the support, but for purposes of layout or textual distinction.</p>
@@ -1721,8 +1744,8 @@ abc defg  hijk l
 <tr><th>Construct</th><th>Definition</th><th>General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Vacat-Char</code></td><td>Uninscribed signs or spaces.</td><td><a href="/docs/en/notation/phenomena/vacat/char.html">🔎 Plain</a></td></tr>
-<tr><td><code>Vacat-Line</code></td><td>A line break within the text, optionally accompanied by explicit line numbering.</td><td><a href="/docs/en/notation/phenomena/vacat/line.html">🔎 Whitespace</a></td></tr>
+<tr><td><code>Vacat-Char</code></td><td>Uninscribed signs or spaces.</td><td><a href="#uninscribed-signs-or-spaces-v-or-vac">🔎 Plain</a></td></tr>
+<tr><td><code>Vacat-Line</code></td><td>A line break within the text, optionally accompanied by explicit line numbering.</td><td><a href="#uninscribed-remainder-of-line-vacat">🔎 Whitespace</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -2049,9 +2072,9 @@ abc defg  hijk l
 <tr><th>Construct</th><th>Definition</th><th>General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Gap-Known</code></td><td>A gap of known extent. The editor indicates a precise number of missing characters by repeating a gap sign inside square brackets.</td><td><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Plain</a></td></tr>
-<tr><td><code>Gap-Range</code></td><td>A gap whose extent is expressed as a plausible numeric range.</td><td><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Whitespace</a></td></tr>
-<tr><td><code>Gap-Unknown</code></td><td>A gap of unknown extent.</td><td><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Whitespace</a></td></tr>
+<tr><td><code>Gap-Known</code></td><td>A gap of known extent. The editor indicates a precise number of missing characters by repeating a gap sign inside square brackets.</td><td><a href="#gap-of-known-extent">🔎 Plain</a></td></tr>
+<tr><td><code>Gap-Range</code></td><td>A gap whose extent is expressed as a plausible numeric range.</td><td><a href="#gap-of-ranged-extent">🔎 Whitespace</a></td></tr>
+<tr><td><code>Gap-Unknown</code></td><td>A gap of unknown extent.</td><td><a href="#gap-of-unknown-extent">🔎 Whitespace</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -2544,7 +2567,7 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>𝑛</code> ∈ ℕ (natural numbers).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
@@ -2553,7 +2576,7 @@ abc defg  hijk l
 <li><code>λ</code> = legibility level (normal or severe) based on the presence or absence of the <code>"</code> operator.</li>
 <li><code>~ᵟ</code> = severe legibility marker <code>~</code> or nothing in case of normal legibility.</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/unclear/index.html">Unclear Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/unclear/index.html">Unclear Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-14"><a class="header" href="#examples-14">Examples</a></h2>
 <table>
   
@@ -2756,7 +2779,7 @@ abc defg  hijk l
 <li><code>λ</code> = legibility level (normal or severe) based on the presence or absence of the <code>"</code> operator.</li>
 <li><code>~ᵟ</code> = severe legibility marker <code>~</code> or nothing in case of normal legibility.</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/unclear/index.html">Unclear Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/unclear/index.html">Unclear Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-15"><a class="header" href="#examples-15">Examples</a></h2>
 <table>
   
@@ -3005,7 +3028,7 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>𝑛</code> ∈ ℕ (natural numbers).</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
@@ -3182,7 +3205,7 @@ abc defg  hijk l
 <li><code>ω;…:ᵟ</code> = optional series of witnesses.</li>
 <li><code>ω,…ᵟ</code> = parsed optional series of witnesses.</li>
 <li><code>ω;…ol.ᵟ</code> = rendering of the optional series of witnesses followed by the abbreviation of the Latin <code>olim</code>.</li>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>⊙</code> ∈ <code>PREVIOUS_SEEN_ALLOWED</code> = any phenomena allowed within <code>PreviousSeen</code> (notation, AST or rendering depending on its placement).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
@@ -4064,7 +4087,7 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>𝑛</code> ∈ ℕ (natural numbers).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
@@ -4512,7 +4535,7 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
@@ -5258,14 +5281,14 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>𝑛</code> ∈ ℕ (natural numbers).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-31"><a class="header" href="#examples-31">Examples</a></h2>
 <table>
   
@@ -5403,7 +5426,7 @@ abc defg  hijk l
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-32"><a class="header" href="#examples-32">Examples</a></h2>
 <table>
   
@@ -5541,7 +5564,7 @@ abc defg  hijk l
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-33"><a class="header" href="#examples-33">Examples</a></h2>
 <table>
   
@@ -5679,7 +5702,7 @@ abc defg  hijk l
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-34"><a class="header" href="#examples-34">Examples</a></h2>
 <table>
   
@@ -5817,7 +5840,7 @@ abc defg  hijk l
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-35"><a class="header" href="#examples-35">Examples</a></h2>
 <table>
   
@@ -5958,7 +5981,7 @@ abc defg  hijk l
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-36"><a class="header" href="#examples-36">Examples</a></h2>
 <table>
   
@@ -6094,14 +6117,14 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>⊙</code> ∈ <code>PREVIOUS_SEEN_ALLOWED</code> = any phenomena allowed within <code>PreviousSeen</code> (notation, AST or rendering depending on its placement).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-37"><a class="header" href="#examples-37">Examples</a></h2>
 <table>
   
@@ -6314,15 +6337,15 @@ abc defg  hijk l
 </div>
 <ul>
 <li><code>𝘏</code> = identifier sign of the hand (if specified in the optional annotations/metadata <code>¤ᵟ</code>).</li>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>𝑛</code> ∈ ℕ (natural numbers).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-38"><a class="header" href="#examples-38">Examples</a></h2>
 <table>
   
@@ -6453,9 +6476,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-39"><a class="header" href="#examples-39">Examples</a></h2>
 <table>
   
@@ -6592,9 +6615,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-40"><a class="header" href="#examples-40">Examples</a></h2>
 <table>
   
@@ -6706,9 +6729,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-41"><a class="header" href="#examples-41">Examples</a></h2>
 <table>
   
@@ -6846,9 +6869,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-42"><a class="header" href="#examples-42">Examples</a></h2>
 <table>
   
@@ -6989,9 +7012,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-43"><a class="header" href="#examples-43">Examples</a></h2>
 <table>
   
@@ -7132,9 +7155,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-44"><a class="header" href="#examples-44">Examples</a></h2>
 <table>
   
@@ -7275,9 +7298,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-45"><a class="header" href="#examples-45">Examples</a></h2>
 <table>
   
@@ -7418,9 +7441,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-46"><a class="header" href="#examples-46">Examples</a></h2>
 <table>
   
@@ -7567,9 +7590,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Addition</code> (cf. <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-47"><a class="header" href="#examples-47">Examples</a></h2>
 <table>
   
@@ -7786,15 +7809,15 @@ abc defg  hijk l
 </div>
 <ul>
 <li><code>𝘏</code> = identifier sign of the hand (if specified in the optional annotations/metadata <code>¤ᵟ</code>).</li>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>𝑛</code> ∈ ℕ (natural numbers).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-48"><a class="header" href="#examples-48">Examples</a></h2>
 <table>
   
@@ -7943,9 +7966,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-49"><a class="header" href="#examples-49">Examples</a></h2>
 <table>
   
@@ -8100,9 +8123,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-50"><a class="header" href="#examples-50">Examples</a></h2>
 <table>
   
@@ -8226,9 +8249,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-51"><a class="header" href="#examples-51">Examples</a></h2>
 <table>
   
@@ -8384,9 +8407,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-52"><a class="header" href="#examples-52">Examples</a></h2>
 <table>
   
@@ -8545,9 +8568,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-53"><a class="header" href="#examples-53">Examples</a></h2>
 <table>
   
@@ -8689,7 +8712,7 @@ abc defg  hijk l
 <p>Signs deleted in an ancient correction that were seen and recorded by earlier editors, but are no longer visible on the support.</p>
 <h2 id="syntax-55"><a class="header" href="#syntax-55">Syntax</a></h2>
 <p>Any notation of a phenomenon (<code>IbiUnit</code>) allowed within <code>PreviousSeen</code>, thus enclosed between low lines <code>_…_</code> to indicate previous observation, followed by an equal sign and a greater-than sign forming a <code>=&gt;</code> arrow, then by the added text notation, all enclosed between plus signs <code>+…+</code>. Optional metadata can be written before the final <code>+</code> delimiter.</p>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="overview-55"><a class="header" href="#overview-55">Overview</a></h2>
 <div class="table-wrapper">
 <table>
@@ -8707,7 +8730,7 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
 <h2 id="examples-54"><a class="header" href="#examples-54">Examples</a></h2>
 <table>
@@ -8867,9 +8890,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-55"><a class="header" href="#examples-55">Examples</a></h2>
 <table>
   
@@ -9034,9 +9057,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-56"><a class="header" href="#examples-56">Examples</a></h2>
 <table>
   
@@ -9222,15 +9245,15 @@ abc defg  hijk l
 </div>
 <ul>
 <li><code>𝘏</code> = identifier sign of the hand (if specified in the optional annotations/metadata <code>¤ᵟ</code>).</li>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>𝑛</code> ∈ ℕ (natural numbers).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-57"><a class="header" href="#examples-57">Examples</a></h2>
 <table>
   
@@ -9379,9 +9402,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-58"><a class="header" href="#examples-58">Examples</a></h2>
 <table>
   
@@ -9536,9 +9559,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-59"><a class="header" href="#examples-59">Examples</a></h2>
 <table>
   
@@ -9662,9 +9685,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-60"><a class="header" href="#examples-60">Examples</a></h2>
 <table>
   
@@ -9820,9 +9843,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-61"><a class="header" href="#examples-61">Examples</a></h2>
 <table>
   
@@ -9981,9 +10004,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-62"><a class="header" href="#examples-62">Examples</a></h2>
 <table>
   
@@ -10142,9 +10165,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-63"><a class="header" href="#examples-63">Examples</a></h2>
 <table>
   
@@ -10303,9 +10326,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-64"><a class="header" href="#examples-64">Examples</a></h2>
 <table>
   
@@ -10470,9 +10493,9 @@ abc defg  hijk l
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
+<li><code>¤ᵟ</code> = optional annotations (metadata) supported by <code>Correction</code> (cf. <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/correction/index.html">Ancient Corrections</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-65"><a class="header" href="#examples-65">Examples</a></h2>
 <table>
   
@@ -10686,13 +10709,13 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/ligature/index.html">Ligated Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/ligature/index.html">Ligated Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-66"><a class="header" href="#examples-66">Examples</a></h2>
 <table>
   
@@ -10824,7 +10847,7 @@ abc defg  hijk l
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/ligature/index.html">Ligated Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/ligature/index.html">Ligated Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-67"><a class="header" href="#examples-67">Examples</a></h2>
 <table>
   
@@ -10965,7 +10988,7 @@ abc defg  hijk l
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/ligature/index.html">Ligated Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/ligature/index.html">Ligated Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-68"><a class="header" href="#examples-68">Examples</a></h2>
 <table>
   
@@ -11106,7 +11129,7 @@ abc defg  hijk l
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = certainty level corresponding to the marker used in the notation.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = rendering of the uncertainty/certainty marker in the notation or empty string (<code>ε</code>).</li>
 </ul>
-<p>See <a href="/docs/en/notation/phenomena/ligature/index.html">Ligated Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/phenomena/ligature/index.html">Ligated Signs</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-69"><a class="header" href="#examples-69">Examples</a></h2>
 <table>
   
@@ -11272,7 +11295,7 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 </ul>
 <h2 id="examples-70"><a class="header" href="#examples-70">Examples</a></h2>
@@ -12914,8 +12937,8 @@ Abbreviation[complete]
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="logograms-conventional-symbols-and-heterograms"><a class="header" href="#logograms-conventional-symbols-and-heterograms">Logograms, Conventional Symbols and Heterograms</a></h1>
-<p>Graphic elements that directly represent an entire word or concept, regardless of their phonetic realisation.</p>
-<p>The notation is similar to that used for identifying lexical units (see <a href="/docs/en/notation/atomic-textual-units/lexicalunit.html">Lexical Unit Boundary</a>), to which linguistic annotations are added to define the nature of the graphic elements (for a detailed discussion of linguistic annotation, see <a href="/docs/en/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Linguistic Annotation of a Lexical Unit</a>).</p>
+<p>Graphic elements that directly represent an entire word or concept, regardless of their phonetic realisation.
+The notation is similar to that used for identifying lexical units (see <a href="../en/notation/atomic-textual-units/lexicalunit.html">Lexical Unit Boundary</a>), to which linguistic annotations are added to define the nature of the graphic elements (for a detailed discussion of linguistic annotation, see <a href="../en/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Linguistic Annotation of a Lexical Unit</a>).</p>
 <p>The graphic function of signs is indicated via the metadata keys <code>graphic</code>, <code>function</code>, or <code>gf</code>, with the following possible values:</p>
 <ul>
 <li><code>lg</code> or <code>logogram</code>: logogram or conventional symbol — a sign integrated into the current writing system, whose foreign origin, if any, is synchronically opaque.</li>
@@ -12981,7 +13004,7 @@ Abbreviation[complete]
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>fₛ</code> ∈ <code>["gf", "graphic", "function"]</code> = label for the graphic function.</li>
 <li><code>fₗ</code> ∈ <code>["lg", "logogram"]</code> = value of the graphic function indicating a logogram.</li>
@@ -13322,7 +13345,7 @@ dipl=☧&amp;</code></pre>
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>fₛ</code> ∈ <code>["gf", "graphic", "function"]</code> = label for the graphic function.</li>
 <li><code>fₕ</code> ∈ <code>["ht", "heterogram"]</code> = value of the graphic function indicating a heterogram.</li>
@@ -13641,7 +13664,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <ul>
 <li><strong>Absolute certainty</strong>: indicates qualitative confidence regarding the identity of phenomena (e.g., <code>Unclear</code>, <code>Supplied</code>, <code>Erasure</code>) or their associated metadata, often used for difficult but guaranteed readings.</li>
 <li><strong>High precision</strong>: indicates that the quantitative estimation of a gap (<code>Gap</code>) or empty space (<code>Vacat</code>) is to be considered exact and not an approximation.</li>
-<li><strong>Assertive superiority</strong>: indicates that the assertion made by the editor is of higher magnitude than the norm (#underline[same operator but with a different meaning, thus cf. <a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/linkkind-preferred.html">Decreasing Plausibility among <em>Lectiones</em></a> for examples and syntax])</li>
+<li><strong>Assertive superiority</strong>: indicates that the assertion made by the editor is of higher magnitude than the norm (#underline[same operator but with a different meaning, thus cf. <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/linkkind-preferred.html">Decreasing Plausibility among <em>Lectiones</em></a> for examples and syntax])</li>
 </ul>
 <h2 id="syntax-88"><a class="header" href="#syntax-88">Syntax</a></h2>
 <p>An exclamation mark <code>!</code> placed at the end of a phenomenon’s notation, strictly within any applicable delimiters of the phenomenon.</p>
@@ -13747,7 +13770,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="interpretative-plausibility-assessment"><a class="header" href="#interpretative-plausibility-assessment">Interpretative Plausibility Assessment</a></h1>
-<p>Notations allowing the editor to structure critical doubt by ordering alternative <em>lectiones</em>#footnote[<a href="/docs/en/glossary.html">lectio</a>]  according to their degree of plausibility, or by declaring them simply non-comparable.</p>
+<p>Notations allowing the editor to structure critical doubt by ordering alternative <em>lectiones</em>#footnote[<a href="../en/glossary.html">lectio</a>]  according to their degree of plausibility, or by declaring them simply non-comparable.</p>
 <h4 id="delimiters-12"><a class="header" href="#delimiters-12">Delimiters</a></h4>
 <div class="table-wrapper">
 <table>
@@ -13837,7 +13860,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 [<code>∥</code>],
 [The <em>lectiones</em> are non-comparable alternatives: the editor expresses no preference],
 )</p>
-<p>When the editor wishes to specify the extent of the plausibility gap between two consecutive <em>lectiones</em>, a degree modifier may be appended to the <code>&gt;</code> operator: <code>?</code> (small gap) or <code>!</code> (marked gap). These are the same modifiers used for absolute epistemicity (cf. <a href="/docs/en/notation/critical-editorial/interpretation/epistemicity-scale/index.html">Interpretative Certainty or Precision Assessment</a>).</p>
+<p>When the editor wishes to specify the extent of the plausibility gap between two consecutive <em>lectiones</em>, a degree modifier may be appended to the <code>&gt;</code> operator: <code>?</code> (small gap) or <code>!</code> (marked gap). These are the same modifiers used for absolute epistemicity (cf. <a href="../en/notation/critical-editorial/interpretation/epistemicity-scale/index.html">Interpretative Certainty or Precision Assessment</a>).</p>
 <p>[<code>&gt;?</code>],
 [<code>≿</code>],
 [The previous <em>lectio</em> is slightly preferable to the next one: the plausibility gap is small.],</p>
@@ -13845,7 +13868,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 [<code>⋟</code>],
 [The previous <em>lectio</em> is clearly preferable to the next one: the plausibility gap is marked.],
 )</p>
-<p>Each relationship exists exclusively between two adjacent <em>lectiones</em> (a pair). Plausibility chains with mixed assertions are permitted, freely combining <code>&gt;</code> and <code>|</code> (cf. <a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/plausibilityseq-mixed.html">Examples of Mixed Plausibility Sequences</a>).</p>
+<p>Each relationship exists exclusively between two adjacent <em>lectiones</em> (a pair). Plausibility chains with mixed assertions are permitted, freely combining <code>&gt;</code> and <code>|</code> (cf. <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/plausibilityseq-mixed.html">Examples of Mixed Plausibility Sequences</a>).</p>
 <p><strong>To Draw an Analogy</strong></p>
 <p>To understand the structure of a plausibility chain, an architectural metaphor is helpful. Each relationship between two adjacent <em>lectiones</em> represents one element of a path that always proceeds from left to right, in a descending direction: the leftmost <em>lectio</em> is always the most plausible.</p>
 <p>The <code>&gt;</code> operator introduces a <em>descending step</em>, whose steepness is determined by the degree modifier: <code>&gt;?</code> indicates a gentle step, <code>&gt;</code> a step of medium steepness, and <code>&gt;!</code> a steep step. The <code>|</code> operator, by contrast, introduces a <em>landing</em>: the two <em>lectiones</em> stand at the same level, with no preference expressed by the editor.</p>
@@ -13885,7 +13908,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <li><strong>In the body of the text</strong>: any notation valid for expressing IbiScript phenomena separated by the <code>&gt;</code> plausibility operator (optionally qualified), all enclosed within percent signs <code>%…%</code>.</li>
 <li><strong>In the phenomenon annotations/metadata</strong>: any Unicode character sequence representing plain text (philological sigla and conventions, linguistic remarks, etc.) separated by the <code>&gt;</code> plausibility operator (optionally qualified), all enclosed within percent signs <code>%…%</code>.</li>
 </ul>
-<p>See <a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-88"><a class="header" href="#examples-88">Examples</a></h2>
 <table>
   
@@ -14090,7 +14113,7 @@ Lines 1–3 of the example tables show the plausibility hierarchy applied to _le
 <li><strong>In the body of the text</strong>: any notation valid for expressing IbiScript phenomena separated by the not-given plausibility operator <code>|</code>, all enclosed within percent signs <code>%…%</code>.</li>
 <li><strong>In the phenomenon annotations/metadata</strong>: any Unicode character sequence representing plain text (philological sigla and conventions, linguistic remarks, etc.) separated by the not-given plausibility operator <code>|</code>, all enclosed within percent signs <code>%…%</code>.</li>
 </ul>
-<p>See <a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-89"><a class="header" href="#examples-89">Examples</a></h2>
 <table>
   
@@ -14192,7 +14215,7 @@ Lines 1–3 of the example tables show the plausibility hierarchy applied to _le
 Line 1 of the example tables shows the plausibility hierarchy applied to _lectiones_ in the main text (e.g. epigraphic phenomena); line 2 shows the use case in annotations, i.e. among the optional metadata supported by certain phenomena.<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="examples-of-mixed-plausibility-sequences"><a class="header" href="#examples-of-mixed-plausibility-sequences">Examples of Mixed Plausibility Sequences</a></h1>
 <p>Illustrative demonstration of mixed plausibility sequences: a series of interpretive pairs where the editor expresses a descending or not-given plausibility between the <em>lectiones</em>.</p>
-<p>See <a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a> for the automatic rectification performed by the formatter to improve legibility.</p>
+<p>See <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a> for the automatic rectification performed by the formatter to improve legibility.</p>
 <h2 id="examples-90"><a class="header" href="#examples-90">Examples</a></h2>
 <table>
   
@@ -14725,7 +14748,7 @@ Line 1 of the example tables shows the plausibility hierarchy applied to _lectio
 </table>
 </div>
 <p>Any number of Unicode characters (representing any philological phenomenon) followed by a semicolon <code>;</code> and optionally any number of linguistic annotations (metadata) made of a key (listed below), an equals sign <code>=</code>, and a value; everything enclosed between ampersands <code>&amp;…&amp;</code>.</p>
-<p>Almost all annotations support the plausibility scale notation, allowing for stratified interpretations (cf. <a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a>).</p>
+<p>Almost all annotations support the plausibility scale notation, allowing for stratified interpretations (cf. <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a>).</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -14738,7 +14761,7 @@ Line 1 of the example tables shows the plausibility hierarchy applied to _lectio
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>λₛ</code> = label, which may also be in abbreviated form, for linguistic annotation.</li>
 <li><code>λᵥ</code> = value of the linguistic annotation (plausibility scale).</li>
@@ -15352,7 +15375,7 @@ Line 1 of the example tables shows the plausibility hierarchy applied to _lectio
 <p>Tools dedicated to managing typographic emphasis and inserting metatextual comments. Includes markers for graphic relief (bold, italics) and documentation features for internal use (line or block comments) not intended for the publication of the critical text.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="italic-text-emphasis"><a class="header" href="#italic-text-emphasis">Italic Text (Emphasis)</a></h1>
-<p>Text displayed in italics, useful for example in apparatus notes (see <a href="/docs/en/notation/critical-editorial/apparatus/apparatusnote.html">Apparatus Note</a>).</p>
+<p>Text displayed in italics, useful for example in apparatus notes (see <a href="../en/notation/critical-editorial/apparatus/apparatusnote.html">Apparatus Note</a>).</p>
 <h2 id="syntax-95"><a class="header" href="#syntax-95">Syntax</a></h2>
 <p>Any number of Unicode characters enclosed by curly brackets <code>{…}</code> preceded by the command <code>\i</code> (italic).</p>
 <h2 id="overview-95"><a class="header" href="#overview-95">Overview</a></h2>
@@ -15367,7 +15390,7 @@ Line 1 of the example tables shows the plausibility hierarchy applied to _lectio
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 </ul>
 <h2 id="examples-95"><a class="header" href="#examples-95">Examples</a></h2>
@@ -15435,7 +15458,7 @@ Line 1 of the example tables shows the plausibility hierarchy applied to _lectio
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="bold-text"><a class="header" href="#bold-text">Bold Text</a></h1>
-<p>Text displayed in bold, useful for example in footnotes (see <a href="/docs/en/notation/critical-editorial/apparatus/apparatusnote.html">Apparatus Note</a>).</p>
+<p>Text displayed in bold, useful for example in footnotes (see <a href="../en/notation/critical-editorial/apparatus/apparatusnote.html">Apparatus Note</a>).</p>
 <h2 id="syntax-96"><a class="header" href="#syntax-96">Syntax</a></h2>
 <p>Any number of Unicode characters enclosed by curly brackets <code>{…}</code> preceded by the command <code>\b</code> (bold).</p>
 <h2 id="overview-96"><a class="header" href="#overview-96">Overview</a></h2>
@@ -15450,7 +15473,7 @@ Line 1 of the example tables shows the plausibility hierarchy applied to _lectio
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 </ul>
 <h2 id="examples-96"><a class="header" href="#examples-96">Examples</a></h2>
@@ -15544,7 +15567,7 @@ Line 1 of the example tables shows the plausibility hierarchy applied to _lectio
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>Tᶜᵟ</code> = optional comment tag.</li>
 <li><code>Tᵥᵟ</code> = validated optional comment tag.</li>
@@ -15627,7 +15650,7 @@ Line 1 of the example tables shows the plausibility hierarchy applied to _lectio
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="/docs/en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
+<li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
 <li><code>Tᶜᵟ</code> = optional comment tag.</li>
 <li><code>Tᵥᵟ</code> = validated optional comment tag.</li>
@@ -15969,7 +15992,7 @@ $
 </div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="writing-systems-supported-for-keyvalue-entry"><a class="header" href="#writing-systems-supported-for-keyvalue-entry">Writing systems supported for <code>key:value</code> entry</a></h1>
-<p>List of ISO 15924 codes relating to the writing systems supported by IbiScript for the engonomic insertion of Unicode characters. The four-letter code must be entered as the identifier for the chosen writing system, followed by a colon <code>:</code> and the nominal aliases for each glyph, separated by commas <code>,</code> if more than one is to be entered (cf. <a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-coded.html">Coded Signs</a>).</p>
+<p>List of ISO 15924 codes relating to the writing systems supported by IbiScript for the engonomic insertion of Unicode characters. The four-letter code must be entered as the identifier for the chosen writing system, followed by a colon <code>:</code> and the nominal aliases for each glyph, separated by commas <code>,</code> if more than one is to be entered (cf. <a href="../en/notation/atomic-textual-units/textual-signs/plain-coded.html">Coded Signs</a>).</p>
 <p>All characters, including those from unsupported writing systems, can be entered using the corresponding Unicode character code.</p>
 <div class="table-wrapper">
 <table>
