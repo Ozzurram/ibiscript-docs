@@ -37,7 +37,7 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-fec0375d.js";
+            window.path_to_searchindex_js = "searchindex-e001a4db.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-d182858a.js"></script>
@@ -186,7 +186,7 @@
 <p>IbiScript restituisce all’editore il controllo immediato sul testo. Sviluppato in Rust e alimentato dal motore di parsing <strong>ANSELMUS</strong>, trasforma l’incertezza del reperto in un dato digitale solido, agendo come un’architettura del pensiero che modella il contributo epistemico del ricercatore.</p>
 <ul>
 <li><strong>Ermeneutica fluida</strong>: Codifica fenomeni epigrafici e apparato critico senza l’interferenza visiva dei tag XML.</li>
-<li><strong>Sussidiarietà tecnica</strong>: Generazione nativa di output EpiDoc, HTM, Typst PDF e Unicode; integrazione totale con l’ecosistema BEDA tramite WebAssembly.</li>
+<li><strong>Sussidiarietà tecnica</strong>: Generazione nativa di output EpiDoc, HTML, Typst PDF e Unicode; integrazione totale con l’ecosistema BEDA tramite WebAssembly.</li>
 <li><strong>Rigore scientifico</strong>: Un ponte tra la fisicità del reperto e una memoria digitale condivisa, dove ogni segno è una tesi scientifica validata.</li>
 </ul>
 <p>Il nome fonde l’Ibis sacro di Thoth, custode della scrittura, con l’avverbio latino <em>ibi</em>: interrogare la parola “lì, in quel luogo”, sulla ruvida superficie della materia antica.</p>
@@ -215,7 +215,7 @@ da punto e virgola. I valori possono contenere a loro volta notazioni di
 plausibilità interpretativa, che permettono all’editore di esprimere
 giudizi graduati su letture alternative — una funzionalità documentata
 in dettaglio nella sezione dedicata alla valutazione di plausibilità
-(cf. <a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a>) e richiamata nelle sezioni dei singoli fenomeni che la supportano.</p>
+(cf. <a href="../it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a>) e richiamata nelle sezioni dei singoli fenomeni che la supportano.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="unità-testuali-atomiche"><a class="header" href="#unità-testuali-atomiche">Unità testuali atomiche</a></h1>
 <p>unità minime di segmentazione testuale e che non possono contenere o annidare altre annotazioni al loro interno.</p>
@@ -225,14 +225,14 @@ in dettaglio nella sezione dedicata alla valutazione di plausibilità
 <tr><th>Costrutto</th><th>Definizione</th><th>Riferimento generale</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Plain</code></td><td>Segni che compongono il testo critico e che non constituiscono la notazione di fenomeni.</td><td><a href="/docs/it/notation/atomic-textual-units/textual-signs/index.html">🔎 Plain</a></td></tr>
-<tr><td><code>Whitespace</code></td><td>Spazio significativo all’interno del testo, sia esso isolato o interposto tra fenomeni epigrafici.</td><td><a href="/docs/it/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td><code>LineBreak</code></td><td>Un’interruzione di riga nel testo, opzionalmente accompagnata dalla numerazione esplicita della riga.</td><td><a href="/docs/it/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
-<tr><td><code>WordBreak</code></td><td>Indica un’interruzione di parola, ossia il punto esatto in cui una sequenza di segni o una parola si interrompe, ad esempio a causa di un fine riga o di una frattura fisica nel supporto epigrafico.</td><td><a href="/docs/it/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td><code>Language</code></td><td>Notazione atta a identificare la lingua dell’iscrizione o di una parte di essa.</td><td><a href="/docs/it/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
-<tr><td><code>Direction</code></td><td>La direzione della scrittura, essenziale per le iscrizioni retrograde (da destra a sinistra) o bustrofediche (ad andamento alternato).</td><td><a href="/docs/it/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
-<tr><td><code>SectionBreak</code></td><td>Indica che il testo seguente è parte della sottosezione indicata dalla notazione.</td><td><a href="/docs/it/notation/atomic-textual-units/sectionbreak.html">🔎 SectionBreak</a></td></tr>
-<tr><td><code>LexicalUnit</code></td><td>Il confine logico di un’unità lessicale (<em>word</em>).</td><td><a href="/docs/it/notation/atomic-textual-units/lexicalunit.html">🔎 LexicalUnit</a></td></tr>
+<tr><td><code>Plain</code></td><td>Segni che compongono il testo critico e che non constituiscono la notazione di fenomeni.</td><td><a href="#segni-a-testo">🔎 Plain</a></td></tr>
+<tr><td><code>Whitespace</code></td><td>Spazio significativo all’interno del testo, sia esso isolato o interposto tra fenomeni epigrafici.</td><td><a href="#spazio-bianco">🔎 Whitespace</a></td></tr>
+<tr><td><code>LineBreak</code></td><td>Un’interruzione di riga nel testo, opzionalmente accompagnata dalla numerazione esplicita della riga.</td><td><a href="#interruzione-di-riga">🔎 LineBreak</a></td></tr>
+<tr><td><code>WordBreak</code></td><td>Indica un’interruzione di parola, ossia il punto esatto in cui una sequenza di segni o una parola si interrompe, ad esempio a causa di un fine riga o di una frattura fisica nel supporto epigrafico.</td><td><a href="#interruzione-di-parola">🔎 WordBreak</a></td></tr>
+<tr><td><code>Language</code></td><td>Notazione atta a identificare la lingua dell’iscrizione o di una parte di essa.</td><td><a href="#lingua-del-testo">🔎 Language</a></td></tr>
+<tr><td><code>Direction</code></td><td>La direzione della scrittura, essenziale per le iscrizioni retrograde (da destra a sinistra) o bustrofediche (ad andamento alternato).</td><td><a href="#direzione-del-testo">🔎 Direction</a></td></tr>
+<tr><td><code>SectionBreak</code></td><td>Indica che il testo seguente è parte della sottosezione indicata dalla notazione.</td><td><a href="#suddivisione-testuale">🔎 SectionBreak</a></td></tr>
+<tr><td><code>LexicalUnit</code></td><td>Il confine logico di un’unità lessicale (<em>word</em>).</td><td><a href="#confine-di-unità-lessicale">🔎 LexicalUnit</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -246,8 +246,8 @@ IbiScript consente la rappresentazione nativa di qualsiasi carattere Unicode, ma
 <tr><th>Costrutto</th><th>Definizione</th><th>Riferimento generale</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Plain</code> (realised)</td><td>Segni testuali realizzati graficamente nel testo come glifi Unicode.</td><td><a href="/docs/it/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td><code>Plai</code> (coded)</td><td>Segni testuali rappresentati sotto forma di notazione astratta.</td><td><a href="/docs/it/notation/atomic-textual-units/plain-coded.html">🔎 Whitespace</a></td></tr>
+<tr><td><code>Plain</code> (realizzato)</td><td>Segni testuali realizzati graficamente nel testo come glifi Unicode.</td><td><a href="#segni-realizzati">🔎 Plain</a></td></tr>
+<tr><td><code>Plai</code> (codificato)</td><td>Segni testuali rappresentati sotto forma di notazione astratta.</td><td><a href="#segni-codificati">🔎 Whitespace</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -268,7 +268,7 @@ IbiScript consente la rappresentazione nativa di qualsiasi carattere Unicode, ma
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 </ul>
 <h2 id="esempi"><a class="header" href="#esempi">Esempi</a></h2>
@@ -684,7 +684,7 @@ IbiScript consente la rappresentazione nativa di qualsiasi carattere Unicode, ma
 </table>
 
 IbiScript consente la rappresentazione in forma codificata di qualunque carattere Unicode purché si conosca il codice di carattere Unicode corrispondente (cf. esempio 1).
-<p>Eppure il sistema di inserimento più conveniente e sicuro è quello a <code>chiave:valore</code>, che IbiScript rende possibile per 111 sistemi di scrittura moderni e storici (cf. <a href="/docs/it/appendix/ws-iso-codes.html">Sistemi di scrittura supportati per l’inserimento <code>chiave:valore</code></a> per l’elenco dei codici completo). Ciascun carattere Unicode è indicabile tramite uno o più alias nominali che si rifanno ai nomi di carattere ufficiali, opportunamente mondati del superfluo; le forme numerali, in particolare, possono essere scritte anche facendo ricorso diretto alle cifre numeriche (cf. esempio 2). Non è necessario ripetere il codice ISO 15924 prima di ogni alias nominale (cf. esempi 3–8), in quanto la sequenza è riconosciuta automaticamente (cf. esempio 9 per un caso di ripetizione esplicita con spazi opzionali dopo i punti e virgola).</p>
+<p>Eppure il sistema di inserimento più conveniente e sicuro è quello a <code>chiave:valore</code>, che IbiScript rende possibile per 111 sistemi di scrittura moderni e storici (cf. <a href="../it/appendix/ws-iso-codes.html">Sistemi di scrittura supportati per l’inserimento <code>chiave:valore</code></a> per l’elenco dei codici completo). Ciascun carattere Unicode è indicabile tramite uno o più alias nominali che si rifanno ai nomi di carattere ufficiali, opportunamente mondati del superfluo; le forme numerali, in particolare, possono essere scritte anche facendo ricorso diretto alle cifre numeriche (cf. esempio 2). Non è necessario ripetere il codice ISO 15924 prima di ogni alias nominale (cf. esempi 3–8), in quanto la sequenza è riconosciuta automaticamente (cf. esempio 9 per un caso di ripetizione esplicita con spazi opzionali dopo i punti e virgola).</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="spazio-bianco"><a class="header" href="#spazio-bianco">Spazio bianco</a></h1>
 <p>spazio significativo all’interno del testo, sia esso isolato o interposto tra fenomeni epigrafici.
@@ -850,7 +850,7 @@ WS
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="interruzione-di-riga"><a class="header" href="#interruzione-di-riga">Interruzione di riga</a></h1>
 <p>un’interruzione di riga nel testo, opzionalmente accompagnata dalla numerazione esplicita della riga.
-I normali “caratteri di a capo” (<em>newline</em>) non vengono valutati come interruzioni di riga significative dal punto di vista filologico, producendo unità di tipo <code>Newline</code> che sono trattate solo come rumore di notazione. I rimandi a capo semplici possono dunque essere adoperati per formattare il codice IbiScript a piacimento, per esempio rinviando alla riga seguente lunghe serie di annotazioni linguistiche (cf. <a href="/docs/it/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Annotazione linguistica di un’unità lessicale</a>.</p>
+I normali “caratteri di a capo” (<em>newline</em>) non vengono valutati come interruzioni di riga significative dal punto di vista filologico, producendo unità di tipo <code>Newline</code> che sono trattate solo come rumore di notazione. I rimandi a capo semplici possono dunque essere adoperati per formattare il codice IbiScript a piacimento, per esempio rinviando alla riga seguente lunghe serie di annotazioni linguistiche (cf. <a href="../it/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Annotazione linguistica di un’unità lessicale</a>.</p>
 <p>Dal punto di vista epigrafico, IbiScript richiede quindi che ogni riga di testo significativa, ossia chiaramente individuabile sul supporto, venga esplicitamente segnalata nel codice: ciò apponendo a fine riga la notazione (illustrata più oltre). Come se per analogia si volesse notificare di un rimando a capo.</p>
 <p>Qualora ci si dimentichi di inserire un’interruzione di riga esplicita all’ultima linea di testo (es. nel caso di iscrizioni costituite da una singola riga), IbiScript si prenderà cura di sopperirla.</p>
 <h2 id="sintassi-3"><a class="header" href="#sintassi-3">Sintassi</a></h2>
@@ -1535,7 +1535,7 @@ Viene utilizzato per marcare la fine di una parola indipendentemente dalla sua d
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>λₛ</code> = etichetta (anche in forma abbreviata) per l’annotazione linguistica.</li>
 <li><code>λᵥ</code> = valore dell’annotazione linguistica (scala di plausibilità).</li>
@@ -1701,9 +1701,32 @@ abc defg  hijk l
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="fenomeni"><a class="header" href="#fenomeni">Fenomeni</a></h1>
 <p>insieme delle notazioni atte a descrivere lo stato della tradizione testuale, le condizioni del supporto e le variazioni occorse durante la genesi o la trasmissione del testo.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Costrutto</th><th>Definizione</th><th>Riferimento generale</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Vacat</code></td><td>Uno spazio lasciato intenzionalmente vuoto dall’incisore del testo, non dovuto a una perdita del supporto, ma a fini di impaginazione o distinzione testuale.</td><td><a href="notation/phenomena/vacat.html">🔎 Plain</a></td></tr>
+<tr><td><code>Gap</code></td><td>Perdite fisiche del supporto che hanno comportato la scomparsa di porzioni di testo originario; l’entità della perdita può essere certa, stimata o ignota.</td><td><a href="notation/phenomena/gap.html">🔎 Gap</a></td></tr>
+<tr><td><code>Fracture</code></td><td>Rotture nel supporto iscritto; la frattura viene indicata nel punto in cui il testo è presente, senza fornire dettagli sul testo che segue o precede.</td><td><a href="#fratture">🔎 Fracture</a></td></tr>
+<tr><td><code>Unclear</code></td><td>Segni superstiti sul supporto ma difficilmente a testo a causa del degrado fisico o di una cattiva conservazione.</td><td><a href="notation/phenomena/unclear.html">🔎 Unclear</a></td></tr>
+<tr><td><code>Supplied</code></td><td>Segni non più visibili o mai incisi, ricostruiti criticamente dall’editore per ripristinare il senso del testo.</td><td><a href="notation/phenomena/supplied.html">🔎 Supplied</a></td></tr>
+<tr><td><code>PreviousSeen</code></td><td>Segni, lacune o fenomeni epigrafici non più riscontrabili autopticamente sul supporto, ma documentati in edizioni o taccuini di studiosi precedenti.</td><td><a href="notation/phenomena/previousseen.html">🔎 PreviousSeen</a></td></tr>
+<tr><td><code>Omitted</code></td><td>Segni, spazi o interruzioni di riga aggiunti dall’editore poiché l’incisore del testo li ha omessi o ha inciso per errore altri caratteri al loro posto.</td><td><a href="notation/phenomena/omitted.html">🔎 Omitted</a></td></tr>
+<tr><td><code>Surplus</code></td><td>Segni incisi per errore che l’editore ritiene non debbano far parte del testo e che pertanto vengono espunti.</td><td><a href="notation/phenomena/surplus.html">🔎 Surplus</a></td></tr>
+<tr><td><code>Erasure</code></td><td>Segni o porzioni di testo intenzionalmente rimossi dal supporto in epoca antica tramite raschiatura o scalpellatura.</td><td><a href="notation/phenomena/erasure.html">🔎 Erasure</a></td></tr>
+<tr><td><code>Addition</code></td><td>Segni, parole o porzioni di testo aggiunti sul supporto in un momento successivo rispetto alla stesura originale, spesso da una mano differente.</td><td><a href="notation/phenomena/addition.html">🔎 Addition</a></td></tr>
+<tr><td><code>Correction</code></td><td>Interventi correttivi sul supporto consistenti nell’erasione di segni preesistenti e nella loro sostituzione con segni nuovi, eseguiti in un momento successivo rispetto alla stesura originale, spesso da una mano differente.</td><td><a href="notation/phenomena/correction.html">🔎 Correction</a></td></tr>
+<tr><td><code>Ligature</code></td><td>Due o più lettere i cui tratti sono stati fusi o uniti dall’incisore in un unico segno grafico, condividendo solitamente un’asta comune.</td><td><a href="notation/phenomena/ligature.html">🔎 Ligature</a></td></tr>
+<tr><td><code>Abbreviation</code></td><td>Fenomeni relativi a parole o formule abbreviate intenzionalmente dall’incisore, inclusi i segni di abbreviazione, le lettere sottintese e lo scioglimento critico operato dall’editore.</td><td><a href="#abbreviazioni-e-loro-espansioni">🔎 Abbreviation</a></td></tr>
+<tr><td><code>LexicalUnit</code></td><td>#logogram-meta.desc</td><td><a href="#logogrammi-simboli-convenzionali-ed-eterogrammi">🔎 LexicalUnit</a></td></tr>
+</tbody>
+</table>
+</div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="vacat"><a class="header" href="#vacat">Vacat</a></h1>
-<p>Uno spazio lasciato intenzionalmente vuoto dall’incisore del testo, non dovuto a una perdita del supporto, ma a fini di impaginazione o distinzione testuale.</p>
+<p>uno spazio lasciato intenzionalmente vuoto dall’incisore del testo, non dovuto a una perdita del supporto, ma a fini di impaginazione o distinzione testuale.</p>
 <h4 id="delimitatori"><a class="header" href="#delimitatori">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -1722,8 +1745,8 @@ abc defg  hijk l
 <tr><th>Costrutto</th><th>Definizione</th><th>Riferimento generale</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Vacat-Char</code></td><td>Segni non incisi o spazi vuoti.</td><td><a href="/docs/it/notation/phenomena/vacat/char.html">🔎 Plain</a></td></tr>
-<tr><td><code>Vacat-Line</code></td><td>Un’interruzione di riga nel testo, opzionalmente accompagnata dalla numerazione esplicita della riga.</td><td><a href="/docs/it/notation/phenomena/vacat/line.html">🔎 Whitespace</a></td></tr>
+<tr><td><code>Vacat-Char</code></td><td>Segni non incisi o spazi vuoti.</td><td><a href="#segni-o-spazi-non-incisi-v-o-vac">🔎 Plain</a></td></tr>
+<tr><td><code>Vacat-Line</code></td><td>Un’interruzione di riga nel testo, opzionalmente accompagnata dalla numerazione esplicita della riga.</td><td><a href="#parte-rimanente-della-riga-non-incisa-vacat">🔎 Whitespace</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -2031,7 +2054,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lacune"><a class="header" href="#lacune">Lacune</a></h1>
-<p>Perdite fisiche del supporto che hanno comportato la scomparsa di porzioni di testo originario; l’entità della perdita può essere certa, stimata o ignota.</p>
+<p>perdite fisiche del supporto che hanno comportato la scomparsa di porzioni di testo originario; l’entità della perdita può essere certa, stimata o ignota.</p>
 <h4 id="delimitatori-1"><a class="header" href="#delimitatori-1">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -2050,9 +2073,9 @@ abc defg  hijk l
 <tr><th>Costrutto</th><th>Definizione</th><th>Riferimento generale</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Gap-Known</code></td><td>Una lacuna di estensione nota. L’editore indica un numero preciso di caratteri mancanti ripetendo un segno di lacuna all’interno delle parentesi quadre.</td><td><a href="/docs/it/notation/phenomena/gap/known.html">🔎 Plain</a></td></tr>
-<tr><td><code>Gap-Range</code></td><td>Una lacuna la cui estensione è espressa come un intervallo numerico plausibile.</td><td><a href="/docs/it/notation/phenomena/gap/range.html">🔎 Whitespace</a></td></tr>
-<tr><td><code>Gap-Unknown</code></td><td>Una lacuna di estensione ignota.</td><td><a href="/docs/it/notation/phenomena/gap/unknown.html">🔎 Whitespace</a></td></tr>
+<tr><td><code>Gap-Known</code></td><td>Una lacuna di estensione nota. L’editore indica un numero preciso di caratteri mancanti ripetendo un segno di lacuna all’interno delle parentesi quadre.</td><td><a href="#lacuna-di-ampiezza-nota">🔎 Plain</a></td></tr>
+<tr><td><code>Gap-Range</code></td><td>Una lacuna la cui estensione è espressa come un intervallo numerico plausibile.</td><td><a href="#lacuna-di-intervallo-noto">🔎 Whitespace</a></td></tr>
+<tr><td><code>Gap-Unknown</code></td><td>Una lacuna di estensione ignota.</td><td><a href="#lacuna-di-estensione-ignota">🔎 Whitespace</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -2448,7 +2471,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="fratture"><a class="header" href="#fratture">Fratture</a></h1>
-<p>Rotture nel supporto iscritto; la frattura viene indicata nel punto in cui il testo è presente, senza fornire dettagli sul testo che segue o precede.</p>
+<p>rotture nel supporto iscritto; la frattura viene indicata nel punto in cui il testo è presente, senza fornire dettagli sul testo che segue o precede.</p>
 <h2 id="sintassi-14"><a class="header" href="#sintassi-14">Sintassi</a></h2>
 <ul>
 <li><strong>Frattura a sinistra</strong>: il segno minore di <code>&lt;</code> racchiuso tra parentesi graffe <code>{…}</code> (cf. esempio 1).</li>
@@ -2472,7 +2495,7 @@ abc defg  hijk l
 </div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-di-lettura-incerta"><a class="header" href="#segni-di-lettura-incerta">Segni di lettura incerta</a></h1>
-<p>Segni superstiti sul supporto ma difficilmente a testo a causa del degrado fisico o di una cattiva conservazione.</p>
+<p>segni superstiti sul supporto ma difficilmente a testo a causa del degrado fisico o di una cattiva conservazione.</p>
 <h4 id="delimitatori-2"><a class="header" href="#delimitatori-2">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -2545,7 +2568,7 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>𝑛</code> ∈ ℕ (numeri naturali).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
@@ -2554,7 +2577,7 @@ abc defg  hijk l
 <li><code>λ</code> = livello di legibilità (normale o severa) in base alla presenza o meno dell’operatore <code>"</code>.</li>
 <li><code>~ᵟ</code> = marcatore di legibilità severa <code>~</code> o nulla in caso di legibilità normale.</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/unclear/index.html">Segni di lettura incerta</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/unclear/index.html">Segni di lettura incerta</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-14"><a class="header" href="#esempi-14">Esempi</a></h2>
 <table>
   
@@ -2757,7 +2780,7 @@ abc defg  hijk l
 <li><code>λ</code> = livello di legibilità (normale o severa) in base alla presenza o meno dell’operatore <code>"</code>.</li>
 <li><code>~ᵟ</code> = marcatore di legibilità severa <code>~</code> o nulla in caso di legibilità normale.</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/unclear/index.html">Segni di lettura incerta</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/unclear/index.html">Segni di lettura incerta</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-15"><a class="header" href="#esempi-15">Esempi</a></h2>
 <table>
   
@@ -2956,7 +2979,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-integrati"><a class="header" href="#segni-integrati">Segni integrati</a></h1>
-<p>Segni non più visibili o mai incisi, ricostruiti criticamente dall’editore per ripristinare il senso del testo.</p>
+<p>segni non più visibili o mai incisi, ricostruiti criticamente dall’editore per ripristinare il senso del testo.</p>
 <h4 id="delimitatori-3"><a class="header" href="#delimitatori-3">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -3006,7 +3029,7 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>𝑛</code> ∈ ℕ (numeri naturali).</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
@@ -3123,7 +3146,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="testimonianze-di-editori-precedenti"><a class="header" href="#testimonianze-di-editori-precedenti">Testimonianze di editori precedenti</a></h1>
-<p>Segni, lacune o fenomeni epigrafici non più riscontrabili autopticamente sul supporto, ma documentati in edizioni o taccuini di studiosi precedenti.</p>
+<p>segni, lacune o fenomeni epigrafici non più riscontrabili autopticamente sul supporto, ma documentati in edizioni o taccuini di studiosi precedenti.</p>
 <h4 id="delimitatori-4"><a class="header" href="#delimitatori-4">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -3183,7 +3206,7 @@ abc defg  hijk l
 <li><code>ω;…:ᵟ</code> = serie opzionale di testimoni.</li>
 <li><code>ω,…ᵟ</code> = serie opzionale di testimoni parsata.</li>
 <li><code>ω;…ol.ᵟ</code> = resa della serie opzionale di testimoni seguita dall’abbreviazione del latino <code>olim</code>.</li>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>⊙</code> ∈ <code>PREVIOUS_SEEN_ALLOWED</code> = qualsiasi fenomeno ammesso all’interno di un <code>PreviousSeen</code> (notazione, AST o resa in base al collocamento).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
@@ -4015,7 +4038,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="omissioni-antiche"><a class="header" href="#omissioni-antiche">Omissioni antiche</a></h1>
-<p>Segni, spazi o interruzioni di riga aggiunti dall’editore poiché l’incisore del testo li ha omessi o ha inciso per errore altri caratteri al loro posto.</p>
+<p>segni, spazi o interruzioni di riga aggiunti dall’editore poiché l’incisore del testo li ha omessi o ha inciso per errore altri caratteri al loro posto.</p>
 <h4 id="delimitatori-5"><a class="header" href="#delimitatori-5">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -4065,7 +4088,7 @@ abc defg  hijk l
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>𝑛</code> ∈ ℕ (numeri naturali).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
@@ -4483,7 +4506,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-superflui"><a class="header" href="#segni-superflui">Segni superflui</a></h1>
-<p>Segni incisi per errore che l’editore ritiene non debbano far parte del testo e che pertanto vengono espunti.</p>
+<p>segni incisi per errore che l’editore ritiene non debbano far parte del testo e che pertanto vengono espunti.</p>
 <h4 id="delimitatori-6"><a class="header" href="#delimitatori-6">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -4513,7 +4536,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
@@ -5181,7 +5204,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-erasi-in-antico-e-rasure"><a class="header" href="#segni-erasi-in-antico-e-rasure">Segni erasi in antico e rasure</a></h1>
-<p>Segni o porzioni di testo intenzionalmente rimossi dal supporto in epoca antica tramite raschiatura o scalpellatura.</p>
+<p>segni o porzioni di testo intenzionalmente rimossi dal supporto in epoca antica tramite raschiatura o scalpellatura.</p>
 <h4 id="delimitatori-7"><a class="header" href="#delimitatori-7">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -5259,14 +5282,14 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>𝑛</code> ∈ ℕ (numeri naturali).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-31"><a class="header" href="#esempi-31">Esempi</a></h2>
 <table>
   
@@ -5404,7 +5427,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-32"><a class="header" href="#esempi-32">Esempi</a></h2>
 <table>
   
@@ -5542,7 +5565,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-33"><a class="header" href="#esempi-33">Esempi</a></h2>
 <table>
   
@@ -5680,7 +5703,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-34"><a class="header" href="#esempi-34">Esempi</a></h2>
 <table>
   
@@ -5818,7 +5841,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-35"><a class="header" href="#esempi-35">Esempi</a></h2>
 <table>
   
@@ -5959,7 +5982,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-36"><a class="header" href="#esempi-36">Esempi</a></h2>
 <table>
   
@@ -6095,14 +6118,14 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>⊙</code> ∈ <code>PREVIOUS_SEEN_ALLOWED</code> = qualsiasi fenomeno ammesso all’interno di un <code>PreviousSeen</code> (notazione, AST o resa in base al collocamento).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/erasure/index.html">Segni erasi in antico e rasure</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-37"><a class="header" href="#esempi-37">Esempi</a></h2>
 <table>
   
@@ -6223,7 +6246,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="aggiunte-antiche-posteriori-di-segni"><a class="header" href="#aggiunte-antiche-posteriori-di-segni">Aggiunte antiche posteriori di segni</a></h1>
-<p>Segni, parole o porzioni di testo aggiunti sul supporto in un momento successivo rispetto alla stesura originale, spesso da una mano differente.</p>
+<p>segni, parole o porzioni di testo aggiunti sul supporto in un momento successivo rispetto alla stesura originale, spesso da una mano differente.</p>
 <h4 id="delimitatori-8"><a class="header" href="#delimitatori-8">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -6315,15 +6338,15 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </div>
 <ul>
 <li><code>𝘏</code> = segno identificativo della mano scribale (se specificata nelle annotazioni/metadata opzionali <code>¤ᵟ</code>).</li>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>𝑛</code> ∈ ℕ (numeri naturali).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-38"><a class="header" href="#esempi-38">Esempi</a></h2>
 <table>
   
@@ -6454,9 +6477,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-39"><a class="header" href="#esempi-39">Esempi</a></h2>
 <table>
   
@@ -6593,9 +6616,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-40"><a class="header" href="#esempi-40">Esempi</a></h2>
 <table>
   
@@ -6707,9 +6730,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-41"><a class="header" href="#esempi-41">Esempi</a></h2>
 <table>
   
@@ -6847,9 +6870,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-42"><a class="header" href="#esempi-42">Esempi</a></h2>
 <table>
   
@@ -6990,9 +7013,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-43"><a class="header" href="#esempi-43">Esempi</a></h2>
 <table>
   
@@ -7133,9 +7156,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-44"><a class="header" href="#esempi-44">Esempi</a></h2>
 <table>
   
@@ -7276,9 +7299,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-45"><a class="header" href="#esempi-45">Esempi</a></h2>
 <table>
   
@@ -7419,9 +7442,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-46"><a class="header" href="#esempi-46">Esempi</a></h2>
 <table>
   
@@ -7568,9 +7591,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Addition</code> (cf. <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/addition/index.html">Aggiunte antiche posteriori di segni</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-47"><a class="header" href="#esempi-47">Esempi</a></h2>
 <table>
   
@@ -7691,7 +7714,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="correzioni-antiche"><a class="header" href="#correzioni-antiche">Correzioni antiche</a></h1>
-<p>Interventi correttivi sul supporto consistenti nell’erasione di segni preesistenti e nella loro sostituzione con segni nuovi, eseguiti in un momento successivo rispetto alla stesura originale, spesso da una mano differente.</p>
+<p>interventi correttivi sul supporto consistenti nell’erasione di segni preesistenti e nella loro sostituzione con segni nuovi, eseguiti in un momento successivo rispetto alla stesura originale, spesso da una mano differente.</p>
 <h4 id="delimitatori-9"><a class="header" href="#delimitatori-9">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -7787,15 +7810,15 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </div>
 <ul>
 <li><code>𝘏</code> = segno identificativo della mano scribale (se specificata nelle annotazioni/metadata opzionali <code>¤ᵟ</code>).</li>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>𝑛</code> ∈ ℕ (numeri naturali).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-48"><a class="header" href="#esempi-48">Esempi</a></h2>
 <table>
   
@@ -7944,9 +7967,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-49"><a class="header" href="#esempi-49">Esempi</a></h2>
 <table>
   
@@ -8101,9 +8124,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-50"><a class="header" href="#esempi-50">Esempi</a></h2>
 <table>
   
@@ -8227,9 +8250,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-51"><a class="header" href="#esempi-51">Esempi</a></h2>
 <table>
   
@@ -8385,9 +8408,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-52"><a class="header" href="#esempi-52">Esempi</a></h2>
 <table>
   
@@ -8546,9 +8569,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-53"><a class="header" href="#esempi-53">Esempi</a></h2>
 <table>
   
@@ -8690,7 +8713,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <p>Segni cancellati in una correzione antica, descritti e registrati da editori precedenti, ma non più visibili sul supporto.</p>
 <h2 id="sintassi-55"><a class="header" href="#sintassi-55">Sintassi</a></h2>
 <p>Qualsiasi notazione di fenomeno (<code>IbiUnit</code>) ammessa all’interno di <code>Surplus</code>, dunque racchiusa tra trattini bassi <code>_…_</code> per indicare la precedente osservazione, seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla notazione del testo aggiunto, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="panoramica-55"><a class="header" href="#panoramica-55">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -8708,7 +8731,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
 <h2 id="esempi-54"><a class="header" href="#esempi-54">Esempi</a></h2>
 <table>
@@ -8868,9 +8891,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-55"><a class="header" href="#esempi-55">Esempi</a></h2>
 <table>
   
@@ -9035,9 +9058,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-56"><a class="header" href="#esempi-56">Esempi</a></h2>
 <table>
   
@@ -9223,15 +9246,15 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </div>
 <ul>
 <li><code>𝘏</code> = segno identificativo della mano scribale (se specificata nelle annotazioni/metadata opzionali <code>¤ᵟ</code>).</li>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>𝑛</code> ∈ ℕ (numeri naturali).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-57"><a class="header" href="#esempi-57">Esempi</a></h2>
 <table>
   
@@ -9380,9 +9403,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-58"><a class="header" href="#esempi-58">Esempi</a></h2>
 <table>
   
@@ -9537,9 +9560,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-59"><a class="header" href="#esempi-59">Esempi</a></h2>
 <table>
   
@@ -9663,9 +9686,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-60"><a class="header" href="#esempi-60">Esempi</a></h2>
 <table>
   
@@ -9821,9 +9844,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-61"><a class="header" href="#esempi-61">Esempi</a></h2>
 <table>
   
@@ -9982,9 +10005,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-62"><a class="header" href="#esempi-62">Esempi</a></h2>
 <table>
   
@@ -10143,9 +10166,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-63"><a class="header" href="#esempi-63">Esempi</a></h2>
 <table>
   
@@ -10304,9 +10327,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-64"><a class="header" href="#esempi-64">Esempi</a></h2>
 <table>
   
@@ -10471,9 +10494,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
-<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
+<li><code>¤ᵟ</code> = annotazioni opzionali (metadati) supportate da <code>Correction</code> (cf. <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/correction/index.html">Correzioni antiche</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-65"><a class="header" href="#esempi-65">Esempi</a></h2>
 <table>
   
@@ -10612,7 +10635,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="legature"><a class="header" href="#legature">Legature</a></h1>
-<p>Due o più lettere i cui tratti sono stati fusi o uniti dall’incisore in un unico segno grafico, condividendo solitamente un’asta comune.</p>
+<p>due o più lettere i cui tratti sono stati fusi o uniti dall’incisore in un unico segno grafico, condividendo solitamente un’asta comune.</p>
 <h4 id="delimitatori-10"><a class="header" href="#delimitatori-10">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -10687,13 +10710,13 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/ligature/index.html">Legature</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/ligature/index.html">Legature</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-66"><a class="header" href="#esempi-66">Esempi</a></h2>
 <table>
   
@@ -10825,7 +10848,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/ligature/index.html">Legature</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/ligature/index.html">Legature</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-67"><a class="header" href="#esempi-67">Esempi</a></h2>
 <table>
   
@@ -10966,7 +10989,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/ligature/index.html">Legature</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/ligature/index.html">Legature</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-68"><a class="header" href="#esempi-68">Esempi</a></h2>
 <table>
   
@@ -11107,7 +11130,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <li><code>γ</code> ∈ {<code>Low</code>, <code>High</code>, <code>Medium</code>} = livello di certezza corrispondente al marcatore adoperato in notazione.</li>
 <li><code>◇ᵟ</code> ∈ {<code>⯑</code>, <code>⯁</code>, <code>ε</code>} = resa del mercatore di incertezza/certezza in notazione o stringa vuota (<code>ε</code>).</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/phenomena/ligature/index.html">Legature</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/phenomena/ligature/index.html">Legature</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-69"><a class="header" href="#esempi-69">Esempi</a></h2>
 <table>
   
@@ -11228,7 +11251,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="abbreviazioni-e-loro-espansioni"><a class="header" href="#abbreviazioni-e-loro-espansioni">Abbreviazioni e loro espansioni</a></h1>
-<p>Fenomeni relativi a parole o formule abbreviate intenzionalmente dall’incisore, inclusi i segni di abbreviazione, le lettere sottintese e lo scioglimento critico operato dall’editore.</p>
+<p>fenomeni relativi a parole o formule abbreviate intenzionalmente dall’incisore, inclusi i segni di abbreviazione, le lettere sottintese e lo scioglimento critico operato dall’editore.</p>
 <p>I segni simbolici (logograms, eterogrammi, sigle) che in tradizioni editoriali precedenti venivano talvolta trattati come abbreviazioni sono discussi separatamente in @logograms-and-heterograms, in quanto rappresentano un fenomeno semiotico distinto dall’abbreviazione fonetico-grafemica.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="testo-abbreviato"><a class="header" href="#testo-abbreviato">Testo abbreviato</a></h1>
@@ -11273,7 +11296,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 </ul>
 <h2 id="esempi-70"><a class="header" href="#esempi-70">Esempi</a></h2>
@@ -12914,9 +12937,9 @@ Abbreviation[complete]
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="logogrammi-simboli-convenzionali-ed-eterogrammi"><a class="header" href="#logogrammi-simboli-convenzionali-ed-eterogrammi">Logogrammi, simboli convenzionali ed eterogrammi</a></h1>
-<p>Elementi grafici che rappresentano direttamente un’intera parola o un concetto, indipendentemente dalla loro realizzazione fonetica.</p>
-<p>La notazione è analoga a quella per l’individuazione di unità lessicali (cf. <a href="/docs/it/notation/atomic-textual-units/lexicalunit.html">Confine di unità lessicale</a>), a cui si aggiungono annotazioni
-linguistiche volte a definire la natura degli elementi grafici (per la trattazione estesa dell’annotazione linguistica cf. <a href="/docs/it/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Annotazione linguistica di un’unità lessicale</a>).</p>
+<p>elementi grafici che rappresentano direttamente un’intera parola o un concetto, indipendentemente dalla loro realizzazione fonetica.
+La notazione è analoga a quella per l’individuazione di unità lessicali (cf. <a href="../it/notation/atomic-textual-units/lexicalunit.html">Confine di unità lessicale</a>), a cui si aggiungono annotazioni
+linguistiche volte a definire la natura degli elementi grafici (per la trattazione estesa dell’annotazione linguistica cf. <a href="../it/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Annotazione linguistica di un’unità lessicale</a>).</p>
 <p>L’indicazione della funzione grafica dei segni (chiavi di metadato <code>graphic</code>, <code>function</code> o <code>gf</code>) avviene apponendo i seguenti possibili valori:</p>
 <ul>
 <li><code>lg</code> o <code>logogram</code>: logogramma o simbolo convenzionale — segno integrato nel sistema scrittorio corrente, la cui eventuale origine straniera è sincronicamente opaca.</li>
@@ -12982,7 +13005,7 @@ linguistiche volte a definire la natura degli elementi grafici (per la trattazio
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>fₛ</code> ∈ <code>["gf", "graphic", "function"]</code> = etichetta per la funzione grafica.</li>
 <li><code>fₗ</code> ∈ <code>["lg", "logogram"]</code> = valore della funzione grafica segnalante un logogramma.</li>
@@ -13323,7 +13346,7 @@ dipl=☧&amp;</code></pre>
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>fₛ</code> ∈ <code>["gf", "graphic", "function"]</code> = etichetta per la funzione grafica.</li>
 <li><code>fₕ</code> ∈ <code>["ht", "heterogram"]</code> = valore della funzione grafica segnalante un eterogramma.</li>
@@ -13532,7 +13555,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <ul>
 <li><strong>Incertezza</strong>: indica dubbio qualitativo sull’identità di fenomeni (es. <code>Unclear</code>, <code>Supplied</code>, <code>Erasure</code>) o dei relativi metadati.</li>
 <li><strong>Scarsa precisione</strong>: indica che la stima quantitativa di una lacuna (<code>Gap</code>) o di uno spazio vuoto (<code>Vacat</code>) è puramente indicativa.</li>
-<li><strong>Inferiorità assertiva</strong>: indica che l’asserzione espressa dall’editore è di magnitudine inferiore rispetto alla norma (#underline[stesso operatore ma semantica diversa, dunque cf. <a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/linkkind-preferred.html">Plausibilità decrescente fra <em>lectiones</em></a> per esempi e sintassi]).</li>
+<li><strong>Inferiorità assertiva</strong>: indica che l’asserzione espressa dall’editore è di magnitudine inferiore rispetto alla norma (#underline[stesso operatore ma semantica diversa, dunque cf. <a href="../it/notation/critical-editorial/interpretation/plausibilityassessment/linkkind-preferred.html">Plausibilità decrescente fra <em>lectiones</em></a> per esempi e sintassi]).</li>
 </ul>
 <h2 id="sintassi-87"><a class="header" href="#sintassi-87">Sintassi</a></h2>
 <p>Un punto interrogativo <code>?</code> posto alla fine della notazione di un fenomeno, obbligatoriamente all’interno degli eventuali delimitatori del fenomeno.</p>
@@ -13642,7 +13665,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <ul>
 <li><strong>Assoluta certezza</strong>: indica sicurezza qualitativa sull’identità di fenomeni (es. <code>Unclear</code>, <code>Supplied</code>, <code>Erasure</code>) o dei relativi metadati, spesso in presenza di letture difficili ma garantite.</li>
 <li><strong>Grande precisione</strong>: indica che la stima quantitativa di una lacuna (<code>Gap</code>) o di uno spazio vuoto (<code>Vacat</code>) è da considerarsi esatta e non approssimativa.</li>
-<li><strong>Superiorità assertiva</strong>: indica che l’asserzione espressa dall’editore è di magnitudine superiore rispetto alla norma (#underline[stesso operatore ma semantica diversa, dunque cf. <a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/linkkind-preferred.html">Plausibilità decrescente fra <em>lectiones</em></a> per esempi e sintassi]).</li>
+<li><strong>Superiorità assertiva</strong>: indica che l’asserzione espressa dall’editore è di magnitudine superiore rispetto alla norma (#underline[stesso operatore ma semantica diversa, dunque cf. <a href="../it/notation/critical-editorial/interpretation/plausibilityassessment/linkkind-preferred.html">Plausibilità decrescente fra <em>lectiones</em></a> per esempi e sintassi]).</li>
 </ul>
 <h2 id="sintassi-88"><a class="header" href="#sintassi-88">Sintassi</a></h2>
 <p>Un punto esclamativo <code>!</code> posto alla fine della notazione di un fenomeno, obbligatoriamente all’interno degli eventuali delimitatori del fenomeno.</p>
@@ -13748,7 +13771,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="valutazione-di-plausibilità-interpretativa"><a class="header" href="#valutazione-di-plausibilità-interpretativa">Valutazione di plausibilità interpretativa</a></h1>
-<p>Notazioni che permettono all’editore di strutturare il dubbio critico ordinando le <em>lectiones</em>#footnote[<a href="/docs/it/glossary.html">lectio</a>] alternative in base al loro grado di plausibilità, o di dichiararle semplicemente non confrontabili.</p>
+<p>Notazioni che permettono all’editore di strutturare il dubbio critico ordinando le <em>lectiones</em>#footnote[<a href="../it/glossary.html">lectio</a>] alternative in base al loro grado di plausibilità, o di dichiararle semplicemente non confrontabili.</p>
 <h4 id="delimitatori-12"><a class="header" href="#delimitatori-12">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -13838,7 +13861,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 [<code>∥</code>],
 [Le <em>lectiones</em> sono alternative non confrontabili: l’editore non esprime alcuna preferenza],
 )</p>
-<p>Quando l’editore vuole precisare l’entità del divario di plausibilità tra due <em>lectiones</em> consecutive, può apporre all’operatore <code>&gt;</code> un modificatore di grado: <code>?</code> (divario ridotto) o <code>!</code> (divario marcato). Si tratta dei medesimi modificatori usati per l’epistemicità assoluta (cf. <a href="/docs/it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">Valutazione di certezza o precisione</a>).</p>
+<p>Quando l’editore vuole precisare l’entità del divario di plausibilità tra due <em>lectiones</em> consecutive, può apporre all’operatore <code>&gt;</code> un modificatore di grado: <code>?</code> (divario ridotto) o <code>!</code> (divario marcato). Si tratta dei medesimi modificatori usati per l’epistemicità assoluta (cf. <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">Valutazione di certezza o precisione</a>).</p>
 <p>[<code>&gt;?</code>],
 [<code>≿</code>],
 [La <em>lectio</em> precedente è lievemente preferibile alla successiva: il divario di plausibilità è ridotto.],</p>
@@ -13846,7 +13869,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 [<code>⋟</code>],
 [La <em>lectio</em> precedente è nettamente preferibile alla successiva: il divario di plausibilità è marcato.],
 )</p>
-<p>Ogni relazione sussiste esclusivamente tra due <em>lectiones</em> adiacenti (una coppia). È possibile costruire catene di plausibilità anche con asserzioni miste, combinando liberamente <code>&gt;</code> e <code>|</code> (cf. <a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/plausibilityseq-mixed.html">Esempi di sequenze di plausibilità miste</a>).</p>
+<p>Ogni relazione sussiste esclusivamente tra due <em>lectiones</em> adiacenti (una coppia). È possibile costruire catene di plausibilità anche con asserzioni miste, combinando liberamente <code>&gt;</code> e <code>|</code> (cf. <a href="../it/notation/critical-editorial/interpretation/plausibilityassessment/plausibilityseq-mixed.html">Esempi di sequenze di plausibilità miste</a>).</p>
 <p><strong>Ricorrendo a un’analogia</strong></p>
 <p>Per comprendere la struttura di una catena di plausibilità, è utile ricorrere a una metafora architettonica. Ogni relazione tra due <em>lectiones</em> adiacenti rappresenta un elemento di un percorso che procede sempre da sinistra verso destra, in direzione discendente: la <em>lectio</em> più a sinistra è sempre la più plausibile.</p>
 <p>L’operatore <code>&gt;</code> introduce un <em>gradino discendente</em>, la cui ripidità è determinata dal modificatore di grado: <code>&gt;?</code> indica un gradino lieve, <code>&gt;</code> un gradino di entità media, <code>&gt;!</code> un gradino marcato. L’operatore <code>|</code>, invece, introduce un <em>pianerottolo</em>: le due <em>lectiones</em> si trovano allo stesso livello, senza che l’editore esprima alcuna preferenza tra loro.</p>
@@ -13886,7 +13909,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <li><strong>Nel corpo del testo</strong>: qualsiasi notazione valida per esprimere fenomeni IbiScript separata dall’operatore di plausibilità <code>&gt;</code> (opzionalmente connotato), il tutto racchiuso da segni di percentuale <code>%…%</code>.</li>
 <li><strong>Nelle annotazioni/metadati di fenomeno</strong>: qualsiasi serie di caratteri Unicode atta a esprimere puro testo (sigle e convenzioni filologiche, osservazioni linguistiche ecc.) separata dall’operatore di plausibilità <code>&gt;</code> (opzionalmente connotato), il tutto racchiuso da segni di percentuale <code>%…%</code>.</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-88"><a class="header" href="#esempi-88">Esempi</a></h2>
 <table>
   
@@ -14091,7 +14114,7 @@ Le righe 1--3 delle tabelle di esempio mostrano la gerarchia di plausibilità ap
 <li><strong>Nel corpo del testo</strong>: qualsiasi notazione valida per esprimere fenomeni IbiScript separata dall’operatore di plausibilità non data <code>|</code>, il tutto racchiuso da segni di percentuale <code>%…%</code>.</li>
 <li><strong>Nelle annotazioni/metadati di fenomeno</strong>: qualsiasi serie di caratteri Unicode atta a esprimere puro testo (sigle e convenzioni filologiche, osservazioni linguistiche ecc.) separata dall’operatore di plausibilità non data <code>|</code>, il tutto racchiuso da segni di percentuale <code>%…%</code>.</li>
 </ul>
-<p>Vedi <a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-89"><a class="header" href="#esempi-89">Esempi</a></h2>
 <table>
   
@@ -14193,7 +14216,7 @@ Le righe 1--3 delle tabelle di esempio mostrano la gerarchia di plausibilità ap
 Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicata a _lectiones_ nel corpo del testo (es. fenomeni epigrafici); la riga 2 mostra il caso d'uso nelle annotazioni, ossia tra i metadata opzionali supportati da alcuni fenomeni.<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="esempi-di-sequenze-di-plausibilità-miste"><a class="header" href="#esempi-di-sequenze-di-plausibilità-miste">Esempi di sequenze di plausibilità miste</a></h1>
 <p>Dimostrazione illustrativa di sequenze di plausibilità miste: serie di coppie interpretative dove l’editore esprime una plausibilità decrescente o non data fra le <em>lectiones</em>.</p>
-<p>Vedi <a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
+<p>Vedi <a href="../it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
 <h2 id="esempi-90"><a class="header" href="#esempi-90">Esempi</a></h2>
 <table>
   
@@ -14726,7 +14749,7 @@ Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicat
 </table>
 </div>
 <p>Qualunque sequenza di caratteri Unicode (che esprime un qualsiasi fenomeno filologico) seguita da un punto e virgola <code>;</code> e opzionalmente da un numero qualsiasi di annotazioni linguistiche (metadati) composte da una chiave (elencate più in basso), un segno di uguale <code>=</code> e un valore; il tutto racchiuso tra e commerciali <code>&amp;…&amp;</code>.</p>
-<p>La quasi totalità delle annotazioni supporta la notazione di scale di plausibilità, permettendo di formulare interpretazioni stratificate (cf. <a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a>).</p>
+<p>La quasi totalità delle annotazioni supporta la notazione di scale di plausibilità, permettendo di formulare interpretazioni stratificate (cf. <a href="../it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a>).</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -14739,7 +14762,7 @@ Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicat
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>λₛ</code> = etichetta (anche in forma abbreviata) per l’annotazione linguistica.</li>
 <li><code>λᵥ</code> = valore dell’annotazione linguistica (scala di plausibilità).</li>
@@ -15353,7 +15376,7 @@ Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicat
 <p>strumenti dedicati alla gestione dell’enfasi tipografica e all’inserimento di commenti metatestuali. Include marcatori per il rilievo grafico (grassetto, corsivo) e funzionalità di documentazione per uso interno (commenti su riga o a blocco) non destinati alla pubblicazione del testo critico.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="testo-in-corsivo-enfasi"><a class="header" href="#testo-in-corsivo-enfasi">Testo in corsivo (enfasi)</a></h1>
-<p>Testo reso in corsivo, utile a esempio nelle note d’apparato (cf. <a href="/docs/it/notation/critical-editorial/apparatus/apparatusnote.html">Nota di apparato</a>).</p>
+<p>Testo reso in corsivo, utile a esempio nelle note d’apparato (cf. <a href="../it/notation/critical-editorial/apparatus/apparatusnote.html">Nota di apparato</a>).</p>
 <h2 id="sintassi-95"><a class="header" href="#sintassi-95">Sintassi</a></h2>
 <p>Qualunque sequenza di caratteri Unicode racchiusa tra parentesi graffe <code>{…}</code> e preceduta dal comando <code>\i</code> (<em>italic</em>, corsivo).</p>
 <h2 id="panoramica-95"><a class="header" href="#panoramica-95">Panoramica</a></h2>
@@ -15368,7 +15391,7 @@ Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicat
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 </ul>
 <h2 id="esempi-95"><a class="header" href="#esempi-95">Esempi</a></h2>
@@ -15436,7 +15459,7 @@ Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicat
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="testo-in-grassetto"><a class="header" href="#testo-in-grassetto">Testo in grassetto</a></h1>
-<p>Testo reso in grassetto, utile a esempio nelle note d’apparato (cf. <a href="/docs/it/notation/critical-editorial/apparatus/apparatusnote.html">Nota di apparato</a>).</p>
+<p>Testo reso in grassetto, utile a esempio nelle note d’apparato (cf. <a href="../it/notation/critical-editorial/apparatus/apparatusnote.html">Nota di apparato</a>).</p>
 <h2 id="sintassi-96"><a class="header" href="#sintassi-96">Sintassi</a></h2>
 <p>Qualunque sequenza di caratteri Unicode racchiusa tra parentesi graffe <code>{…}</code> e preceduta dal comando <code>\b</code> (<em>bold</em>, grassetto).</p>
 <h2 id="panoramica-96"><a class="header" href="#panoramica-96">Panoramica</a></h2>
@@ -15451,7 +15474,7 @@ Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicat
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 </ul>
 <h2 id="esempi-96"><a class="header" href="#esempi-96">Esempi</a></h2>
@@ -15545,7 +15568,7 @@ Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicat
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>Tᶜᵟ</code> = tag di commento opzionale.</li>
 <li><code>Tᵥᵟ</code> = tag di commento opzionale validato.</li>
@@ -15628,7 +15651,7 @@ Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicat
 </table>
 </div>
 <ul>
-<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="/docs/it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
+<li><code>𝑆</code> = qualunque segno (carattere Unicode) ∉ <code>STOP_SET</code> (cf. <a href="../it/appendix/symbols.html">Catalogo tecnico dei simboli</a>) altrimenti preceduto dal carattere di escape <code>\</code>.</li>
 <li><code>𝑁</code> = numero di caratteri (rappresentato da segni o cifre).</li>
 <li><code>Tᶜᵟ</code> = tag di commento opzionale.</li>
 <li><code>Tᵥᵟ</code> = tag di commento opzionale validato.</li>
@@ -15970,7 +15993,7 @@ $
 </div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="sistemi-di-scrittura-supportati-per-linserimento-chiavevalore"><a class="header" href="#sistemi-di-scrittura-supportati-per-linserimento-chiavevalore">Sistemi di scrittura supportati per l’inserimento <code>chiave:valore</code></a></h1>
-<p>Elenco dei codici ISO 15924 afferenti ai sistemi di scrittura supportati da IbiScript per l’inserimento facilitato di caratteri Unicode. Il codice quadrilittero va inserito come chiave identificativa del sistema di scrittura scelto, al quale possono seguire dopo i due punti <code>:</code> gli alias nominali per ogni glifo, separati da virgole <code>,</code> qualora se ne vogliano inserire più di uno (cf. <a href="/docs/it/notation/atomic-textual-units/textual-signs/plain-coded.html">Segni codificati</a>).</p>
+<p>Elenco dei codici ISO 15924 afferenti ai sistemi di scrittura supportati da IbiScript per l’inserimento facilitato di caratteri Unicode. Il codice quadrilittero va inserito come chiave identificativa del sistema di scrittura scelto, al quale possono seguire dopo i due punti <code>:</code> gli alias nominali per ogni glifo, separati da virgole <code>,</code> qualora se ne vogliano inserire più di uno (cf. <a href="../it/notation/atomic-textual-units/textual-signs/plain-coded.html">Segni codificati</a>).</p>
 <p>Tutti i caratteri, anche quelli dei sistemi di scrittura non supportati, possono essere inseriti tramite il codice di carattere Unicode corrispondente.</p>
 <div class="table-wrapper">
 <table>
