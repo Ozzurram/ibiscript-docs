@@ -29,7 +29,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="ibiscript-481452b5.min.css">
+        <link rel="stylesheet" href="ibiscript-d656c9af.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -37,7 +37,7 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-e001a4db.js";
+            window.path_to_searchindex_js = "searchindex-658f03a6.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-d182858a.js"></script>
@@ -186,7 +186,7 @@
 <p>IbiScript restituisce all’editore il controllo immediato sul testo. Sviluppato in Rust e alimentato dal motore di parsing <strong>ANSELMUS</strong>, trasforma l’incertezza del reperto in un dato digitale solido, agendo come un’architettura del pensiero che modella il contributo epistemico del ricercatore.</p>
 <ul>
 <li><strong>Ermeneutica fluida</strong>: Codifica fenomeni epigrafici e apparato critico senza l’interferenza visiva dei tag XML.</li>
-<li><strong>Sussidiarietà tecnica</strong>: Generazione nativa di output EpiDoc, HTML, Typst PDF e Unicode; integrazione totale con l’ecosistema BEDA tramite WebAssembly.</li>
+<li><strong>Sussidiarietà tecnica</strong>: Generazione nativa di output EpiDoc, HTML, JSONL, Typst PDF e Unicode; integrazione totale con l’ecosistema BEDA tramite WebAssembly.</li>
 <li><strong>Rigore scientifico</strong>: Un ponte tra la fisicità del reperto e una memoria digitale condivisa, dove ogni segno è una tesi scientifica validata.</li>
 </ul>
 <p>Il nome fonde l’Ibis sacro di Thoth, custode della scrittura, con l’avverbio latino <em>ibi</em>: interrogare la parola “lì, in quel luogo”, sulla ruvida superficie della materia antica.</p>
@@ -15758,7 +15758,7 @@ Arguments:
   &lt;FILE&gt;  The .ibi source file to compile
 
 Options:
-  -f, --format &lt;FORMAT&gt;               The target output format [default: html] [possible values: unicode, html, epidoc, typst, pdf]
+  -f, --format &lt;FORMAT&gt;               The target output format [default: html] [possible values: unicode, html, epidoc, jsonl, typst, pdf]
   -o, --output &lt;OUTPUT&gt;               The output file path
       --inline-section-breaks         Inline section breaks instead of dropping them as block-level structural breaks
   -s, --lines &lt;SEMANTIC_LINE_FILTER&gt;  Extract specific semantic lines or ranges from the inscription (e.g., "2" or "4..5")
@@ -15883,11 +15883,12 @@ $
   <figcaption>Facsimile con alcune righe di testo evidenziate e mappate alle righe dell'iscrizione individuate da LineBreak in IbiScript.</figcaption>
 </figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="esportazione-nei-formati-di-diffusione-scientifica"><a class="header" href="#esportazione-nei-formati-di-diffusione-scientifica">Esportazione nei formati di diffusione scientifica</a></h1>
-<p>Il menu <code>Export</code> permette di convertire istantaneamente il file IbiScript in cinque formati standard per la ricerca e l’editoria:</p>
+<p>Il menu <code>Export</code> permette di convertire istantaneamente il file IbiScript in sei formati standard per la ricerca e l’editoria:</p>
 <ul>
 <li>testo Unicode puro per edizioni diplomatiche elementari;</li>
 <li>HTML per la pubblicazione diretta sul portale web;</li>
 <li>EpiDoc XML per garantire l’interoperabilità dei dati secondo i criteri internazionali delle Digital Humanities;</li>
+<li>JSONL per l’analisi relazionale e l’interrogazione ad alte prestazioni tramite database SQL (es. DuckDB);</li>
 <li>Typst e PDF, quest’ultimo viene compilato direttamente dal server a partire dal primo, offrendo un documento pronto per la stampa ad alta definizione tipografica.</li>
 </ul>
 <figure>
