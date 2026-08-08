@@ -36,7 +36,7 @@
             const path_to_root = "../../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../../searchindex-50878121.js";
+            window.path_to_searchindex_js = "../../../../searchindex-49237300.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../../../../toc-62e63e58.js"></script>
@@ -180,10 +180,16 @@
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <p>Any notation of a phenomenon (<code>IbiUnit</code>) allowed within <code>PreviousSeen</code>, thus enclosed between low lines <code>_…_</code> preceding a left round bracket <code>(</code>, marker of the abbreviation’s expansion.</p>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
-<p>[<code>_⊙‽ᵟ_(…)</code>],
-[<code>rust Written([PreviousSeen { ⊙, γ }])</code>],
-<code>⸤⊙⸥◇ᵟ</code>,
-)</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
+</thead>
+<tbody>
+<tr><td><code>_⊙‽ᵟ_(…)</code></td><td><code>Written([PreviousSeen { ⊙, γ }])</code></td><td><code>⸤⊙⸥◇ᵟ</code></td></tr>
+</tbody>
+</table>
+</div>
 <ul>
 <li><code>⊙</code> ∈ <code>PREVIOUS_SEEN_ALLOWED</code> = any phenomena allowed within <code>PreviousSeen</code> (notation, AST or rendering depending on its placement).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
