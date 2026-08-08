@@ -36,7 +36,7 @@
             const path_to_root = "../../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../../searchindex-658f03a6.js";
+            window.path_to_searchindex_js = "../../../../searchindex-d1eb0ba0.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../../../../toc-d182858a.js"></script>
@@ -180,10 +180,16 @@
 <h2 id="sintassi"><a class="header" href="#sintassi">Sintassi</a></h2>
 <p>Qualsiasi notazione di fenomeno (<code>IbiUnit</code>) ammessa all’interno di <code>PreviousSeen</code>, dunque racchiusa tra trattini bassi (underscore) <code>_…_</code> che precedono una parentesi tonda aperta <code>(</code>, marcatore dell’espansione dell’abbreviazione.</p>
 <h2 id="panoramica"><a class="header" href="#panoramica">Panoramica</a></h2>
-<p>[<code>_⊙‽ᵟ_(…)</code>],
-[<code>rust Written([PreviousSeen { ⊙, γ }])</code>],
-<code>⸤⊙⸥◇ᵟ</code>,
-)</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Notazione</th><th>AST Concettuale</th><th>Resa cartacea</th></tr>
+</thead>
+<tbody>
+<tr><td><code>_⊙‽ᵟ_(…)</code></td><td><code>Written([PreviousSeen { ⊙, γ }])</code></td><td><code>⸤⊙⸥◇ᵟ</code></td></tr>
+</tbody>
+</table>
+</div>
 <ul>
 <li><code>⊙</code> ∈ <code>PREVIOUS_SEEN_ALLOWED</code> = qualsiasi fenomeno ammesso all’interno di un <code>PreviousSeen</code> (notazione, AST o resa in base al collocamento).</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>
