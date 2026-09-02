@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-49237300.js";
+            window.path_to_searchindex_js = "../../../searchindex-fe8d23bd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-62e63e58.js"></script>
+        <script src="../../../toc-c4ff48a2.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -178,7 +178,7 @@
                         <h1 id="rasura-or-gap-in-erasure-of-known-extent"><a class="header" href="#rasura-or-gap-in-erasure-of-known-extent">Rasura (or Gap in Erasure) of Known Extent</a></h1>
 <p>A gap of known extent corresponding to an erasure or contained within an ancient erasure.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<p>The notation for a gap of known extent enclosed between double square brackets <code>[[…]]</code>.</p>
+<p>The <a href="../../../../en/notation/phenomena/gap/known.html">notation for a gap of known extent</a> enclosed between double square brackets <code>[[…]]</code>.</p>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
 <div class="table-wrapper">
 <table>
@@ -252,8 +252,10 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="low"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="5"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -261,8 +263,10 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="medium"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="2"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -270,8 +274,10 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="high"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="3"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>

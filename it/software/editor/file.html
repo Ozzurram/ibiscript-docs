@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d1eb0ba0.js";
+            window.path_to_searchindex_js = "../../searchindex-60928b87.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-d182858a.js"></script>
+        <script src="../../toc-a22df3b9.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -176,10 +176,11 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="gestione-dei-documenti-e-persistenza-dei-dati"><a class="header" href="#gestione-dei-documenti-e-persistenza-dei-dati">Gestione dei documenti e persistenza dei dati</a></h1>
-<p>Il menu <code>File</code> gestisce l’importazione e la salvaguardia dei dati epigrafici. L’editor permette di caricare file locali con estensione <code>.ibi</code> o testo piano. Per prevenire la perdita accidentale delle trascrizioni dovuta a chiusure improvvise della scheda del browser, l’ambiente integra un sistema di monitoraggio protettivo: in presenza di modifiche non salvate, qualsiasi tentativo di abbandono della pagina viene intercettato, richiedendo una conferma esplicita da parte dell’utente.</p>
-<figure>
+<p>Il menu <code>File</code> gestisce l’importazione e la salvaguardia dei dati epigrafici. L’editor permette di creare e caricare file <code>.ibi</code> e <code>.xml</code>. Per prevenire la perdita accidentale delle trascrizioni dovuta a chiusure improvvise della scheda del browser, l’ambiente integra un sistema di monitoraggio protettivo: in presenza di modifiche non salvate, qualsiasi tentativo di abbandono della pagina viene intercettato, richiedendo una conferma esplicita da parte dell’utente.</p>
+<p>Il tasto <code>Download Source</code> varia a seconda del tipo di file attualmente presente nel panello di inserimento (es. un sorgente IbiScript nella <a href="#fig-ibiscript-editor-menu-file">Figura 1</a>).</p>
+<figure id="fig-ibiscript-editor-menu-file" class="doc-figure">
   <img src="../../assets/figures/ibiscript-editor-menu-file.png">
-  <figcaption>Opzioni contenute nel menù File.</figcaption>
+  <figcaption>Opzioni contenute nel menù File, modalità IbiScript (.ibi).</figcaption>
 </figure>
                     </main>
 

@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-49237300.js";
+            window.path_to_searchindex_js = "../../searchindex-fe8d23bd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-62e63e58.js"></script>
+        <script src="../../toc-c4ff48a2.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -177,9 +177,13 @@
                     <main>
                         <h1 id="error-tolerance-in-the-dynamic-preview"><a class="header" href="#error-tolerance-in-the-dynamic-preview">Error Tolerance in the Dynamic Preview</a></h1>
 <p>The preview panel offers a real-time rendering of the web-ready edition. To prevent disruptions to the philological workflow, the interface adopts a strict error-tolerance policy during parsing: should a syntactically non-compliant string be entered, the system moves into a warning state. In this mode, the preview preserves the rendering of the last valid state intact, displaying a descriptive notification alongside it to facilitate the detection and correction of the anomaly.</p>
-<figure>
-  <img src="../../assets/figures/ibiscript-editor-error-message.png">
-  <figcaption>Error syntax warning: the user has entered an incomplete Unclear construct within Supplied.</figcaption>
+<figure id="fig-ibiscript-editor-error-ibi" class="doc-figure">
+  <img src="../../assets/figures/ibiscript-editor-error-ibi.png">
+  <figcaption>Error syntax warning, IbiScript mode (.ibi): the user has entered an incomplete Unclear construct within Supplied.</figcaption>
+</figure>
+<figure id="fig-ibiscript-editor-error-xml" class="doc-figure">
+  <img src="../../assets/figures/ibiscript-editor-error-xml.png">
+  <figcaption>Error syntax warning, EpiDoc mode (.xml): the user has entered an ibi element outside of the text element.</figcaption>
 </figure>
                     </main>
 

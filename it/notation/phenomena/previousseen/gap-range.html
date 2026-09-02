@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-d1eb0ba0.js";
+            window.path_to_searchindex_js = "../../../searchindex-60928b87.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-d182858a.js"></script>
+        <script src="../../../toc-a22df3b9.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -178,7 +178,7 @@
                         <h1 id="lacuna-con-intervallo-noto-vista-da-editori-precedenti"><a class="header" href="#lacuna-con-intervallo-noto-vista-da-editori-precedenti">Lacuna con intervallo noto vista da editori precedenti</a></h1>
 <p>Una lacuna la cui estensione è espressa come un intervallo numerico plausibile, vista da editori precedenti ma non più visibile sul supporto.</p>
 <h2 id="sintassi"><a class="header" href="#sintassi">Sintassi</a></h2>
-<p>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue la notazione della lacuna di intevallo noto, il tutto avvolto da trattini bassi <code>_…_</code>.</p>
+<p>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue la <a href="../../../../it/notation/phenomena/gap/range.html">notazione della lacuna di intevallo noto</a>, il tutto avvolto da trattini bassi <code>_…_</code>.</p>
 <h2 id="panoramica"><a class="header" href="#panoramica">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -254,7 +254,7 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;
-        &lt;gap reason="lost" atLeast="1" atMost="3" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="1" atMost="3"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -263,7 +263,7 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="low" source="#A"&gt;
-        &lt;gap reason="lost" atLeast="2" atMost="5" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="2" atMost="5"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -272,7 +272,7 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="high" source="#A #B"&gt;
-        &lt;gap reason="lost" atLeast="1" atMost="4" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="1" atMost="4"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>

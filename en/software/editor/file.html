@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-49237300.js";
+            window.path_to_searchindex_js = "../../searchindex-fe8d23bd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-62e63e58.js"></script>
+        <script src="../../toc-c4ff48a2.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -176,10 +176,11 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="document-management-and-data-persistence"><a class="header" href="#document-management-and-data-persistence">Document Management and Data Persistence</a></h1>
-<p>The <code>File</code> menu handles the import and preservation of epigraphic data. The editor allows local files bearing the <code>.ibi</code> or plain text extensions to be loaded. To prevent the accidental loss of transcriptions due to abrupt browser tab closure, the environment integrates a protective safeguard: if unsaved changes are present, any attempt to navigate away from the page is intercepted, prompting the user for explicit confirmation.</p>
-<figure>
+<p>The <code>File</code> menu handles the import and preservation of epigraphic data. The editor allows to create and load <code>.ibi</code> and <code>.xml</code> files. To prevent the accidental loss of transcriptions due to abrupt browser tab closure, the environment integrates a protective safeguard: if unsaved changes are present, any attempt to navigate away from the page is intercepted, prompting the user for explicit confirmation.</p>
+<p>The <code>Download Source</code> buttons changes depending on the type file currently contained in the editing panel (e.g. an IbiScript source in <a href="#fig-ibiscript-editor-menu-file">Figura 1</a>).</p>
+<figure id="fig-ibiscript-editor-menu-file" class="doc-figure">
   <img src="../../assets/figures/ibiscript-editor-menu-file.png">
-  <figcaption>Options contained in the File menu.</figcaption>
+  <figcaption>Options contained in the File menu, IbiScript mode (.ibi).</figcaption>
 </figure>
                     </main>
 

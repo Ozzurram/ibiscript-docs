@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-49237300.js";
+            window.path_to_searchindex_js = "../../../searchindex-fe8d23bd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-62e63e58.js"></script>
+        <script src="../../../toc-c4ff48a2.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -185,8 +185,7 @@
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&amp;𝑆×𝑁;fₛ=fₕ;…&amp;</code></td><td>`LexicalUnit([𝘜], LinguisticAnalysis[</td><td></td></tr>
-<tr><td>fₖ:fₕ,…])`</td><td><code>𝑆×𝑁</code></td><td></td></tr>
+<tr><td><code>&amp;𝑆×𝑁;fₛ=fₕ;…&amp;</code></td><td><code>LexicalUnit([𝘜], LinguisticAnalysis[fₖ:fₕ,…])</code></td><td><code>𝑆×𝑁</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -198,7 +197,6 @@
 <li><code>fₖ</code> = canonical key for the graphic function derived from the corresponding label.</li>
 </ul>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<h2 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h2>
 <p>Any number of Unicode characters  constituting the logogram followed by a semicolon <code>;</code> (representing any sequence of <code>IbiUnit</code> variants), followed by one of the keys indicating the graphic function (<code>graphic</code>, <code>function</code> or <code>gf</code>), an equal sign <code>=</code> and the value <code>ht</code> (or <code>heterogram</code>); all enclosed within ampersands <code>&amp;…&amp;</code>.</p>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <table>

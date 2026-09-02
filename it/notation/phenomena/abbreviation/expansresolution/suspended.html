@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../../searchindex-d1eb0ba0.js";
+            window.path_to_searchindex_js = "../../../../searchindex-60928b87.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../../toc-d182858a.js"></script>
+        <script src="../../../../toc-a22df3b9.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -179,7 +179,7 @@
 <p>Un’abbreviazione plurimembre composta da una serie di parti leggibili sul supporto (sospensioni) seguite dalle rispettive integrazioni editoriali tra parentesi tonde.</p>
 <h2 id="sintassi"><a class="header" href="#sintassi">Sintassi</a></h2>
 <p>Una o più sequenze di <code>Abbreviated Text</code> seguite dai rispettivi <code>Expansion Components</code>.</p>
-<p>Nel caso di abbreviazioni sospese, la notazione di <code>LexicalUnit</code> tra e commerciali <code>&amp;...&amp;</code> è l’unico modo per indicare esplicitamente che la sequenza di abbreviazioni costituisce un’unica unità lessicale (es. <code>&amp;q(uin)q(uennalis)&amp;</code>).</p>
+<p>Nel caso di abbreviazioni sospese, la notazione di <a href="../../../../../it/notation/atomic-textual-units/lexicalunit.html"><code>LexicalUnit</code></a> tra e commerciali <code>&amp;...&amp;</code> è l’unico modo per indicare esplicitamente che la sequenza di abbreviazioni costituisce un’unica unità lessicale (es. <code>&amp;q(uin)q(uennalis)&amp;</code>).</p>
 <h2 id="panoramica"><a class="header" href="#panoramica">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -233,11 +233,7 @@
 <pre><code class="language-text">proco(n)s(ul)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;proco&lt;/abbr&gt;
-        &lt;ex&gt;n&lt;/ex&gt;
-        &lt;abbr&gt;s&lt;/abbr&gt;
-        &lt;ex&gt;ul&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;proco&lt;/abbr&gt;&lt;ex&gt;n&lt;/ex&gt;&lt;abbr&gt;s&lt;/abbr&gt;&lt;ex&gt;ul&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
