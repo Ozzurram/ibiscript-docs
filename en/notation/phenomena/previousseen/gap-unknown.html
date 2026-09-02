@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-49237300.js";
+            window.path_to_searchindex_js = "../../../searchindex-fe8d23bd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-62e63e58.js"></script>
+        <script src="../../../toc-c4ff48a2.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -178,7 +178,7 @@
                         <h1 id="gap-of-unknown-extent-seen-by-previous-editors"><a class="header" href="#gap-of-unknown-extent-seen-by-previous-editors">Gap of Unknown Extent Seen by Previous Editors</a></h1>
 <p>A gap of unknown extent seen by earlier editors but no longer visible on the support.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<p>An optional sequence of witness identifiers separated by semicolons <code>;</code> interrupted by a colon <code>:</code>, followed by the notation for a gap of unknwon extent, all wrapped by low lines <code>_…_</code>.</p>
+<p>An optional sequence of witness identifiers separated by semicolons <code>;</code> interrupted by a colon <code>:</code>, followed by the <a href="../../../../en/notation/phenomena/gap/unknown.html">notation for a gap of unknwon extent</a>, all wrapped by low lines <code>_…_</code>.</p>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
 <div class="table-wrapper">
 <table>
@@ -254,7 +254,7 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -263,7 +263,7 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="low" source="#A"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -272,7 +272,7 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="high" source="#A #B"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>

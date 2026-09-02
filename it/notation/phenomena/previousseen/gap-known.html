@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-d1eb0ba0.js";
+            window.path_to_searchindex_js = "../../../searchindex-60928b87.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-d182858a.js"></script>
+        <script src="../../../toc-a22df3b9.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -179,7 +179,7 @@
 <p>Una lacuna di ampiezza nota vista da editori precedenti, ma non più visibile sul supporto. L’editore indica un numero preciso di caratteri mancanti ripetendo un segno di lacuna all’interno di parentesi quadre.</p>
 <h2 id="sintassi"><a class="header" href="#sintassi">Sintassi</a></h2>
 <ul>
-<li>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue la notazione della lacuna di estensione nota, il tutto avvolto da trattini bassi <code>_…_</code>.</li>
+<li>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue la <a href="../../../../it/notation/phenomena/gap/known.html">notazione della lacuna di estensione nota</a>, il tutto avvolto da trattini bassi <code>_…_</code>.</li>
 </ul>
 <h2 id="panoramica"><a class="header" href="#panoramica">Panoramica</a></h2>
 <div class="table-wrapper">
@@ -256,7 +256,7 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="low"&gt;
-        &lt;gap reason="lost" quantity="7" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="7"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -265,7 +265,7 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="medium" source="#A"&gt;
-        &lt;gap reason="lost" quantity="4" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="4"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -274,7 +274,7 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="high" source="#A #B"&gt;
-        &lt;gap reason="lost" quantity="2" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="2"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>

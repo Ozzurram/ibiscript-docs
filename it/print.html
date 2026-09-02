@@ -29,7 +29,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -37,10 +37,10 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-d1eb0ba0.js";
+            window.path_to_searchindex_js = "searchindex-60928b87.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-d182858a.js"></script>
+        <script src="toc-a22df3b9.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -190,16 +190,18 @@
 <li><strong>Rigore scientifico</strong>: Un ponte tra la fisicità del reperto e una memoria digitale condivisa, dove ogni segno è una tesi scientifica validata.</li>
 </ul>
 <p>Il nome fonde l’Ibis sacro di Thoth, custode della scrittura, con l’avverbio latino <em>ibi</em>: interrogare la parola “lì, in quel luogo”, sulla ruvida superficie della materia antica.</p>
-<figure>
+<figure id="fig-ibiscript-pipeline-it" class="doc-figure">
   <img src="assets/figures/ibiscript-pipeline-it.png">
   <figcaption>Diagramma del flusso di elaborazione di IbiScript.</figcaption>
 </figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="guida-alla-notazione"><a class="header" href="#guida-alla-notazione">Guida alla notazione</a></h1>
 <p>La presente guida è strutturata secondo la logica incrementale del sistema ANSELMUS, riflettendo il passaggio dal dato materiale all’interpretazione editoriale.</p>
-<p><strong><strong>Unità testuali atomiche</strong></strong> — Unità minime di segmentazione testuale e che non possono contenere o annidare altre annotazioni al loro interno.</p>
-<p><strong><strong>Fenomeni</strong></strong> — Insieme delle notazioni atte a descrivere lo stato della tradizione testuale, le condizioni del supporto e le variazioni occorse durante la genesi o la trasmissione del testo.</p>
-<p><strong><strong>Corredo editoriale e critico</strong></strong> — Insieme delle notazioni per i fenomeni meta-testuali che costituiscono l’analisi filologica del testo iscritto. Include le valutazioni di epistemicità e di plausibilità interpretativa, le note di apparato critico discorsive, le annotazioni linguistiche e la bibliografia.</p>
-<p><strong><strong>Formattazione e annotazione interna</strong></strong> — Strumenti dedicati alla gestione dell’enfasi tipografica e all’inserimento di commenti metatestuali. Include marcatori per il rilievo grafico (grassetto, corsivo) e funzionalità di documentazione per uso interno (commenti su riga o a blocco) non destinati alla pubblicazione del testo critico.</p>
+<ul>
+<li><a href="../it/notation/atomic-textual-units/index.html"><strong>Unità testuali atomiche</strong></a> — Unità minime di segmentazione testuale e che non possono contenere o annidare altre annotazioni al loro interno.</li>
+<li><a href="../it/notation/phenomena/index.html"><strong>Fenomeni</strong></a> — Insieme delle notazioni atte a descrivere lo stato della tradizione testuale, le condizioni del supporto e le variazioni occorse durante la genesi o la trasmissione del testo.</li>
+<li><a href="../it/notation/critical-editorial/index.html"><strong>Corredo editoriale e critico</strong></a> — Insieme delle notazioni per i fenomeni meta-testuali che costituiscono l’analisi filologica del testo iscritto. Include le valutazioni di epistemicità e di plausibilità interpretativa, le note di apparato critico discorsive, le annotazioni linguistiche e la bibliografia.</li>
+<li><a href="../it/notation/formatting-internal-annotation/index.html"><strong>Formattazione e annotazione interna</strong></a> — Strumenti dedicati alla gestione dell’enfasi tipografica e all’inserimento di commenti metatestuali. Include marcatori per il rilievo grafico (grassetto, corsivo) e funzionalità di documentazione per uso interno (commenti su riga o a blocco) non destinati alla pubblicazione del testo critico.</li>
+</ul>
 <p>Ogni fenomeno è documentato in modo atomico, elencando sistematicamente le combinazioni previste dall’AST. Tuttavia, per ragioni di leggibilità, la trattazione segue una profondità massima di due livelli di annidamento: quando un fenomeno A può contenere un fenomeno B, il manuale illustra il caso <code>A(B)</code> nella sezione dedicata ad A, rimandando alla sezione di B per la trattazione completa di ciò che B può a sua volta contenere.</p>
 <p>Salvo diversa indicazione, qualsiasi fenomeno che ammetta contenuto interno accetta tutti i fenomeni compatibili con la distinzione fisico/editoriale documentata in ciascuna sezione.</p>
 <div style="break-before: page; page-break-before: always;"></div>
@@ -683,7 +685,7 @@ IbiScript consente la rappresentazione nativa di qualsiasi carattere Unicode, ma
 
 </table>
 
-IbiScript consente la rappresentazione in forma codificata di qualunque carattere Unicode purché si conosca il codice di carattere Unicode corrispondente (cf. esempio 1).
+<p>IbiScript consente la rappresentazione in forma codificata di qualunque carattere Unicode purché si conosca il codice di carattere Unicode corrispondente (cf. esempio 1).</p>
 <p>Eppure il sistema di inserimento più conveniente e sicuro è quello a <code>chiave:valore</code>, che IbiScript rende possibile per 111 sistemi di scrittura moderni e storici (cf. <a href="../it/appendix/ws-iso-codes.html">Sistemi di scrittura supportati per l’inserimento <code>chiave:valore</code></a> per l’elenco dei codici completo). Ciascun carattere Unicode è indicabile tramite uno o più alias nominali che si rifanno ai nomi di carattere ufficiali, opportunamente mondati del superfluo; le forme numerali, in particolare, possono essere scritte anche facendo ricorso diretto alle cifre numeriche (cf. esempio 2). Non è necessario ripetere il codice ISO 15924 prima di ogni alias nominale (cf. esempi 3–8), in quanto la sequenza è riconosciuta automaticamente (cf. esempio 9 per un caso di ripetizione esplicita con spazi opzionali dopo i punti e virgola).</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="spazio-bianco"><a class="header" href="#spazio-bianco">Spazio bianco</a></h1>
@@ -693,7 +695,7 @@ Le seguenti regole definiscono uno spazio bianco come significativo:</p>
 <li>isolato nel testo semplice (cf. esempio 1).</li>
 <li>inserito nel testo semplice tra blocchi di testo come separatore di parole (cf. esempio 2).</li>
 <li>inserito all’interno di blocchi di fenomeni epigrafici o fenomeni epigrafici nidificati (cf. esempio 3).</li>
-<li>inserito, anche singolarmente, all’interno di un fenomeno <code>Omitted</code> per esprimere l’omissione deliberata di uno spazio da parte dello scriba (cf. esempio 4).
+<li>inserito, anche singolarmente, all’interno di un fenomeno <a href="../it/notation/phenomena/omitted/whitespace.html"><code>Omitted</code></a> per esprimere l’omissione deliberata di uno spazio da parte dello scriba (cf. esempio 4).
 Gli spazi bianchi prima o dopo i delimitatori non sono considerati significativi e vengono pertanto ignorati, trattati con permissività come refusi editoriali.</li>
 </ul>
 <h2 id="sintassi-2"><a class="header" href="#sintassi-2">Sintassi</a></h2>
@@ -1014,7 +1016,7 @@ Plain("def")
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="interruzione-di-parola"><a class="header" href="#interruzione-di-parola">Interruzione di parola</a></h1>
 <p>indica un’interruzione di parola, ossia il punto esatto in cui una sequenza di segni o una parola si interrompe, ad esempio a causa di un fine riga o di una frattura fisica nel supporto epigrafico.
-Questo nodo descrive unicamente un evento grafico o posizionale e non implica una divisione dal punto di vista linguistico: l’effettiva separazione o categorizzazione delle unità lessicali è infatti gestita per mezzo della specifica notazione fornita da <code>LexicalUnit</code>.</p>
+Questo nodo descrive unicamente un evento grafico o posizionale e non implica una divisione dal punto di vista linguistico: l’effettiva separazione o categorizzazione delle unità lessicali è infatti gestita per mezzo della specifica notazione fornita da <a href="../it/notation/atomic-textual-units/lexicalunit.html"><code>LexicalUnit</code></a>.</p>
 <h2 id="sintassi-4"><a class="header" href="#sintassi-4">Sintassi</a></h2>
 <p>Un trattino <code>-</code>.</p>
 <h2 id="panoramica-4"><a class="header" href="#panoramica-4">Panoramica</a></h2>
@@ -1384,7 +1386,7 @@ LineBreak
 <h1 id="suddivisione-testuale"><a class="header" href="#suddivisione-testuale">Suddivisione testuale</a></h1>
 <p>indica che il testo seguente è parte della sottosezione indicata dalla notazione.</p>
 <h2 id="sintassi-7"><a class="header" href="#sintassi-7">Sintassi</a></h2>
-<p>Qualsiasi chiave di metadato valida (elencate più in basso) seguita da un segno di uguale <code>=</code>, da un identificativo in testo libero della suddivisione testuale prescelta e dalla notazione opzionale di certezza, il tutto racchiuso tra simboli di dollaro <code>$…$</code>.</p>
+<p>Qualsiasi chiave di metadato valida (elencate più in basso) seguita da un segno di uguale <code>=</code>, da un identificativo in testo libero della suddivisione testuale prescelta e dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di certezza</a>, il tutto racchiuso tra simboli di dollaro <code>$…$</code>.</p>
 <h2 id="panoramica-7"><a class="header" href="#panoramica-7">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -1521,7 +1523,7 @@ LineBreak
 <p>il confine logico di un’unità lessicale (<em>word</em>).
 Viene utilizzato per marcare la fine di una parola indipendentemente dalla sua disposizione fisica sul supporto, permettendo al sistema di ricomporre unità divise da fratture o interruzioni di riga.</p>
 <h2 id="sintassi-8"><a class="header" href="#sintassi-8">Sintassi</a></h2>
-<p>Qualunque numero di caratteri Unicode racchiusi tra e commerciale <code>&amp;…&amp;</code>. Opzionalmente, annotazioni linguistiche possono seguire dopo un punto e virgola <code>;</code>.</p>
+<p>Qualunque numero di caratteri Unicode racchiusi tra e commerciali <code>&amp;…&amp;</code>. Opzionalmente, annotazioni linguistiche possono seguire dopo un punto e virgola <code>;</code>.</p>
 <p>Qualora si voglia individuare facilmente una serie di unità lessicali, è possibile racchiudere la serie tra e commerciali <code>&amp;…&amp;</code> e separare le unità tramite la barra obliqua <code>/</code>.</p>
 <h2 id="panoramica-8"><a class="header" href="#panoramica-8">Panoramica</a></h2>
 <div class="table-wrapper">
@@ -1754,7 +1756,7 @@ abc defg  hijk l
 <h1 id="segni-o-spazi-non-incisi-v-o-vac"><a class="header" href="#segni-o-spazi-non-incisi-v-o-vac">Segni o spazi non incisi (v. o vac.)</a></h1>
 <p>segni non incisi o spazi vuoti.</p>
 <h2 id="sintassi-9"><a class="header" href="#sintassi-9">Sintassi</a></h2>
-<p>Il segno maggiore di <code>&gt;</code> seguito dalla lettera <code>c</code> di “carattere” e da un numero corrispondente al conteggio di caratteri (seguito dalla notazione opzionale di precisione), il tutto racchiuso tra parentesi quadre <code>[…]</code>.</p>
+<p>Il segno maggiore di <code>&gt;</code> seguito dalla lettera <code>c</code> di “carattere” e da un numero corrispondente al conteggio di caratteri (seguito dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di precisione</a>), il tutto racchiuso tra parentesi quadre <code>[…]</code>.</p>
 <h2 id="panoramica-9"><a class="header" href="#panoramica-9">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -1905,7 +1907,7 @@ abc defg  hijk l
 <h1 id="parte-rimanente-della-riga-non-incisa-vacat"><a class="header" href="#parte-rimanente-della-riga-non-incisa-vacat">Parte rimanente della riga non incisa (vacat)</a></h1>
 <p>la parte rimanente della riga non incisa.</p>
 <h2 id="sintassi-10"><a class="header" href="#sintassi-10">Sintassi</a></h2>
-<p>Il segno maggiore di <code>&gt;</code> seguito dalla lettera <code>l</code> di “linea” e da un numero corrispondente al conteggio di caratteri (seguito dalla notazione opzionale di precisione), il tutto racchiuso tra parentesi quadre <code>[…]</code>.</p>
+<p>Il segno maggiore di <code>&gt;</code> seguito dalla lettera <code>l</code> di “linea” e da un numero corrispondente al conteggio di caratteri (seguito dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di precisione</a>), il tutto racchiuso tra parentesi quadre <code>[…]</code>.</p>
 <h2 id="panoramica-10"><a class="header" href="#panoramica-10">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -2083,7 +2085,7 @@ abc defg  hijk l
 <h1 id="lacuna-di-ampiezza-nota"><a class="header" href="#lacuna-di-ampiezza-nota">Lacuna di ampiezza nota</a></h1>
 <p>una lacuna di estensione nota. L’editore indica un numero preciso di caratteri mancanti ripetendo un segno di lacuna all’interno delle parentesi quadre.</p>
 <h2 id="sintassi-11"><a class="header" href="#sintassi-11">Sintassi</a></h2>
-<p>Qualunque numero naturale affiancato da doppi punti fermi <code>.….</code>, seguito dalla notazione opzionale di precisione e racchiuso tra parentesi quadre <code>[…]</code>.</p>
+<p>Qualunque numero naturale affiancato da doppi punti fermi <code>.….</code>, seguito dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di precisione</a> e racchiuso tra parentesi quadre <code>[…]</code>.</p>
 <h2 id="panoramica-11"><a class="header" href="#panoramica-11">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -2156,7 +2158,7 @@ abc defg  hijk l
 <pre><code class="language-text">[.7.]</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;gap reason="lost" quantity="7" unit="character" precision="medium"/&gt;
+    &lt;gap reason="lost" unit="character" precision="medium" quantity="7"/&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -2214,7 +2216,7 @@ abc defg  hijk l
 <h1 id="lacuna-di-intervallo-noto"><a class="header" href="#lacuna-di-intervallo-noto">Lacuna di intervallo noto</a></h1>
 <p>una lacuna la cui estensione è espressa come un intervallo numerico plausibile.</p>
 <h2 id="sintassi-12"><a class="header" href="#sintassi-12">Sintassi</a></h2>
-<p>Qualunque coppia di numeri naturali separati da un trattino <code>-</code> (seguita dalla notazione opzionale di precisione) e racchiusa tra parentesi quadre <code>[…]</code>.</p>
+<p>Qualunque coppia di numeri naturali separati da un trattino <code>-</code> (seguita dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di precisione</a>) e racchiusa tra parentesi quadre <code>[…]</code>.</p>
 <h2 id="panoramica-12"><a class="header" href="#panoramica-12">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -2288,21 +2290,21 @@ abc defg  hijk l
 <pre><code class="language-text">[1-3]</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;gap reason="lost" atLeast="1" atMost="3" unit="character" precision="medium"/&gt;
+    &lt;gap reason="lost" unit="character" precision="medium" atLeast="1" atMost="3"/&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
 <pre><code class="language-text">[2-4?]</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;gap reason="lost" atLeast="2" atMost="4" unit="character" precision="low"/&gt;
+    &lt;gap reason="lost" unit="character" precision="low" atLeast="2" atMost="4"/&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
 <pre><code class="language-text">[5-6!]</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;gap reason="lost" atLeast="5" atMost="6" unit="character" precision="high"/&gt;
+    &lt;gap reason="lost" unit="character" precision="high" atLeast="5" atMost="6"/&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -2417,21 +2419,21 @@ abc defg  hijk l
 <pre><code class="language-text">[]</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+    &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
 <pre><code class="language-text">[?]</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;gap reason="lost" extent="unknown" unit="character" precision="low"/&gt;
+    &lt;gap reason="lost" unit="character" precision="low" extent="unknown"/&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
 <pre><code class="language-text">[!]</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;gap reason="lost" extent="unknown" unit="character" precision="high"/&gt;
+    &lt;gap reason="lost" unit="character" precision="high" extent="unknown"/&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -2555,7 +2557,7 @@ abc defg  hijk l
 <h1 id="segni-incerti-a-testo"><a class="header" href="#segni-incerti-a-testo">Segni incerti a testo</a></h1>
 <p>Segni le cui tracce superstiti sul supporto sono sufficientemente leggibili per essere identificate, ma per i quali sono possibili letture alternative.</p>
 <h2 id="sintassi-15"><a class="header" href="#sintassi-15">Sintassi</a></h2>
-<p>Qualunque sequenza di caratteri Unicode (seguita dalla notazione opzionale di certezza) racchiusa tra asterischi <code>*…*</code>. Lo speciale operatore opzionale <code>"</code>, da porre prima del delimitatore finale, può essere utilizzato per indicare una lettura particolarmente difficile.</p>
+<p>Qualunque sequenza di caratteri Unicode (seguita dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di certezza</a>) racchiusa tra asterischi <code>*…*</code>. Lo speciale operatore opzionale <code>"</code>, da porre prima del delimitatore finale, può essere utilizzato per indicare una lettura particolarmente difficile.</p>
 <h2 id="panoramica-15"><a class="header" href="#panoramica-15">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -3016,7 +3018,7 @@ abc defg  hijk l
 <h1 id="segni-integrati-a-testo"><a class="header" href="#segni-integrati-a-testo">Segni integrati a testo</a></h1>
 <p>Segni integrati dall’editore, ricostruiti come originariamente incisi ma oggi perduti.</p>
 <h2 id="sintassi-17"><a class="header" href="#sintassi-17">Sintassi</a></h2>
-<p>Qualunque sequenza di caratteri Unicode (seguita dalla notazione opzionale di certezza) racchiusa tra parentesi quadre <code>[…]</code>.</p>
+<p>Qualunque sequenza di caratteri Unicode (seguita dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di certezza</a>) racchiusa tra parentesi quadre <code>[…]</code>.</p>
 <h2 id="panoramica-17"><a class="header" href="#panoramica-17">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -3190,7 +3192,7 @@ abc defg  hijk l
 <h1 id="segni-visti-da-editori-precedenti"><a class="header" href="#segni-visti-da-editori-precedenti">Segni visti da editori precedenti</a></h1>
 <p>Segni visti da editori precedenti ma non più visibili sul supporto.</p>
 <h2 id="sintassi-18"><a class="header" href="#sintassi-18">Sintassi</a></h2>
-<p>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue una qualunque sequenza di caratteri Unicode (seguita dalla notazione opzionale di certezza) racchiusa tra trattini bassi <code>_…_</code>.</p>
+<p>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue una qualunque sequenza di caratteri Unicode (seguita dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di certezza</a>) racchiusa tra trattini bassi <code>_…_</code>.</p>
 <h2 id="panoramica-18"><a class="header" href="#panoramica-18">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -3327,7 +3329,7 @@ abc defg  hijk l
 <p>Una lacuna di ampiezza nota vista da editori precedenti, ma non più visibile sul supporto. L’editore indica un numero preciso di caratteri mancanti ripetendo un segno di lacuna all’interno di parentesi quadre.</p>
 <h2 id="sintassi-19"><a class="header" href="#sintassi-19">Sintassi</a></h2>
 <ul>
-<li>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue la notazione della lacuna di estensione nota, il tutto avvolto da trattini bassi <code>_…_</code>.</li>
+<li>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue la <a href="../it/notation/phenomena/gap/known.html">notazione della lacuna di estensione nota</a>, il tutto avvolto da trattini bassi <code>_…_</code>.</li>
 </ul>
 <h2 id="panoramica-19"><a class="header" href="#panoramica-19">Panoramica</a></h2>
 <div class="table-wrapper">
@@ -3404,7 +3406,7 @@ abc defg  hijk l
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="low"&gt;
-        &lt;gap reason="lost" quantity="7" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="7"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -3413,7 +3415,7 @@ abc defg  hijk l
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="medium" source="#A"&gt;
-        &lt;gap reason="lost" quantity="4" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="4"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -3422,7 +3424,7 @@ abc defg  hijk l
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="high" source="#A #B"&gt;
-        &lt;gap reason="lost" quantity="2" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="2"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -3468,7 +3470,7 @@ abc defg  hijk l
 <h1 id="lacuna-con-intervallo-noto-vista-da-editori-precedenti"><a class="header" href="#lacuna-con-intervallo-noto-vista-da-editori-precedenti">Lacuna con intervallo noto vista da editori precedenti</a></h1>
 <p>Una lacuna la cui estensione è espressa come un intervallo numerico plausibile, vista da editori precedenti ma non più visibile sul supporto.</p>
 <h2 id="sintassi-20"><a class="header" href="#sintassi-20">Sintassi</a></h2>
-<p>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue la notazione della lacuna di intevallo noto, il tutto avvolto da trattini bassi <code>_…_</code>.</p>
+<p>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue la <a href="../it/notation/phenomena/gap/range.html">notazione della lacuna di intevallo noto</a>, il tutto avvolto da trattini bassi <code>_…_</code>.</p>
 <h2 id="panoramica-20"><a class="header" href="#panoramica-20">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -3544,7 +3546,7 @@ abc defg  hijk l
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;
-        &lt;gap reason="lost" atLeast="1" atMost="3" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="1" atMost="3"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -3553,7 +3555,7 @@ abc defg  hijk l
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="low" source="#A"&gt;
-        &lt;gap reason="lost" atLeast="2" atMost="5" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="2" atMost="5"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -3562,7 +3564,7 @@ abc defg  hijk l
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="high" source="#A #B"&gt;
-        &lt;gap reason="lost" atLeast="1" atMost="4" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="1" atMost="4"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -3608,7 +3610,7 @@ abc defg  hijk l
 <h1 id="lacuna-di-estensione-ignota-vista-da-editori-precedenti"><a class="header" href="#lacuna-di-estensione-ignota-vista-da-editori-precedenti">Lacuna di estensione ignota vista da editori precedenti</a></h1>
 <p>Una lacuna di estensione ignota vista da editori precedenti, ma non più visibile sul supporto.</p>
 <h2 id="sintassi-21"><a class="header" href="#sintassi-21">Sintassi</a></h2>
-<p>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue la notazione della lacuna di estensione ignota, il tutto avvolto da trattini bassi <code>_…_</code>.</p>
+<p>Una sequenza opzionale di identificativi di testimoni separati da punti e virgola <code>;</code> interrotta da due punti <code>:</code>, cui segue la <a href="../it/notation/phenomena/gap/unknown.html">notazione della lacuna di estensione ignota</a>, il tutto avvolto da trattini bassi <code>_…_</code>.</p>
 <h2 id="panoramica-21"><a class="header" href="#panoramica-21">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -3684,7 +3686,7 @@ abc defg  hijk l
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -3693,7 +3695,7 @@ abc defg  hijk l
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="low" source="#A"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -3702,7 +3704,7 @@ abc defg  hijk l
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="high" source="#A #B"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
     &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -3825,9 +3827,9 @@ abc defg  hijk l
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;
         &lt;del cert="medium"&gt;
-        &lt;/supplied&gt;
-    &lt;/del&gt;
-&lt;/supplied&gt;
+            &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+        &lt;/del&gt;
+    &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -3836,9 +3838,9 @@ abc defg  hijk l
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="low" source="#A"&gt;
         &lt;del cert="medium"&gt;
-        &lt;/supplied&gt;
-    &lt;/del&gt;
-&lt;/supplied&gt;
+            &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+        &lt;/del&gt;
+    &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -3847,9 +3849,9 @@ abc defg  hijk l
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" evidence="previouseditor" cert="high" source="#A #B"&gt;
         &lt;del cert="medium"&gt;
-        &lt;/supplied&gt;
-    &lt;/del&gt;
-&lt;/supplied&gt;
+            &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+        &lt;/del&gt;
+    &lt;/supplied&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -4075,7 +4077,7 @@ abc defg  hijk l
 <h1 id="segni-omessi"><a class="header" href="#segni-omessi">Segni omessi</a></h1>
 <p>Segni a testo aggiunti dall’editore che l’incisore del testo ha omesso o per i quali ha inciso per errore altri segni.</p>
 <h2 id="sintassi-24"><a class="header" href="#sintassi-24">Sintassi</a></h2>
-<p>Qualunque sequenza di caratteri Unicode (seguita dalla notazione opzionale di certezza) racchiusa tra parentesi uncinate <code>&lt;…&gt;</code>.</p>
+<p>Qualunque sequenza di caratteri Unicode (seguita dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di certezza</a>) racchiusa tra parentesi uncinate <code>&lt;…&gt;</code>.</p>
 <h2 id="panoramica-24"><a class="header" href="#panoramica-24">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -4523,7 +4525,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="segni-superflui-a-testo"><a class="header" href="#segni-superflui-a-testo">Segni superflui a testo</a></h1>
 <p>Segni superflui aggiunti per errore dall’incisore del testo ed espunti dall’editore.</p>
 <h2 id="sintassi-27"><a class="header" href="#sintassi-27">Sintassi</a></h2>
-<p>Qualunque sequenza di caratteri Unicode (seguita dalla notazione opzionale di certezza) racchiusa tra parentesi graffe <code>{…}</code>.</p>
+<p>Qualunque sequenza di caratteri Unicode (seguita dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di certezza</a>) racchiusa tra parentesi graffe <code>{…}</code>.</p>
 <h2 id="panoramica-27"><a class="header" href="#panoramica-27">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -4655,7 +4657,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="lacuna-superflua-di-ampiezza-nota"><a class="header" href="#lacuna-superflua-di-ampiezza-nota">Lacuna superflua di ampiezza nota</a></h1>
 <p>Una lacuna superflua di estensione nota, aggiunta per errore dall’incisore del testo ed espunta dall’editore. L’editore indica un numero preciso di caratteri mancanti ripetendo un segno di lacuna all’interno di parentesi quadre.</p>
 <h2 id="sintassi-28"><a class="header" href="#sintassi-28">Sintassi</a></h2>
-<p>La notazione della lacuna di estensione nota racchiusa tra parentesi graffe <code>{…}</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/known.html">notazione della lacuna di estensione nota</a> racchiusa tra parentesi graffe <code>{…}</code>.</p>
 <h2 id="panoramica-28"><a class="header" href="#panoramica-28">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -4728,7 +4730,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;surplus cert="low"&gt;
-        &lt;gap reason="lost" quantity="5" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="5"/&gt;
     &lt;/surplus&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -4737,7 +4739,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;surplus cert="medium"&gt;
-        &lt;gap reason="lost" quantity="3" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="3"/&gt;
     &lt;/surplus&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -4746,7 +4748,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;surplus cert="high"&gt;
-        &lt;gap reason="lost" quantity="4" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="4"/&gt;
     &lt;/surplus&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -4792,7 +4794,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="lacuna-superflua-di-intervallo-noto"><a class="header" href="#lacuna-superflua-di-intervallo-noto">Lacuna superflua di intervallo noto</a></h1>
 <p>Una lacuna superflua, la cui estensione è espressa come un intervallo numerico plausibile, aggiunta per errore dall’incisore del testo ed espunta dall’editore.</p>
 <h2 id="sintassi-29"><a class="header" href="#sintassi-29">Sintassi</a></h2>
-<p>La notazione della lacuna di intevallo noto racchiusa tra parentesi graffe <code>{…}</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/range.html">notazione della lacuna di intevallo noto</a> racchiusa tra parentesi graffe <code>{…}</code>.</p>
 <h2 id="panoramica-29"><a class="header" href="#panoramica-29">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -4865,7 +4867,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;surplus cert="medium"&gt;
-        &lt;gap reason="lost" atLeast="2" atMost="4" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="2" atMost="4"/&gt;
     &lt;/surplus&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -4874,7 +4876,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;surplus cert="low"&gt;
-        &lt;gap reason="lost" atLeast="1" atMost="5" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="1" atMost="5"/&gt;
     &lt;/surplus&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -4883,7 +4885,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;surplus cert="high"&gt;
-        &lt;gap reason="lost" atLeast="3" atMost="6" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="3" atMost="6"/&gt;
     &lt;/surplus&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -4929,7 +4931,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="lacuna-superflua-di-estensione-ignota"><a class="header" href="#lacuna-superflua-di-estensione-ignota">Lacuna superflua di estensione ignota</a></h1>
 <p>Una lacuna superflua di estensione ignota, aggiunta per errore dall’incisore del testo ed espunta dall’editore.</p>
 <h2 id="sintassi-30"><a class="header" href="#sintassi-30">Sintassi</a></h2>
-<p>La notazione della lacuna di estensione ignota racchiusa tra parentesi graffe <code>{…}</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/unknown.html">notazione della lacuna di estensione ignota</a> racchiusa tra parentesi graffe <code>{…}</code>.</p>
 <h2 id="panoramica-30"><a class="header" href="#panoramica-30">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -5002,7 +5004,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;surplus cert="medium"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
     &lt;/surplus&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -5011,7 +5013,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;surplus cert="low"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
     &lt;/surplus&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -5020,7 +5022,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;surplus cert="high"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
     &lt;/surplus&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -5269,7 +5271,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="erasione-di-segni-a-testo"><a class="header" href="#erasione-di-segni-a-testo">Erasione di segni a testo</a></h1>
 <p>Segni o spazi deliberatamente erasi in antico, ma ancora leggibili.</p>
 <h2 id="sintassi-32"><a class="header" href="#sintassi-32">Sintassi</a></h2>
-<p>Qualunque sequenza di caratteri Unicode (seguita dalla notazione opzionale di certezza) racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
+<p>Qualunque sequenza di caratteri Unicode (seguita dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di certezza</a>) racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
 <h2 id="panoramica-32"><a class="header" href="#panoramica-32">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -5345,8 +5347,8 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="medium"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -5354,8 +5356,8 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="low"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -5363,8 +5365,8 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="high"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -5409,7 +5411,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="rasura-o-lacuna-in-erasione-di-ampiezza-nota"><a class="header" href="#rasura-o-lacuna-in-erasione-di-ampiezza-nota">Rasura (o lacuna in erasione) di ampiezza nota</a></h1>
 <p>Una lacuna di estensione nota corrispondente a una rasura o contenuta in un’erasione antica.</p>
 <h2 id="sintassi-33"><a class="header" href="#sintassi-33">Sintassi</a></h2>
-<p>La notazione della lacuna di estensione nota racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/known.html">notazione della lacuna di estensione nota</a> racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
 <h2 id="panoramica-33"><a class="header" href="#panoramica-33">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -5483,8 +5485,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="low"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="5"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -5492,8 +5496,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="medium"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="2"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -5501,8 +5507,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="high"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="3"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -5547,7 +5555,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="rasura-o-lacuna-in-erasione-di-intervallo-noto"><a class="header" href="#rasura-o-lacuna-in-erasione-di-intervallo-noto">Rasura (o lacuna in erasione) di intervallo noto</a></h1>
 <p>Una lacuna la cui estensione è espressa come un intervallo numerico plausibile, corrispondente a una rasura o contenuta in un’erasione antica.</p>
 <h2 id="sintassi-34"><a class="header" href="#sintassi-34">Sintassi</a></h2>
-<p>La notazione della lacuna di intevallo noto racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/range.html">notazione della lacuna di intevallo noto</a> racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
 <h2 id="panoramica-34"><a class="header" href="#panoramica-34">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -5621,8 +5629,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="medium"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" atLeast="3" atMost="6"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -5630,8 +5640,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="low"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" atLeast="4" atMost="5"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -5639,8 +5651,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="high"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" atLeast="2" atMost="4"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -5685,7 +5699,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="rasura-o-lacuna-in-erasione-di-estensione-ignota"><a class="header" href="#rasura-o-lacuna-in-erasione-di-estensione-ignota">Rasura (o lacuna in erasione) di estensione ignota</a></h1>
 <p>Una lacuna di estensione ignota corrispondente a una rasura o contenuta in un’erasione antica.</p>
 <h2 id="sintassi-35"><a class="header" href="#sintassi-35">Sintassi</a></h2>
-<p>La notazione della lacuna di estensione ignota racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/unknown.html">notazione della lacuna di estensione ignota</a> racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
 <h2 id="panoramica-35"><a class="header" href="#panoramica-35">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -5759,8 +5773,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="medium"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -5768,8 +5784,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="low"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -5777,8 +5795,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="high"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -5897,8 +5917,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="medium"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -5906,8 +5928,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="low"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -5915,8 +5939,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="high"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -6181,8 +6207,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="medium"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -6190,8 +6218,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="low"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -6199,8 +6229,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="high"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;
+            &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;
+        &lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -6408,14 +6440,14 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-text">+abc?;h=c&gt;d+</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;add cert="low"&gt;abc&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;abc&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;abc&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+    &lt;add cert="low"&gt;abc&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
 <pre><code class="language-text">+abc!;manus=c;place=supra+</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;add place="above" cert="medium"&gt;abc&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;abc&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+    &lt;add place="above" cert="medium"&gt;abc&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -6460,7 +6492,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="aggiunta-contenente-lacuna-di-ampiezza-nota"><a class="header" href="#aggiunta-contenente-lacuna-di-ampiezza-nota">Aggiunta contenente lacuna di ampiezza nota</a></h1>
 <p>Lacuna di estensione nota (un numero specifico di caratteri mancanti o perduti) contenuta in un’integrazione sul supporto da una mano antica posteriore.</p>
 <h2 id="sintassi-40"><a class="header" href="#sintassi-40">Sintassi</a></h2>
-<p>La notazione della lacuna di estensione nota racchiusa tra segni più <code>+…+</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/known.html">notazione della lacuna di estensione nota</a> racchiusa tra segni più <code>+…+</code>.</p>
 <h2 id="panoramica-40"><a class="header" href="#panoramica-40">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -6535,7 +6567,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="low"&gt;
-        &lt;gap reason="lost" quantity="7" unit="character" precision="medium"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;gap reason="lost" quantity="7" unit="character" precision="medium"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;gap reason="lost" quantity="7" unit="character" precision="medium"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="7"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -6544,7 +6576,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="medium"&gt;
-        &lt;gap reason="lost" quantity="4" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="4"/&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -6553,7 +6585,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add place="above" cert="medium"&gt;
-        &lt;gap reason="lost" quantity="2" unit="character" precision="medium"/&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;gap reason="lost" quantity="2" unit="character" precision="medium"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" quantity="2"/&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -6599,7 +6631,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="aggiunta-contenente-lacuna-di-intervallo-noto"><a class="header" href="#aggiunta-contenente-lacuna-di-intervallo-noto">Aggiunta contenente lacuna di intervallo noto</a></h1>
 <p>Lacuna la cui estensione è espressa tramite un intervallo numerico plausibile contenuta in un’integrazione sul supporto da una mano antica posteriore.</p>
 <h2 id="sintassi-41"><a class="header" href="#sintassi-41">Sintassi</a></h2>
-<p>La notazione della lacuna di intevallo noto racchiusa tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/range.html">notazione della lacuna di intevallo noto</a> racchiusa tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
 <h2 id="panoramica-41"><a class="header" href="#panoramica-41">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -6665,7 +6697,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="medium"&gt;
-        &lt;gap reason="lost" atLeast="1" atMost="3" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="1" atMost="3"/&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -6674,7 +6706,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="low"&gt;
-        &lt;gap reason="lost" atLeast="2" atMost="4" unit="character" precision="medium"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;gap reason="lost" atLeast="2" atMost="4" unit="character" precision="medium"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;gap reason="lost" atLeast="2" atMost="4" unit="character" precision="medium"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" atLeast="2" atMost="4"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -6788,7 +6820,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="medium"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -6797,7 +6829,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="low"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -6806,7 +6838,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add place="above" cert="medium"&gt;
-        &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -6937,7 +6969,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="low"&gt;
-        &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -6946,7 +6978,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add place="above" cert="medium"&gt;
-        &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7080,7 +7112,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="low"&gt;
-        &lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7089,7 +7121,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add place="above" cert="medium"&gt;
-        &lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7223,7 +7255,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="low"&gt;
-        &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7232,7 +7264,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add place="above" cert="medium"&gt;
-        &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7366,7 +7398,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="low"&gt;
-        &lt;surplus cert="medium"&gt;abc&lt;/surplus&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;surplus cert="medium"&gt;abc&lt;/surplus&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;surplus cert="medium"&gt;abc&lt;/surplus&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;surplus cert="medium"&gt;abc&lt;/surplus&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7375,7 +7407,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add place="above" cert="medium"&gt;
-        &lt;surplus cert="medium"&gt;abc&lt;/surplus&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;surplus cert="medium"&gt;abc&lt;/surplus&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;surplus cert="medium"&gt;abc&lt;/surplus&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7501,9 +7533,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="medium"&gt;
         &lt;del cert="medium"&gt;
-        &lt;/supplied&gt;
-    &lt;/del&gt;
-&lt;/add&gt;
+            &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+        &lt;/del&gt;
+    &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -7512,9 +7544,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="low"&gt;
         &lt;del cert="medium"&gt;
-        &lt;/supplied&gt;
-    &lt;/del&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;del cert="medium"&gt;&lt;/supplied&gt;&lt;/del&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;del cert="medium"&gt;&lt;/supplied&gt;&lt;/del&gt;&lt;/rdg&gt;&lt;/app&gt;
-&lt;/add&gt;
+            &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+        &lt;/del&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+    &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -7523,9 +7555,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add place="above" cert="medium"&gt;
         &lt;del cert="medium"&gt;
-        &lt;/supplied&gt;
-    &lt;/del&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;del cert="medium"&gt;&lt;/supplied&gt;&lt;/del&gt;&lt;/rdg&gt;&lt;/app&gt;
-&lt;/add&gt;
+            &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+        &lt;/del&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+    &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -7658,7 +7690,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add cert="low"&gt;
-        &lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7667,7 +7699,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;add place="above" cert="medium"&gt;
-        &lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
     &lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7885,7 +7917,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;abc&lt;/del&gt;
-        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;xyz&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7895,7 +7927,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;abc&lt;/del&gt;
-        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -7950,7 +7982,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="testo-cancellato-in-correzione-con-lacuna-di-ampiezza-nota"><a class="header" href="#testo-cancellato-in-correzione-con-lacuna-di-ampiezza-nota">Testo cancellato (in correzione) con lacuna di ampiezza nota</a></h1>
 <p>Lacuna di estensione nota (un numero specifico di caratteri mancanti o perduti) contenuta nel testo cancellato in un’antica correzione.</p>
 <h2 id="sintassi-50"><a class="header" href="#sintassi-50">Sintassi</a></h2>
-<p>La notazione della lacuna di estensione nota seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla notazione del testo aggiunto, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/known.html">notazione della lacuna di estensione nota</a> seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla notazione del testo aggiunto, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
 <h2 id="panoramica-50"><a class="header" href="#panoramica-50">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -8026,9 +8058,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
-            &lt;gap reason="lost" quantity="7" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="7"/&gt;
         &lt;/del&gt;
-        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;xyz&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8038,7 +8070,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="medium"&gt;
-            &lt;gap reason="lost" quantity="5" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="5"/&gt;
         &lt;/del&gt;
         &lt;add cert="medium"&gt;xyz&lt;/add&gt;
     &lt;/subst&gt;
@@ -8050,9 +8082,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
-            &lt;gap reason="lost" quantity="2" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="2"/&gt;
         &lt;/del&gt;
-        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8107,7 +8139,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="testo-cancellato-in-correzione-con-lacuna-di-intervallo-noto"><a class="header" href="#testo-cancellato-in-correzione-con-lacuna-di-intervallo-noto">Testo cancellato (in correzione) con lacuna di intervallo noto</a></h1>
 <p>Lacuna la cui estensione è espressa tramite un intervallo numerico plausibile contenuta nel testo cancellato in un’antica correzione.</p>
 <h2 id="sintassi-51"><a class="header" href="#sintassi-51">Sintassi</a></h2>
-<p>La notazione della lacuna di intevallo noto seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla notazione del testo aggiunto, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/range.html">notazione della lacuna di intevallo noto</a> seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla notazione del testo aggiunto, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
 <h2 id="panoramica-51"><a class="header" href="#panoramica-51">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -8174,7 +8206,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="medium"&gt;
-            &lt;gap reason="lost" atLeast="1" atMost="3" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" atLeast="1" atMost="3"/&gt;
         &lt;/del&gt;
         &lt;add cert="medium"&gt;xyz&lt;/add&gt;
     &lt;/subst&gt;
@@ -8186,9 +8218,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
-            &lt;gap reason="lost" atLeast="2" atMost="4" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" atLeast="2" atMost="4"/&gt;
         &lt;/del&gt;
-        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;xyz&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8233,7 +8265,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="testo-cancellato-in-correzione-con-lacuna-di-estensione-ignota"><a class="header" href="#testo-cancellato-in-correzione-con-lacuna-di-estensione-ignota">Testo cancellato (in correzione) con lacuna di estensione ignota</a></h1>
 <p>Lacuna di estensione ignota (segni perduti o illeggibili per i quali non è possibile stimare il numero originario di caratteri) contenuta nel testo cancellato in un’antica correzione.</p>
 <h2 id="sintassi-52"><a class="header" href="#sintassi-52">Sintassi</a></h2>
-<p>La notazione della lacuna di estensione ignota, seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla notazione del testo aggiunto, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
+<p>La <a href="../it/notation/phenomena/gap/unknown.html">notazione della lacuna di estensione ignota</a>, seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla notazione del testo aggiunto, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
 <h2 id="panoramica-52"><a class="header" href="#panoramica-52">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -8309,7 +8341,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="medium"&gt;
-            &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
         &lt;/del&gt;
         &lt;add cert="medium"&gt;xyz&lt;/add&gt;
     &lt;/subst&gt;
@@ -8321,9 +8353,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
-            &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
         &lt;/del&gt;
-        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;xyz&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8333,9 +8365,9 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
-            &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
         &lt;/del&gt;
-        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8481,7 +8513,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
             &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;
         &lt;/del&gt;
-        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;xyz&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8493,7 +8525,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
             &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;
         &lt;/del&gt;
-        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8642,7 +8674,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
             &lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;
         &lt;/del&gt;
-        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;xyz&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8654,7 +8686,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
             &lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;
         &lt;/del&gt;
-        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8803,7 +8835,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
             &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;
         &lt;/del&gt;
-        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;xyz&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8815,7 +8847,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
             &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;
         &lt;/del&gt;
-        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -8951,11 +8983,11 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;
             &lt;del cert="medium"&gt;
-            &lt;/supplied&gt;
+                &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+            &lt;/del&gt;
         &lt;/del&gt;
-    &lt;/del&gt;
-    &lt;add cert="medium"&gt;xyz&lt;/add&gt;
-&lt;/subst&gt;
+        &lt;add cert="medium"&gt;xyz&lt;/add&gt;
+    &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -8965,11 +8997,11 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
             &lt;del cert="medium"&gt;
-            &lt;/supplied&gt;
+                &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+            &lt;/del&gt;
         &lt;/del&gt;
-    &lt;/del&gt;
-    &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;xyz&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
-&lt;/subst&gt;
+        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+    &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -8979,11 +9011,11 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
             &lt;del cert="medium"&gt;
-            &lt;/supplied&gt;
+                &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+            &lt;/del&gt;
         &lt;/del&gt;
-    &lt;/del&gt;
-    &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
-&lt;/subst&gt;
+        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+    &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -9131,7 +9163,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
             &lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;
         &lt;/del&gt;
-        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;xyz&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add cert="low"&gt;xyz&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -9143,7 +9175,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
             &lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;
         &lt;/del&gt;
-        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;xyz&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add place="above" cert="medium"&gt;xyz&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -9321,7 +9353,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
-        &lt;add cert="low"&gt;abc&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;abc&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;abc&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add cert="low"&gt;abc&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -9331,7 +9363,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
-        &lt;add place="above" cert="medium"&gt;abc&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;abc&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+        &lt;add place="above" cert="medium"&gt;abc&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -9386,7 +9418,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="testo-aggiunto-in-correzione-con-lacuna-di-ampiezza-nota"><a class="header" href="#testo-aggiunto-in-correzione-con-lacuna-di-ampiezza-nota">Testo aggiunto (in correzione) con lacuna di ampiezza nota</a></h1>
 <p>Lacuna di estensione nota (un numero specifico di caratteri mancanti o perduti) contenuta nel testo aggiunto in un’antica correzione.</p>
 <h2 id="sintassi-59"><a class="header" href="#sintassi-59">Sintassi</a></h2>
-<p>La notazione atta a esprimere il testo cancellato seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla notazione della lacuna di estensione nota, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
+<p>La notazione atta a esprimere il testo cancellato seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla <a href="../it/notation/phenomena/gap/known.html">notazione della lacuna di estensione nota</a>, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
 <h2 id="panoramica-59"><a class="header" href="#panoramica-59">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -9463,7 +9495,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add cert="low"&gt;
-            &lt;gap reason="lost" quantity="7" unit="character" precision="medium"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;gap reason="lost" quantity="7" unit="character" precision="medium"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;gap reason="lost" quantity="7" unit="character" precision="medium"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="7"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -9475,7 +9507,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;xyz&lt;/del&gt;
         &lt;add cert="medium"&gt;
-            &lt;gap reason="lost" quantity="4" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="4"/&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -9487,7 +9519,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add place="above" cert="medium"&gt;
-            &lt;gap reason="lost" quantity="2" unit="character" precision="medium"/&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;gap reason="lost" quantity="2" unit="character" precision="medium"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" quantity="2"/&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -9543,7 +9575,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="testo-aggiunto-in-correzione-con-lacuna-di-intervallo-noto"><a class="header" href="#testo-aggiunto-in-correzione-con-lacuna-di-intervallo-noto">Testo aggiunto (in correzione) con lacuna di intervallo noto</a></h1>
 <p>Lacuna la cui estensione è espressa tramite un intervallo numerico plausibile contenuta nel testo aggiunto in un’antica correzione.</p>
 <h2 id="sintassi-60"><a class="header" href="#sintassi-60">Sintassi</a></h2>
-<p>La notazione atta a esprimere il testo cancellato seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla notazione della lacuna di intevallo noto, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
+<p>La notazione atta a esprimere il testo cancellato seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla <a href="../it/notation/phenomena/gap/range.html">notazione della lacuna di intevallo noto</a>, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
 <h2 id="panoramica-60"><a class="header" href="#panoramica-60">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -9611,7 +9643,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;xyz&lt;/del&gt;
         &lt;add cert="medium"&gt;
-            &lt;gap reason="lost" atLeast="1" atMost="3" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" atLeast="1" atMost="3"/&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -9623,7 +9655,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add cert="low"&gt;
-            &lt;gap reason="lost" atLeast="2" atMost="4" unit="character" precision="medium"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;gap reason="lost" atLeast="2" atMost="4" unit="character" precision="medium"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;gap reason="lost" atLeast="2" atMost="4" unit="character" precision="medium"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" atLeast="2" atMost="4"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -9669,7 +9701,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="testo-aggiunto-in-correzione-con-lacuna-di-estensione-ignota"><a class="header" href="#testo-aggiunto-in-correzione-con-lacuna-di-estensione-ignota">Testo aggiunto (in correzione) con lacuna di estensione ignota</a></h1>
 <p>Lacuna di estensione ignota (segni perduti o illeggibili per i quali non è possibile stimare il numero originario di caratteri) contenuta nel testo aggiunto in un’antica correzione.</p>
 <h2 id="sintassi-61"><a class="header" href="#sintassi-61">Sintassi</a></h2>
-<p>La notazione atta a esprimere il testo cancellato seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla notazione della lacuna di estensione ignota, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
+<p>La notazione atta a esprimere il testo cancellato seguita dal segno di uguale e dal segno maggiore di formanti una freccia <code>=&gt;</code>, poi dalla <a href="../it/notation/phenomena/gap/unknown.html">notazione della lacuna di estensione ignota</a>, il tutto compreso tra segni più <code>+…+</code>. Metadati opzionali sono scrivibili prima dell’ultimo delimitatore <code>+</code>.</p>
 <h2 id="panoramica-61"><a class="header" href="#panoramica-61">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -9746,7 +9778,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;xyz&lt;/del&gt;
         &lt;add cert="medium"&gt;
-            &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -9758,7 +9790,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add cert="low"&gt;
-            &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -9770,7 +9802,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add place="above" cert="medium"&gt;
-            &lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;gap reason="lost" extent="unknown" unit="character" precision="medium"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;gap reason="lost" unit="character" precision="medium" extent="unknown"/&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -9916,7 +9948,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add cert="low"&gt;
-            &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -9928,7 +9960,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add place="above" cert="medium"&gt;
-            &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;unclear cert="medium"&gt;abc&lt;/unclear&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -10077,7 +10109,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add cert="low"&gt;
-            &lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -10089,7 +10121,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add place="above" cert="medium"&gt;
-            &lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;supplied reason="lost" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -10238,7 +10270,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add cert="low"&gt;
-            &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -10250,7 +10282,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add place="above" cert="medium"&gt;
-            &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;abc&lt;/supplied&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -10388,10 +10420,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="medium"&gt;xyz&lt;/del&gt;
         &lt;add cert="medium"&gt;
             &lt;del cert="medium"&gt;
-            &lt;/supplied&gt;
-        &lt;/del&gt;
-    &lt;/add&gt;
-&lt;/subst&gt;
+                &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+            &lt;/del&gt;
+        &lt;/add&gt;
+    &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -10402,10 +10434,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add cert="low"&gt;
             &lt;del cert="medium"&gt;
-            &lt;/supplied&gt;
-        &lt;/del&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;del cert="medium"&gt;&lt;/supplied&gt;&lt;/del&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;del cert="medium"&gt;&lt;/supplied&gt;&lt;/del&gt;&lt;/rdg&gt;&lt;/app&gt;
-    &lt;/add&gt;
-&lt;/subst&gt;
+                &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+            &lt;/del&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;/add&gt;
+    &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -10416,10 +10448,10 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add place="above" cert="medium"&gt;
             &lt;del cert="medium"&gt;
-            &lt;/supplied&gt;
-        &lt;/del&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;del cert="medium"&gt;&lt;/supplied&gt;&lt;/del&gt;&lt;/rdg&gt;&lt;/app&gt;
-    &lt;/add&gt;
-&lt;/subst&gt;
+                &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+            &lt;/del&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
+        &lt;/add&gt;
+    &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -10566,7 +10598,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="low"&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add cert="low"&gt;
-            &lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#c"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#d"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -10578,7 +10610,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
     &lt;subst&gt;
         &lt;del cert="medium"&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;xyz&lt;/del&gt;
         &lt;add place="above" cert="medium"&gt;
-            &lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;/rdg&gt;&lt;/app&gt;
+            &lt;hi rend="ligature" cert="medium"&gt;abc&lt;/hi&gt;&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;/app&gt;
         &lt;/add&gt;
     &lt;/subst&gt;
 &lt;/ab&gt;</code></pre>
@@ -10697,7 +10729,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <h1 id="legatura-di-segni-a-testo"><a class="header" href="#legatura-di-segni-a-testo">Legatura di segni a testo</a></h1>
 <p>Una legatura composta da segni a testo.</p>
 <h2 id="sintassi-67"><a class="header" href="#sintassi-67">Sintassi</a></h2>
-<p>Qualunque sequenza di caratteri Unicode (seguita dalla notazione opzionale di certezza) racchiusa tra segni di uguale <code>=…=</code>.</p>
+<p>Qualunque sequenza di caratteri Unicode (seguita dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di certezza</a>) racchiusa tra segni di uguale <code>=…=</code>.</p>
 <h2 id="panoramica-67"><a class="header" href="#panoramica-67">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -11335,9 +11367,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-text">Aug(ustus)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;Aug&lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;Aug&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11443,11 +11473,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-text">*Aug*(ustus)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;
-            &lt;unclear cert="medium"&gt;Aug&lt;/unclear&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;&lt;unclear cert="medium"&gt;Aug&lt;/unclear&gt;&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11455,11 +11481,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-text">*Aug?*(ustus)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;
-            &lt;unclear cert="low"&gt;Aug&lt;/unclear&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;&lt;unclear cert="low"&gt;Aug&lt;/unclear&gt;&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11467,11 +11489,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <pre><code class="language-text">*Aug!*(ustus)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;
-            &lt;unclear cert="high"&gt;Aug&lt;/unclear&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;&lt;unclear cert="high"&gt;Aug&lt;/unclear&gt;&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11602,8 +11620,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" cert="medium"&gt;Aug&lt;/supplied&gt;
-    &lt;expan&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11612,8 +11629,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" cert="low"&gt;Aug&lt;/supplied&gt;
-    &lt;expan&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11622,8 +11638,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;supplied reason="lost" cert="high"&gt;Aug&lt;/supplied&gt;
-    &lt;expan&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11750,11 +11765,7 @@ Abbreviation[complete]
 <pre><code class="language-text">_Aug_(ustus)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;
-            &lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;Aug&lt;/supplied&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;&lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;Aug&lt;/supplied&gt;&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11762,11 +11773,7 @@ Abbreviation[complete]
 <pre><code class="language-text">_Aug?_(ustus)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;
-            &lt;supplied reason="lost" evidence="previouseditor" cert="low"&gt;Aug&lt;/supplied&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;&lt;supplied reason="lost" evidence="previouseditor" cert="low"&gt;Aug&lt;/supplied&gt;&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11774,11 +11781,7 @@ Abbreviation[complete]
 <pre><code class="language-text">_Aug!_(ustus)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;
-            &lt;supplied reason="lost" evidence="previouseditor" cert="high"&gt;Aug&lt;/supplied&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;&lt;supplied reason="lost" evidence="previouseditor" cert="high"&gt;Aug&lt;/supplied&gt;&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11908,11 +11911,7 @@ Abbreviation[complete]
 <pre><code class="language-text">{Aug}(ustus)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;
-            &lt;surplus cert="medium"&gt;Aug&lt;/surplus&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;&lt;surplus cert="medium"&gt;Aug&lt;/surplus&gt;&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11920,11 +11919,7 @@ Abbreviation[complete]
 <pre><code class="language-text">{Aug?}(ustus)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;
-            &lt;surplus cert="low"&gt;Aug&lt;/surplus&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;&lt;surplus cert="low"&gt;Aug&lt;/surplus&gt;&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -11932,11 +11927,7 @@ Abbreviation[complete]
 <pre><code class="language-text">{Aug!}(ustus)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;
-            &lt;surplus cert="high"&gt;Aug&lt;/surplus&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;&lt;surplus cert="high"&gt;Aug&lt;/surplus&gt;&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -12067,11 +12058,10 @@ Abbreviation[complete]
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="medium"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
-&lt;expan&gt;
-    &lt;ex&gt;ustus&lt;/ex&gt;
-&lt;/expan&gt;
+        &lt;supplied reason="lost"&gt;Aug&lt;/supplied&gt;
+    &lt;/del&gt;
+    &lt;expan&gt;&lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -12079,11 +12069,10 @@ Abbreviation[complete]
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="low"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
-&lt;expan&gt;
-    &lt;ex&gt;ustus&lt;/ex&gt;
-&lt;/expan&gt;
+        &lt;supplied reason="lost"&gt;Aug&lt;/supplied&gt;
+    &lt;/del&gt;
+    &lt;expan&gt;&lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -12091,11 +12080,10 @@ Abbreviation[complete]
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="high"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
-&lt;expan&gt;
-    &lt;ex&gt;ustus&lt;/ex&gt;
-&lt;/expan&gt;
+        &lt;supplied reason="lost"&gt;Aug&lt;/supplied&gt;
+    &lt;/del&gt;
+    &lt;expan&gt;&lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -12203,9 +12191,7 @@ Abbreviation[complete]
 <pre><code class="language-text">Mar(ius)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;Mar&lt;/abbr&gt;
-        &lt;ex&gt;ius&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;Mar&lt;/abbr&gt;&lt;ex&gt;ius&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -12291,9 +12277,7 @@ Abbreviation[complete]
 <pre><code class="language-text">Mar(ius?)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;Mar&lt;/abbr&gt;
-        &lt;ex&gt;ius&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;Mar&lt;/abbr&gt;&lt;ex&gt;ius&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -12452,17 +12436,11 @@ Abbreviation[complete]
 <pre><code class="language-text">Aug(ustus) trib(unicia) pot(estate)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;Aug&lt;/abbr&gt;
-        &lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;Aug&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
     &lt;/expan&gt; 
-    &lt;expan&gt;
-        &lt;abbr&gt;trib&lt;/abbr&gt;
-        &lt;ex&gt;unicia&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;trib&lt;/abbr&gt;&lt;ex&gt;unicia&lt;/ex&gt;
     &lt;/expan&gt; 
-    &lt;expan&gt;
-        &lt;abbr&gt;pot&lt;/abbr&gt;
-        &lt;ex&gt;estate&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;pot&lt;/abbr&gt;&lt;ex&gt;estate&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -12564,9 +12542,7 @@ Abbreviation[complete]
 <pre><code class="language-text">(Vale)rius</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;ex&gt;Vale&lt;/ex&gt;
-        &lt;abbr&gt;rius&lt;/abbr&gt;
+    &lt;expan&gt;&lt;ex&gt;Vale&lt;/ex&gt;&lt;abbr&gt;rius&lt;/abbr&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -12679,10 +12655,7 @@ Abbreviation[complete]
 <pre><code class="language-text">Lib(erta)s</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;Lib&lt;/abbr&gt;
-        &lt;ex&gt;erta&lt;/ex&gt;
-        &lt;abbr&gt;s&lt;/abbr&gt;
+    &lt;expan&gt;&lt;abbr&gt;Lib&lt;/abbr&gt;&lt;ex&gt;erta&lt;/ex&gt;&lt;abbr&gt;s&lt;/abbr&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -12690,12 +12663,7 @@ Abbreviation[complete]
 <pre><code class="language-text">D(omi)n(u)s</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;D&lt;/abbr&gt;
-        &lt;ex&gt;omi&lt;/ex&gt;
-        &lt;abbr&gt;n&lt;/abbr&gt;
-        &lt;ex&gt;u&lt;/ex&gt;
-        &lt;abbr&gt;s&lt;/abbr&gt;
+    &lt;expan&gt;&lt;abbr&gt;D&lt;/abbr&gt;&lt;ex&gt;omi&lt;/ex&gt;&lt;abbr&gt;n&lt;/abbr&gt;&lt;ex&gt;u&lt;/ex&gt;&lt;abbr&gt;s&lt;/abbr&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -12749,7 +12717,7 @@ Abbreviation[complete]
 <p>Un’abbreviazione plurimembre composta da una serie di parti leggibili sul supporto (sospensioni) seguite dalle rispettive integrazioni editoriali tra parentesi tonde.</p>
 <h2 id="sintassi-83"><a class="header" href="#sintassi-83">Sintassi</a></h2>
 <p>Una o più sequenze di <code>Abbreviated Text</code> seguite dai rispettivi <code>Expansion Components</code>.</p>
-<p>Nel caso di abbreviazioni sospese, la notazione di <code>LexicalUnit</code> tra e commerciali <code>&amp;...&amp;</code> è l’unico modo per indicare esplicitamente che la sequenza di abbreviazioni costituisce un’unica unità lessicale (es. <code>&amp;q(uin)q(uennalis)&amp;</code>).</p>
+<p>Nel caso di abbreviazioni sospese, la notazione di <a href="../it/notation/atomic-textual-units/lexicalunit.html"><code>LexicalUnit</code></a> tra e commerciali <code>&amp;...&amp;</code> è l’unico modo per indicare esplicitamente che la sequenza di abbreviazioni costituisce un’unica unità lessicale (es. <code>&amp;q(uin)q(uennalis)&amp;</code>).</p>
 <h2 id="panoramica-83"><a class="header" href="#panoramica-83">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -12803,11 +12771,7 @@ Abbreviation[complete]
 <pre><code class="language-text">proco(n)s(ul)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;proco&lt;/abbr&gt;
-        &lt;ex&gt;n&lt;/ex&gt;
-        &lt;abbr&gt;s&lt;/abbr&gt;
-        &lt;ex&gt;ul&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;proco&lt;/abbr&gt;&lt;ex&gt;n&lt;/ex&gt;&lt;abbr&gt;s&lt;/abbr&gt;&lt;ex&gt;ul&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -12900,13 +12864,7 @@ Abbreviation[complete]
 <pre><code class="language-text">co(n)s(ul)-</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;
-        &lt;abbr&gt;co&lt;gap reason="lost" extent="unknown" unit="character"/&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;n&lt;/ex&gt;
-        &lt;abbr&gt;s&lt;gap reason="lost" extent="unknown" unit="character"/&gt;
-        &lt;/abbr&gt;
-        &lt;ex&gt;ul&lt;/ex&gt;
+    &lt;expan&gt;&lt;abbr&gt;co&lt;gap reason="lost" extent="unknown" unit="character"/&gt;&lt;/abbr&gt;&lt;ex&gt;n&lt;/ex&gt;&lt;abbr&gt;s&lt;gap reason="lost" extent="unknown" unit="character"/&gt;&lt;/abbr&gt;&lt;ex&gt;ul&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -13005,8 +12963,7 @@ linguistiche volte a definire la natura degli elementi grafici (per la trattazio
 <tr><th>Notazione</th><th>AST Concettuale</th><th>Resa cartacea</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&amp;𝑆×𝑁;fₛ=fₗ;…&amp;</code></td><td>`LexicalUnit([𝘜], LinguisticAnalysis[</td><td></td></tr>
-<tr><td>fₖ:fₗ,…])`</td><td><code>𝑆×𝑁</code></td><td></td></tr>
+<tr><td><code>&amp;𝑆×𝑁;fₛ=fₗ;…&amp;</code></td><td><code>LexicalUnit([𝘜], LinguisticAnalysis[fₖ:fₗ,…])</code></td><td><code>𝑆×𝑁</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -13018,7 +12975,7 @@ linguistiche volte a definire la natura degli elementi grafici (per la trattazio
 <li><code>fₖ</code> = chiave canonica per la funzione grafica derivata dall’etichetta corrispondente.</li>
 </ul>
 <h2 id="sintassi-85"><a class="header" href="#sintassi-85">Sintassi</a></h2>
-<p>Qualunque sequenza di caratteri Unicode costituente il logogramma seguita da un punto e virgola <code>;</code>, seguita da una delle chiavi indicanti la funzione grafica (<code>graphic</code>, <code>function</code> o <code>gf</code>), un segno di uguale <code>=</code> e il valore <code>lg</code> (o <code>logogram</code>); il tutto racchiuso tra e commerciale <code>&amp;…&amp;</code>.</p>
+<p>Qualunque sequenza di caratteri Unicode costituente il logogramma seguita da un punto e virgola <code>;</code>, seguita da una delle chiavi indicanti la funzione grafica (<code>graphic</code>, <code>function</code> o <code>gf</code>), un segno di uguale <code>=</code> e il valore <code>lg</code> (o <code>logogram</code>); il tutto racchiuso tra e commerciali <code>&amp;…&amp;</code>.</p>
 <h2 id="esempi-84"><a class="header" href="#esempi-84">Esempi</a></h2>
 <table>
   
@@ -13346,8 +13303,7 @@ dipl=☧&amp;</code></pre>
 <tr><th>Notazione</th><th>AST Concettuale</th><th>Resa cartacea</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&amp;𝑆×𝑁;fₛ=fₕ;…&amp;</code></td><td>`LexicalUnit([𝘜], LinguisticAnalysis[</td><td></td></tr>
-<tr><td>fₖ:fₕ,…])`</td><td><code>𝑆×𝑁</code></td><td></td></tr>
+<tr><td><code>&amp;𝑆×𝑁;fₛ=fₕ;…&amp;</code></td><td><code>LexicalUnit([𝘜], LinguisticAnalysis[fₖ:fₕ,…])</code></td><td><code>𝑆×𝑁</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -13359,8 +13315,7 @@ dipl=☧&amp;</code></pre>
 <li><code>fₖ</code> = chiave canonica per la funzione grafica derivata dall’etichetta corrispondente.</li>
 </ul>
 <h2 id="sintassi-86"><a class="header" href="#sintassi-86">Sintassi</a></h2>
-<h2 id="sintassi-1-1"><a class="header" href="#sintassi-1-1">Sintassi</a></h2>
-<p>Qualunque sequenza di caratteri Unicode costituente il logogramma seguita da un punto e virgola <code>;</code>, seguita da una delle chiavi indicanti la funzione grafica (<code>graphic</code>, <code>function</code> o <code>gf</code>), un segno di uguale <code>=</code> e il valore <code>ht</code> (o <code>heterogram</code>); il tutto racchiuso tra e commerciale <code>&amp;…&amp;</code>.</p>
+<p>Qualunque sequenza di caratteri Unicode costituente il logogramma seguita da un punto e virgola <code>;</code>, seguita da una delle chiavi indicanti la funzione grafica (<code>graphic</code>, <code>function</code> o <code>gf</code>), un segno di uguale <code>=</code> e il valore <code>ht</code> (o <code>heterogram</code>); il tutto racchiuso tra e commerciali <code>&amp;…&amp;</code>.</p>
 <h2 id="esempi-85"><a class="header" href="#esempi-85">Esempi</a></h2>
 <table>
   
@@ -14018,7 +13973,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <pre><code class="language-text">+textus;h=%a&gt;b%+</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;add cert="medium"&gt;textus&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#a"/&gt;textus&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#b"/&gt;textus&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+    &lt;add cert="medium"&gt;textus&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#a"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#b"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -14088,7 +14043,8 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 
 </table>
 
-Le righe 1--3 delle tabelle di esempio mostrano la gerarchia di plausibilità applicata a _lectiones_ nel corpo del testo (es. fenomeni epigrafici); la riga 4 mostra il caso d'uso nelle annotazioni, ossia tra i metadata opzionali supportati da alcuni fenomeni.<div style="break-before: page; page-break-before: always;"></div>
+<p>Le righe 1–3 delle tabelle di esempio mostrano la gerarchia di plausibilità applicata a <em>lectiones</em> nel corpo del testo (es. fenomeni epigrafici); la riga 4 mostra il caso d’uso nelle annotazioni, ossia tra i metadata opzionali supportati da alcuni fenomeni.</p>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="plausibilità-non-data-fra-lectiones"><a class="header" href="#plausibilità-non-data-fra-lectiones">Plausibilità non data fra <em>lectiones</em></a></h1>
 <p>Coppia di <em>lectiones</em> per le quali l’editore non può o non vuole esprimersi in merito alla plausibilità che si denota al loro confronto.</p>
 <h2 id="panoramica-90"><a class="header" href="#panoramica-90">Panoramica</a></h2>
@@ -14098,7 +14054,7 @@ Le righe 1--3 delle tabelle di esempio mostrano la gerarchia di plausibilità ap
 <tr><th>Notazione</th><th>AST Concettuale</th><th>Resa cartacea</th></tr>
 </thead>
 <tbody>
-<tr><td>`%⊙</td><td>…%`</td><td>`PlausibilityAssessment(</td></tr>
+<tr><td><code>%⊙|…%</code></td><td>`PlausibilityAssessment(</td><td></td></tr>
 <tr><td>PlausibilitySeq{</td><td></td><td></td></tr>
 <tr><td>lectiones: [ ⊙, … ],</td><td></td><td></td></tr>
 <tr><td>links: [</td><td></td><td></td></tr>
@@ -14177,7 +14133,7 @@ Le righe 1--3 delle tabelle di esempio mostrano la gerarchia di plausibilità ap
 <pre><code class="language-text">+textus;h=%a|b%+</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;add cert="medium"&gt;textus&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#a"/&gt;textus&lt;/rdg&gt;&lt;rdg&gt;&lt;handShift new="#b"/&gt;textus&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
+    &lt;add cert="medium"&gt;textus&lt;app type="alternative"&gt;&lt;rdg&gt;&lt;handShift new="#a"/&gt;&lt;/rdg&gt;&lt;rdg&gt;&lt;handShift new="#b"/&gt;&lt;/rdg&gt;&lt;/app&gt;&lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -14219,7 +14175,8 @@ Le righe 1--3 delle tabelle di esempio mostrano la gerarchia di plausibilità ap
 
 </table>
 
-Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicata a _lectiones_ nel corpo del testo (es. fenomeni epigrafici); la riga 2 mostra il caso d'uso nelle annotazioni, ossia tra i metadata opzionali supportati da alcuni fenomeni.<div style="break-before: page; page-break-before: always;"></div>
+<p>Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicata a <em>lectiones</em> nel corpo del testo (es. fenomeni epigrafici); la riga 2 mostra il caso d’uso nelle annotazioni, ossia tra i metadata opzionali supportati da alcuni fenomeni.</p>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="esempi-di-sequenze-di-plausibilità-miste"><a class="header" href="#esempi-di-sequenze-di-plausibilità-miste">Esempi di sequenze di plausibilità miste</a></h1>
 <p>Dimostrazione illustrativa di sequenze di plausibilità miste: serie di coppie interpretative dove l’editore esprime una plausibilità decrescente o non data fra le <em>lectiones</em>.</p>
 <p>Vedi <a href="../it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a> per la rettifica automatica dei delimitatori eseguita dal formattatore per migliorarne la leggibilità.</p>
@@ -14325,7 +14282,7 @@ Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicat
 <pre><code class="language-text">+textus;h=%a|b&gt;?c%+</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;add cert="medium"&gt;textus&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#a"/&gt;textus&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#b"/&gt;textus&lt;/rdg&gt;&lt;rdg cert="low"&gt;&lt;handShift new="#c"/&gt;textus&lt;/rdg&gt;&lt;note&gt;Detailed plausibility chain available in IbiScript source&lt;/note&gt;&lt;/app&gt;&lt;/add&gt;
+    &lt;add cert="medium"&gt;textus&lt;app type="alternative"&gt;&lt;lem&gt;&lt;handShift new="#a"/&gt;&lt;/lem&gt;&lt;rdg&gt;&lt;handShift new="#b"/&gt;&lt;/rdg&gt;&lt;rdg cert="low"&gt;&lt;handShift new="#c"/&gt;&lt;/rdg&gt;&lt;note&gt;Detailed plausibility chain available in IbiScript source&lt;/note&gt;&lt;/app&gt;&lt;/add&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
@@ -15724,6 +15681,251 @@ Le riga 1 delle tabelle di esempio mostra la gerarchia di plausibilità applicat
 
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="estensibilità-e-interoperabilità"><a class="header" href="#estensibilità-e-interoperabilità">Estensibilità e interoperabilità</a></h1>
+<p>ibiScript offre due modalità di estensibilità e interoperabilità con EpiDoc:</p>
+<ul>
+<li>aggiunta di attributi EpiDoc extra a costrutti IbiScript.</li>
+<li>utilizzo di frammenti di codice IbiScript all’interno di EpiDoc.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="attributi-epidoc-in-ibiscript"><a class="header" href="#attributi-epidoc-in-ibiscript">Attributi EpiDoc in IbiScript</a></h1>
+<p>Ulteriori attributi EpiDoc che si desidera aggiungere a un costrutto IbiScript, ignorati quando si esporta in formati diversi da EpiDoc.</p>
+<p>Per la specifica di attributi quali <code>cert</code> e <code>precision</code>, adoperare la notazione apposita (cf. <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">Valutazione di certezza o precisione</a>), altrimenti il sistema restituisce errore.</p>
+<h2 id="panoramica-99"><a class="header" href="#panoramica-99">Panoramica</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Notazione</th><th>AST Concettuale</th><th>Resa cartacea</th></tr>
+</thead>
+<tbody>
+<tr><td><code>⊙|αₖ=αᵥ;…|</code></td><td><code>IbiUnit{ ⊙, attrs: Α }</code></td><td><code>⊙</code></td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><code>⊙</code> = qualsiasi notazione di costrutto IbiScript.</li>
+<li>αₖ = qualsiasi chiave di attributo EpiDoc valida.</li>
+<li>αᵥ = qualsiasi valore di attributo EpiDoc valido.</li>
+<li>Α = list validata di attributi EpiDoc.</li>
+</ul>
+<h2 id="sintassi-99"><a class="header" href="#sintassi-99">Sintassi</a></h2>
+<p>Qualsiasi sequenza di attributi EpiDoc validi quali coppie chiave-valore separate dal segno d’uguale <code>=</code>, delimitate da punti e virgola <code>;</code> e racchiuse complessivamente tra barre verticali <code>|…|</code>.</p>
+<h2 id="esempi-99"><a class="header" href="#esempi-99">Esempi</a></h2>
+<table>
+  
+<thead>
+<tr><th>Notazione</th><th>Resa cartacea</th></tr>
+</thead>
+
+  
+<tbody>
+<tr><td>
+<pre><code class="language-text">*abc*|xml:id=unc-1;resp=editor|</code></pre>
+</td><td>
+<div class="rendered-preview">
+<div class="ibi-inscription">
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-unclear" data-epistemicity="medium"><span class="ibi-content">abc</span></span></div>
+</div>
+</div>
+</td></tr>
+</tbody>
+
+</table>
+
+<h3>Rese EpiDoc</h3>
+
+<table>
+  
+<thead>
+<tr><th>Notazione</th><th>EpiDoc (XML)</th></tr>
+</thead>
+
+  
+<tbody>
+<tr><td>
+<pre><code class="language-text">*abc*|xml:id=unc-1;resp=editor|</code></pre>
+</td><td>
+<pre><code class="language-xml">&lt;ab&gt;
+    &lt;unclear xml:id="unc-1" resp="editor" cert="medium"&gt;abc&lt;/unclear&gt;
+&lt;/ab&gt;</code></pre>
+</td></tr>
+</tbody>
+
+</table>
+
+<h3>Analisi strutturale (AST concettuale)</h3>
+
+<table>
+  
+<thead>
+<tr><th>Notazione</th><th>AST</th></tr>
+</thead>
+
+  
+<tbody>
+<tr><td>
+<pre><code class="language-text">*abc*|xml:id=unc-1;resp=editor|</code></pre>
+</td><td>
+<pre><code class="language-json">Unclear[medium, legibility: normal]
+  Plain("abc")
+</code></pre>
+</td></tr>
+</tbody>
+
+</table>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="macro-ibiscript-in-epidoc"><a class="header" href="#macro-ibiscript-in-epidoc">Macro IbiScript in EpiDoc</a></h1>
+<p>i frammenti di notazione IbiScript possono essere integrati nei documenti XML per sfruttarne la brevità in contesti TEI/EpiDoc complessi:</p>
+<ul>
+<li><strong>attributo <code>ibi</code></strong>: ideale per inserire annotazioni brevi e rapide direttamente all’interno dei tag XML esistenti.</li>
+<li><strong>elemento <code>ibi</code></strong>: pensato per ospitare frammenti di codice più lunghi, articolati o su più righe.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="attributo-ibi"><a class="header" href="#attributo-ibi">Attributo <code>ibi</code></a></h1>
+<p>L’attributo <code>ibi</code> può essere applicato a qualsiasi elemento contenuto all’interno della regione delimitata dall’elemento TEI <code>text</code> e può ospitare al suo interno qualsiasi notazione IbiScript.</p>
+<p>Qualora il frammento IbiScript contenga le virgolette doppie <code>"</code>, sostiturle con la sequenza di escape <code>&amp;quot;</code>.</p>
+<h2 id="esempi-100"><a class="header" href="#esempi-100">Esempi</a></h2>
+<p><strong>EpiDoc+IbiScript (XML)</strong></p>
+<pre><code class="language-xml">&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"&gt;
+  …
+  &lt;text&gt;
+    &lt;body&gt;
+      &lt;div type="edition"&gt;
+        &lt;ab xml:lang="Phli"&gt;
+          &lt;lb n="1" style="text-direction:r-to-l" ibi="[ZY hlgwpt] {^}"/&gt;
+        &lt;/ab&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+</code></pre>
+<p><strong>EpiDoc (XML)</strong></p>
+<pre><code class="language-xml">&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"&gt;
+  …
+  &lt;text&gt;
+    &lt;body&gt;
+      &lt;div type="edition"&gt;
+        &lt;ab xml:lang="Phli"&gt;
+          &lt;lb n="1" style="text-direction:r-to-l"&gt;
+          &lt;supplied reason="lost" cert="medium"&gt;ZY hlgwpt&lt;/supplied&gt;
+          &lt;milestone unit="fracture" rend="top"/&gt;
+        &lt;/ab&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+</code></pre>
+<hr>
+<p><strong>EpiDoc+IbiScript (XML)</strong></p>
+<pre><code class="language-xml">&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"&gt;
+  …
+  &lt;text&gt;
+    &lt;body&gt;
+      &lt;div type="edition"&gt;
+        &lt;ab xml:lang="Phli" ibi="$&lt;-$ _Herzfeld:⁎ʾnyr&amp;quot;⁑_[ʾn] /1"&gt;
+        &lt;/ab&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+</code></pre>
+<p><strong>EpiDoc (XML)</strong></p>
+<pre><code class="language-xml">&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"&gt;
+  …
+  &lt;text&gt;
+    &lt;body&gt;
+      &lt;div type="edition"&gt;
+        &lt;ab xml:lang="Phli"&gt;
+          &lt;lb n="1" style="text-direction:r-to-l"/&gt;
+          &lt;supplied reason="lost" evidence="previouseditor" cert="medium" source="#Herzfeld"&gt;
+            &lt;unclear cert="medium" reason="illegible"&gt;ʾnyr&lt;/unclear&gt;
+          &lt;/supplied&gt;
+          &lt;supplied reason="lost" cert="medium"&gt;ʾn&lt;/supplied&gt;
+        &lt;/ab&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="elemento-ibi"><a class="header" href="#elemento-ibi">Elemento <code>ibi</code></a></h1>
+<p>L’elemento <code>ibi</code> può essere inserito all’interno della regione delimitata dall’elemento TEI <code>text</code> e può ospitare al suo interno qualsiasi notazione IbiScript.</p>
+<p>Qualora il frammento IbiScript contenga caratteri che sono riservati in XML come il segno minore di <code>&lt;</code> ecc., adoperare una sezione CDATA per rimuovere ogni ambiguità.</p>
+<h2 id="esempi-101"><a class="header" href="#esempi-101">Esempi</a></h2>
+<p><strong>EpiDoc+IbiScript (XML)</strong></p>
+<pre><code class="language-xml">&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"&gt;
+  …
+  &lt;text&gt;
+    &lt;body&gt;
+      &lt;div type="edition"&gt;
+        &lt;ab xml:lang="Phli"&gt;
+          &lt;lb n="1" style="text-direction:r-to-l"/&gt;
+          &lt;ibi&gt;
+            [ML]*K"*\u{right-half-ring}
+          &lt;/ibi&gt;
+        &lt;/ab&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+</code></pre>
+<p><strong>EpiDoc (XML)</strong></p>
+<pre><code class="language-xml">&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"&gt;
+  …
+  &lt;text&gt;
+    &lt;body&gt;
+      &lt;div type="edition"&gt;
+        &lt;ab xml:lang="Phli"&gt;
+          &lt;lb n="1" style="text-direction:r-to-l"/&gt;
+          &lt;supplied reason="lost" cert="medium"&gt;ML&lt;/supplied&gt;
+          &lt;unclear cert="medium" reason="illegible"&gt;K&lt;/unclear&gt;ʾ
+        &lt;/ab&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+</code></pre>
+<hr>
+<p><strong>EpiDoc+IbiScript (XML)</strong></p>
+<pre><code class="language-xml">&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"&gt;
+  …
+  &lt;text&gt;
+    &lt;body&gt;
+      &lt;div type="edition"&gt;
+        &lt;ab xml:lang="Latn"&gt;
+          &lt;lb n="1" style="text-direction:l-to-r"/&gt;
+          &lt;ibi&gt;&lt;![CDATA[
+            %&lt;lupus&gt; &gt;? &lt;ludus&gt;%
+          ]]&gt;&lt;/ibi&gt;
+        &lt;/ab&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+</code></pre>
+<p><strong>EpiDoc (XML)</strong></p>
+<pre><code class="language-xml">&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"&gt;
+  …
+  &lt;text&gt;
+    &lt;body&gt;
+      &lt;div type="edition"&gt;
+        &lt;ab xml:lang="Latn"&gt;
+          &lt;lb n="1" style="text-direction:l-to-r"/&gt;
+          &lt;app type="alternative"&gt;
+            &lt;lem cert="low"&gt;
+               &lt;supplied reason="omitted" cert="medium"&gt;lupus&lt;/supplied&gt;
+             &lt;/lem&gt;
+             &lt;rdg cert="low"&gt;
+               &lt;supplied reason="omitted" cert="medium"&gt;ludus&lt;/supplied&gt;
+             &lt;/rdg&gt;
+          &lt;/app&gt;
+        &lt;/ab&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="guida-al-software"><a class="header" href="#guida-al-software">Guida al software</a></h1>
 <p>L’ecosistema IbiScript include diverse soluzioni software progettate per consentire agli studiosi di produrre edizioni critiche digitali. Questa sezione del manuale ne esamina in dettaglio le componenti principali:</p>
 <ul>
@@ -15741,6 +15943,7 @@ Usage: ibis &lt;COMMAND&gt;
 
 Commands:
   compile      Compile a source file into the specified target format
+  transpile    Transpile an EpiDoc XML file containing IbiScript macro layer annotations into pure EpiDoc XML
   format       Format and canonicalise an IbiScript source file
   minify       Minify and canonicalise an IbiScript source file
   restitute    Restitute multiple IbiScript blocks (contiguous or parallel) into a composite critical edition
@@ -15769,6 +15972,23 @@ Options:
       --inline-section-breaks         Inline section breaks instead of dropping them as block-level structural breaks
   -s, --lines &lt;SEMANTIC_LINE_FILTER&gt;  Extract specific semantic lines or ranges from the inscription (e.g., "2" or "4..5")
   -h, --help                          Print help
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="transpilazione-di-epidoc-arricchito-con-ibiscript-a-epidoc-puro-con-transpile"><a class="header" href="#transpilazione-di-epidoc-arricchito-con-ibiscript-a-epidoc-puro-con-transpile">Transpilazione di EpiDoc arricchito con IbiScript a EpiDoc puro con <code>transpile</code></a></h1>
+<p>Il comando <code>transpile</code> converte un file XML EpiDoc contenente <a href="../it/notation/extensibility-interoperability/macros/index.html">macro IbiScript</a> in XML EpiDoc puro.</p>
+<pre><code class="language-text">$ ibis transpile -h
+
+Transpile an EpiDoc XML file containing IbiScript macro layer annotations into pure EpiDoc XML
+
+Usage: ibis transpile [OPTIONS] &lt;FILE&gt;
+
+Arguments:
+  &lt;FILE&gt;  The annotated EpiDoc XML source file to transpile
+
+Options:
+  -o, --output &lt;OUTPUT&gt;  Write output to a separate file rather than standard output
+      --check            Check validity without writing output (returns non-zero exit code on transpilation error)
+  -h, --help             Print help
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="formattazione-di-un-file-sorgente-con-format"><a class="header" href="#formattazione-di-un-file-sorgente-con-format">Formattazione di un file sorgente con <code>format</code></a></h1>
@@ -15848,30 +16068,44 @@ Options:
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="editor-web-integrato"><a class="header" href="#editor-web-integrato">Editor web integrato</a></h1>
 <p>L’IbiScript Editor costituisce l’ambiente di lavoro centrale per la codifica di edizioni critiche e apparati, integrato nativamente all’interno della suite BEDA. L’interfaccia è strutturata per supportare l’attività del filologo senza interruzioni: il motore di parsing ANSELMUS opera in background, segnalando eventuali anomalie sintattiche tramite sottolineature visive direttamente nel testo. In caso di errore, il pannello di anteprima dinamica, che mostra l’edizione resa in formato web, non si blocca, ma preserva l’ultimo output valido inserendo un messaggio esplicito per guidare la correzione.</p>
-<figure>
-  <img src="assets/figures/ibiscript-editor.png">
-  <figcaption>IbiScript editor in modalità schermo intero: pannello di inserimento a sinistra, anteprima HTML interattiva a destra.</figcaption>
+<p>L’editor permette di lavorare con due diverse tipologie di file:</p>
+<ul>
+<li>file sorgente <strong>IbiScript</strong> (<code>.ibi</code>, <a href="#fig-ibiscript-editor-ibi">Figura 1</a>): l’anteprima mostra l’edizione critica HTML risultante.</li>
+<li>file <strong>EpiDoc XML</strong> contenente macro IbiScript (<code>.xml</code>, <a href="#fig-ibiscript-editor-xml">Figura 2</a>): l’anteprima mostra il codice XML traspilato a EpiDoc puro.</li>
+</ul>
+<figure id="fig-ibiscript-editor-ibi" class="doc-figure">
+  <img src="assets/figures/ibiscript-editor-ibi.png">
+  <figcaption>IbiScript editor in modalità schermo intero, file .ibi: pannello di inserimento a sinistra, anteprima HTML interattiva a destra.</figcaption>
+</figure>
+<figure id="fig-ibiscript-editor-xml" class="doc-figure">
+  <img src="assets/figures/ibiscript-editor-xml.png">
+  <figcaption>IbiScript editor in modalità schermo intero, file .xml: pannello di inserimento a sinistra, anteprima EpiDoc transpilata a destra.</figcaption>
 </figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="gestione-dei-documenti-e-persistenza-dei-dati"><a class="header" href="#gestione-dei-documenti-e-persistenza-dei-dati">Gestione dei documenti e persistenza dei dati</a></h1>
-<p>Il menu <code>File</code> gestisce l’importazione e la salvaguardia dei dati epigrafici. L’editor permette di caricare file locali con estensione <code>.ibi</code> o testo piano. Per prevenire la perdita accidentale delle trascrizioni dovuta a chiusure improvvise della scheda del browser, l’ambiente integra un sistema di monitoraggio protettivo: in presenza di modifiche non salvate, qualsiasi tentativo di abbandono della pagina viene intercettato, richiedendo una conferma esplicita da parte dell’utente.</p>
-<figure>
+<p>Il menu <code>File</code> gestisce l’importazione e la salvaguardia dei dati epigrafici. L’editor permette di creare e caricare file <code>.ibi</code> e <code>.xml</code>. Per prevenire la perdita accidentale delle trascrizioni dovuta a chiusure improvvise della scheda del browser, l’ambiente integra un sistema di monitoraggio protettivo: in presenza di modifiche non salvate, qualsiasi tentativo di abbandono della pagina viene intercettato, richiedendo una conferma esplicita da parte dell’utente.</p>
+<p>Il tasto <code>Download Source</code> varia a seconda del tipo di file attualmente presente nel panello di inserimento (es. un sorgente IbiScript nella <a href="#fig-ibiscript-editor-menu-file">Figura 1</a>).</p>
+<figure id="fig-ibiscript-editor-menu-file" class="doc-figure">
   <img src="assets/figures/ibiscript-editor-menu-file.png">
-  <figcaption>Opzioni contenute nel menù File.</figcaption>
+  <figcaption>Opzioni contenute nel menù File, modalità IbiScript (.ibi).</figcaption>
 </figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="normalizzazione-sintattica-format"><a class="header" href="#normalizzazione-sintattica-format">Normalizzazione sintattica (Format)</a></h1>
-<p>Accessibile dal menu <code>Edit</code>, la funzione <code>Format Document</code> agisce come un regolarizzatore formale del testo sorgente. Senza alterare il valore semantico delle letture o dei segni critici inseriti, l’algoritmo riorganizza automaticamente la spaziatura, l’allineamento e i rientri del codice IbiScript. Questa operazione garantisce la massima leggibilità del file sorgente e uniforma i criteri di impaginazione logica del documento.</p>
-<figure>
+<p>Accessibile dal menu <code>Edit</code>, la funzione <code>Format Document</code> agisce come un regolarizzatore formale del testo sorgente ed è disponibile esclusivamente in modalità IbiScript (<code>.ibi</code>). Senza alterare il valore semantico delle letture o dei segni critici inseriti, l’algoritmo riorganizza automaticamente la spaziatura, l’allineamento e i rientri del codice. Questa operazione garantisce la massima leggibilità del file sorgente e uniforma i criteri di impaginazione logica del documento.</p>
+<figure id="fig-ibiscript-editor-menu-edit" class="doc-figure">
   <img src="assets/figures/ibiscript-editor-menu-edit.png">
-  <figcaption>Opzioni contenute nel menù Edit.</figcaption>
+  <figcaption>Opzioni contenute nel menù Edit, modalità IbiScript (.ibi).</figcaption>
 </figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="tolleranza-derrore-nellanteprima-dinamica"><a class="header" href="#tolleranza-derrore-nellanteprima-dinamica">Tolleranza d’errore nell’anteprima dinamica</a></h1>
 <p>Il pannello di anteprima offre una visualizzazione in tempo reale dell’edizione resa per il web. Per evitare interruzioni nel lavoro filologico, l’interfaccia adotta una politica di tolleranza degli errori di parsing: qualora venga inserita una stringa sintatticamente non conforme, il sistema entra in uno stato di avviso. In questa modalità, l’anteprima preserva intatta la visualizzazione dell’ultimo stato valido testato, affiancando ad esso una notifica descrittiva per agevolare l’individuazione e la correzione dell’anomalia.</p>
-<figure>
-  <img src="assets/figures/ibiscript-editor-error-message.png">
-  <figcaption>Avviso di errore sintattico: l'utente ha inserito un costrutto Unclear incompleto all'interno di Supplied.</figcaption>
+<figure id="fig-ibiscript-editor-error-ibi" class="doc-figure">
+  <img src="assets/figures/ibiscript-editor-error-ibi.png">
+  <figcaption>Avviso di errore sintattico, modalità IbiScript (.ibi): l'utente ha inserito un costrutto Unclear incompleto all'interno di Supplied.</figcaption>
+</figure>
+<figure id="fig-ibiscript-editor-error-xml" class="doc-figure">
+  <img src="assets/figures/ibiscript-editor-error-xml.png">
+  <figcaption>Avviso di errore sintattico, modalità EpiDoc (.xml): l'utente ha inserito un elemento ibi fuori dall'elemento text.</figcaption>
 </figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="gestione-visiva-e-persistenza-del-facsimile"><a class="header" href="#gestione-visiva-e-persistenza-del-facsimile">Gestione visiva e persistenza del facsimile</a></h1>
-<p>Il pannello del facsimile consente di associare coordinate geometriche precise alle righe di testo dell’iscrizione. L’utente non è tenuto a scrivere manualmente la sintassi di configurazione: l’editor genera e aggiorna automaticamente una metasintassi dedicata non appena una regione viene tracciata o ridimensionata con il mouse sull’immagine. Questo blocco dati garantisce la persistenza e la portabilità del riscontro visivo direttamente all’interno del file sorgente.</p>
+<p>Disponibile esclusivamente in modalità IbiScript (<code>.ibi</code>), il pannello del facsimile consente di associare coordinate geometriche precise alle righe di testo dell’iscrizione. L’utente non è tenuto a scrivere manualmente la sintassi di configurazione: l’editor genera e aggiorna automaticamente una metasintassi dedicata non appena una regione viene tracciata o ridimensionata con il mouse sull’immagine. Questo blocco dati garantisce la persistenza e la portabilità del riscontro visivo direttamente all’interno del file sorgente.</p>
 <p>Un esempio di blocco generato automaticamente dall’interfaccia grafica:</p>
 <pre><code>$image;
 url = paikuli-block.png;
@@ -15884,22 +16118,24 @@ regions = [
 $
 </code></pre>
 <p>All’interno di questa struttura, il campo <code>url</code> identifica la risorsa visiva, <code>cat</code> definisce la categoria archeologica o museale dell’immagine, e l’array <code>reg</code> memorizza le regioni geometriche (normalizzate su scala decimale) indicizzate secondo il rispettivo numero di riga dell’iscrizione.</p>
-<figure>
+<figure id="fig-ibiscript-editor-facsimile-lines" class="doc-figure">
   <img src="assets/figures/ibiscript-editor-facsimile-lines.png">
   <figcaption>Facsimile con alcune righe di testo evidenziate e mappate alle righe dell'iscrizione individuate da LineBreak in IbiScript.</figcaption>
 </figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="esportazione-nei-formati-di-diffusione-scientifica"><a class="header" href="#esportazione-nei-formati-di-diffusione-scientifica">Esportazione nei formati di diffusione scientifica</a></h1>
-<p>Il menu <code>Export</code> permette di convertire istantaneamente il file IbiScript in sei formati standard per la ricerca e l’editoria:</p>
+<p>Il menu <code>Export</code> adatta le opzioni disponibili in base alla modalità attiva:</p>
 <ul>
+<li>In modalità <strong>IbiScript</strong>, permette di convertire il file sorgente in sei formati standard per la ricerca e l’editoria:</li>
 <li>testo Unicode puro per edizioni diplomatiche elementari;</li>
 <li>HTML per la pubblicazione diretta sul portale web;</li>
 <li>EpiDoc XML per garantire l’interoperabilità dei dati secondo i criteri internazionali delle Digital Humanities;</li>
 <li>JSONL per l’analisi relazionale e l’interrogazione ad alte prestazioni tramite database SQL (es. DuckDB);</li>
 <li>Typst e PDF, quest’ultimo viene compilato direttamente dal server a partire dal primo, offrendo un documento pronto per la stampa ad alta definizione tipografica.</li>
+<li>In modalità <strong>EpiDoc XML</strong>, è invece possibile esportare unicamente in EpiDoc puro, un’operazione che costituisce a tutti gli effetti una traspilazione diretta.</li>
 </ul>
-<figure>
+<figure id="fig-ibiscript-editor-menu-export" class="doc-figure">
   <img src="assets/figures/ibiscript-editor-menu-export.png">
-  <figcaption>Opzioni contenute nel menù Export.</figcaption>
+  <figcaption>Opzioni contenute nel menù Export, modalità IbiScript (.ibi).</figcaption>
 </figure><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="scorciatoie-da-tastiera-delleditor"><a class="header" href="#scorciatoie-da-tastiera-delleditor">Scorciatoie da tastiera dell’Editor</a></h1>
 <div class="table-wrapper">
@@ -15914,6 +16150,8 @@ $
 <tr><td><code>Ctrl + B</code></td><td>Formatta come grassetto</td></tr>
 <tr><td><code>Ctrl + I</code></td><td>Formatta come corsivo</td></tr>
 <tr><td><code>Ctrl + Shift + I</code></td><td>Carica l’immagine del facsimile</td></tr>
+<tr><td><code>Ctrl + N</code></td><td>Crea un nuovo file IbiScript</td></tr>
+<tr><td><code>Ctrl + Shift + N</code></td><td>Crea un nuovo file EpiDoc XML</td></tr>
 <tr><td><code>Ctrl + O</code></td><td>Apri un file locale</td></tr>
 <tr><td><code>Ctrl + S</code></td><td>Salva le modifiche</td></tr>
 <tr><td><code>Ctrl + Shift + S</code></td><td>Salva il documento con nome</td></tr>
@@ -16125,7 +16363,9 @@ $
 </div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="glossario-terminologico"><a class="header" href="#glossario-terminologico">Glossario terminologico</a></h1>
-<p><strong><em>Lectio</em></strong> (pl. <em>lectiones</em>) — la singola scelta interpretativa operata dall’editore in materia epigrafica, filologica o linguistica.</p>
+<ul>
+<li><strong><em>Lectio</em></strong> (pl. <em>lectiones</em>) — la singola scelta interpretativa operata dall’editore in materia epigrafica, filologica o linguistica.</li>
+</ul>
 
                     </main>
 

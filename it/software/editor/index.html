@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d1eb0ba0.js";
+            window.path_to_searchindex_js = "../../searchindex-60928b87.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-d182858a.js"></script>
+        <script src="../../toc-a22df3b9.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -177,9 +177,18 @@
                     <main>
                         <h1 id="editor-web-integrato"><a class="header" href="#editor-web-integrato">Editor web integrato</a></h1>
 <p>L’IbiScript Editor costituisce l’ambiente di lavoro centrale per la codifica di edizioni critiche e apparati, integrato nativamente all’interno della suite BEDA. L’interfaccia è strutturata per supportare l’attività del filologo senza interruzioni: il motore di parsing ANSELMUS opera in background, segnalando eventuali anomalie sintattiche tramite sottolineature visive direttamente nel testo. In caso di errore, il pannello di anteprima dinamica, che mostra l’edizione resa in formato web, non si blocca, ma preserva l’ultimo output valido inserendo un messaggio esplicito per guidare la correzione.</p>
-<figure>
-  <img src="../../assets/figures/ibiscript-editor.png">
-  <figcaption>IbiScript editor in modalità schermo intero: pannello di inserimento a sinistra, anteprima HTML interattiva a destra.</figcaption>
+<p>L’editor permette di lavorare con due diverse tipologie di file:</p>
+<ul>
+<li>file sorgente <strong>IbiScript</strong> (<code>.ibi</code>, <a href="#fig-ibiscript-editor-ibi">Figura 1</a>): l’anteprima mostra l’edizione critica HTML risultante.</li>
+<li>file <strong>EpiDoc XML</strong> contenente macro IbiScript (<code>.xml</code>, <a href="#fig-ibiscript-editor-xml">Figura 2</a>): l’anteprima mostra il codice XML traspilato a EpiDoc puro.</li>
+</ul>
+<figure id="fig-ibiscript-editor-ibi" class="doc-figure">
+  <img src="../../assets/figures/ibiscript-editor-ibi.png">
+  <figcaption>IbiScript editor in modalità schermo intero, file .ibi: pannello di inserimento a sinistra, anteprima HTML interattiva a destra.</figcaption>
+</figure>
+<figure id="fig-ibiscript-editor-xml" class="doc-figure">
+  <img src="../../assets/figures/ibiscript-editor-xml.png">
+  <figcaption>IbiScript editor in modalità schermo intero, file .xml: pannello di inserimento a sinistra, anteprima EpiDoc transpilata a destra.</figcaption>
 </figure>
                     </main>
 

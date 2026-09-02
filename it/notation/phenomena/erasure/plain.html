@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../ibiscript-d656c9af.min.css">
+        <link rel="stylesheet" href="../../../ibiscript-b8bfa0be.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-d1eb0ba0.js";
+            window.path_to_searchindex_js = "../../../searchindex-60928b87.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-d182858a.js"></script>
+        <script src="../../../toc-a22df3b9.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -178,7 +178,7 @@
                         <h1 id="erasione-di-segni-a-testo"><a class="header" href="#erasione-di-segni-a-testo">Erasione di segni a testo</a></h1>
 <p>Segni o spazi deliberatamente erasi in antico, ma ancora leggibili.</p>
 <h2 id="sintassi"><a class="header" href="#sintassi">Sintassi</a></h2>
-<p>Qualunque sequenza di caratteri Unicode (seguita dalla notazione opzionale di certezza) racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
+<p>Qualunque sequenza di caratteri Unicode (seguita dalla <a href="../../../../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di certezza</a>) racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
 <h2 id="panoramica"><a class="header" href="#panoramica">Panoramica</a></h2>
 <div class="table-wrapper">
 <table>
@@ -254,8 +254,8 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="medium"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -263,8 +263,8 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="low"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
@@ -272,8 +272,8 @@
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;del cert="high"&gt;
-    &lt;/supplied&gt;
-&lt;/del&gt;
+        &lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;
+    &lt;/del&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 </tbody>
