@@ -37,7 +37,7 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-60928b87.js";
+            window.path_to_searchindex_js = "searchindex-c31cf1c8.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-a22df3b9.js"></script>
@@ -220,7 +220,7 @@ in dettaglio nella sezione dedicata alla valutazione di plausibilità
 (cf. <a href="../it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Valutazione di plausibilità interpretativa</a>) e richiamata nelle sezioni dei singoli fenomeni che la supportano.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="unità-testuali-atomiche"><a class="header" href="#unità-testuali-atomiche">Unità testuali atomiche</a></h1>
-<p>unità minime di segmentazione testuale e che non possono contenere o annidare altre annotazioni al loro interno.</p>
+<p>Unità minime di segmentazione testuale e che non possono contenere o annidare altre annotazioni al loro interno.</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -240,7 +240,7 @@ in dettaglio nella sezione dedicata alla valutazione di plausibilità
 </div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-a-testo"><a class="header" href="#segni-a-testo">Segni a testo</a></h1>
-<p>segni che compongono il testo critico e che non constituiscono la notazione di fenomeni.
+<p>Segni che compongono il testo critico e che non constituiscono la notazione di fenomeni.
 IbiScript consente la rappresentazione nativa di qualsiasi carattere Unicode, ma ciascun sistema di scrittura trova benefici unici fra le varie modalità offerte per la rappresentazione dei segni.</p>
 <div class="table-wrapper">
 <table>
@@ -255,7 +255,7 @@ IbiScript consente la rappresentazione nativa di qualsiasi carattere Unicode, ma
 </div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-realizzati"><a class="header" href="#segni-realizzati">Segni realizzati</a></h1>
-<p>segni testuali realizzati graficamente nel testo come glifi Unicode.</p>
+<p>Segni testuali realizzati graficamente nel testo come glifi Unicode.</p>
 <h2 id="sintassi"><a class="header" href="#sintassi">Sintassi</a></h2>
 <p>Qualsiasi numero di caratteri Unicode non inclusi in <code>STOP_SET</code>, ovvero quei caratteri speciali utilizzati per marcare altri fenomeni.</p>
 <h2 id="panoramica"><a class="header" href="#panoramica">Panoramica</a></h2>
@@ -437,7 +437,7 @@ IbiScript consente la rappresentazione nativa di qualsiasi carattere Unicode, ma
 <p>Se questo metodo di immissione è ottimale per i caratteri di uso corrente, si rivela inadeguato per i glifi rari o appartenenti a sistemi di scrittura storici. L’inserimento diretto di caratteri Unicode specifici, infatti, non solo rischia di generare segni di sostituzione errati qualora il font in uso sia lacunoso, ma compromette la coerenza logica dello spazio editoriale. Ciò accade in particolare quando si introducono grafemi con vettori di scrittura opposti (come nel caso di caratteri mediopersiani inseriti nel flusso della trascrizione latina), provocando imprevedibili alterazioni nell’impaginazione del testo.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-codificati"><a class="header" href="#segni-codificati">Segni codificati</a></h1>
-<p>segni testuali rappresentati sotto forma di notazione astratta.</p>
+<p>Segni testuali rappresentati sotto forma di notazione astratta.</p>
 <h2 id="sintassi-1"><a class="header" href="#sintassi-1">Sintassi</a></h2>
 <ul>
 <li>Qualunque sequenza di codici di carattere esadecimali Unicode separata da punti e virgola <code>;</code>, racchiusa tra parentesi graffe <code>{…}</code> e preceduta dal comando <code>\u</code>.</li>
@@ -689,7 +689,7 @@ IbiScript consente la rappresentazione nativa di qualsiasi carattere Unicode, ma
 <p>Eppure il sistema di inserimento più conveniente e sicuro è quello a <code>chiave:valore</code>, che IbiScript rende possibile per 111 sistemi di scrittura moderni e storici (cf. <a href="../it/appendix/ws-iso-codes.html">Sistemi di scrittura supportati per l’inserimento <code>chiave:valore</code></a> per l’elenco dei codici completo). Ciascun carattere Unicode è indicabile tramite uno o più alias nominali che si rifanno ai nomi di carattere ufficiali, opportunamente mondati del superfluo; le forme numerali, in particolare, possono essere scritte anche facendo ricorso diretto alle cifre numeriche (cf. esempio 2). Non è necessario ripetere il codice ISO 15924 prima di ogni alias nominale (cf. esempi 3–8), in quanto la sequenza è riconosciuta automaticamente (cf. esempio 9 per un caso di ripetizione esplicita con spazi opzionali dopo i punti e virgola).</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="spazio-bianco"><a class="header" href="#spazio-bianco">Spazio bianco</a></h1>
-<p>spazio significativo all’interno del testo, sia esso isolato o interposto tra fenomeni epigrafici.
+<p>Spazio significativo all’interno del testo, sia esso isolato o interposto tra fenomeni epigrafici.
 Le seguenti regole definiscono uno spazio bianco come significativo:</p>
 <ul>
 <li>isolato nel testo semplice (cf. esempio 1).</li>
@@ -851,7 +851,7 @@ WS
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="interruzione-di-riga"><a class="header" href="#interruzione-di-riga">Interruzione di riga</a></h1>
-<p>un’interruzione di riga nel testo, opzionalmente accompagnata dalla numerazione esplicita della riga.
+<p>Un’interruzione di riga nel testo, opzionalmente accompagnata dalla numerazione esplicita della riga.
 I normali “caratteri di a capo” (<em>newline</em>) non vengono valutati come interruzioni di riga significative dal punto di vista filologico, producendo unità di tipo <code>Newline</code> che sono trattate solo come rumore di notazione. I rimandi a capo semplici possono dunque essere adoperati per formattare il codice IbiScript a piacimento, per esempio rinviando alla riga seguente lunghe serie di annotazioni linguistiche (cf. <a href="../it/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Annotazione linguistica di un’unità lessicale</a>.</p>
 <p>Dal punto di vista epigrafico, IbiScript richiede quindi che ogni riga di testo significativa, ossia chiaramente individuabile sul supporto, venga esplicitamente segnalata nel codice: ciò apponendo a fine riga la notazione (illustrata più oltre). Come se per analogia si volesse notificare di un rimando a capo.</p>
 <p>Qualora ci si dimentichi di inserire un’interruzione di riga esplicita all’ultima linea di testo (es. nel caso di iscrizioni costituite da una singola riga), IbiScript si prenderà cura di sopperirla.</p>
@@ -1015,7 +1015,7 @@ Plain("def")
 <p>Essendo i normali rimandi a capo (ossia quelli inseriti con il tasto “Invio”) non significativi, è possibile scrivere anche su una singola riga di codice iscrizioni costituite da righe molto brevi, es. <code>riga1/riga2/riga3/</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="interruzione-di-parola"><a class="header" href="#interruzione-di-parola">Interruzione di parola</a></h1>
-<p>indica un’interruzione di parola, ossia il punto esatto in cui una sequenza di segni o una parola si interrompe, ad esempio a causa di un fine riga o di una frattura fisica nel supporto epigrafico.
+<p>Indica un’interruzione di parola, ossia il punto esatto in cui una sequenza di segni o una parola si interrompe, ad esempio a causa di un fine riga o di una frattura fisica nel supporto epigrafico.
 Questo nodo descrive unicamente un evento grafico o posizionale e non implica una divisione dal punto di vista linguistico: l’effettiva separazione o categorizzazione delle unità lessicali è infatti gestita per mezzo della specifica notazione fornita da <a href="../it/notation/atomic-textual-units/lexicalunit.html"><code>LexicalUnit</code></a>.</p>
 <h2 id="sintassi-4"><a class="header" href="#sintassi-4">Sintassi</a></h2>
 <p>Un trattino <code>-</code>.</p>
@@ -1160,7 +1160,7 @@ Plain("c")
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lingua-del-testo"><a class="header" href="#lingua-del-testo">Lingua del testo</a></h1>
-<p>notazione atta a identificare la lingua dell’iscrizione o di una parte di essa.</p>
+<p>Notazione atta a identificare la lingua dell’iscrizione o di una parte di essa.</p>
 <h2 id="sintassi-5"><a class="header" href="#sintassi-5">Sintassi</a></h2>
 <p>Qualsiasi chiave di metadato valida (elencate più in basso) seguita da un segno di uguale <code>=</code> e da un codice linguistico #link(“https:</p>
 <h2 id="panoramica-5"><a class="header" href="#panoramica-5">Panoramica</a></h2>
@@ -1280,7 +1280,7 @@ LineBreak
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="direzione-del-testo"><a class="header" href="#direzione-del-testo">Direzione del testo</a></h1>
-<p>la direzione della scrittura, essenziale per le iscrizioni retrograde (da destra a sinistra) o bustrofediche (ad andamento alternato).</p>
+<p>La direzione della scrittura, essenziale per le iscrizioni retrograde (da destra a sinistra) o bustrofediche (ad andamento alternato).</p>
 <h2 id="sintassi-6"><a class="header" href="#sintassi-6">Sintassi</a></h2>
 <p>Un trattino <code>-</code> seguito dal segno di maggiore di per la freccia destrorsa oppure un trattino <code>-</code> preceduto dal segno di minore di per la freccia sinistrorsa, il tutto racchiuso tra simboli di dollaro <code>$…$</code>.</p>
 <h2 id="panoramica-6"><a class="header" href="#panoramica-6">Panoramica</a></h2>
@@ -1384,7 +1384,7 @@ LineBreak
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="suddivisione-testuale"><a class="header" href="#suddivisione-testuale">Suddivisione testuale</a></h1>
-<p>indica che il testo seguente è parte della sottosezione indicata dalla notazione.</p>
+<p>Indica che il testo seguente è parte della sottosezione indicata dalla notazione.</p>
 <h2 id="sintassi-7"><a class="header" href="#sintassi-7">Sintassi</a></h2>
 <p>Qualsiasi chiave di metadato valida (elencate più in basso) seguita da un segno di uguale <code>=</code>, da un identificativo in testo libero della suddivisione testuale prescelta e dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di certezza</a>, il tutto racchiuso tra simboli di dollaro <code>$…$</code>.</p>
 <h2 id="panoramica-7"><a class="header" href="#panoramica-7">Panoramica</a></h2>
@@ -1520,7 +1520,7 @@ LineBreak
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="confine-di-unità-lessicale"><a class="header" href="#confine-di-unità-lessicale">Confine di unità lessicale</a></h1>
-<p>il confine logico di un’unità lessicale (<em>word</em>).
+<p>Il confine logico di un’unità lessicale (<em>word</em>).
 Viene utilizzato per marcare la fine di una parola indipendentemente dalla sua disposizione fisica sul supporto, permettendo al sistema di ricomporre unità divise da fratture o interruzioni di riga.</p>
 <h2 id="sintassi-8"><a class="header" href="#sintassi-8">Sintassi</a></h2>
 <p>Qualunque numero di caratteri Unicode racchiusi tra e commerciali <code>&amp;…&amp;</code>. Opzionalmente, annotazioni linguistiche possono seguire dopo un punto e virgola <code>;</code>.</p>
@@ -1702,7 +1702,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="fenomeni"><a class="header" href="#fenomeni">Fenomeni</a></h1>
-<p>insieme delle notazioni atte a descrivere lo stato della tradizione testuale, le condizioni del supporto e le variazioni occorse durante la genesi o la trasmissione del testo.</p>
+<p>Insieme delle notazioni atte a descrivere lo stato della tradizione testuale, le condizioni del supporto e le variazioni occorse durante la genesi o la trasmissione del testo.</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -1728,7 +1728,7 @@ abc defg  hijk l
 </div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="vacat"><a class="header" href="#vacat">Vacat</a></h1>
-<p>uno spazio lasciato intenzionalmente vuoto dall’incisore del testo, non dovuto a una perdita del supporto, ma a fini di impaginazione o distinzione testuale.</p>
+<p>Uno spazio lasciato intenzionalmente vuoto dall’incisore del testo, non dovuto a una perdita del supporto, ma a fini di impaginazione o distinzione testuale.</p>
 <h4 id="delimitatori"><a class="header" href="#delimitatori">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -1754,7 +1754,7 @@ abc defg  hijk l
 </div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-o-spazi-non-incisi-v-o-vac"><a class="header" href="#segni-o-spazi-non-incisi-v-o-vac">Segni o spazi non incisi (v. o vac.)</a></h1>
-<p>segni non incisi o spazi vuoti.</p>
+<p>Segni non incisi o spazi vuoti.</p>
 <h2 id="sintassi-9"><a class="header" href="#sintassi-9">Sintassi</a></h2>
 <p>Il segno maggiore di <code>&gt;</code> seguito dalla lettera <code>c</code> di “carattere” e da un numero corrispondente al conteggio di caratteri (seguito dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di precisione</a>), il tutto racchiuso tra parentesi quadre <code>[…]</code>.</p>
 <h2 id="panoramica-9"><a class="header" href="#panoramica-9">Panoramica</a></h2>
@@ -1905,7 +1905,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="parte-rimanente-della-riga-non-incisa-vacat"><a class="header" href="#parte-rimanente-della-riga-non-incisa-vacat">Parte rimanente della riga non incisa (vacat)</a></h1>
-<p>la parte rimanente della riga non incisa.</p>
+<p>La parte rimanente della riga non incisa.</p>
 <h2 id="sintassi-10"><a class="header" href="#sintassi-10">Sintassi</a></h2>
 <p>Il segno maggiore di <code>&gt;</code> seguito dalla lettera <code>l</code> di “linea” e da un numero corrispondente al conteggio di caratteri (seguito dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di precisione</a>), il tutto racchiuso tra parentesi quadre <code>[…]</code>.</p>
 <h2 id="panoramica-10"><a class="header" href="#panoramica-10">Panoramica</a></h2>
@@ -2056,7 +2056,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lacune"><a class="header" href="#lacune">Lacune</a></h1>
-<p>perdite fisiche del supporto che hanno comportato la scomparsa di porzioni di testo originario; l’entità della perdita può essere certa, stimata o ignota.</p>
+<p>Perdite fisiche del supporto che hanno comportato la scomparsa di porzioni di testo originario; l’entità della perdita può essere certa, stimata o ignota.</p>
 <h4 id="delimitatori-1"><a class="header" href="#delimitatori-1">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -2083,7 +2083,7 @@ abc defg  hijk l
 </div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lacuna-di-ampiezza-nota"><a class="header" href="#lacuna-di-ampiezza-nota">Lacuna di ampiezza nota</a></h1>
-<p>una lacuna di estensione nota. L’editore indica un numero preciso di caratteri mancanti ripetendo un segno di lacuna all’interno delle parentesi quadre.</p>
+<p>Una lacuna di estensione nota. L’editore indica un numero preciso di caratteri mancanti ripetendo un segno di lacuna all’interno delle parentesi quadre.</p>
 <h2 id="sintassi-11"><a class="header" href="#sintassi-11">Sintassi</a></h2>
 <p>Qualunque numero naturale affiancato da doppi punti fermi <code>.….</code>, seguito dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di precisione</a> e racchiuso tra parentesi quadre <code>[…]</code>.</p>
 <h2 id="panoramica-11"><a class="header" href="#panoramica-11">Panoramica</a></h2>
@@ -2214,7 +2214,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lacuna-di-intervallo-noto"><a class="header" href="#lacuna-di-intervallo-noto">Lacuna di intervallo noto</a></h1>
-<p>una lacuna la cui estensione è espressa come un intervallo numerico plausibile.</p>
+<p>Una lacuna la cui estensione è espressa come un intervallo numerico plausibile.</p>
 <h2 id="sintassi-12"><a class="header" href="#sintassi-12">Sintassi</a></h2>
 <p>Qualunque coppia di numeri naturali separati da un trattino <code>-</code> (seguita dalla <a href="../it/notation/critical-editorial/interpretation/epistemicity-scale/index.html">notazione opzionale di precisione</a>) e racchiusa tra parentesi quadre <code>[…]</code>.</p>
 <h2 id="panoramica-12"><a class="header" href="#panoramica-12">Panoramica</a></h2>
@@ -2344,7 +2344,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lacuna-di-estensione-ignota"><a class="header" href="#lacuna-di-estensione-ignota">Lacuna di estensione ignota</a></h1>
-<p>una lacuna di estensione ignota.</p>
+<p>Una lacuna di estensione ignota.</p>
 <h2 id="sintassi-13"><a class="header" href="#sintassi-13">Sintassi</a></h2>
 <p>Zero o più spazi bianchi racchiusi tra parentesi quadre <code>[…]</code>.</p>
 <h2 id="panoramica-13"><a class="header" href="#panoramica-13">Panoramica</a></h2>
@@ -2473,7 +2473,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="fratture"><a class="header" href="#fratture">Fratture</a></h1>
-<p>rotture nel supporto iscritto; la frattura viene indicata nel punto in cui il testo è presente, senza fornire dettagli sul testo che segue o precede.</p>
+<p>Rotture nel supporto iscritto; la frattura viene indicata nel punto in cui il testo è presente, senza fornire dettagli sul testo che segue o precede.</p>
 <h2 id="sintassi-14"><a class="header" href="#sintassi-14">Sintassi</a></h2>
 <ul>
 <li><strong>Frattura a sinistra</strong>: il segno minore di <code>&lt;</code> racchiuso tra parentesi graffe <code>{…}</code> (cf. esempio 1).</li>
@@ -2497,7 +2497,7 @@ abc defg  hijk l
 </div>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-di-lettura-incerta"><a class="header" href="#segni-di-lettura-incerta">Segni di lettura incerta</a></h1>
-<p>segni superstiti sul supporto ma difficilmente a testo a causa del degrado fisico o di una cattiva conservazione.</p>
+<p>Segni superstiti sul supporto ma difficilmente a testo a causa del degrado fisico o di una cattiva conservazione.</p>
 <h4 id="delimitatori-2"><a class="header" href="#delimitatori-2">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -2544,6 +2544,7 @@ abc defg  hijk l
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
 <tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/unclear/previousseen.html">📖</a></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
 <tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
 <tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
@@ -2981,7 +2982,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-integrati"><a class="header" href="#segni-integrati">Segni integrati</a></h1>
-<p>segni non più visibili o mai incisi, ricostruiti criticamente dall’editore per ripristinare il senso del testo.</p>
+<p>Segni non più visibili o mai incisi, ricostruiti criticamente dall’editore per ripristinare il senso del testo.</p>
 <h4 id="delimitatori-3"><a class="header" href="#delimitatori-3">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -3005,6 +3006,7 @@ abc defg  hijk l
 <tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
 <tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
 <tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
 <tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
 <tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
 <tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
@@ -3148,7 +3150,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="testimonianze-di-editori-precedenti"><a class="header" href="#testimonianze-di-editori-precedenti">Testimonianze di editori precedenti</a></h1>
-<p>segni, lacune o fenomeni epigrafici non più riscontrabili autopticamente sul supporto, ma documentati in edizioni o taccuini di studiosi precedenti.</p>
+<p>Segni, lacune o fenomeni epigrafici non più riscontrabili autopticamente sul supporto, ma documentati in edizioni o taccuini di studiosi precedenti.</p>
 <h4 id="delimitatori-4"><a class="header" href="#delimitatori-4">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -4040,7 +4042,7 @@ abc defg  hijk l
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="omissioni-antiche"><a class="header" href="#omissioni-antiche">Omissioni antiche</a></h1>
-<p>segni, spazi o interruzioni di riga aggiunti dall’editore poiché l’incisore del testo li ha omessi o ha inciso per errore altri caratteri al loro posto.</p>
+<p>Segni, spazi o interruzioni di riga aggiunti dall’editore poiché l’incisore del testo li ha omessi o ha inciso per errore altri caratteri al loro posto.</p>
 <h4 id="delimitatori-5"><a class="header" href="#delimitatori-5">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -4508,7 +4510,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-superflui"><a class="header" href="#segni-superflui">Segni superflui</a></h1>
-<p>segni incisi per errore che l’editore ritiene non debbano far parte del testo e che pertanto vengono espunti.</p>
+<p>Segni incisi per errore che l’editore ritiene non debbano far parte del testo e che pertanto vengono espunti.</p>
 <h4 id="delimitatori-6"><a class="header" href="#delimitatori-6">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -4518,6 +4520,29 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <tbody>
 <tr><td style="text-align: left">Sinistro</td><td style="text-align: center"><code>{</code></td><td style="text-align: left">Parentesi graffa sinistra</td><td style="text-align: left"><code>U+007B</code></td></tr>
 <tr><td style="text-align: left">Destro</td><td style="text-align: center"><code>}</code></td><td style="text-align: left">Parentesi graffa destra</td><td style="text-align: left"><code>U+007D</code></td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="costrutti-ammessi-internamente-4"><a class="header" href="#costrutti-ammessi-internamente-4">Costrutti ammessi internamente</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">Costrutto</th><th style="text-align: center">Riferimento specifico</th><th style="text-align: center">Riferimento generale</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/surplus/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/it/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/surplus/gap-known.html">📖</a></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/surplus/gap-range.html">📖</a></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/surplus/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/surplus/unclear.html">📖</a></td><td style="text-align: center"><a href="/docs/it/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/it/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -5206,7 +5231,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="segni-erasi-in-antico-e-rasure"><a class="header" href="#segni-erasi-in-antico-e-rasure">Segni erasi in antico e rasure</a></h1>
-<p>segni o porzioni di testo intenzionalmente rimossi dal supporto in epoca antica tramite raschiatura o scalpellatura.</p>
+<p>Segni o porzioni di testo intenzionalmente rimossi dal supporto in epoca antica tramite raschiatura o scalpellatura.</p>
 <h4 id="delimitatori-7"><a class="header" href="#delimitatori-7">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -5242,7 +5267,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </tbody>
 </table>
 </div>
-<h4 id="costrutti-ammessi-internamente-4"><a class="header" href="#costrutti-ammessi-internamente-4">Costrutti ammessi internamente</a></h4>
+<h4 id="costrutti-ammessi-internamente-5"><a class="header" href="#costrutti-ammessi-internamente-5">Costrutti ammessi internamente</a></h4>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -6278,7 +6303,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="aggiunte-antiche-posteriori-di-segni"><a class="header" href="#aggiunte-antiche-posteriori-di-segni">Aggiunte antiche posteriori di segni</a></h1>
-<p>segni, parole o porzioni di testo aggiunti sul supporto in un momento successivo rispetto alla stesura originale, spesso da una mano differente.</p>
+<p>Segni, parole o porzioni di testo aggiunti sul supporto in un momento successivo rispetto alla stesura originale, spesso da una mano differente.</p>
 <h4 id="delimitatori-8"><a class="header" href="#delimitatori-8">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -6314,7 +6339,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </tbody>
 </table>
 </div>
-<h4 id="costrutti-ammessi-internamente-5"><a class="header" href="#costrutti-ammessi-internamente-5">Costrutti ammessi internamente</a></h4>
+<h4 id="costrutti-ammessi-internamente-6"><a class="header" href="#costrutti-ammessi-internamente-6">Costrutti ammessi internamente</a></h4>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -7746,7 +7771,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="correzioni-antiche"><a class="header" href="#correzioni-antiche">Correzioni antiche</a></h1>
-<p>interventi correttivi sul supporto consistenti nell’erasione di segni preesistenti e nella loro sostituzione con segni nuovi, eseguiti in un momento successivo rispetto alla stesura originale, spesso da una mano differente.</p>
+<p>Interventi correttivi sul supporto consistenti nell’erasione di segni preesistenti e nella loro sostituzione con segni nuovi, eseguiti in un momento successivo rispetto alla stesura originale, spesso da una mano differente.</p>
 <h4 id="delimitatori-9"><a class="header" href="#delimitatori-9">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -7797,7 +7822,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="testo-cancellato-in-correzione"><a class="header" href="#testo-cancellato-in-correzione">Testo cancellato in correzione</a></h1>
 <p>Fenomeni relativi al testo eraso dalla correzione.</p>
-<h4 id="costrutti-ammessi-internamente-6"><a class="header" href="#costrutti-ammessi-internamente-6">Costrutti ammessi internamente</a></h4>
+<h4 id="costrutti-ammessi-internamente-7"><a class="header" href="#costrutti-ammessi-internamente-7">Costrutti ammessi internamente</a></h4>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -9232,7 +9257,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="testo-aggiunto-in-correzione"><a class="header" href="#testo-aggiunto-in-correzione">Testo aggiunto in correzione</a></h1>
 <p>Fenomeni relativi al testo aggiunto dalla correzione.</p>
-<h4 id="costrutti-ammessi-internamente-7"><a class="header" href="#costrutti-ammessi-internamente-7">Costrutti ammessi internamente</a></h4>
+<h4 id="costrutti-ammessi-internamente-8"><a class="header" href="#costrutti-ammessi-internamente-8">Costrutti ammessi internamente</a></h4>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -10667,7 +10692,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="legature"><a class="header" href="#legature">Legature</a></h1>
-<p>due o più lettere i cui tratti sono stati fusi o uniti dall’incisore in un unico segno grafico, condividendo solitamente un’asta comune.</p>
+<p>Due o più lettere i cui tratti sono stati fusi o uniti dall’incisore in un unico segno grafico, condividendo solitamente un’asta comune.</p>
 <h4 id="delimitatori-10"><a class="header" href="#delimitatori-10">Delimitatori</a></h4>
 <div class="table-wrapper">
 <table>
@@ -10703,7 +10728,7 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </tbody>
 </table>
 </div>
-<h4 id="costrutti-ammessi-internamente-8"><a class="header" href="#costrutti-ammessi-internamente-8">Costrutti ammessi internamente</a></h4>
+<h4 id="costrutti-ammessi-internamente-9"><a class="header" href="#costrutti-ammessi-internamente-9">Costrutti ammessi internamente</a></h4>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -11283,12 +11308,12 @@ L’omissione (<code>Omitted</code>) è infatti l’unico fenomeno che può cont
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="abbreviazioni-e-loro-espansioni"><a class="header" href="#abbreviazioni-e-loro-espansioni">Abbreviazioni e loro espansioni</a></h1>
-<p>fenomeni relativi a parole o formule abbreviate intenzionalmente dall’incisore, inclusi i segni di abbreviazione, le lettere sottintese e lo scioglimento critico operato dall’editore.</p>
+<p>Fenomeni relativi a parole o formule abbreviate intenzionalmente dall’incisore, inclusi i segni di abbreviazione, le lettere sottintese e lo scioglimento critico operato dall’editore.</p>
 <p>I segni simbolici (logograms, eterogrammi, sigle) che in tradizioni editoriali precedenti venivano talvolta trattati come abbreviazioni sono discussi separatamente in @logograms-and-heterograms, in quanto rappresentano un fenomeno semiotico distinto dall’abbreviazione fonetico-grafemica.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="testo-abbreviato"><a class="header" href="#testo-abbreviato">Testo abbreviato</a></h1>
 <p>Fenomeni relativi alla parte dell’abbreviazione fisicamente presente sul supporto, inclusi i segni grafici di compendio e le lettere superstiti della parola abbreviata.</p>
-<h4 id="costrutti-ammessi-internamente-9"><a class="header" href="#costrutti-ammessi-internamente-9">Costrutti ammessi internamente</a></h4>
+<h4 id="costrutti-ammessi-internamente-10"><a class="header" href="#costrutti-ammessi-internamente-10">Costrutti ammessi internamente</a></h4>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -12901,7 +12926,7 @@ Abbreviation[complete]
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="logogrammi-simboli-convenzionali-ed-eterogrammi"><a class="header" href="#logogrammi-simboli-convenzionali-ed-eterogrammi">Logogrammi, simboli convenzionali ed eterogrammi</a></h1>
-<p>elementi grafici che rappresentano direttamente un’intera parola o un concetto, indipendentemente dalla loro realizzazione fonetica.
+<p>Elementi grafici che rappresentano direttamente un’intera parola o un concetto, indipendentemente dalla loro realizzazione fonetica.
 La notazione è analoga a quella per l’individuazione di unità lessicali (cf. <a href="../it/notation/atomic-textual-units/lexicalunit.html">Confine di unità lessicale</a>), a cui si aggiungono annotazioni
 linguistiche volte a definire la natura degli elementi grafici (per la trattazione estesa dell’annotazione linguistica cf. <a href="../it/notation/critical-editorial/linguistic-analysis/lexicalunit.html">Annotazione linguistica di un’unità lessicale</a>).</p>
 <p>L’indicazione della funzione grafica dei segni (chiavi di metadato <code>graphic</code>, <code>function</code> o <code>gf</code>) avviene apponendo i seguenti possibili valori:</p>
@@ -13469,7 +13494,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="corredo-editoriale-e-critico"><a class="header" href="#corredo-editoriale-e-critico">Corredo editoriale e critico</a></h1>
-<p>insieme delle notazioni per i fenomeni meta-testuali che costituiscono l’analisi filologica del testo iscritto. Include le valutazioni di epistemicità e di plausibilità interpretativa, le note di apparato critico discorsive, le annotazioni linguistiche e la bibliografia.</p>
+<p>Insieme delle notazioni per i fenomeni meta-testuali che costituiscono l’analisi filologica del testo iscritto. Include le valutazioni di epistemicità e di plausibilità interpretativa, le note di apparato critico discorsive, le annotazioni linguistiche e la bibliografia.</p>
 <p><strong>Il concetto di <em>lectio</em></strong></p>
 <p>Per <em>lectio</em> (pl. <em>lectiones</em>) si intende l’esito puntuale della scelta interpretativa operata dall’editore in ambito epigrafico, filologico o linguistico. Essa rappresenta l’asserzione critica che scaturisce dall’analisi del dato: non solo la lettura di una sequenza testuale, ma anche l’identificazione di una mano scribale o l’attribuzione morfologica di una forma (es. la scelta tra caso genitivo o dativo).</p>
 <p>La preferenza accordata al termine <em>lectio</em> — pur consapevole della sua accezione tradizionale in filologia testuale (legata alla variante tra codici, cf. <em>lectio difficilior</em>) — risponde a una precisa esigenza metodologica di IbiScript.</p>
@@ -13768,7 +13793,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 </tbody>
 </table>
 </div>
-<h4 id="costrutti-ammessi-internamente-10"><a class="header" href="#costrutti-ammessi-internamente-10">Costrutti ammessi internamente</a></h4>
+<h4 id="costrutti-ammessi-internamente-11"><a class="header" href="#costrutti-ammessi-internamente-11">Costrutti ammessi internamente</a></h4>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -14369,7 +14394,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 </tbody>
 </table>
 </div>
-<h4 id="costrutti-ammessi-internamente-11"><a class="header" href="#costrutti-ammessi-internamente-11">Costrutti ammessi internamente</a></h4>
+<h4 id="costrutti-ammessi-internamente-12"><a class="header" href="#costrutti-ammessi-internamente-12">Costrutti ammessi internamente</a></h4>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -14513,7 +14538,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 </tbody>
 </table>
 </div>
-<h4 id="costrutti-ammessi-internamente-12"><a class="header" href="#costrutti-ammessi-internamente-12">Costrutti ammessi internamente</a></h4>
+<h4 id="costrutti-ammessi-internamente-13"><a class="header" href="#costrutti-ammessi-internamente-13">Costrutti ammessi internamente</a></h4>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -15336,7 +15361,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="formattazione-e-annotazione-interna"><a class="header" href="#formattazione-e-annotazione-interna">Formattazione e annotazione interna</a></h1>
-<p>strumenti dedicati alla gestione dell’enfasi tipografica e all’inserimento di commenti metatestuali. Include marcatori per il rilievo grafico (grassetto, corsivo) e funzionalità di documentazione per uso interno (commenti su riga o a blocco) non destinati alla pubblicazione del testo critico.</p>
+<p>Strumenti dedicati alla gestione dell’enfasi tipografica e all’inserimento di commenti metatestuali. Include marcatori per il rilievo grafico (grassetto, corsivo) e funzionalità di documentazione per uso interno (commenti su riga o a blocco) non destinati alla pubblicazione del testo critico.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="testo-in-corsivo-enfasi"><a class="header" href="#testo-in-corsivo-enfasi">Testo in corsivo (enfasi)</a></h1>
 <p>Testo reso in corsivo, utile a esempio nelle note d’apparato (cf. <a href="../it/notation/critical-editorial/apparatus/apparatusnote.html">Nota di apparato</a>).</p>
@@ -15682,7 +15707,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="estensibilità-e-interoperabilità"><a class="header" href="#estensibilità-e-interoperabilità">Estensibilità e interoperabilità</a></h1>
-<p>ibiScript offre due modalità di estensibilità e interoperabilità con EpiDoc:</p>
+<p>IbiScript offre due modalità di estensibilità e interoperabilità con EpiDoc:</p>
 <ul>
 <li>aggiunta di attributi EpiDoc extra a costrutti IbiScript.</li>
 <li>utilizzo di frammenti di codice IbiScript all’interno di EpiDoc.</li>
@@ -15775,7 +15800,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 </table>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="macro-ibiscript-in-epidoc"><a class="header" href="#macro-ibiscript-in-epidoc">Macro IbiScript in EpiDoc</a></h1>
-<p>i frammenti di notazione IbiScript possono essere integrati nei documenti XML per sfruttarne la brevità in contesti TEI/EpiDoc complessi:</p>
+<p>I frammenti di notazione IbiScript possono essere integrati nei documenti XML per sfruttarne la brevità in contesti TEI/EpiDoc complessi:</p>
 <ul>
 <li><strong>attributo <code>ibi</code></strong>: ideale per inserire annotazioni brevi e rapide direttamente all’interno dei tag XML esistenti.</li>
 <li><strong>elemento <code>ibi</code></strong>: pensato per ospitare frammenti di codice più lunghi, articolati o su più righe.</li>
