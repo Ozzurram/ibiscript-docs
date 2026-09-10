@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-c31cf1c8.js";
+            window.path_to_searchindex_js = "../../../searchindex-0c47e587.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-a22df3b9.js"></script>
+        <script src="../../../toc-ac6c36d9.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -180,16 +180,10 @@
 <h2 id="sintassi"><a class="header" href="#sintassi">Sintassi</a></h2>
 <p>La <a href="../../../../it/notation/phenomena/gap/unknown.html">notazione della lacuna di estensione ignota</a> racchiusa tra doppie parentesi quadre <code>[[…]]</code>.</p>
 <h2 id="panoramica"><a class="header" href="#panoramica">Panoramica</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Notazione</th><th>AST Concettuale</th><th>Resa cartacea</th></tr>
-</thead>
-<tbody>
-<tr><td><code>[[[⊙‽ᵟ]]</code></td><td><code>Erasure { content: [Gap { ⊙ }], cert: γ }</code></td><td><code>⟦[⊙]◇ᵟ⟧</code></td></tr>
-</tbody>
-</table>
-</div>
+<p>[<code>[[[⊙‽ᵟ]]</code>],
+[<code>rust Erasure { content: [Gap { ⊙ }], cert: γ }</code>],
+[<code>⟦[⊙]◇ᵟ⟧</code>],
+)</p>
 <ul>
 <li><code>⊙</code> ∈ {<code>Known</code>, <code>Ranged</code>, <code>Unknown</code>} = la notazione di lacuna pertinente.</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = marcatore di incertezza <code>?</code> o marcatore di certezza <code>!</code> o stringa vuota (<code>ε</code>).</li>

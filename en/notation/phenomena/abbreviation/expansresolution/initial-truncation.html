@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Abbreviation by Internal Truncation - The IbiScript DSL</title>
+        <title>Abbreviation by Initial Truncation - The IbiScript DSL</title>
 
 
         <!-- Custom HTML head -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../../searchindex-0e461787.js";
+            window.path_to_searchindex_js = "../../../../searchindex-5c411da8.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../../toc-c4ff48a2.js"></script>
+        <script src="../../../../toc-d63ecdbd.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,10 +175,10 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="abbreviation-by-internal-truncation"><a class="header" href="#abbreviation-by-internal-truncation">Abbreviation by Internal Truncation</a></h1>
-<p>A fully resolved word where the portions present on the support constitute the beginning and the end of the lexical unit, while the central part, omitted by contraction, is reintegrated by the editor within parentheses (e.g., <code>D(omi)n(u)s</code>).</p>
+                        <h1 id="abbreviation-by-initial-truncation"><a class="header" href="#abbreviation-by-initial-truncation">Abbreviation by Initial Truncation</a></h1>
+<p>A fully resolved word where the portion present on the support constitutes the end (tail) of the lexical unit, while the initial part, omitted by truncation, is reintegrated by the editor within parentheses at the beginning of the word (e.g., <code>(bi)cornis</code>).</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<p>An alternating sequence of signs (<code>Abbreviated Text</code>) and completions in parentheses (<code>Expansion Components</code>), where the phenomenon begins and ends with text present on the support.</p>
+<p>A sequence in parentheses (<code>Expansion Components</code>) immediately followed by a sequence of signs (<code>Abbreviated Text</code>) acting as the tail of the word.</p>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
 <div class="table-wrapper">
 <table>
@@ -186,13 +186,12 @@
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>⊙(⊙)⊙…</code></td><td><code>⊙</code></td><td>⊙</td></tr>
-<tr><td>[<code>⊙(⊙)⊙…</code>],</td><td></td><td></td></tr>
-<tr><td>)</td><td></td><td></td></tr>
+<tr><td><code>(⊙)⊙…</code></td><td><code>Abbrev(Segmented(Expanded([⊙]), Written([⊙]), …, Complete))</code></td><td><code>(⊙)⊙…</code></td></tr>
 </tbody>
 </table>
 </div>
 <ul>
+<li><code>⊙</code> ∈ <code>ABBREV_TEXT_ALLOWED</code> = any phenomena allowed within <code>Abbrev</code> (notation, AST or rendering depending on its placement).</li>
 <li><code>⊙</code> ∈ <code>EXPANS_CONTENT_ALLOWED</code> = any phenomena allowed within <code>Abbrev</code> (notation, AST or rendering depending on its placement).</li>
 </ul>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
@@ -205,20 +204,11 @@
   
 <tbody>
 <tr><td>
-<pre><code class="language-text">Lib(erta)s</code></pre>
+<pre><code class="language-text">(Vale)rius</code></pre>
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-abbreviation" data-completion="complete"><span class="ibi-abbreviation-seg-written">Lib</span><span class="ibi-abbreviation-seg-expansion">erta</span><span class="ibi-abbreviation-seg-written">s</span></span></div>
-</div>
-</div>
-</td></tr>
-<tr><td>
-<pre><code class="language-text">D(omi)n(u)s</code></pre>
-</td><td>
-<div class="rendered-preview">
-<div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-abbreviation" data-completion="complete"><span class="ibi-abbreviation-seg-written">D</span><span class="ibi-abbreviation-seg-expansion">omi</span><span class="ibi-abbreviation-seg-written">n</span><span class="ibi-abbreviation-seg-expansion">u</span><span class="ibi-abbreviation-seg-written">s</span></span></div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-abbreviation" data-completion="complete"><span class="ibi-abbreviation-seg-expansion">Vale</span><span class="ibi-abbreviation-seg-written">rius</span></span></div>
 </div>
 </div>
 </td></tr>
@@ -237,18 +227,10 @@
   
 <tbody>
 <tr><td>
-<pre><code class="language-text">Lib(erta)s</code></pre>
+<pre><code class="language-text">(Vale)rius</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;&lt;abbr&gt;Lib&lt;/abbr&gt;&lt;ex&gt;erta&lt;/ex&gt;&lt;abbr&gt;s&lt;/abbr&gt;
-    &lt;/expan&gt;
-&lt;/ab&gt;</code></pre>
-</td></tr>
-<tr><td>
-<pre><code class="language-text">D(omi)n(u)s</code></pre>
-</td><td>
-<pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;&lt;abbr&gt;D&lt;/abbr&gt;&lt;ex&gt;omi&lt;/ex&gt;&lt;abbr&gt;n&lt;/abbr&gt;&lt;ex&gt;u&lt;/ex&gt;&lt;abbr&gt;s&lt;/abbr&gt;
+    &lt;expan&gt;&lt;ex&gt;Vale&lt;/ex&gt;&lt;abbr&gt;rius&lt;/abbr&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -267,31 +249,13 @@
   
 <tbody>
 <tr><td>
-<pre><code class="language-text">Lib(erta)s</code></pre>
+<pre><code class="language-text">(Vale)rius</code></pre>
 </td><td>
 <pre><code class="language-json">Abbreviation[complete]
-  Written
-    Plain("Lib")
   Expanded(certain)
-    Plain("erta")
+    Plain("Vale")
   Written
-    Plain("s")
-</code></pre>
-</td></tr>
-<tr><td>
-<pre><code class="language-text">D(omi)n(u)s</code></pre>
-</td><td>
-<pre><code class="language-json">Abbreviation[complete]
-  Written
-    Plain("D")
-  Expanded(certain)
-    Plain("omi")
-  Written
-    Plain("n")
-  Expanded(certain)
-    Plain("u")
-  Written
-    Plain("s")
+    Plain("rius")
 </code></pre>
 </td></tr>
 </tbody>
@@ -302,11 +266,11 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../../notation/phenomena/abbreviation/expansresolution/initial_truncation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../../notation/phenomena/abbreviation/expansresolution/final-truncation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../../../notation/phenomena/abbreviation/expansresolution/suspended.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../../notation/phenomena/abbreviation/expansresolution/internal-truncation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -316,11 +280,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../../notation/phenomena/abbreviation/expansresolution/initial_truncation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../../notation/phenomena/abbreviation/expansresolution/final-truncation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../../../notation/phenomena/abbreviation/expansresolution/suspended.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../../notation/phenomena/abbreviation/expansresolution/internal-truncation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
