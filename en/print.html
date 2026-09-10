@@ -37,10 +37,10 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-0e461787.js";
+            window.path_to_searchindex_js = "searchindex-5c411da8.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-c4ff48a2.js"></script>
+        <script src="toc-d63ecdbd.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -684,7 +684,7 @@ IbiScript supports the native rendering of any Unicode character, but each writi
 
 </table>
 
-<p>IbiScript allows any Unicode character to be represented in encoded form, provided the corresponding Unicode character code is known (cf. example 1).</p>
+IbiScript allows any Unicode character to be represented in encoded form, provided the corresponding Unicode character code is known (cf. example 1).
 <p>However, the most convenient and reliable input method is the <code>key:value</code> system, which IbiScript supports for 111 modern and historical writing systems (cf. <a href="../en/appendix/ws-iso-codes.html">Writing systems supported for <code>key:value</code> entry</a> for the full list of codes). Each Unicode character can be referred to via one or more nominal aliases that correspond to the official character names, suitably stripped of superfluous elements; numerical forms, in particular, can also be written by directly using numeric digits (cf. example 2). It is not necessary to repeat the ISO 15924 code before each nominal alias (cf. examples 3–8), as the sequence is recognised automatically (cf. example 9 for a case of explicit repetition with optional spaces after the semicolons).</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="white-space"><a class="header" href="#white-space">White Space</a></h1>
@@ -1393,8 +1393,7 @@ LineBreak
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>$kₘ=iₚ‽ᵟ$</code></td><td>`SectionBreak {</td><td></td></tr>
-<tr><td>unit: Lᵥ, n: iₚ, cert: γ }`</td><td><code>§iₚ</code></td><td></td></tr>
+<tr><td><code>$kₘ=iₚ‽ᵟ$</code></td><td><code>SectionBreak {unit: Lᵥ, n: iₚ, cert: γ}</code></td><td><code>§iₚ</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -1531,7 +1530,7 @@ It is used to mark the end of a word regardless of its physical layout on the su
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&amp;𝑆×𝑁;λₛ=λᵥ;…&amp;</code></td><td><code>LexicalUnit([𝘜], LinguisticAnalysis{λₖ:λᵥ,…})</code></td><td><code>𝑆×𝑁</code></td></tr>
+<tr><td><code>&amp;𝑆×𝑁;λₛ=λᵥ;…&amp;</code></td><td><code>LexicalUnit([𝘜], LinguisticAnalysis{λₖ:λᵥ, …})</code></td><td><code>𝑆×𝑁</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -1763,7 +1762,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[&gt;cN‽ᵟ]</code></td><td><code>Vacat{ count: n, unit: Char, precision: γ }</code></td><td><code>vac. char. n◇ᵟ</code></td></tr>
+<tr><td><code>[&gt;cN‽ᵟ]</code></td><td><code>Vacat{count: n, unit: Char, precision: γ}</code></td><td><code>vac. char. n◇ᵟ</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -1914,7 +1913,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[&gt;lN‽ᵟ]</code></td><td><code>Vacat{ count: n, unit: Line, precision: γ }</code></td><td><code>vacat n◇ᵟ</code></td></tr>
+<tr><td><code>[&gt;lN‽ᵟ]</code></td><td><code>Vacat{count: n, unit: Line, precision: γ}</code></td><td><code>vacat n◇ᵟ</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -2092,7 +2091,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[.𝑁.‽ᵟ]</code></td><td><code>Gap{ quantity: Known{ count: 𝑁 }, precision: γ }</code></td><td><code>[·𝑁◇ᵟ·]</code></td></tr>
+<tr><td><code>[.𝑁.‽ᵟ]</code></td><td><code>Gap{quantity: Known{count: 𝑁}, precision: γ}</code></td><td><code>[·𝑁◇ᵟ·]</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -2223,7 +2222,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[𝑛₁-𝑛₂‽ᵟ]</code></td><td><code>Gap{ quantity: Range{ min: 𝑛₁, max: 𝑛₂ }, precision: γ }</code></td><td><code>[·𝑛₁–𝑛₂◇ᵟ·]</code></td></tr>
+<tr><td><code>[𝑛₁-𝑛₂‽ᵟ]</code></td><td><code>Gap{quantity: Range{min: 𝑛₁, max: 𝑛₂}, precision: γ}</code></td><td><code>[·𝑛₁–𝑛₂◇ᵟ·]</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -2353,7 +2352,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[𝑊×𝑁₀₋ₙ‽ᵟ]</code></td><td><code>Gap{ quantity: Unknown, precision: γ }</code></td><td><code>[··◇ᵟ·]</code></td></tr>
+<tr><td><code>[𝑊×𝑁₀₋ₙ‽ᵟ]</code></td><td><code>Gap{quantity: Unknown, precision: γ}</code></td><td><code>[··◇ᵟ·]</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -2539,17 +2538,17 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
-<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/previousseen.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
+<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/previousseen.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -2565,7 +2564,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>*𝑆×𝑁‽ᵟ"ᵟ*</code></td><td><code>Unclear { content: [Plain("𝑆×𝑁")], cert: γ, legibility:  λ }</code></td><td><code>⦇𝑆×𝑁◇ᵟ~ᵟ⦈</code></td></tr>
+<tr><td><code>*𝑆×𝑁‽ᵟ"ᵟ*</code></td><td><code>Unclear {content: [Plain("𝑆×𝑁")], cert: γ, legibility:  λ}</code></td><td><code>⦇𝑆×𝑁◇ᵟ~ᵟ⦈</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -2770,7 +2769,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>*_⊙_‽ᵟ"ᵟ*</code></td><td><code>Unclear { content: [PreviousSeen { ⊙ }], cert: γ, legibility:  λ }</code></td><td><code>⦇⸤⊙⸥◇ᵟ~ᵟ⦈</code></td></tr>
+<tr><td><code>*_⊙_‽ᵟ"ᵟ*</code></td><td><code>Unclear {content: [PreviousSeen {⊙}], cert: γ, legibility:  λ}</code></td><td><code>⦇⸤⊙⸥◇ᵟ~ᵟ⦈</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -3001,17 +3000,17 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -3027,7 +3026,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[𝑆×𝑁‽ᵟ]</code></td><td><code>Supplied { content: [Plain("𝑆×𝑁")], cert: γ }</code></td><td><code>[𝑆×𝑁◇ᵟ]</code></td></tr>
+<tr><td><code>[𝑆×𝑁‽ᵟ]</code></td><td><code>Supplied {content: [Plain("𝑆×𝑁")], cert: γ}</code></td><td><code>[𝑆×𝑁◇ᵟ]</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -3169,23 +3168,23 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/gap-known.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/gap-range.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
-<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
-<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/erasure.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
-<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/ligature.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/gap-known.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/gap-range.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
+<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
+<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/erasure.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
+<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/ligature.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -3201,7 +3200,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>_ω;…:ᵟ𝑆×𝑁‽ᵟ_</code></td><td><code>PreviousSeen { witnesses: [ω,…ᵟ], content: [Plain("𝑆×𝑁")], cert: γ }</code></td><td><code>⸤𝑆×𝑁ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
+<tr><td><code>_ω;…:ᵟ𝑆×𝑁‽ᵟ_</code></td><td><code>PreviousSeen {witnesses: [ω, …ᵟ], content: [Plain("𝑆×𝑁")], cert: γ}</code></td><td><code>⸤𝑆×𝑁ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -3339,7 +3338,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>_ω;…:ᵟ[⊙]‽ᵟ_</code></td><td><code>PreviousSeen { witnesses: [ω,…ᵟ], content: [Gap{ ⊙ }], cert: γ }</code></td><td><code>⸤[⊙]ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
+<tr><td><code>_ω;…:ᵟ[⊙]‽ᵟ_</code></td><td><code>PreviousSeen {witnesses: [ω, …ᵟ], content: [Gap{⊙}], cert: γ}</code></td><td><code>⸤[⊙]ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -3479,7 +3478,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>_ω;…:ᵟ[⊙]‽ᵟ_</code></td><td><code>PreviousSeen { witnesses: [ω,…ᵟ], content: [Gap{ ⊙ }], cert: γ }</code></td><td><code>⸤[⊙]ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
+<tr><td><code>_ω;…:ᵟ[⊙]‽ᵟ_</code></td><td><code>PreviousSeen {witnesses: [ω, …ᵟ], content: [Gap{⊙}], cert: γ}</code></td><td><code>⸤[⊙]ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -3619,7 +3618,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>_ω;…:ᵟ[⊙]‽ᵟ_</code></td><td><code>PreviousSeen { witnesses: [ω,…ᵟ], content: [Gap{ ⊙ }], cert: γ }</code></td><td><code>⸤[⊙]ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
+<tr><td><code>_ω;…:ᵟ[⊙]‽ᵟ_</code></td><td><code>PreviousSeen {witnesses: [ω, …ᵟ], content: [Gap{⊙}], cert: γ}</code></td><td><code>⸤[⊙]ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -3759,7 +3758,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>_ω;…:ᵟ[[⊙]]‽ᵟ_</code></td><td><code>PreviousSeen { witnesses: [ω,…ᵟ], content: [Erasure { ⊙ }], cert: γ }</code></td><td><code>⸤⟦𝑆×𝑁⟧ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
+<tr><td><code>_ω;…:ᵟ[[⊙]]‽ᵟ_</code></td><td><code>PreviousSeen {witnesses: [ω, …ᵟ], content: [Erasure {⊙}], cert: γ}</code></td><td><code>⸤⟦𝑆×𝑁⟧ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -3908,7 +3907,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>_ω;…:ᵟ=⊙=‽ᵟ_</code></td><td><code>PreviousSeen { witnesses: [ω,…ᵟ], content: [Ligature { ⊙ }], cert: γ }</code></td><td><code>⸤⧵⊙⧷ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
+<tr><td><code>_ω;…:ᵟ=⊙=‽ᵟ_</code></td><td><code>PreviousSeen {witnesses: [ω, …ᵟ], content: [Ligature {⊙}], cert: γ}</code></td><td><code>⸤⧵⊙⧷ω;…ol.ᵟ◇ᵟ⸥</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -4061,16 +4060,16 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/omitted/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/omitted/whitespace.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>LineBreak</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/omitted/linebreak.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/omitted/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center"><a href="/en/notation/phenomena/omitted/whitespace.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>LineBreak</code></td><td style="text-align: center"><a href="/en/notation/phenomena/omitted/linebreak.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -4086,7 +4085,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&lt;𝑆×𝑁‽ᵟ&gt;</code></td><td><code>Omitted { content: [Plain("𝑆×𝑁")], cert: γ }</code></td><td><code>〈𝑆×𝑁◇ᵟ〉</code></td></tr>
+<tr><td><code>&lt;𝑆×𝑁‽ᵟ&gt;</code></td><td><code>Omitted {content: [Plain("𝑆×𝑁")], cert: γ}</code></td><td><code>〈𝑆×𝑁◇ᵟ〉</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -4220,7 +4219,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&lt;𝑊‽ᵟ&gt;</code></td><td><code>Omitted { content: [Whitespace], cert: γ }</code></td><td><code>〈 ◇ᵟ〉</code></td></tr>
+<tr><td><code>&lt;𝑊‽ᵟ&gt;</code></td><td><code>Omitted {content: [Whitespace], cert: γ}</code></td><td><code>〈 ◇ᵟ〉</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -4381,7 +4380,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&lt;#𝑛ᵟ‽ᵟ&gt;</code></td><td><code>Omitted { content: [LineBreak(νₐᵟ)], cert: γ }</code></td><td><code>〈↵◇ᵟ〉</code></td></tr>
+<tr><td><code>&lt;#𝑛ᵟ‽ᵟ&gt;</code></td><td><code>Omitted {content: [LineBreak(νₐᵟ)], cert: γ}</code></td><td><code>〈↵◇ᵟ〉</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -4529,19 +4528,19 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/gap-known.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/gap-range.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/unclear.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/gap-known.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/gap-range.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/unclear.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -4551,16 +4550,10 @@ abc defg  hijk l
 <h2 id="syntax-27"><a class="header" href="#syntax-27">Syntax</a></h2>
 <p>Any number of Unicode characters (followed by the <a href="../en/notation/critical-editorial/interpretation/epistemicity-scale/index.html">optional certainty notation</a>) enclosed between curly brackets <code>{…}</code>.</p>
 <h2 id="overview-27"><a class="header" href="#overview-27">Overview</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
-</thead>
-<tbody>
-<tr><td><code>{𝑆×𝑁‽ᵟ}</code></td><td><code>[Surplus { content: [Plain("𝑆×𝑁")], cert: γ }</code></td><td><code>{𝑆×𝑁◇ᵟ}</code></td></tr>
-</tbody>
-</table>
-</div>
+<p>[<code>{𝑆×𝑁‽ᵟ}</code>],
+[<code>rust [Surplus { content: [Plain("𝑆×𝑁")], cert: γ }</code>],
+[<code>{𝑆×𝑁◇ᵟ}</code>],
+)</p>
 <ul>
 <li><code>𝑆</code> = any sign (Unicode character) ∉ <code>STOP_SET</code> (cf. <a href="../en/appendix/symbols.html">Technical Catalogue of Symbols</a>) otherwise preceded by the escape character <code>\</code>.</li>
 <li><code>𝑁</code> = number of characters (represented by char or digits).</li>
@@ -4689,7 +4682,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>{[⊙]‽ᵟ}</code></td><td><code>Surplus { content: [Gap { ⊙ }], cert: γ }</code></td><td><code>{[⊙]◇ᵟ}</code></td></tr>
+<tr><td><code>{[⊙]‽ᵟ}</code></td><td><code>Surplus {content: [Gap {⊙}], cert: γ}</code></td><td><code>{[⊙]◇ᵟ}</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -4826,7 +4819,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>{[⊙]‽ᵟ}</code></td><td><code>Surplus { content: [Gap { ⊙ }], cert: γ }</code></td><td><code>{[⊙]◇ᵟ}</code></td></tr>
+<tr><td><code>{[⊙]‽ᵟ}</code></td><td><code>Surplus {content: [Gap {⊙}], cert: γ}</code></td><td><code>{[⊙]◇ᵟ}</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -4963,7 +4956,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>{[⊙]‽ᵟ}</code></td><td><code>Surplus { content: [Gap { ⊙ }], cert: γ }</code></td><td><code>{[⊙]◇ᵟ}</code></td></tr>
+<tr><td><code>{[⊙]‽ᵟ}</code></td><td><code>Surplus {content: [Gap {⊙}], cert: γ}</code></td><td><code>{[⊙]◇ᵟ}</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -5100,7 +5093,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>{*⊙*‽ᵟ}</code></td><td><code>Surplus { content: [Unclear { ⊙ }], cert: γ }</code></td><td><code>{⦇⊙⦈◇ᵟ}</code></td></tr>
+<tr><td><code>{*⊙*‽ᵟ}</code></td><td><code>Surplus {content: [Unclear {⊙}], cert: γ}</code></td><td><code>{⦇⊙⦈◇ᵟ}</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -5273,21 +5266,21 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/gap-known.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/gap-range.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/unclear.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/supplied.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
-<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/previousseen.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/gap-known.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/gap-range.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/unclear.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/supplied.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
+<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/previousseen.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -5303,7 +5296,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[[𝑆×𝑁‽ᵟ]]</code></td><td><code>Erasure { content: [Supplied { content: [Plain("𝑆×𝑁")], cert: γ }], cert: High }</code></td><td><code>⟦𝑆×𝑁◇ᵟ⟧</code></td></tr>
+<tr><td><code>[[𝑆×𝑁‽ᵟ]]</code></td><td><code>Erasure {content: [Supplied {content: [Plain("𝑆×𝑁")], cert: γ}], cert: High}</code></td><td><code>⟦𝑆×𝑁◇ᵟ⟧</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -5443,7 +5436,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[[[⊙]‽ᵟ]]</code></td><td><code>Erasure { content: [Gap { ⊙ }], cert: γ }</code></td><td><code>⟦[⊙]◇ᵟ⟧</code></td></tr>
+<tr><td><code>[[[⊙]‽ᵟ]]</code></td><td><code>Erasure {content: [Gap {⊙}], cert: γ}</code></td><td><code>⟦[⊙]◇ᵟ⟧</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -5587,7 +5580,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[[[⊙]‽ᵟ]]</code></td><td><code>Erasure { content: [Gap { ⊙ }], cert: γ }</code></td><td><code>⟦[⊙]◇ᵟ⟧</code></td></tr>
+<tr><td><code>[[[⊙]‽ᵟ]]</code></td><td><code>Erasure {content: [Gap {⊙}], cert: γ}</code></td><td><code>⟦[⊙]◇ᵟ⟧</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -5725,16 +5718,10 @@ abc defg  hijk l
 <h2 id="syntax-35"><a class="header" href="#syntax-35">Syntax</a></h2>
 <p>The <a href="../en/notation/phenomena/gap/unknown.html">notation for a gap of unknwon extent</a> enclosed between double square brackets <code>[[…]]</code>.</p>
 <h2 id="overview-35"><a class="header" href="#overview-35">Overview</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
-</thead>
-<tbody>
-<tr><td><code>[[[⊙‽ᵟ]]</code></td><td><code>Erasure { content: [Gap { ⊙ }], cert: γ }</code></td><td><code>⟦[⊙]◇ᵟ⟧</code></td></tr>
-</tbody>
-</table>
-</div>
+<p>[<code>[[[⊙‽ᵟ]]</code>],
+[<code>rust Erasure { content: [Gap { ⊙ }], cert: γ }</code>],
+[<code>⟦[⊙]◇ᵟ⟧</code>],
+)</p>
 <ul>
 <li><code>⊙</code> ∈ <code>PREVIOUS_SEEN_ALLOWED</code> = the relevant gap notation.</li>
 <li><code>‽ᵟ</code> ∈ {<code>?</code>, <code>!</code>, <code>ε</code>} = uncertainty marker <code>?</code>, certainty marker <code>!</code>, or empty string (<code>ε</code>).</li>
@@ -5875,7 +5862,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[[*⊙*‽ᵟ]]</code></td><td><code>Erasure { content: [Unclear { ⊙ }], cert: γ }</code></td><td><code>⟦⦇⊙⦈◇ᵟ⟧</code></td></tr>
+<tr><td><code>[[*⊙*‽ᵟ]]</code></td><td><code>Erasure {content: [Unclear {⊙}], cert: γ}</code></td><td><code>⟦⦇⊙⦈◇ᵟ⟧</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -6022,7 +6009,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[[[⊙]‽ᵟ]]</code></td><td><code>Erasure { content: [Supplied { ⊙ }], cert: γ }</code></td><td><code>⟦[⊙]◇ᵟ⟧</code></td></tr>
+<tr><td><code>[[[⊙]‽ᵟ]]</code></td><td><code>Erasure {content: [Supplied {⊙}], cert: γ}</code></td><td><code>⟦[⊙]◇ᵟ⟧</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -6163,7 +6150,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[[_⊙_‽ᵟ]]</code></td><td><code>Erasure { content: [PreviousSeen { ⊙ }], cert: γ }</code></td><td><code>⟦⸤⊙⸥◇ᵟ⟧</code></td></tr>
+<tr><td><code>[[_⊙_‽ᵟ]]</code></td><td><code>Erasure {content: [PreviousSeen {⊙}], cert: γ}</code></td><td><code>⟦⸤⊙⸥◇ᵟ⟧</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -6345,22 +6332,22 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/gap-known.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/gap-range.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/unclear.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/supplied.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
-<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/previousseen.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
-<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/addition/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/en/notation/phenomena/addition/gap-known.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/en/notation/phenomena/addition/gap-range.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/en/notation/phenomena/addition/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/en/notation/phenomena/addition/unclear.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/en/notation/phenomena/addition/supplied.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
+<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/en/notation/phenomena/addition/previousseen.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
+<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -6388,7 +6375,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+𝑆×𝑁‽ᵟ¤ᵟ+</code></td><td><code>Addition { content: [Plain("𝑆×𝑁")], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸂𝑆×𝑁◇ᵟ⸃</code></td></tr>
+<tr><td><code>+𝑆×𝑁‽ᵟ¤ᵟ+</code></td><td><code>Addition {content: [Plain("𝑆×𝑁")], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸂𝑆×𝑁◇ᵟ⸃</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -6524,7 +6511,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Addition { content: [Gap { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸂[⊙]◇ᵟ⸃</code></td></tr>
+<tr><td><code>+[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Addition {content: [Gap {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸂[⊙]◇ᵟ⸃</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -6663,7 +6650,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Addition { content: [Gap { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸂[⊙]◇ᵟ⸃</code></td></tr>
+<tr><td><code>+[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Addition {content: [Gap {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸂[⊙]◇ᵟ⸃</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -6777,7 +6764,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Addition { content: [Gap { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸂[⊙]◇ᵟ⸃</code></td></tr>
+<tr><td><code>+[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Addition {content: [Gap {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸂[⊙]◇ᵟ⸃</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -6916,7 +6903,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+*⊙*‽ᵟ¤ᵟ+</code></td><td><code>Addition { content: [Unclear { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸂⦇⊙⦈◇ᵟ⸃</code></td></tr>
+<tr><td><code>+*⊙*‽ᵟ¤ᵟ+</code></td><td><code>Addition {content: [Unclear {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸂⦇⊙⦈◇ᵟ⸃</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -7059,7 +7046,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Addition { content: [Supplied { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸂[⊙]◇ᵟ⸃</code></td></tr>
+<tr><td><code>+[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Addition {content: [Supplied {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸂[⊙]◇ᵟ⸃</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -7202,7 +7189,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+_⊙_‽ᵟ¤ᵟ+</code></td><td><code>Addition { content: [PreviousSeen { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸂⸤⊙⸥◇ᵟ⸃</code></td></tr>
+<tr><td><code>+_⊙_‽ᵟ¤ᵟ+</code></td><td><code>Addition {content: [PreviousSeen {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸂⸤⊙⸥◇ᵟ⸃</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -7345,7 +7332,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+{⊙}‽ᵟ¤ᵟ+</code></td><td><code>Addition { content: [Surplus { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸂{⊙}◇ᵟ⸃</code></td></tr>
+<tr><td><code>+{⊙}‽ᵟ¤ᵟ+</code></td><td><code>Addition {content: [Surplus {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸂{⊙}◇ᵟ⸃</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -7488,7 +7475,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+[[⊙]]‽ᵟ¤ᵟ+</code></td><td><code>Addition { content: [Erasure { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸂⟦⊙⟧◇ᵟ⸃</code></td></tr>
+<tr><td><code>+[[⊙]]‽ᵟ¤ᵟ+</code></td><td><code>Addition {content: [Erasure {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸂⟦⊙⟧◇ᵟ⸃</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -7637,7 +7624,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+=⊙=‽ᵟ¤ᵟ+</code></td><td><code>Addition { content: [Ligature { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸂⧵⊙⧷◇ᵟ⸃</code></td></tr>
+<tr><td><code>+=⊙=‽ᵟ¤ᵟ+</code></td><td><code>Addition {content: [Ligature {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸂⧵⊙⧷◇ᵟ⸃</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -7828,23 +7815,23 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/gap-known.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/gap-range.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/unclear.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/supplied.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
-<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/previousseen.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
-<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/erasure.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
-<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/deleted/ligature.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/deleted/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/deleted/gap-known.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/deleted/gap-range.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/deleted/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/deleted/unclear.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/deleted/supplied.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
+<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/deleted/previousseen.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
+<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/deleted/erasure.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
+<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/deleted/ligature.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -7860,7 +7847,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+𝑆×𝑁=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted: [Plain("𝑆×𝑁")], added:…, cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄𝑆×𝑁 ↦ …◇ᵟ⸅</code></td></tr>
+<tr><td><code>+𝑆×𝑁=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted: [Plain("𝑆×𝑁")], added:…, cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄𝑆×𝑁 ↦ …◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -8014,7 +8001,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+[⊙]=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted: [Gap { ⊙ }], added:…, cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄[⊙] ↦ …◇ᵟ⸅</code></td></tr>
+<tr><td><code>+[⊙]=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted: [Gap {⊙}], added:…, cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄[⊙] ↦ …◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -8171,7 +8158,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+[⊙]=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted: [Gap { ⊙ }], added:…, cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄[⊙] ↦ …◇ᵟ⸅</code></td></tr>
+<tr><td><code>+[⊙]=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted: [Gap {⊙}], added:…, cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄[⊙] ↦ …◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -8297,7 +8284,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+[⊙]=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted: [Gap { ⊙ }], added:…, cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄[⊙] ↦ …◇ᵟ⸅</code></td></tr>
+<tr><td><code>+[⊙]=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted: [Gap {⊙}], added:…, cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄[⊙] ↦ …◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -8454,7 +8441,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+*⊙*=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted: [Unclear { ⊙ }], added:…, cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄⦇⊙⦈ ↦ …◇ᵟ⸅</code></td></tr>
+<tr><td><code>+*⊙*=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted: [Unclear {⊙}], added:…, cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄⦇⊙⦈ ↦ …◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -8615,7 +8602,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+[⊙]=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted: [Supplied { ⊙ }], added:…, cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄[⊙] ↦ …◇ᵟ⸅</code></td></tr>
+<tr><td><code>+[⊙]=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted: [Supplied {⊙}], added:…, cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄[⊙] ↦ …◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -8777,7 +8764,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+_⊙_=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted: [PreviousSeen { ⊙ }], added:…, cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄⸤⊙⸥ ↦ …◇ᵟ⸅</code></td></tr>
+<tr><td><code>+_⊙_=&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted: [PreviousSeen {⊙}], added:…, cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄⸤⊙⸥ ↦ …◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -8937,7 +8924,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+[[⊙=&gt;…]]‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted: [Erasure { ⊙ }], added:…, cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄⟦⊙⟧ ↦ …◇ᵟ⸅</code></td></tr>
+<tr><td><code>+[[⊙=&gt;…]]‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted: [Erasure {⊙}], added:…, cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄⟦⊙⟧ ↦ …◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -9104,7 +9091,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+=⊙==&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted: [Ligature { ⊙ }], added:…, cert: γ, meta: ¤ }</code></td><td>`𝘏ᵟ```⸄⧵⊙⧷ ↦ …◇ᵟ⸅``</td></tr>
+<tr><td><code>+=⊙==&gt;…‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted: [Ligature {⊙}], added:…, cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ</code>⸄⧵⊙⧷ ↦ …◇ᵟ⸅``</td></tr>
 </tbody>
 </table>
 </div>
@@ -9263,24 +9250,24 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/gap-known.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/gap-range.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/unclear.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/supplied.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
-<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/previousseen.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
-<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
-<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/erasure.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
-<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/added/ligature.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/added/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/added/gap-known.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/added/gap-range.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/added/gap-unknown.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/added/unclear.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/added/supplied.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
+<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/added/previousseen.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
+<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
+<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/added/erasure.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
+<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center"><a href="/en/notation/phenomena/correction/added/ligature.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -9296,7 +9283,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+…=&gt;𝑆×𝑁‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted:…, added: [Plain("𝑆×𝑁")], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄… ↦ 𝑆×𝑁◇ᵟ⸅</code></td></tr>
+<tr><td><code>+…=&gt;𝑆×𝑁‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted:…, added: [Plain("𝑆×𝑁")], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄… ↦ 𝑆×𝑁◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -9450,7 +9437,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+…=&gt;[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted:…, added: [Gap { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄… ↦ [⊙]◇ᵟ⸅</code></td></tr>
+<tr><td><code>+…=&gt;[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted:…, added: [Gap {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄… ↦ [⊙]◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -9607,7 +9594,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+…=&gt;[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted:…, added: [Gap { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄… ↦ [⊙]◇ᵟ⸅</code></td></tr>
+<tr><td><code>+…=&gt;[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted:…, added: [Gap {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄… ↦ [⊙]◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -9733,7 +9720,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+…=&gt;[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted:…, added: [Gap { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄… ↦ [⊙]◇ᵟ⸅</code></td></tr>
+<tr><td><code>+…=&gt;[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted:…, added: [Gap {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄… ↦ [⊙]◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -9890,7 +9877,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+…=&gt;*⊙*‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted:…, added: [Unclear { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄… ↦ ⦇⊙⦈◇ᵟ⸅</code></td></tr>
+<tr><td><code>+…=&gt;*⊙*‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted:…, added: [Unclear {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄… ↦ ⦇⊙⦈◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -10051,7 +10038,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+…=&gt;[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted:…, added: [Supplied { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄… ↦ [⊙]◇ᵟ⸅</code></td></tr>
+<tr><td><code>+…=&gt;[⊙]‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted:…, added: [Supplied {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄… ↦ [⊙]◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -10212,7 +10199,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+…=&gt;_⊙_‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted:…, added: [PreviousSeen { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄… ↦ ⸤⊙⸥◇ᵟ⸅</code></td></tr>
+<tr><td><code>+…=&gt;_⊙_‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted:…, added: [PreviousSeen {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄… ↦ ⸤⊙⸥◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -10373,7 +10360,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+…=&gt;[[⊙]]‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted:…, added: [Erasure { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄… ↦ ⟦⊙⟧◇ᵟ⸅</code></td></tr>
+<tr><td><code>+…=&gt;[[⊙]]‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted:…, added: [Erasure {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄… ↦ ⟦⊙⟧◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -10540,7 +10527,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>+…=&gt;=⊙=‽ᵟ¤ᵟ+</code></td><td><code>Correction { deleted:…, added: [Ligature { ⊙ }], cert: γ, meta: ¤ }</code></td><td><code>𝘏ᵟ``⸄… ↦ ⧵⊙⧷◇ᵟ⸅</code></td></tr>
+<tr><td><code>+…=&gt;=⊙=‽ᵟ¤ᵟ+</code></td><td><code>Correction {deleted:…, added: [Ligature {⊙}], cert: γ, meta: ¤}</code></td><td><code>𝘏ᵟ⸄… ↦ ⧵⊙⧷◇ᵟ⸅</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -10734,18 +10721,18 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/unclear.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/supplied.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
-<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/previousseen.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/ligature/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/en/notation/phenomena/ligature/unclear.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/en/notation/phenomena/ligature/supplied.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
+<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/en/notation/phenomena/ligature/previousseen.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -10761,7 +10748,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>=𝑆×𝑁=</code></td><td><code>Ligature { content: [Plain("𝑆×𝑁")], cert: γ }</code></td><td><code>⧵𝑆×𝑁⧷</code></td></tr>
+<tr><td><code>=𝑆×𝑁=</code></td><td><code>Ligature {content: [Plain("𝑆×𝑁")], cert: γ}</code></td><td><code>⧵𝑆×𝑁⧷</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -10894,7 +10881,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>=*⊙*=</code></td><td><code>Ligature { content: [Unclear { ⊙ }], cert: γ }</code></td><td><code>⦇⧵⊙⧷⦈</code></td></tr>
+<tr><td><code>=*⊙*=</code></td><td><code>Ligature {content: [Unclear {⊙}], cert: γ}</code></td><td><code>⦇⧵⊙⧷⦈</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -11035,7 +11022,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>=[⊙]=</code></td><td><code>Ligature { content: [Supplied { ⊙ }], cert: γ }</code></td><td><code>[⧵⊙⧷]</code></td></tr>
+<tr><td><code>=[⊙]=</code></td><td><code>Ligature {content: [Supplied {⊙}], cert: γ}</code></td><td><code>[⧵⊙⧷]</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -11176,7 +11163,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>=_⊙_=</code></td><td><code>Ligature { content: [PreviousSeen { ⊙ }], cert: γ }</code></td><td><code>⸤⧵⊙⧷⸥</code></td></tr>
+<tr><td><code>=_⊙_=</code></td><td><code>Ligature {content: [PreviousSeen {⊙}], cert: γ}</code></td><td><code>⸤⧵⊙⧷⸥</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -11319,19 +11306,19 @@ abc defg  hijk l
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/abbrevsegment-written/plain.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/abbrevsegment-written/unclear.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/abbrevsegment-written/supplied.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
-<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/abbrevsegment-written/previousseen.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
-<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/abbrevsegment-written/surplus.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
-<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/abbrevsegment-written/erasure.html">📖</a></td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center"><a href="/en/notation/phenomena/abbreviation/abbrevsegment-written/plain.html">📖</a></td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center"><a href="/en/notation/phenomena/abbreviation/abbrevsegment-written/unclear.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center"><a href="/en/notation/phenomena/abbreviation/abbrevsegment-written/supplied.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
+<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center"><a href="/en/notation/phenomena/abbreviation/abbrevsegment-written/previousseen.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
+<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center"><a href="/en/notation/phenomena/abbreviation/abbrevsegment-written/surplus.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
+<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center"><a href="/en/notation/phenomena/abbreviation/abbrevsegment-written/erasure.html">📖</a></td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -11434,7 +11421,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>*⊙‽ᵟ*(…)</code></td><td><code>Written([Unclear { ⊙, γ }])</code></td><td><code>⦇⊙◇ᵟ⦈</code></td></tr>
+<tr><td><code>*⊙‽ᵟ*(…)</code></td><td><code>Written([Unclear {⊙, γ}])</code></td><td><code>⦇⊙◇ᵟ⦈</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -11580,7 +11567,7 @@ abc defg  hijk l
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[⊙‽ᵟ](…)</code></td><td><code>Written([Supplied { ⊙, γ }])</code></td><td><code>[⊙◇ᵟ]</code></td></tr>
+<tr><td><code>[⊙‽ᵟ](…)</code></td><td><code>Written([Supplied {⊙, γ}])</code></td><td><code>[⊙◇ᵟ]</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -11726,7 +11713,7 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>_⊙‽ᵟ_(…)</code></td><td><code>Written([PreviousSeen { ⊙, γ }])</code></td><td><code>⸤⊙⸥◇ᵟ</code></td></tr>
+<tr><td><code>_⊙‽ᵟ_(…)</code></td><td><code>Written([PreviousSeen {⊙, γ}])</code></td><td><code>⸤⊙⸥◇ᵟ</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -11872,7 +11859,7 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>{⊙‽ᵟ}(…)</code></td><td><code>Written([Surplus { ⊙, γ }])</code></td><td><code>{⊙◇ᵟ}</code></td></tr>
+<tr><td><code>{⊙‽ᵟ}(…)</code></td><td><code>Written([Surplus {⊙, γ}])</code></td><td><code>{⊙◇ᵟ}</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -12018,7 +12005,7 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>[[⊙‽ᵟ]](…)</code></td><td><code>Written([Erasure { ⊙, γ }])</code></td><td><code>⟦⊙◇ᵟ⟧</code></td></tr>
+<tr><td><code>[[⊙‽ᵟ]](…)</code></td><td><code>Written([Erasure {⊙, γ}])</code></td><td><code>⟦⊙◇ᵟ⟧</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -12173,7 +12160,7 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>…(⊙)</code></td><td><code>Certain([ ⊙ ])</code></td><td><code>(⊙)</code></td></tr>
+<tr><td><code>…(⊙)</code></td><td><code>Certain([⊙])</code></td><td><code>(⊙)</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -12259,7 +12246,7 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>…(⊙?)</code></td><td><code>Uncertain([ ⊙ ])</code></td><td><code>(⊙⯑)</code></td></tr>
+<tr><td><code>…(⊙?)</code></td><td><code>Uncertain([⊙])</code></td><td><code>(⊙⯑)</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -12425,6 +12412,21 @@ Abbreviation[complete]
 <p>A fully resolved word where the portion present on the support constitutes the beginning (head) of the lexical unit, while the part omitted by truncation is reintegrated by the editor within parentheses (e.g., <code>Aug(ustus)</code>).</p>
 <h2 id="syntax-80"><a class="header" href="#syntax-80">Syntax</a></h2>
 <p>A sequence of signs (<code>Abbreviated Text</code>) acting as the root, immediately followed by the completion in parentheses (<code>Expansion Components</code>).</p>
+<h2 id="overview-80"><a class="header" href="#overview-80">Overview</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
+</thead>
+<tbody>
+<tr><td><code>…⊙(⊙)</code></td><td><code>Abbrev(Segmented(…, Written([⊙]), Expanded([⊙])), Complete))</code></td><td><code>…⊙(⊙)</code></td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><code>⊙</code> ∈ <code>ABBREV_TEXT_ALLOWED</code> = any phenomena allowed within <code>Abbrev</code> (notation, AST or rendering depending on its placement).</li>
+<li><code>⊙</code> ∈ <code>EXPANS_CONTENT_ALLOWED</code> = any phenomena allowed within <code>Abbrev</code> (notation, AST or rendering depending on its placement).</li>
+</ul>
 <h2 id="examples-79"><a class="header" href="#examples-79">Examples</a></h2>
 <table>
   
@@ -12508,17 +12510,19 @@ Abbreviation[complete]
 </tbody>
 
 </table>
-
-<h2 id="overview-80"><a class="header" href="#overview-80">Overview</a></h2>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="abbreviation-by-initial-truncation"><a class="header" href="#abbreviation-by-initial-truncation">Abbreviation by Initial Truncation</a></h1>
+<p>A fully resolved word where the portion present on the support constitutes the end (tail) of the lexical unit, while the initial part, omitted by truncation, is reintegrated by the editor within parentheses at the beginning of the word (e.g., <code>(bi)cornis</code>).</p>
+<h2 id="syntax-81"><a class="header" href="#syntax-81">Syntax</a></h2>
+<p>A sequence in parentheses (<code>Expansion Components</code>) immediately followed by a sequence of signs (<code>Abbreviated Text</code>) acting as the tail of the word.</p>
+<h2 id="overview-81"><a class="header" href="#overview-81">Overview</a></h2>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>…⊙(⊙)</code></td><td><code>⊙</code></td><td>⊙</td></tr>
-<tr><td>[<code>…⊙(⊙)</code>],</td><td></td><td></td></tr>
-<tr><td>)</td><td></td><td></td></tr>
+<tr><td><code>(⊙)⊙…</code></td><td><code>Abbrev(Segmented(Expanded([⊙]), Written([⊙]), …, Complete))</code></td><td><code>(⊙)⊙…</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -12526,11 +12530,6 @@ Abbreviation[complete]
 <li><code>⊙</code> ∈ <code>ABBREV_TEXT_ALLOWED</code> = any phenomena allowed within <code>Abbrev</code> (notation, AST or rendering depending on its placement).</li>
 <li><code>⊙</code> ∈ <code>EXPANS_CONTENT_ALLOWED</code> = any phenomena allowed within <code>Abbrev</code> (notation, AST or rendering depending on its placement).</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="abbreviation-by-initial-truncation"><a class="header" href="#abbreviation-by-initial-truncation">Abbreviation by Initial Truncation</a></h1>
-<p>A fully resolved word where the portion present on the support constitutes the end (tail) of the lexical unit, while the initial part, omitted by truncation, is reintegrated by the editor within parentheses at the beginning of the word (e.g., <code>(bi)cornis</code>).</p>
-<h2 id="syntax-81"><a class="header" href="#syntax-81">Syntax</a></h2>
-<p>A sequence in parentheses (<code>Expansion Components</code>) immediately followed by a sequence of signs (<code>Abbreviated Text</code>) acting as the tail of the word.</p>
 <h2 id="examples-80"><a class="header" href="#examples-80">Examples</a></h2>
 <table>
   
@@ -12598,22 +12597,6 @@ Abbreviation[complete]
 </tbody>
 
 </table>
-
-<h2 id="overview-81"><a class="header" href="#overview-81">Overview</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
-</thead>
-<tbody>
-<tr><td><code>(⊙)⊙…</code></td><td><code>Abbrev(Segmented(Expanded([ ⊙ ]), Written([ ⊙ ]), …, Complete))</code></td><td><code>(⊙)⊙…</code></td></tr>
-</tbody>
-</table>
-</div>
-<ul>
-<li><code>⊙</code> ∈ <code>ABBREV_TEXT_ALLOWED</code> = any phenomena allowed within <code>Abbrev</code> (notation, AST or rendering depending on its placement).</li>
-<li><code>⊙</code> ∈ <code>EXPANS_CONTENT_ALLOWED</code> = any phenomena allowed within <code>Abbrev</code> (notation, AST or rendering depending on its placement).</li>
-</ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="abbreviation-by-internal-truncation"><a class="header" href="#abbreviation-by-internal-truncation">Abbreviation by Internal Truncation</a></h1>
 <p>A fully resolved word where the portions present on the support constitute the beginning and the end of the lexical unit, while the central part, omitted by contraction, is reintegrated by the editor within parentheses (e.g., <code>D(omi)n(u)s</code>).</p>
@@ -12626,9 +12609,7 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>⊙(⊙)⊙…</code></td><td><code>⊙</code></td><td>⊙</td></tr>
-<tr><td>[<code>⊙(⊙)⊙…</code>],</td><td></td><td></td></tr>
-<tr><td>)</td><td></td><td></td></tr>
+<tr><td><code>⊙(⊙)⊙…</code></td><td><code>Abbrev(Segmented(Written([⊙]), Expanded([⊙])), Written([⊙]), …, Complete))</code></td><td><code>⊙(⊙)⊙…</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -12750,9 +12731,7 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>…⊙(⊙)…</code></td><td><code>⊙</code></td><td>⊙</td></tr>
-<tr><td>[<code>…⊙(⊙)…</code>],</td><td></td><td></td></tr>
-<tr><td>)</td><td></td><td></td></tr>
+<tr><td><code>…⊙(⊙)…</code></td><td><code>Abbrev(Segmented(…, Written([⊙]), Expanded([⊙])), …, Complete))</code></td><td><code>…⊙(⊙)…</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -12843,9 +12822,7 @@ Abbreviation[complete]
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>…⊙(⊙)…-</code></td><td><code>⊙</code></td><td>⊙</td></tr>
-<tr><td>[<code>…⊙(⊙)…–</code>],</td><td></td><td></td></tr>
-<tr><td>)</td><td></td><td></td></tr>
+<tr><td><code>…⊙(⊙)…-</code></td><td><code>Abbrev(Segmented(…, Written([⊙]), Expanded([⊙])), …, Truncated))</code></td><td><code>…⊙(⊙)…–</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -12987,7 +12964,7 @@ The notation is similar to that used for identifying lexical units (see <a href=
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&amp;𝑆×𝑁;fₛ=fₗ;…&amp;</code></td><td><code>LexicalUnit([𝘜], LinguisticAnalysis[fₖ:fₗ,…])</code></td><td><code>𝑆×𝑁</code></td></tr>
+<tr><td><code>&amp;𝑆×𝑁;fₛ=fₗ;…&amp;</code></td><td><code>LexicalUnit([𝘜], LinguisticAnalysis[fₖ:fₗ, …])</code></td><td><code>𝑆×𝑁</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -13327,7 +13304,7 @@ dipl=☧&amp;</code></pre>
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&amp;𝑆×𝑁;fₛ=fₕ;…&amp;</code></td><td><code>LexicalUnit([𝘜], LinguisticAnalysis[fₖ:fₕ,…])</code></td><td><code>𝑆×𝑁</code></td></tr>
+<tr><td><code>&amp;𝑆×𝑁;fₛ=fₕ;…&amp;</code></td><td><code>LexicalUnit([𝘜], LinguisticAnalysis[fₖ:fₕ, …])</code></td><td><code>𝑆×𝑁</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -13521,16 +13498,16 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th>Variant</th><th>Category</th><th>Reference</th></tr>
 </thead>
 <tbody>
-<tr><td><code>PreviousSeen</code></td><td>Certainty (Cert)</td><td>@previousseen</td></tr>
-<tr><td><code>Unclear</code></td><td>Certainty (Cert)</td><td>@unclear</td></tr>
-<tr><td><code>Supplied</code></td><td>Certainty (Cert)</td><td>@supplied</td></tr>
-<tr><td><code>Omitted</code></td><td>Certainty (Cert)</td><td>@omitted</td></tr>
-<tr><td><code>Surplus</code></td><td>Certainty (Cert)</td><td>@surplus</td></tr>
-<tr><td><code>Erasure</code></td><td>Certainty (Cert)</td><td>@erasure</td></tr>
-<tr><td><code>Addition</code></td><td>Certainty (Cert)</td><td>@addition</td></tr>
-<tr><td><code>Ligature</code></td><td>Certainty (Cert)</td><td>@addition</td></tr>
-<tr><td><code>Gap</code></td><td>Precision (Precision)</td><td>@gap</td></tr>
-<tr><td><code>Vacat</code></td><td>Precision (Precision)</td><td>@vacat</td></tr>
+<tr><td><code>PreviousSeen</code></td><td>Certainty (<code>Cert</code>)</td><td><a href="../en/notation/phenomena/previousseen/index.html">Testimonies by Earlier Editors</a></td></tr>
+<tr><td><code>Unclear</code></td><td>Certainty (<code>Cert</code>)</td><td><a href="../en/notation/phenomena/unclear/index.html">Unclear Signs</a></td></tr>
+<tr><td><code>Supplied</code></td><td>Certainty (<code>Cert</code>)</td><td><a href="../en/notation/phenomena/supplied/index.html">Supplied Signs</a></td></tr>
+<tr><td><code>Omitted</code></td><td>Certainty (<code>Cert</code>)</td><td><a href="../en/notation/phenomena/omitted/index.html">Ancient Omissions</a></td></tr>
+<tr><td><code>Surplus</code></td><td>Certainty (<code>Cert</code>)</td><td><a href="../en/notation/phenomena/surplus/index.html">Surplus of Signs</a></td></tr>
+<tr><td><code>Erasure</code></td><td>Certainty (<code>Cert</code>)</td><td><a href="../en/notation/phenomena/erasure/index.html">Signs Erased in Antiquity and Rasurae</a></td></tr>
+<tr><td><code>Addition</code></td><td>Certainty (<code>Cert</code>)</td><td><a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a></td></tr>
+<tr><td><code>Ligature</code></td><td>Certainty (<code>Cert</code>)</td><td><a href="../en/notation/phenomena/addition/index.html">Later Ancient Additions of Signs</a></td></tr>
+<tr><td><code>Gap</code></td><td>Precision (<code>Precision</code>)</td><td><a href="../en/notation/phenomena/gap/index.html">Gaps</a></td></tr>
+<tr><td><code>Vacat</code></td><td>Precision (<code>Precision</code>)</td><td><a href="../en/notation/phenomena/vacat/index.html">Vacat</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -13540,7 +13517,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <ul>
 <li><strong>Uncertainty</strong>: indicates qualitative doubt regarding the identity of phenomena (e.g., <code>Unclear</code>, <code>Supplied</code>, <code>Erasure</code>) or their associated metadata.</li>
 <li><strong>Low precision</strong>: indicates that the quantitative estimation of a gap (<code>Gap</code>) or empty space (<code>Vacat</code>) is purely indicative.</li>
-<li><strong>Assertive inferiority</strong>: indicates that the assertion made by the editor is of lower magnitude than the norm (#underline[same operator but with a different meaning, thus cf. #ref() for examples and syntax]).</li>
+<li><strong>Assertive inferiority</strong>: indicates that the assertion made by the editor is of lower magnitude than the norm (<em>same operator but with a different meaning, thus cf. #ref() for examples and syntax</em>).</li>
 </ul>
 <h2 id="syntax-87"><a class="header" href="#syntax-87">Syntax</a></h2>
 <p>A question mark <code>?</code> placed at the end of a phenomenon’s notation, strictly within any applicable delimiters of the phenomenon.</p>
@@ -13650,7 +13627,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <ul>
 <li><strong>Absolute certainty</strong>: indicates qualitative confidence regarding the identity of phenomena (e.g., <code>Unclear</code>, <code>Supplied</code>, <code>Erasure</code>) or their associated metadata, often used for difficult but guaranteed readings.</li>
 <li><strong>High precision</strong>: indicates that the quantitative estimation of a gap (<code>Gap</code>) or empty space (<code>Vacat</code>) is to be considered exact and not an approximation.</li>
-<li><strong>Assertive superiority</strong>: indicates that the assertion made by the editor is of higher magnitude than the norm (#underline[same operator but with a different meaning, thus cf. <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/linkkind-preferred.html">Decreasing Plausibility among <em>Lectiones</em></a> for examples and syntax])</li>
+<li><strong>Assertive superiority</strong>: indicates that the assertion made by the editor is of higher magnitude than the norm (<em>same operator but with a different meaning, thus cf. <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/linkkind-preferred.html">Decreasing Plausibility among <em>Lectiones</em></a> for examples and syntax</em>)</li>
 </ul>
 <h2 id="syntax-88"><a class="header" href="#syntax-88">Syntax</a></h2>
 <p>An exclamation mark <code>!</code> placed at the end of a phenomenon’s notation, strictly within any applicable delimiters of the phenomenon.</p>
@@ -13799,61 +13776,67 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Direction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
-<tr><td style="text-align: left"><code>Language</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>LineBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
-<tr><td style="text-align: left"><code>SectionBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/sectionbreak.html">🔎 SectionBreak</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Vacat</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/vacat/index.html">🔎 Vacat</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
-<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
-<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
-<tr><td style="text-align: left"><code>Omitted</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/omitted/index.html">🔎 Omitted</a></td></tr>
-<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
-<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
-<tr><td style="text-align: left"><code>Correction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/index.html">🔎 Correction</a></td></tr>
-<tr><td style="text-align: left"><code>Addition</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/index.html">🔎 Addition</a></td></tr>
-<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
-<tr><td style="text-align: left"><code>Abbreviation</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/index.html">🔎 Abbreviation</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusNote</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusnote.html">🔎 ApparatusNote</a></td></tr>
-<tr><td style="text-align: left"><code>LexicalUnit</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/lexicalunit.html">🔎 LexicalUnit</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
-<tr><td style="text-align: left"><code>Cite</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/referencing/cite.html">🔎 Cite</a></td></tr>
-<tr><td style="text-align: left"><code>Locus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/referencing/locus.html">🔎 Locus</a></td></tr>
-<tr><td style="text-align: left"><code>Facsimile</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/software/editor/facsimile.html">🔎 Facsimile</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Direction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
+<tr><td style="text-align: left"><code>Language</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>LineBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
+<tr><td style="text-align: left"><code>SectionBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/sectionbreak.html">🔎 SectionBreak</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Vacat</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/vacat/index.html">🔎 Vacat</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
+<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
+<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
+<tr><td style="text-align: left"><code>Omitted</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/omitted/index.html">🔎 Omitted</a></td></tr>
+<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
+<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
+<tr><td style="text-align: left"><code>Correction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/correction/index.html">🔎 Correction</a></td></tr>
+<tr><td style="text-align: left"><code>Addition</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/addition/index.html">🔎 Addition</a></td></tr>
+<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
+<tr><td style="text-align: left"><code>Abbreviation</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/abbreviation/index.html">🔎 Abbreviation</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusNote</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusnote.html">🔎 ApparatusNote</a></td></tr>
+<tr><td style="text-align: left"><code>LexicalUnit</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/lexicalunit.html">🔎 LexicalUnit</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Cite</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/referencing/cite.html">🔎 Cite</a></td></tr>
+<tr><td style="text-align: left"><code>Locus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/referencing/locus.html">🔎 Locus</a></td></tr>
+<tr><td style="text-align: left"><code>Facsimile</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/software/editor/facsimile.html">🔎 Facsimile</a></td></tr>
 </tbody>
 </table>
 </div>
 <p><strong>Plausibility Operators</strong></p>
 <p>The editor has two fundamental plausibility operators.</p>
-<p>[<code>&gt;</code>],
-[<code>Preferred</code>],
-[<code>≻</code>],
-[The previous <em>lectio</em> is preferable to the next one],</p>
-<p>[<code>|</code>],
-[<code>Alternative</code>],
-[<code>∥</code>],
-[The <em>lectiones</em> are non-comparable alternatives: the editor expresses no preference],
-)</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Operator</th><th>Name</th><th>Symbol</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>&gt;</code></td><td>Preferred</td><td><code>≻</code></td><td>The previous <em>lectio</em> is preferable to the next one</td></tr>
+<tr><td><code>|</code></td><td>Alternative</td><td><code>∥</code></td><td>The <em>lectiones</em> are non-comparable alternatives: the editor expresses no preference</td></tr>
+</tbody>
+</table>
+</div>
 <p>When the editor wishes to specify the extent of the plausibility gap between two consecutive <em>lectiones</em>, a degree modifier may be appended to the <code>&gt;</code> operator: <code>?</code> (small gap) or <code>!</code> (marked gap). These are the same modifiers used for absolute epistemicity (cf. <a href="../en/notation/critical-editorial/interpretation/epistemicity-scale/index.html">Interpretative Certainty or Precision Assessment</a>).</p>
-<p>[<code>&gt;?</code>],
-[<code>≿</code>],
-[The previous <em>lectio</em> is slightly preferable to the next one: the plausibility gap is small.],</p>
-<p>[<code>&gt;!</code>],
-[<code>⋟</code>],
-[The previous <em>lectio</em> is clearly preferable to the next one: the plausibility gap is marked.],
-)</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Operator</th><th>Symbol</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>&gt;?</code></td><td><code>≿</code></td><td>The previous <em>lectio</em> is slightly preferable to the next one: the plausibility gap is small.</td></tr>
+<tr><td><code>&gt;!</code></td><td><code>⋟</code></td><td>The previous <em>lectio</em> is clearly preferable to the next one: the plausibility gap is marked.</td></tr>
+</tbody>
+</table>
+</div>
 <p>Each relationship exists exclusively between two adjacent <em>lectiones</em> (a pair). Plausibility chains with mixed assertions are permitted, freely combining <code>&gt;</code> and <code>|</code> (cf. <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/plausibilityseq-mixed.html">Examples of Mixed Plausibility Sequences</a>).</p>
 <p><strong>To Draw an Analogy</strong></p>
 <p>To understand the structure of a plausibility chain, an architectural metaphor is helpful. Each relationship between two adjacent <em>lectiones</em> represents one element of a path that always proceeds from left to right, in a descending direction: the leftmost <em>lectio</em> is always the most plausible.</p>
@@ -13869,17 +13852,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>%⊙&gt;‽ᵟ…%</code></td><td>`PlausibilityAssessment(</td><td></td></tr>
-<tr><td>PlausibilitySeq{</td><td></td><td></td></tr>
-<tr><td>lectiones: [ ⊙, … ],</td><td></td><td></td></tr>
-<tr><td>links: [</td><td></td><td></td></tr>
-<tr><td>PlausibilityLink(</td><td></td><td></td></tr>
-<tr><td>kind: Preferred,</td><td></td><td></td></tr>
-<tr><td>degree: Some(γ)</td><td></td><td></td></tr>
-<tr><td>), …</td><td></td><td></td></tr>
-<tr><td>]</td><td></td><td></td></tr>
-<tr><td>}</td><td></td><td></td></tr>
-<tr><td>)`</td><td><code>⦃ ⊙ 𝘱 … ⦄</code></td><td></td></tr>
+<tr><td><code>%⊙&gt;‽ᵟ…%</code></td><td><code>PlausibilityAssessment(PlausibilitySeq{lectiones: [⊙, …], links: [PlausibilityLink(kind: Preferred, degree: Some(γ)), …]})</code></td><td><code>⦃ ⊙ 𝘱 … ⦄</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -14067,8 +14040,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 
 </table>
 
-<p>Lines 1–3 of the example tables show the plausibility hierarchy applied to <em>lectiones</em> in the main text (e.g. epigraphic phenomena); line 4 shows the use case in annotations, i.e. among the optional metadata supported by certain phenomena.</p>
-<div style="break-before: page; page-break-before: always;"></div>
+Lines 1–3 of the example tables show the plausibility hierarchy applied to _lectiones_ in the main text (e.g. epigraphic phenomena); line 4 shows the use case in annotations, i.e. among the optional metadata supported by certain phenomena.<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="not-given-plausibility-among-lectiones"><a class="header" href="#not-given-plausibility-among-lectiones">Not-Given Plausibility among <em>Lectiones</em></a></h1>
 <p>Pair of <em>lectiones</em> for which the editor is either unable or unwilling to offer a judgment regarding the plausibility emerging from their comparison.</p>
 <h2 id="overview-90"><a class="header" href="#overview-90">Overview</a></h2>
@@ -14078,17 +14050,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>%⊙|…%</code></td><td>`PlausibilityAssessment(</td><td></td></tr>
-<tr><td>PlausibilitySeq{</td><td></td><td></td></tr>
-<tr><td>lectiones: [ ⊙, … ],</td><td></td><td></td></tr>
-<tr><td>links: [</td><td></td><td></td></tr>
-<tr><td>PlausibilityLink(</td><td></td><td></td></tr>
-<tr><td>kind: Alterative,</td><td></td><td></td></tr>
-<tr><td>degree: None</td><td></td><td></td></tr>
-<tr><td>), …</td><td></td><td></td></tr>
-<tr><td>]</td><td></td><td></td></tr>
-<tr><td>}</td><td></td><td></td></tr>
-<tr><td>)`</td><td><code>⦃ ⊙ ∥ … ⦄</code></td><td></td></tr>
+<tr><td><code>%⊙|…%</code></td><td><code>PlausibilityAssessment(PlausibilitySeq{lectiones: [⊙, …], links: [PlausibilityLink(kind: Alterative, degree: None), …]})</code></td><td><code>⦃ ⊙ ∥ … ⦄</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -14199,8 +14161,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 
 </table>
 
-<p>Line 1 of the example tables shows the plausibility hierarchy applied to <em>lectiones</em> in the main text (e.g. epigraphic phenomena); line 2 shows the use case in annotations, i.e. among the optional metadata supported by certain phenomena.</p>
-<div style="break-before: page; page-break-before: always;"></div>
+Line 1 of the example tables shows the plausibility hierarchy applied to _lectiones_ in the main text (e.g. epigraphic phenomena); line 2 shows the use case in annotations, i.e. among the optional metadata supported by certain phenomena.<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="examples-of-mixed-plausibility-sequences"><a class="header" href="#examples-of-mixed-plausibility-sequences">Examples of Mixed Plausibility Sequences</a></h1>
 <p>Illustrative demonstration of mixed plausibility sequences: a series of interpretive pairs where the editor expresses a descending or not-given plausibility between the <em>lectiones</em>.</p>
 <p>See <a href="../en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">Interpretative Plausibility Assessment</a> for the automatic rectification performed by the formatter to improve legibility.</p>
@@ -14400,39 +14361,39 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Direction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
-<tr><td style="text-align: left"><code>Language</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>LineBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
-<tr><td style="text-align: left"><code>SectionBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/sectionbreak.html">🔎 SectionBreak</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Vacat</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/vacat/index.html">🔎 Vacat</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
-<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
-<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
-<tr><td style="text-align: left"><code>Omitted</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/omitted/index.html">🔎 Omitted</a></td></tr>
-<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
-<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
-<tr><td style="text-align: left"><code>Correction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/index.html">🔎 Correction</a></td></tr>
-<tr><td style="text-align: left"><code>Addition</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/index.html">🔎 Addition</a></td></tr>
-<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
-<tr><td style="text-align: left"><code>Abbreviation</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/index.html">🔎 Abbreviation</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusNote</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusnote.html">🔎 ApparatusNote</a></td></tr>
-<tr><td style="text-align: left"><code>LexicalUnit</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/lexicalunit.html">🔎 LexicalUnit</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
-<tr><td style="text-align: left"><code>Cite</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/referencing/cite.html">🔎 Cite</a></td></tr>
-<tr><td style="text-align: left"><code>Locus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/referencing/locus.html">🔎 Locus</a></td></tr>
-<tr><td style="text-align: left"><code>Facsimile</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/software/editor/facsimile.html">🔎 Facsimile</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Direction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
+<tr><td style="text-align: left"><code>Language</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>LineBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
+<tr><td style="text-align: left"><code>SectionBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/sectionbreak.html">🔎 SectionBreak</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Vacat</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/vacat/index.html">🔎 Vacat</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
+<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
+<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
+<tr><td style="text-align: left"><code>Omitted</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/omitted/index.html">🔎 Omitted</a></td></tr>
+<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
+<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
+<tr><td style="text-align: left"><code>Correction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/correction/index.html">🔎 Correction</a></td></tr>
+<tr><td style="text-align: left"><code>Addition</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/addition/index.html">🔎 Addition</a></td></tr>
+<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
+<tr><td style="text-align: left"><code>Abbreviation</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/abbreviation/index.html">🔎 Abbreviation</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusNote</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusnote.html">🔎 ApparatusNote</a></td></tr>
+<tr><td style="text-align: left"><code>LexicalUnit</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/lexicalunit.html">🔎 LexicalUnit</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Cite</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/referencing/cite.html">🔎 Cite</a></td></tr>
+<tr><td style="text-align: left"><code>Locus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/referencing/locus.html">🔎 Locus</a></td></tr>
+<tr><td style="text-align: left"><code>Facsimile</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/software/editor/facsimile.html">🔎 Facsimile</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -14445,7 +14406,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>$𝘔:𝘜$</code></td><td><code>ApparatusMark(𝘔, [𝘜])</code></td><td><code>φ``𝘔</code></td></tr>
+<tr><td><code>$𝘔:𝘜$</code></td><td><code>ApparatusMark(𝘔, [𝘜])</code></td><td><code>φ𝘔</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -14544,39 +14505,39 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th style="text-align: left">Construct</th><th style="text-align: center">Specific Reference</th><th style="text-align: center">General Reference</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
-<tr><td style="text-align: left"><code>Direction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
-<tr><td style="text-align: left"><code>Language</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
-<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
-<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
-<tr><td style="text-align: left"><code>LineBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
-<tr><td style="text-align: left"><code>SectionBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/sectionbreak.html">🔎 SectionBreak</a></td></tr>
-<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
-<tr><td style="text-align: left"><code>Vacat</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/vacat/index.html">🔎 Vacat</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
-<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
-<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
-<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
-<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
-<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
-<tr><td style="text-align: left"><code>Omitted</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/omitted/index.html">🔎 Omitted</a></td></tr>
-<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
-<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
-<tr><td style="text-align: left"><code>Correction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/correction/index.html">🔎 Correction</a></td></tr>
-<tr><td style="text-align: left"><code>Addition</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/addition/index.html">🔎 Addition</a></td></tr>
-<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
-<tr><td style="text-align: left"><code>Abbreviation</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/phenomena/abbreviation/index.html">🔎 Abbreviation</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
-<tr><td style="text-align: left"><code>ApparatusNote</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/apparatus/apparatusnote.html">🔎 ApparatusNote</a></td></tr>
-<tr><td style="text-align: left"><code>LexicalUnit</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/atomic-textual-units/lexicalunit.html">🔎 LexicalUnit</a></td></tr>
-<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
-<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
-<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
-<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
-<tr><td style="text-align: left"><code>Cite</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/referencing/cite.html">🔎 Cite</a></td></tr>
-<tr><td style="text-align: left"><code>Locus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/notation/critical-editorial/referencing/locus.html">🔎 Locus</a></td></tr>
-<tr><td style="text-align: left"><code>Facsimile</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/docs/en/software/editor/facsimile.html">🔎 Facsimile</a></td></tr>
+<tr><td style="text-align: left"><code>Plain</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/textual-signs/plain-realized.html">🔎 Plain</a></td></tr>
+<tr><td style="text-align: left"><code>Direction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/direction.html">🔎 Direction</a></td></tr>
+<tr><td style="text-align: left"><code>Language</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/language.html">🔎 Language</a></td></tr>
+<tr><td style="text-align: left"><code>Whitespace</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/whitespace.html">🔎 Whitespace</a></td></tr>
+<tr><td style="text-align: left"><code>Newline</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 Newline</a></td></tr>
+<tr><td style="text-align: left"><code>LineBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/linebreak.html">🔎 LineBreak</a></td></tr>
+<tr><td style="text-align: left"><code>SectionBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/sectionbreak.html">🔎 SectionBreak</a></td></tr>
+<tr><td style="text-align: left"><code>WordBreak</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/wordbreak.html">🔎 WordBreak</a></td></tr>
+<tr><td style="text-align: left"><code>Vacat</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/vacat/index.html">🔎 Vacat</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Known</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/gap/known.html">🔎 Gap-Known</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Range</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/gap/range.html">🔎 Gap-Range</a></td></tr>
+<tr><td style="text-align: left"><code>Gap-Unknown</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/gap/unknown.html">🔎 Gap-Unknown</a></td></tr>
+<tr><td style="text-align: left"><code>Fracture</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/fracture.html">🔎 Fracture</a></td></tr>
+<tr><td style="text-align: left"><code>Unclear</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/unclear/index.html">🔎 Unclear</a></td></tr>
+<tr><td style="text-align: left"><code>Supplied</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/supplied/index.html">🔎 Supplied</a></td></tr>
+<tr><td style="text-align: left"><code>PreviousSeen</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/previousseen/index.html">🔎 PreviousSeen</a></td></tr>
+<tr><td style="text-align: left"><code>Omitted</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/omitted/index.html">🔎 Omitted</a></td></tr>
+<tr><td style="text-align: left"><code>Surplus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/surplus/index.html">🔎 Surplus</a></td></tr>
+<tr><td style="text-align: left"><code>Erasure</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/erasure/index.html">🔎 Erasure</a></td></tr>
+<tr><td style="text-align: left"><code>Correction</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/correction/index.html">🔎 Correction</a></td></tr>
+<tr><td style="text-align: left"><code>Addition</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/addition/index.html">🔎 Addition</a></td></tr>
+<tr><td style="text-align: left"><code>Ligature</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/ligature/index.html">🔎 Ligature</a></td></tr>
+<tr><td style="text-align: left"><code>Abbreviation</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/phenomena/abbreviation/index.html">🔎 Abbreviation</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusMark</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusmark.html">🔎 ApparatusMark</a></td></tr>
+<tr><td style="text-align: left"><code>ApparatusNote</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/apparatus/apparatusnote.html">🔎 ApparatusNote</a></td></tr>
+<tr><td style="text-align: left"><code>LexicalUnit</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/atomic-textual-units/lexicalunit.html">🔎 LexicalUnit</a></td></tr>
+<tr><td style="text-align: left"><code>PlausibilityAssessment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/interpretation/plausibilityassessment/index.html">🔎 PlausibilityAssessment</a></td></tr>
+<tr><td style="text-align: left"><code>Strong</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/strong.html">🔎 Strong</a></td></tr>
+<tr><td style="text-align: left"><code>Emphasis</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/emphasis.html">🔎 Emphasis</a></td></tr>
+<tr><td style="text-align: left"><code>Comment</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/formatting-internal-annotation/comment/index.html">🔎 Comment</a></td></tr>
+<tr><td style="text-align: left"><code>Cite</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/referencing/cite.html">🔎 Cite</a></td></tr>
+<tr><td style="text-align: left"><code>Locus</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/notation/critical-editorial/referencing/locus.html">🔎 Locus</a></td></tr>
+<tr><td style="text-align: left"><code>Facsimile</code></td><td style="text-align: center">—</td><td style="text-align: center"><a href="/en/software/editor/facsimile.html">🔎 Facsimile</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -14594,6 +14555,16 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 </thead>
 <tbody>
 <tr><td><code>^*:C^</code></td><td><code>ApparatusNote(General, 𝘊)</code></td><td><code>φ</code></td></tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
+</thead>
+<tbody>
+<tr><td><code>^𝘔:C^</code></td><td><code>ApparatusNote(Marked(𝘔), 𝘊)</code></td><td><code>𝘔φ</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -14743,8 +14714,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&amp;𝑆×𝑁;λₛ=λᵥ;…&amp;</code></td><td>`LexicalUnit([𝘜], LinguisticAnalysis[</td><td></td></tr>
-<tr><td>λₖ:λᵥ,…])`</td><td><code>𝑆×𝑁</code></td><td></td></tr>
+<tr><td><code>&amp;𝑆×𝑁;λₛ=λᵥ;…&amp;</code></td><td><code>LexicalUnit([𝘜], LinguisticAnalysis[λₖ:λᵥ, …])</code></td><td><code>𝑆×𝑁</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -14755,6 +14725,206 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <li><code>λᵥ</code> = value of the linguistic annotation (plausibility scale).</li>
 <li><code>λₖ</code> = canonical key for the linguistic annotation derived from the corresponding label.</li>
 </ul>
+<table>
+  
+<thead>
+<tr><th>Notation</th><th>Paper Output</th></tr>
+</thead>
+
+  
+<tbody>
+<tr><td>
+<pre><code class="language-text">&amp;logos;
+lemma=λόγος;
+transc=logos;
+transl=logos;
+palaeo=𐌻𐌾𐌲𐍉𐍃;
+pos=noun;
+gen=masc;
+num=sg;
+case=nom;
+lang=grc;
+gloss=word, speech, account, reason;
+semdom=language;
+etym=from PIE *leg- "to gather, speak";
+notes=core term in Greek philosophy and rhetoric;
+&amp;</code></pre>
+</td><td>
+<div class="rendered-preview">
+<div class="ibi-inscription">
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-lexical-unit"><span class="ibi-content">logos</span><span class="ibi-writing"><span class="ibi-transliteration" data-ibi-seq=""><span class="ibi-lectio">logos</span></span><span class="ibi-reading" data-ibi-seq=""><span class="ibi-lectio">logos</span></span><span class="ibi-palaeographic" data-ibi-seq=""><span class="ibi-lectio">𐌻𐌾𐌲𐍉𐍃</span></span></span><span class="ibi-lemma" data-ibi-seq=""><span class="ibi-lectio">λόγος</span></span><span class="ibi-gloss" data-ibi-seq=""><span class="ibi-lectio">word, speech, account, reason</span></span><span class="ibi-etymology" data-ibi-seq=""><span class="ibi-lectio">from PIE *leg- "to gather, speak"</span></span><span class="ibi-semantic-domain" data-ibi-seq=""><span class="ibi-lectio">language</span></span><span class="ibi-pos" data-ibi-seq=""><span class="ibi-lectio">n</span></span><span class="ibi-morph-features" data-ibi-seq=""><span class="ibi-gender" data-ibi-seq=""><span class="ibi-lectio">masc</span></span><span class="ibi-number" data-ibi-seq=""><span class="ibi-lectio">sg</span></span><span class="ibi-case" data-ibi-seq=""><span class="ibi-lectio">nom</span></span></span><span class="ibi-lang" data-ibi-seq=""><span class="ibi-lectio">grc</span></span><span class="ibi-lang" data-ibi-seq="">core term in Greek philosophy and rhetoric</span></span></div>
+</div>
+</div>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">&amp;fakent;
+lemma=facere;
+transc=fákent;
+transl=fakent;
+palaeo=𐌅𐌀𐌊𐌄𐌍𐌕;
+pos=verb;
+tense=prs;
+mood=sub;
+diath=act;
+person=3;
+num=pl;
+lang=lat;
+gloss=may they do, let them do;
+semdom=action, causation;
+etym=from PIE *dʰeh₁- "to put, to place, to set" (semantic shift to "do" in Italic);
+notes=archaic subjunctive form; orthography reflects Old Italic script conventions;
+&amp;</code></pre>
+</td><td>
+<div class="rendered-preview">
+<div class="ibi-inscription">
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-lexical-unit"><span class="ibi-content">fakent</span><span class="ibi-writing"><span class="ibi-transliteration" data-ibi-seq=""><span class="ibi-lectio">fakent</span></span><span class="ibi-reading" data-ibi-seq=""><span class="ibi-lectio">fákent</span></span><span class="ibi-palaeographic" data-ibi-seq=""><span class="ibi-lectio">𐌅𐌀𐌊𐌄𐌍𐌕</span></span></span><span class="ibi-lemma" data-ibi-seq=""><span class="ibi-lectio">facere</span></span><span class="ibi-gloss" data-ibi-seq=""><span class="ibi-lectio">may they do, let them do</span></span><span class="ibi-etymology" data-ibi-seq=""><span class="ibi-lectio">from PIE *dʰeh₁- "to put, to place, to set" (semantic shift to "do" in Italic)</span></span><span class="ibi-semantic-domain" data-ibi-seq=""><span class="ibi-lectio">action, causation</span></span><span class="ibi-pos" data-ibi-seq=""><span class="ibi-lectio">v</span></span><span class="ibi-morph-features" data-ibi-seq=""><span class="ibi-number" data-ibi-seq=""><span class="ibi-lectio">pl</span></span><span class="ibi-person" data-ibi-seq=""><span class="ibi-lectio">3rd</span></span><span class="ibi-tense" data-ibi-seq=""><span class="ibi-lectio">prs</span></span><span class="ibi-mood" data-ibi-seq=""><span class="ibi-lectio">subj</span></span><span class="ibi-diathesis" data-ibi-seq=""><span class="ibi-lectio">act</span></span></span><span class="ibi-lang" data-ibi-seq=""><span class="ibi-lectio">lat</span></span><span class="ibi-lang" data-ibi-seq="">archaic subjunctive form</span></span></div>
+</div>
+</div>
+</td></tr>
+</tbody>
+
+</table>
+
+<h3>EpiDoc Outputs</h3>
+
+<table>
+  
+<thead>
+<tr><th>Notation</th><th>EpiDoc (XML)</th></tr>
+</thead>
+
+  
+<tbody>
+<tr><td>
+<pre><code class="language-text">&amp;logos;
+lemma=λόγος;
+transc=logos;
+transl=logos;
+palaeo=𐌻𐌾𐌲𐍉𐍃;
+pos=noun;
+gen=masc;
+num=sg;
+case=nom;
+lang=grc;
+gloss=word, speech, account, reason;
+semdom=language;
+etym=from PIE *leg- "to gather, speak";
+notes=core term in Greek philosophy and rhetoric;
+&amp;</code></pre>
+</td><td>
+<pre><code class="language-xml">&lt;ab&gt;
+    &lt;w xml:id="gen-0" xml:lang="grc" norm="logos" lemma="λόγος" pos="n" msd="Gender=PlausibilitySeq { lectiones: [Masculine], links: [] }|Number=PlausibilitySeq { lectiones: [Singular], links: [] }|Case=PlausibilitySeq { lectiones: [Nominative], links: [] }"&gt;logos&lt;/w&gt;
+    &lt;note target="#gen-0" type="reading"&gt;logos
+    &lt;/note&gt;
+    &lt;note target="#gen-0" type="palaeographic"&gt;𐌻𐌾𐌲𐍉𐍃
+    &lt;/note&gt;
+    &lt;note target="#gen-0" type="gloss"&gt;word, speech, account, reason
+    &lt;/note&gt;
+    &lt;note target="#gen-0" type="etymology"&gt;from PIE *leg- "to gather, speak"
+    &lt;/note&gt;
+    &lt;note target="#gen-0" type="semantic_domain"&gt;language
+    &lt;/note&gt;
+    &lt;note target="#gen-0" type="editorial"&gt;core term in Greek philosophy and rhetoric
+    &lt;/note&gt;
+&lt;/ab&gt;</code></pre>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">&amp;fakent;
+lemma=facere;
+transc=fákent;
+transl=fakent;
+palaeo=𐌅𐌀𐌊𐌄𐌍𐌕;
+pos=verb;
+tense=prs;
+mood=sub;
+diath=act;
+person=3;
+num=pl;
+lang=lat;
+gloss=may they do, let them do;
+semdom=action, causation;
+etym=from PIE *dʰeh₁- "to put, to place, to set" (semantic shift to "do" in Italic);
+notes=archaic subjunctive form; orthography reflects Old Italic script conventions;
+&amp;</code></pre>
+</td><td>
+<pre><code class="language-xml">&lt;ab&gt;
+    &lt;w xml:id="gen-0" xml:lang="lat" norm="fakent" lemma="facere" pos="v" msd="Number=PlausibilitySeq { lectiones: [Plural], links: [] }|Tense=PlausibilitySeq { lectiones: [Custom(&amp;quot;prs&amp;quot;)], links: [] }|Mood=PlausibilitySeq { lectiones: [Subjunctive], links: [] }|Person=PlausibilitySeq { lectiones: [Third], links: [] }|Voice=PlausibilitySeq { lectiones: [Active], links: [] }"&gt;fakent&lt;/w&gt;
+    &lt;note target="#gen-0" type="reading"&gt;fákent
+    &lt;/note&gt;
+    &lt;note target="#gen-0" type="palaeographic"&gt;𐌅𐌀𐌊𐌄𐌍𐌕
+    &lt;/note&gt;
+    &lt;note target="#gen-0" type="gloss"&gt;may they do, let them do
+    &lt;/note&gt;
+    &lt;note target="#gen-0" type="etymology"&gt;from PIE *dʰeh₁- "to put, to place, to set" (semantic shift to "do" in Italic)
+    &lt;/note&gt;
+    &lt;note target="#gen-0" type="semantic_domain"&gt;action, causation
+    &lt;/note&gt;
+    &lt;note target="#gen-0" type="editorial"&gt;archaic subjunctive form
+    &lt;/note&gt;
+&lt;/ab&gt;</code></pre>
+</td></tr>
+</tbody>
+
+</table>
+
+<h3>Structural Analysis (Conceptual AST)</h3>
+
+<table>
+  
+<thead>
+<tr><th>Notation</th><th>AST</th></tr>
+</thead>
+
+  
+<tbody>
+<tr><td>
+<pre><code class="language-text">&amp;logos;
+lemma=λόγος;
+transc=logos;
+transl=logos;
+palaeo=𐌻𐌾𐌲𐍉𐍃;
+pos=noun;
+gen=masc;
+num=sg;
+case=nom;
+lang=grc;
+gloss=word, speech, account, reason;
+semdom=language;
+etym=from PIE *leg- "to gather, speak";
+notes=core term in Greek philosophy and rhetoric;
+&amp;</code></pre>
+</td><td>
+<pre><code class="language-json">LexicalUnit[meta]
+  Plain("logos")
+</code></pre>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">&amp;fakent;
+lemma=facere;
+transc=fákent;
+transl=fakent;
+palaeo=𐌅𐌀𐌊𐌄𐌍𐌕;
+pos=verb;
+tense=prs;
+mood=sub;
+diath=act;
+person=3;
+num=pl;
+lang=lat;
+gloss=may they do, let them do;
+semdom=action, causation;
+etym=from PIE *dʰeh₁- "to put, to place, to set" (semantic shift to "do" in Italic);
+notes=archaic subjunctive form; orthography reflects Old Italic script conventions;
+&amp;</code></pre>
+</td><td>
+<pre><code class="language-json">LexicalUnit[meta]
+  Plain("fakent")
+</code></pre>
+</td></tr>
+</tbody>
+
+</table>
+
 <h3 id="supported-metadata-keys-4"><a class="header" href="#supported-metadata-keys-4">Supported Metadata Keys</a></h3>
 <div class="table-wrapper">
 <table>
@@ -15025,7 +15195,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>@βₗ=kᵟ:toᵟ-fromᵟ;…@</code></td><td><code>Cite { refs: βᵣ }</code></td><td><code>βₚ</code></td></tr>
+<tr><td><code>@βₗ=kᵟ:toᵟ-fromᵟ;…@</code></td><td><code>Cite {refs: βᵣ}</code></td><td><code>βₚ</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -15203,7 +15373,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>#ρₖᵟ:kᵟ=vᵟ;…/…#</code></td><td><code>Locus { refs: ρᵣ }</code></td><td><code>ρₚ</code></td></tr>
+<tr><td><code>#ρₖᵟ:kᵟ=vᵟ;…/…#</code></td><td><code>Locus {refs: ρᵣ}</code></td><td><code>ρₚ</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -15722,7 +15892,7 @@ dipl=𐼰𐼷𐽁𐼳&amp;</code></pre>
 <tr><th>Notation</th><th>Conceptual AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>⊙|αₖ=αᵥ;…|</code></td><td><code>IbiUnit{ ⊙, attrs: Α }</code></td><td><code>⊙</code></td></tr>
+<tr><td><code>⊙|αₖ=αᵥ;…|</code></td><td><code>IbiUnit{⊙, attrs: Α}</code></td><td><code>⊙</code></td></tr>
 </tbody>
 </table>
 </div>

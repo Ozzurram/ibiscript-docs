@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Abbreviazione per troncamento iniziale - Il linguaggio IbiScript</title>
+        <title>Abbreviazione per troncamento finale - Il linguaggio IbiScript</title>
 
 
         <!-- Custom HTML head -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../../searchindex-c31cf1c8.js";
+            window.path_to_searchindex_js = "../../../../searchindex-0c47e587.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../../toc-a22df3b9.js"></script>
+        <script src="../../../../toc-ac6c36d9.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,10 +175,25 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="abbreviazione-per-troncamento-iniziale"><a class="header" href="#abbreviazione-per-troncamento-iniziale">Abbreviazione per troncamento iniziale</a></h1>
-<p>Una parola sciolta integralmente in cui la parte presente sul supporto costituisce la fine (coda) dell’unità lessicale, mentre la parte iniziale, omessa per troncamento, viene reintegrata dall’editore tra parentesi tonde all’inizio della parola (es. <code>(bi)cornis</code>).</p>
+                        <h1 id="abbreviazione-per-troncamento-finale"><a class="header" href="#abbreviazione-per-troncamento-finale">Abbreviazione per troncamento finale</a></h1>
+<p>Una parola sciolta integralmente in cui la parte presente sul supporto costituisce l’inizio (testa) dell’unità lessicale, mentre la parte omessa per troncamento viene reintegrata dall’editore tra parentesi tonde (es. <code>Aug(ustus)</code>).</p>
 <h2 id="sintassi"><a class="header" href="#sintassi">Sintassi</a></h2>
-<p>Una sequenza tra parentesi (<code>Expansion Components</code>) seguita immediatamente da una sequenza di segni (<code>Abbreviated Text</code>) che funge da coda della parola.</p>
+<p>Una sequenza di segni (<code>Abbreviated Text</code>) che funge da radice, seguita immediatamente dal completamento tra parentesi (<code>Expansion Components</code>).</p>
+<h2 id="panoramica"><a class="header" href="#panoramica">Panoramica</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Notazione</th><th>AST Concettuale</th><th>Resa cartacea</th></tr>
+</thead>
+<tbody>
+<tr><td><code>…⊙(⊙)</code></td><td><code>Abbrev(Segmented(…, Written([⊙]), Expanded([⊙])), Complete))</code></td><td><code>…⊙(⊙)</code></td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><code>⊙</code> ∈ <code>ABBREV_TEXT_ALLOWED</code> = qualsiasi fenomeno ammesso all’interno di una <code>Abbrev</code> (notazione, AST o resa in base al collocamento).</li>
+<li><code>⊙</code> ∈ <code>EXPANS_CONTENT_ALLOWED</code> = qualsiasi fenomeno ammesso all’interno di una <code>Abbrev</code> (notazione, AST o resa in base al collocamento).</li>
+</ul>
 <h2 id="esempi"><a class="header" href="#esempi">Esempi</a></h2>
 <table>
   
@@ -189,11 +204,11 @@
   
 <tbody>
 <tr><td>
-<pre><code class="language-text">(Vale)rius</code></pre>
+<pre><code class="language-text">Aug(ustus) trib(unicia) pot(estate)</code></pre>
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-abbreviation" data-completion="complete"><span class="ibi-abbreviation-seg-expansion">Vale</span><span class="ibi-abbreviation-seg-written">rius</span></span></div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-abbreviation" data-completion="complete"><span class="ibi-abbreviation-seg-written">Aug</span><span class="ibi-abbreviation-seg-expansion">ustus</span></span> <span class="ibi-abbreviation" data-completion="complete"><span class="ibi-abbreviation-seg-written">trib</span><span class="ibi-abbreviation-seg-expansion">unicia</span></span> <span class="ibi-abbreviation" data-completion="complete"><span class="ibi-abbreviation-seg-written">pot</span><span class="ibi-abbreviation-seg-expansion">estate</span></span></div>
 </div>
 </div>
 </td></tr>
@@ -212,10 +227,14 @@
   
 <tbody>
 <tr><td>
-<pre><code class="language-text">(Vale)rius</code></pre>
+<pre><code class="language-text">Aug(ustus) trib(unicia) pot(estate)</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;expan&gt;&lt;ex&gt;Vale&lt;/ex&gt;&lt;abbr&gt;rius&lt;/abbr&gt;
+    &lt;expan&gt;&lt;abbr&gt;Aug&lt;/abbr&gt;&lt;ex&gt;ustus&lt;/ex&gt;
+    &lt;/expan&gt; 
+    &lt;expan&gt;&lt;abbr&gt;trib&lt;/abbr&gt;&lt;ex&gt;unicia&lt;/ex&gt;
+    &lt;/expan&gt; 
+    &lt;expan&gt;&lt;abbr&gt;pot&lt;/abbr&gt;&lt;ex&gt;estate&lt;/ex&gt;
     &lt;/expan&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -234,44 +253,40 @@
   
 <tbody>
 <tr><td>
-<pre><code class="language-text">(Vale)rius</code></pre>
+<pre><code class="language-text">Aug(ustus) trib(unicia) pot(estate)</code></pre>
 </td><td>
 <pre><code class="language-json">Abbreviation[complete]
-  Expanded(certain)
-    Plain("Vale")
   Written
-    Plain("rius")
+    Plain("Aug")
+  Expanded(certain)
+    Plain("ustus")
+WS
+Abbreviation[complete]
+  Written
+    Plain("trib")
+  Expanded(certain)
+    Plain("unicia")
+WS
+Abbreviation[complete]
+  Written
+    Plain("pot")
+  Expanded(certain)
+    Plain("estate")
 </code></pre>
 </td></tr>
 </tbody>
 
 </table>
 
-<h2 id="panoramica"><a class="header" href="#panoramica">Panoramica</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Notazione</th><th>AST Concettuale</th><th>Resa cartacea</th></tr>
-</thead>
-<tbody>
-<tr><td><code>(⊙)⊙…</code></td><td><code>Abbrev(Segmented(Expanded([ ⊙ ]), Written([ ⊙ ]), …, Complete))</code></td><td><code>(⊙)⊙…</code></td></tr>
-</tbody>
-</table>
-</div>
-<ul>
-<li><code>⊙</code> ∈ <code>ABBREV_TEXT_ALLOWED</code> = qualsiasi fenomeno ammesso all’interno di una <code>Abbrev</code> (notazione, AST o resa in base al collocamento).</li>
-<li><code>⊙</code> ∈ <code>EXPANS_CONTENT_ALLOWED</code> = qualsiasi fenomeno ammesso all’interno di una <code>Abbrev</code> (notazione, AST o resa in base al collocamento).</li>
-</ul>
-
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../../notation/phenomena/abbreviation/expansresolution/final_truncation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../../notation/phenomena/abbreviation/expansresolution/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../../../notation/phenomena/abbreviation/expansresolution/internal_truncation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../../notation/phenomena/abbreviation/expansresolution/initial-truncation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -281,11 +296,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../../notation/phenomena/abbreviation/expansresolution/final_truncation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../../notation/phenomena/abbreviation/expansresolution/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../../../notation/phenomena/abbreviation/expansresolution/internal_truncation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../../notation/phenomena/abbreviation/expansresolution/initial-truncation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
