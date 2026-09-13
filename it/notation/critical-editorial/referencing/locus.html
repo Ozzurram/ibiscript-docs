@@ -36,7 +36,7 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-d32b7afd.js";
+            window.path_to_searchindex_js = "../../../searchindex-66216fc7.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../../../toc-ac6c36d9.js"></script>
@@ -218,6 +218,7 @@
 <tr><td><code>volume</code>, <code>vol</code>, <code>v</code></td><td><code>volume</code></td><td><code>vol</code></td><td><code>v</code></td></tr>
 <tr><td><code>part</code>, <code>pt</code></td><td><code>parte</code></td><td><code>part</code></td><td><code>pt</code></td></tr>
 <tr><td><code>manuscript</code>, <code>ms</code></td><td><code>manoscritto</code></td><td><code>ms</code></td><td><code>ms</code></td></tr>
+<tr><td><code>work</code>, <code>wk</code>, <code>op</code></td><td><code>opera</code></td><td><code>work</code></td><td><code>wk</code></td></tr>
 <tr><td><code>chapter</code>, <code>chap</code>, <code>ch</code></td><td><code>capitolo</code></td><td><code>chap</code></td><td><code>ch</code></td></tr>
 <tr><td><code>paragraph</code>, <code>para</code>, <code>par</code></td><td><code>paragrafo</code></td><td><code>par</code></td><td><code>par</code></td></tr>
 <tr><td><code>clause</code>, <code>cl</code></td><td><code>clausola</code></td><td><code>cl</code></td><td><code>cl</code></td></tr>
@@ -237,29 +238,32 @@
   
 <tbody>
 <tr><td>
-<pre><code class="language-text">#manuscript=A; folio= 1#</code></pre>
+<pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 3#</code></pre>
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-locus"><a href="#ms-A-fol-1" class="ibi-locus-ref">fol 1</a></span></div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-locus"><a href="beda:paikuli-d2-mp#block-D2-ln-3" class="ibi-locus-ref">block D2, ln 3</a></span></div>
 </div>
 </div>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 03#</code></pre>
+<pre><code class="language-text">#work = mackenzie_1971; entry = duxš#</code></pre>
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-locus"><a href="beda:paikuli-d2-mp#block-D2-ln-03" class="ibi-locus-ref">block D2, ln 03</a></span></div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-locus"><a href="#work-mackenzie_1971-entry-duxš" class="ibi-locus-ref">entry duxš</a></span></div>
 </div>
 </div>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">#      thle-ta1: entry = Ta1; inscription = 2; col = 2; line = 1 /      cie-important-section: vol = 4; page = 100; section = 3    #</code></pre>
+<pre><code class="language-text">#
+  entry = NPi; plate = 2; col = 2; ln = 1 /
+  pag = 45; sect = 22; ln = 6
+#</code></pre>
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-locus"><a href="beda:thle-ta1#entry-Ta1-inscription-2-col-2-ln-1" class="ibi-locus-ref">entry Ta1, inscription 2, col 2, ln 1</a><a href="beda:cie-important-section#vol-4-pag-100-sect-3" class="ibi-locus-ref">vol 4, pag 100, sect 3</a></span></div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-locus"><a href="#entry-NPi-plate-2-col-2-ln-1" class="ibi-locus-ref">entry NPi, plate 2, col 2, ln 1</a><a href="#pag-45-sect-22-ln-6" class="ibi-locus-ref">pag 45, sect 22, ln 6</a></span></div>
 </div>
 </div>
 </td></tr>
@@ -278,28 +282,31 @@
   
 <tbody>
 <tr><td>
-<pre><code class="language-text">#manuscript=A; folio= 1#</code></pre>
+<pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 3#</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;ref target="#ms-A-fol-1"&gt;fol 1
+    &lt;ref target="beda:paikuli-d2-mp#block-D2-ln-3"&gt;block D2, ln 3
     &lt;/ref&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 03#</code></pre>
+<pre><code class="language-text">#work = mackenzie_1971; entry = duxš#</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;ref target="beda:paikuli-d2-mp#block-D2-ln-03"&gt;block D2, ln 03
+    &lt;ref target="#work-mackenzie_1971-entry-duxš"&gt;entry duxš
     &lt;/ref&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">#      thle-ta1: entry = Ta1; inscription = 2; col = 2; line = 1 /      cie-important-section: vol = 4; page = 100; section = 3    #</code></pre>
+<pre><code class="language-text">#
+  entry = NPi; plate = 2; col = 2; ln = 1 /
+  pag = 45; sect = 22; ln = 6
+#</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;ref target="beda:thle-ta1#entry-Ta1-inscription-2-col-2-ln-1"&gt;entry Ta1, inscription 2, col 2, ln 1
+    &lt;ref target="#entry-NPi-plate-2-col-2-ln-1"&gt;entry NPi, plate 2, col 2, ln 1
     &lt;/ref&gt;
-    &lt;ref target="beda:cie-important-section#vol-4-pag-100-sect-3"&gt;vol 4, pag 100, sect 3
+    &lt;ref target="#pag-45-sect-22-ln-6"&gt;pag 45, sect 22, ln 6
     &lt;/ref&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -318,25 +325,28 @@
   
 <tbody>
 <tr><td>
-<pre><code class="language-text">#manuscript=A; folio= 1#</code></pre>
+<pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 3#</code></pre>
 </td><td>
 <pre><code class="language-json">Locus
-  → (ms A, fol 1)
+  → paikuli-d2-mp (block D2, ln 3)
 </code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 03#</code></pre>
+<pre><code class="language-text">#work = mackenzie_1971; entry = duxš#</code></pre>
 </td><td>
 <pre><code class="language-json">Locus
-  → paikuli-d2-mp (block D2, ln 03)
+  → (work mackenzie_1971, entry duxš)
 </code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">#      thle-ta1: entry = Ta1; inscription = 2; col = 2; line = 1 /      cie-important-section: vol = 4; page = 100; section = 3    #</code></pre>
+<pre><code class="language-text">#
+  entry = NPi; plate = 2; col = 2; ln = 1 /
+  pag = 45; sect = 22; ln = 6
+#</code></pre>
 </td><td>
 <pre><code class="language-json">Locus
-  → thle-ta1 (entry Ta1, inscription 2, col 2, ln 1)
-  → cie-important-section (vol 4, pag 100, sect 3)
+  → (entry NPi, plate 2, col 2, ln 1)
+  → (pag 45, sect 22, ln 6)
 </code></pre>
 </td></tr>
 </tbody>
