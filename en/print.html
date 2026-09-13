@@ -37,7 +37,7 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-57f849ba.js";
+            window.path_to_searchindex_js = "searchindex-2ae889fb.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-d63ecdbd.js"></script>
@@ -15246,23 +15246,28 @@ notes=archaic subjunctive form; orthography reflects Old Italic script conventio
 </div>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">@someone_book_1998=pag:30-33@</code></pre>
+<pre><code class="language-text">@someone_book_1998:pag=30-33@</code></pre>
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span>@someone<span class="ibi-previous-seen" data-epistemicity="medium"><span class="ibi-content">book</span></span>1998</div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-someone_book_1998" class="ibi-cite-ref">someone_book_1998, pag 30; </a></span></div>
+<div class="ibi-bibliography">
+<h3 class="ibi-header">Bibliography</h3>
+<div class="ibi-bib-entry" id="bib-someone_book_1998">someone_book_1998</div>
+</div>
 </div>
 </div>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">@first_scholar_book_1861=plate:6;second_scholar_book_1969=line:10-15@</code></pre>
+<pre><code class="language-text">@first_scholar_book_1861:plate=6;second_scholar_book_1969:line=10-15@</code></pre>
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-first_scholar_book_1861=plate" class="ibi-cite-ref">first_scholar_book_1861=plate, 6;second_scholar_book_1969 line:10; </a></span></div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-first_scholar_book_1861" class="ibi-cite-ref">first_scholar_book_1861, plate 6; </a><a href="#bib-second_scholar_book_1969" class="ibi-cite-ref">second_scholar_book_1969, ln 10; </a></span></div>
 <div class="ibi-bibliography">
 <h3 class="ibi-header">Bibliography</h3>
-<div class="ibi-bib-entry" id="bib-first_scholar_book_1861=plate">first_scholar_book_1861=plate</div>
+<div class="ibi-bib-entry" id="bib-first_scholar_book_1861">first_scholar_book_1861</div>
+<div class="ibi-bib-entry" id="bib-second_scholar_book_1969">second_scholar_book_1969</div>
 </div>
 </div>
 </div>
@@ -15291,17 +15296,28 @@ notes=archaic subjunctive form; orthography reflects Old Italic script conventio
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">@someone_book_1998=pag:30-33@</code></pre>
-</td><td>
-<pre><code class="language-xml">&lt;ab&gt;@someone&lt;supplied reason="lost" evidence="previouseditor" cert="medium"&gt;book&lt;/supplied&gt;1998&lt;/ab&gt;</code></pre>
-</td></tr>
-<tr><td>
-<pre><code class="language-text">@first_scholar_book_1861=plate:6;second_scholar_book_1969=line:10-15@</code></pre>
+<pre><code class="language-text">@someone_book_1998:pag=30-33@</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
     &lt;bibl&gt;
-        &lt;ptr target="#first_scholar_book_1861=plate"/&gt;
-        &lt;citedRange unit="6;second_scholar_book_1969" from="line:10" to="15"&gt;
+        &lt;ptr target="#someone_book_1998"/&gt;
+        &lt;citedRange unit="page" from="30" to="33"&gt;
+        &lt;/citedRange&gt;
+    &lt;/bibl&gt;
+&lt;/ab&gt;</code></pre>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">@first_scholar_book_1861:plate=6;second_scholar_book_1969:line=10-15@</code></pre>
+</td><td>
+<pre><code class="language-xml">&lt;ab&gt;
+    &lt;bibl&gt;
+        &lt;ptr target="#first_scholar_book_1861"/&gt;
+        &lt;citedRange unit="plate" from="6"&gt;
+        &lt;/citedRange&gt;
+    &lt;/bibl&gt;
+    &lt;bibl&gt;
+        &lt;ptr target="#second_scholar_book_1969"/&gt;
+        &lt;citedRange unit="line" from="10" to="15"&gt;
         &lt;/citedRange&gt;
     &lt;/bibl&gt;
 &lt;/ab&gt;</code></pre>
@@ -15328,19 +15344,18 @@ notes=archaic subjunctive form; orthography reflects Old Italic script conventio
 </code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">@someone_book_1998=pag:30-33@</code></pre>
+<pre><code class="language-text">@someone_book_1998:pag=30-33@</code></pre>
 </td><td>
-<pre><code class="language-json">Plain("@someone")
-PreviousSeen[medium]
-  Plain("book")
-Plain("1998")
+<pre><code class="language-json">Cite
+  → someone_book_1998 (pag 30)
 </code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">@first_scholar_book_1861=plate:6;second_scholar_book_1969=line:10-15@</code></pre>
+<pre><code class="language-text">@first_scholar_book_1861:plate=6;second_scholar_book_1969:line=10-15@</code></pre>
 </td><td>
 <pre><code class="language-json">Cite
-  → first_scholar_book_1861=plate (6;second_scholar_book_1969 line:10)
+  → first_scholar_book_1861 (plate 6)
+  → second_scholar_book_1969 (ln 10)
 </code></pre>
 </td></tr>
 </tbody>
