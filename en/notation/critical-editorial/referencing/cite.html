@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../ibiscript-baceb321.min.css">
+        <link rel="stylesheet" href="../../../ibiscript-3b613bf8.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-b76b651e.js";
+            window.path_to_searchindex_js = "../../../searchindex-f32b0850.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-b16a1edc.js"></script>
+        <script src="../../../toc-ca10d8ef.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -176,13 +176,14 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="citation-of-external-works-in-bibliography"><a class="header" href="#citation-of-external-works-in-bibliography">Citation of External Works in Bibliography</a></h1>
-<p>An in-text citation referring to a secondary work already listed in the bibliography, with an optional sublocation.</p>
+<p>An in-text citation referring to a secondary work already listed in the bibliography, with optional locators (page, figure, line, etc.).</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <p>Any number of bibliographic citations, separated by semicolons <code>;</code> and enclosed within double at signs <code>@…@</code>, consisting of:</p>
 <ul>
 <li>the BibLaTeX label of a previously listed bibliographic entry;</li>
-<li>an optional sublocation, introduced by a colon <code>:</code> and consisting of a metadata key (listed below) and value separated by an equals sign <code>=</code>.</li>
+<li>one or more optional locators, introduced by a colon <code>:</code> and separated by commas <code>,</code>. Each locator consists of a unit key (listed below) and a value, separated by an equals sign <code>=</code>. The value may be a range <code>from-to</code>.</li>
 </ul>
+<p>Locators are parallel, not nested: <code>pag = 12, fig = 3</code> means page 12 <em>and</em> figure 3. For a hierarchical path inside a text (face, row, line), use a <a href="../../../../en/notation/critical-editorial/referencing/locus.html">locus reference</a> instead.</p>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
 <div class="table-wrapper">
 <table>
@@ -190,33 +191,22 @@
 <tr><th>Notation</th><th>Simplified AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>@βₗ:kᵟ=toᵟ-fromᵟ;…@</code></td><td><code>Cite {refs: βᵣ}</code></td><td><code>βₚ</code></td></tr>
+<tr><td><code>@βₗ:kᵟ=fromᵟ-toᵟ,…;…@</code></td><td><code>Cite {refs: βᵣ}</code></td><td><code>βₚ</code></td></tr>
 </tbody>
 </table>
 </div>
 <ul>
 <li><code>βₗ</code> = the label of the bibliographic entry, i.e. the text immediately after the curly bracket <code>{</code> until the end of the line.</li>
-<li><code>kᵟ</code> = any valid location key (listed below).</li>
-<li><code>toᵟ</code> = optional sublocation key for the end of the interval.</li>
+<li><code>kᵟ</code> is a location unit key, shared by <code>Cite</code> and <code>Locus</code> (page, figure, plate, column, line, etc.).</li>
 <li><code>fromᵟ</code> = optional sublocation key for the start of the interval or none if the interval is a single point.</li>
+<li><code>toᵟ</code> = optional sublocation key for the end of the interval.</li>
 <li><code>βₚ</code> = the parenthetic in-text citation rendered according to the Chicago Manual of Style, with optional sublocation.</li>
 </ul>
-<h5 id="supported-metadata-keys-and-values"><a class="header" href="#supported-metadata-keys-and-values">Supported Metadata Keys and Values</a></h5>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Key</th><th>Meaning</th><th>Formatting</th><th>Minification</th></tr>
-</thead>
-<tbody>
-<tr><td><code>column</code>, <code>col</code>, <code>c</code></td><td><code>column</code></td><td><code>col</code></td><td><code>c</code></td></tr>
-<tr><td><code>line</code>, <code>ln</code>, <code>l</code></td><td><code>line</code></td><td><code>ln</code></td><td><code>l</code></td></tr>
-<tr><td><code>section</code>, <code>sec</code>, <code>sect</code>, <code>s</code></td><td><code>section</code></td><td><code>sect</code></td><td><code>s</code></td></tr>
-<tr><td><code>page</code>, <code>pag</code>, <code>p</code>, <code>pg</code></td><td><code>page</code></td><td><code>pag</code></td><td><code>p</code></td></tr>
-<tr><td><code>entry</code>, <code>n</code></td><td><code>entry</code></td><td><code>entry</code></td><td><code>n</code></td></tr>
-<tr><td><code>plate</code>, <code>plt</code></td><td><code>plate</code></td><td><code>plate</code></td><td><code>plt</code></td></tr>
-</tbody>
-</table>
-</div>
+<h2 id="remarks"><a class="header" href="#remarks">Remarks</a></h2>
+<ul>
+<li>A hyphen <code>-</code> in a value always denotes a range: <code>pag = 45-47</code> is “pp. 45–47”.</li>
+<li><code>Cite</code> only points to bibliography entries. To refer to another text with an <code>$id:</code> identifier, use <a href="../../../../en/notation/critical-editorial/referencing/locus.html">locus</a>.</li>
+</ul>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <table>
   
@@ -231,7 +221,7 @@
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-humbach_skjaervo_1978" class="ibi-cite-ref">humbach_skjaervo_1978; </a></span></div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-humbach_skjaervo_1978" class="ibi-cite-ref">humbach_skjaervo_1978</a></span></div>
 <div class="ibi-bibliography">
 <h3 class="ibi-header">Bibliography</h3>
 <div class="ibi-bib-entry" id="bib-humbach_skjaervo_1978">humbach_skjaervo_1978</div>
@@ -244,7 +234,7 @@
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-gnoli_1989" class="ibi-cite-ref">gnoli_1989, pag 93; </a></span></div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-gnoli_1989" class="ibi-cite-ref">gnoli_1989, pag 93</a></span></div>
 <div class="ibi-bibliography">
 <h3 class="ibi-header">Bibliography</h3>
 <div class="ibi-bib-entry" id="bib-gnoli_1989">gnoli_1989</div>
@@ -253,15 +243,41 @@
 </div>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">@cereti_1995: sect = 12; boyce_1975: pag = 45-47@</code></pre>
+<pre><code class="language-text">@humbach_skjaervo_1983: pag = 12-14, fig = 3@</code></pre>
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-cereti_1995" class="ibi-cite-ref">cereti_1995, sect 12; </a><a href="#bib-boyce_1975" class="ibi-cite-ref">boyce_1975, pag 45; </a></span></div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-humbach_skjaervo_1983" class="ibi-cite-ref">humbach_skjaervo_1983, pag 12-14, fig 3</a></span></div>
 <div class="ibi-bibliography">
 <h3 class="ibi-header">Bibliography</h3>
-<div class="ibi-bib-entry" id="bib-cereti_1995">cereti_1995</div>
+<div class="ibi-bib-entry" id="bib-humbach_skjaervo_1983">humbach_skjaervo_1983</div>
+</div>
+</div>
+</div>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">@boyce_1975: pag = 45, ln = 3-5; cereti_1995: sect = 12@</code></pre>
+</td><td>
+<div class="rendered-preview">
+<div class="ibi-inscription">
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-boyce_1975" class="ibi-cite-ref">boyce_1975, pag 45, ln 3-5</a>; <a href="#bib-cereti_1995" class="ibi-cite-ref">cereti_1995, sect 12</a></span></div>
+<div class="ibi-bibliography">
+<h3 class="ibi-header">Bibliography</h3>
 <div class="ibi-bib-entry" id="bib-boyce_1975">boyce_1975</div>
+<div class="ibi-bib-entry" id="bib-cereti_1995">cereti_1995</div>
+</div>
+</div>
+</div>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">@mackenzie_1971: entry = duxš@</code></pre>
+</td><td>
+<div class="rendered-preview">
+<div class="ibi-inscription">
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-cite"><a href="#bib-mackenzie_1971" class="ibi-cite-ref">mackenzie_1971, entry duxš</a></span></div>
+<div class="ibi-bibliography">
+<h3 class="ibi-header">Bibliography</h3>
+<div class="ibi-bib-entry" id="bib-mackenzie_1971">mackenzie_1971</div>
 </div>
 </div>
 </div>
@@ -301,17 +317,43 @@
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">@cereti_1995: sect = 12; boyce_1975: pag = 45-47@</code></pre>
+<pre><code class="language-text">@humbach_skjaervo_1983: pag = 12-14, fig = 3@</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
+    &lt;bibl&gt;
+        &lt;ptr target="#humbach_skjaervo_1983"/&gt;
+        &lt;citedRange unit="page" from="12" to="14"&gt;
+        &lt;/citedRange&gt;
+        &lt;citedRange unit="fig" from="3"&gt;
+        &lt;/citedRange&gt;
+    &lt;/bibl&gt;
+&lt;/ab&gt;</code></pre>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">@boyce_1975: pag = 45, ln = 3-5; cereti_1995: sect = 12@</code></pre>
+</td><td>
+<pre><code class="language-xml">&lt;ab&gt;
+    &lt;bibl&gt;
+        &lt;ptr target="#boyce_1975"/&gt;
+        &lt;citedRange unit="page" from="45"&gt;
+        &lt;/citedRange&gt;
+        &lt;citedRange unit="line" from="3" to="5"&gt;
+        &lt;/citedRange&gt;
+    &lt;/bibl&gt;
     &lt;bibl&gt;
         &lt;ptr target="#cereti_1995"/&gt;
         &lt;citedRange unit="section" from="12"&gt;
         &lt;/citedRange&gt;
     &lt;/bibl&gt;
+&lt;/ab&gt;</code></pre>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">@mackenzie_1971: entry = duxš@</code></pre>
+</td><td>
+<pre><code class="language-xml">&lt;ab&gt;
     &lt;bibl&gt;
-        &lt;ptr target="#boyce_1975"/&gt;
-        &lt;citedRange unit="page" from="45" to="47"&gt;
+        &lt;ptr target="#mackenzie_1971"/&gt;
+        &lt;citedRange unit="entry" from="duxš"&gt;
         &lt;/citedRange&gt;
     &lt;/bibl&gt;
 &lt;/ab&gt;</code></pre>
@@ -345,11 +387,25 @@
 </code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">@cereti_1995: sect = 12; boyce_1975: pag = 45-47@</code></pre>
+<pre><code class="language-text">@humbach_skjaervo_1983: pag = 12-14, fig = 3@</code></pre>
 </td><td>
 <pre><code class="language-json">Cite
+  → humbach_skjaervo_1983 (pag 12–14, fig 3)
+</code></pre>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">@boyce_1975: pag = 45, ln = 3-5; cereti_1995: sect = 12@</code></pre>
+</td><td>
+<pre><code class="language-json">Cite
+  → boyce_1975 (pag 45, ln 3–5)
   → cereti_1995 (sect 12)
-  → boyce_1975 (pag 45)
+</code></pre>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">@mackenzie_1971: entry = duxš@</code></pre>
+</td><td>
+<pre><code class="language-json">Cite
+  → mackenzie_1971 (entry duxš)
 </code></pre>
 </td></tr>
 </tbody>

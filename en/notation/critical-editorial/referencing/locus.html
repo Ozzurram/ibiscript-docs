@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../ibiscript-baceb321.min.css">
+        <link rel="stylesheet" href="../../../ibiscript-3b613bf8.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-b76b651e.js";
+            window.path_to_searchindex_js = "../../../searchindex-f32b0850.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-b16a1edc.js"></script>
+        <script src="../../../toc-ca10d8ef.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -176,10 +176,14 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="reference-to-a-textual-locus"><a class="header" href="#reference-to-a-textual-locus">Reference to a Textual Locus</a></h1>
-<p>A cross-reference to a specific location within the text being edited or another text in the BEDA corpus, with one or more hierarchical levels (block, column, line, etc.).</p>
+<p>A cross-reference to a specific location within the text being edited or another text identified by <code>$id:</code>, described by a path of one or more hierarchical levels (block, column, line, etc.).</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<p>An optional BEDA file key, used to reference another project, separated by a colon <code>:</code>, possibly followed by a series of sublocations separated by semicolons <code>;</code>, each consisting of a metadata key and a value separated by an equal sign <code>=</code>, all enclosed within hash symbols <code>#…#</code>.</p>
-<p>Multiple locations, each with its own file key and optional series of sublocations, may be placed within the hash symbols <code>#…#</code>, separated by slashes <code>/</code>.</p>
+<p>An optional file key, separated by a colon <code>:</code>, followed by a path of levels separated by semicolons <code>;</code>. Each level consists of a unit key and a value, separated by an equals sign <code>=</code>. All of it is enclosed within hash symbols <code>#…#</code>.</p>
+<ul>
+<li>The <strong>file key</strong> is the identifier declared by the target text with the <code>$id:</code> unit. It consists of letters, digits, <code>_</code>, <code>-</code> and <code>.</code>, and cannot start with a digit. If omitted, the reference points to the current text.</li>
+<li>The <strong>path</strong> is hierarchical: each level narrows the previous one (<code>face = B; row = 2; ln = 4</code>). The value of the last level may be a range <code>from-to</code>.</li>
+</ul>
+<p>Multiple references, each with its own optional key and path, may be placed within the hash symbols <code>#…#</code>, separated by slashes <code>/</code>.</p>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
 <div class="table-wrapper">
 <table>
@@ -187,47 +191,21 @@
 <tr><th>Notation</th><th>Simplified AST</th><th>Paper Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>#ρₖᵟ:kᵟ=vᵟ;…/…#</code></td><td><code>Locus {refs: ρᵣ}</code></td><td><code>ρₚ</code></td></tr>
+<tr><td><code>#ρₖ:kᵟ=vᵟ;…/…#</code></td><td><code>Locus {refs: ρᵣ}</code></td><td><code>ρₚ</code></td></tr>
 </tbody>
 </table>
 </div>
 <ul>
-<li><code>ρₖᵟ</code> = optional BEDA key that redirects to another project.</li>
-<li><code>kᵟ</code> = any key corresponding to an arbitrary reference level (listed below).</li>
-<li><code>vᵟ</code> = value of the reference.</li>
+<li><code>ρₖ</code> is the key of the target file, that is, its <code>$id:</code>; if absent, the current text.</li>
+<li><code>kᵟ</code> is a location unit key, shared by <code>Cite</code> and <code>Locus</code>.</li>
+<li><code>vᵟ</code> is the value of the level: a single <code>from</code> value or, on the last level, a range <code>from-to</code>.</li>
 <li><code>ρₚ</code> = loci references rendered.</li>
 </ul>
-<h5 id="supported-metadata-keys-and-values"><a class="header" href="#supported-metadata-keys-and-values">Supported Metadata Keys and Values</a></h5>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Key</th><th>Meaning</th><th>Formatting</th><th>Minification</th></tr>
-</thead>
-<tbody>
-<tr><td><code>column</code>, <code>col</code>, <code>c</code></td><td><code>column</code></td><td><code>col</code></td><td><code>c</code></td></tr>
-<tr><td><code>line</code>, <code>ln</code>, <code>l</code></td><td><code>line</code></td><td><code>ln</code></td><td><code>l</code></td></tr>
-<tr><td><code>section</code>, <code>sec</code>, <code>sect</code>, <code>s</code></td><td><code>section</code></td><td><code>sect</code></td><td><code>s</code></td></tr>
-<tr><td><code>page</code>, <code>pag</code>, <code>p</code>, <code>pg</code></td><td><code>page</code></td><td><code>pag</code></td><td><code>p</code></td></tr>
-<tr><td><code>entry</code>, <code>n</code></td><td><code>entry</code></td><td><code>entry</code></td><td><code>n</code></td></tr>
-<tr><td><code>folio</code>, <code>fol</code>, <code>f</code></td><td><code>folio</code></td><td><code>fol</code></td><td><code>f</code></td></tr>
-<tr><td><code>face</code>, <code>fac</code></td><td><code>face</code></td><td><code>face</code></td><td><code>fac</code></td></tr>
-<tr><td><code>side</code>, <code>sid</code></td><td><code>side</code></td><td><code>side</code></td><td><code>sid</code></td></tr>
-<tr><td><code>row</code>, <code>rw</code></td><td><code>row</code></td><td><code>row</code></td><td><code>rw</code></td></tr>
-<tr><td><code>block</code>, <code>bl</code></td><td><code>block</code></td><td><code>block</code></td><td><code>bl</code></td></tr>
-<tr><td><code>fragment</code>, <code>frag</code>, <code>fr</code></td><td><code>fragment</code></td><td><code>fr</code></td><td><code>fr</code></td></tr>
-<tr><td><code>volume</code>, <code>vol</code>, <code>v</code></td><td><code>volume</code></td><td><code>vol</code></td><td><code>v</code></td></tr>
-<tr><td><code>part</code>, <code>pt</code></td><td><code>part</code></td><td><code>part</code></td><td><code>pt</code></td></tr>
-<tr><td><code>manuscript</code>, <code>ms</code></td><td><code>manuscript</code></td><td><code>ms</code></td><td><code>ms</code></td></tr>
-<tr><td><code>work</code>, <code>wk</code>, <code>op</code></td><td><code>work</code></td><td><code>work</code></td><td><code>wk</code></td></tr>
-<tr><td><code>chapter</code>, <code>chap</code>, <code>ch</code></td><td><code>chapter</code></td><td><code>chap</code></td><td><code>ch</code></td></tr>
-<tr><td><code>paragraph</code>, <code>para</code>, <code>par</code></td><td><code>paragraph</code></td><td><code>par</code></td><td><code>par</code></td></tr>
-<tr><td><code>clause</code>, <code>cl</code></td><td><code>clause</code></td><td><code>cl</code></td><td><code>cl</code></td></tr>
-<tr><td><code>word</code>, <code>w</code></td><td><code>word</code></td><td><code>word</code></td><td><code>w</code></td></tr>
-<tr><td><code>glyph</code>, <code>g</code></td><td><code>glyph</code></td><td><code>g</code></td><td><code>g</code></td></tr>
-<tr><td><code>number</code>, <code>no</code>, <code>nr</code>, <code>num</code></td><td><code>number</code></td><td><code>no</code></td><td><code>no</code></td></tr>
-</tbody>
-</table>
-</div>
+<h2 id="remarks"><a class="header" href="#remarks">Remarks</a></h2>
+<ul>
+<li>A hyphen <code>-</code> in a value always denotes a range.</li>
+<li><code>Locus</code> only points to texts with an <code>$id:</code>. For bibliography entries, use a <a href="../../../../en/notation/critical-editorial/referencing/cite.html">citation</a>.</li>
+</ul>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <table>
   
@@ -238,6 +216,15 @@
   
 <tbody>
 <tr><td>
+<pre><code class="language-text">#face = B; row = 2; ln = 4#</code></pre>
+</td><td>
+<div class="rendered-preview">
+<div class="ibi-inscription">
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-locus"><a href="#face-B-row-2-ln-4" class="ibi-locus-ref">face B, row 2, ln 4</a></span></div>
+</div>
+</div>
+</td></tr>
+<tr><td>
 <pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 3#</code></pre>
 </td><td>
 <div class="rendered-preview">
@@ -247,11 +234,20 @@
 </div>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">#work = mackenzie_1971; entry = duxš#</code></pre>
+<pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 3-5#</code></pre>
 </td><td>
 <div class="rendered-preview">
 <div class="ibi-inscription">
-<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-locus"><a href="#work-mackenzie_1971-entry-duxš" class="ibi-locus-ref">entry duxš</a></span></div>
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-locus"><a href="beda:paikuli-d2-mp#block-D2-ln-3-5" class="ibi-locus-ref">block D2, ln 3–5</a></span></div>
+</div>
+</div>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">#pyrgi-1: ln = 3-4 / pyrgi-2: ln = 5#</code></pre>
+</td><td>
+<div class="rendered-preview">
+<div class="ibi-inscription">
+<div class="ibi-section-preamble"><span class="ibi-line-break"></span><span class="ibi-locus"><a href="beda:pyrgi-1#ln-3-4" class="ibi-locus-ref">ln 3–4</a><a href="beda:pyrgi-2#ln-5" class="ibi-locus-ref">ln 5</a></span></div>
 </div>
 </div>
 </td></tr>
@@ -282,6 +278,14 @@
   
 <tbody>
 <tr><td>
+<pre><code class="language-text">#face = B; row = 2; ln = 4#</code></pre>
+</td><td>
+<pre><code class="language-xml">&lt;ab&gt;
+    &lt;ref target="#face-B-row-2-ln-4"&gt;face B, row 2, ln 4
+    &lt;/ref&gt;
+&lt;/ab&gt;</code></pre>
+</td></tr>
+<tr><td>
 <pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 3#</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
@@ -290,10 +294,20 @@
 &lt;/ab&gt;</code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">#work = mackenzie_1971; entry = duxš#</code></pre>
+<pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 3-5#</code></pre>
 </td><td>
 <pre><code class="language-xml">&lt;ab&gt;
-    &lt;ref target="#work-mackenzie_1971-entry-duxš"&gt;entry duxš
+    &lt;ref target="beda:paikuli-d2-mp#block-D2-ln-3"&gt;block D2, ln 3
+    &lt;/ref&gt;
+&lt;/ab&gt;</code></pre>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">#pyrgi-1: ln = 3-4 / pyrgi-2: ln = 5#</code></pre>
+</td><td>
+<pre><code class="language-xml">&lt;ab&gt;
+    &lt;ref target="beda:pyrgi-1#ln-3"&gt;ln 3
+    &lt;/ref&gt;
+    &lt;ref target="beda:pyrgi-2#ln-5"&gt;ln 5
     &lt;/ref&gt;
 &lt;/ab&gt;</code></pre>
 </td></tr>
@@ -325,6 +339,13 @@
   
 <tbody>
 <tr><td>
+<pre><code class="language-text">#face = B; row = 2; ln = 4#</code></pre>
+</td><td>
+<pre><code class="language-json">Locus
+  → (face B, row 2, ln 4)
+</code></pre>
+</td></tr>
+<tr><td>
 <pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 3#</code></pre>
 </td><td>
 <pre><code class="language-json">Locus
@@ -332,10 +353,18 @@
 </code></pre>
 </td></tr>
 <tr><td>
-<pre><code class="language-text">#work = mackenzie_1971; entry = duxš#</code></pre>
+<pre><code class="language-text">#paikuli-d2-mp: block = D2; ln = 3-5#</code></pre>
 </td><td>
 <pre><code class="language-json">Locus
-  → (work mackenzie_1971, entry duxš)
+  → paikuli-d2-mp (block D2, ln 3–5)
+</code></pre>
+</td></tr>
+<tr><td>
+<pre><code class="language-text">#pyrgi-1: ln = 3-4 / pyrgi-2: ln = 5#</code></pre>
+</td><td>
+<pre><code class="language-json">Locus
+  → pyrgi-1 (ln 3–4)
+  → pyrgi-2 (ln 5)
 </code></pre>
 </td></tr>
 <tr><td>

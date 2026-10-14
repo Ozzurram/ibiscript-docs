@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../ibiscript-baceb321.min.css">
+        <link rel="stylesheet" href="../../../ibiscript-3b613bf8.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-ff7a1571.js";
+            window.path_to_searchindex_js = "../../../searchindex-36d98725.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-83d9f030.js"></script>
+        <script src="../../../toc-9a39c2ec.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -178,6 +178,48 @@
                         <h1 id="riferimenti-ad-altre-opere"><a class="header" href="#riferimenti-ad-altre-opere">Riferimenti ad altre opere</a></h1>
 <p>Notazioni che permettono di esprimere riferimenti bibliografici esterni o rimandi intra-corpus.</p>
 <p>Entrambe condividono la stessa convenzione sintattica: i due punti <code>:</code> introducono le sublocazioni, mentre l’uguale <code>=</code> separa chiave e valore all’interno di ciascuna (v. <a href="../../../../it/notation/critical-editorial/referencing/cite.html">Citazione di opere esterne in bibliografia</a> e <a href="../../../../it/notation/critical-editorial/referencing/locus.html">Riferimento a un locus testuale</a>).</p>
+<h5 id="chiavi-e-valori-di-metadato-supportati"><a class="header" href="#chiavi-e-valori-di-metadato-supportati">Chiavi e valori di metadato supportati</a></h5>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Chiave</th><th>Significato</th><th>Formattazione</th><th>Minificazione</th></tr>
+</thead>
+<tbody>
+<tr><td><code>column</code>, <code>col</code>, <code>c</code></td><td><code>colonna</code></td><td><code>col</code></td><td><code>c</code></td></tr>
+<tr><td><code>line</code>, <code>ln</code>, <code>l</code></td><td><code>riga</code></td><td><code>ln</code></td><td><code>l</code></td></tr>
+<tr><td><code>section</code>, <code>sec</code>, <code>sect</code>, <code>s</code></td><td><code>sezione</code></td><td><code>sect</code></td><td><code>s</code></td></tr>
+<tr><td><code>page</code>, <code>pag</code>, <code>p</code>, <code>pg</code></td><td><code>pagina</code></td><td><code>pag</code></td><td><code>p</code></td></tr>
+<tr><td><code>entry</code>, <code>n</code></td><td><code>voce</code></td><td><code>entry</code></td><td><code>n</code></td></tr>
+<tr><td><code>plate</code>, <code>plt</code></td><td><code>tavola</code></td><td><code>plate</code></td><td><code>plt</code></td></tr>
+<tr><td><code>folio</code>, <code>fol</code>, <code>f</code></td><td><code>folio</code></td><td><code>fol</code></td><td><code>f</code></td></tr>
+<tr><td><code>face</code>, <code>fac</code></td><td><code>faccia</code></td><td><code>face</code></td><td><code>fac</code></td></tr>
+<tr><td><code>side</code>, <code>sid</code></td><td><code>lato</code></td><td><code>side</code></td><td><code>sid</code></td></tr>
+<tr><td><code>row</code>, <code>rw</code></td><td><code>riga</code></td><td><code>row</code></td><td><code>rw</code></td></tr>
+<tr><td><code>block</code>, <code>bl</code></td><td><code>blocco</code></td><td><code>block</code></td><td><code>bl</code></td></tr>
+<tr><td><code>fragment</code>, <code>frag</code>, <code>fr</code></td><td><code>frammento</code></td><td><code>fr</code></td><td><code>fr</code></td></tr>
+<tr><td><code>volume</code>, <code>vol</code>, <code>v</code></td><td><code>volume</code></td><td><code>vol</code></td><td><code>v</code></td></tr>
+<tr><td><code>part</code>, <code>pt</code></td><td><code>parte</code></td><td><code>part</code></td><td><code>pt</code></td></tr>
+<tr><td><code>manuscript</code>, <code>ms</code></td><td><code>manoscritto</code></td><td><code>ms</code></td><td><code>ms</code></td></tr>
+<tr><td><code>work</code>, <code>wk</code>, <code>op</code></td><td><code>opera</code></td><td><code>work</code></td><td><code>wk</code></td></tr>
+<tr><td><code>chapter</code>, <code>chap</code>, <code>ch</code></td><td><code>capitolo</code></td><td><code>chap</code></td><td><code>ch</code></td></tr>
+<tr><td><code>paragraph</code>, <code>para</code>, <code>par</code></td><td><code>paragrafo</code></td><td><code>par</code></td><td><code>par</code></td></tr>
+<tr><td><code>clause</code>, <code>cl</code></td><td><code>clausola</code></td><td><code>cl</code></td><td><code>cl</code></td></tr>
+<tr><td><code>word</code>, <code>w</code></td><td><code>parola</code></td><td><code>word</code></td><td><code>w</code></td></tr>
+<tr><td><code>glyph</code>, <code>g</code></td><td><code>glifo</code></td><td><code>g</code></td><td><code>g</code></td></tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Costrutto</th><th>Definizione</th><th>Riferimento generale</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Cite</code></td><td>Una citazione nel testo che rimanda a un’opera seconda già indicata in bibliografia, con la possibilità di specificare uno o più locatori (pagina, figura, riga, ecc.).</td><td><a href="cite.html">🔎 Cite</a></td></tr>
+<tr><td><code>Locus</code></td><td>Un rimando a una posizione specifica all’interno del testo in edizione o di un altro testo identificato da <code>$id:</code>, descritta da un percorso di uno o più livelli gerarchici (blocco, colonna, riga, ecc.).</td><td><a href="locus.html">🔎 Locus</a></td></tr>
+</tbody>
+</table>
+</div>
 
                     </main>
 

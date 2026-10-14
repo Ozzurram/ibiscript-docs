@@ -28,7 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../ibiscript-baceb321.min.css">
+        <link rel="stylesheet" href="../../../ibiscript-3b613bf8.min.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-b76b651e.js";
+            window.path_to_searchindex_js = "../../../searchindex-f32b0850.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-b16a1edc.js"></script>
+        <script src="../../../toc-ca10d8ef.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -178,6 +178,48 @@
                         <h1 id="references-to-other-works"><a class="header" href="#references-to-other-works">References to Other Works</a></h1>
 <p>Notations that allow expressing external bibliographic references or intra-corpus remands.</p>
 <p>Both share the same syntactic convention: a colon <code>:</code> introduces sublocations, while an equals sign <code>=</code> separates key and value within each one (see <a href="../../../../en/notation/critical-editorial/referencing/cite.html">Citation of External Works in Bibliography</a> and <a href="../../../../en/notation/critical-editorial/referencing/locus.html">Reference to a Textual Locus</a>).</p>
+<h5 id="supported-metadata-keys-and-values"><a class="header" href="#supported-metadata-keys-and-values">Supported Metadata Keys and Values</a></h5>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Key</th><th>Meaning</th><th>Formatting</th><th>Minification</th></tr>
+</thead>
+<tbody>
+<tr><td><code>column</code>, <code>col</code>, <code>c</code></td><td><code>column</code></td><td><code>col</code></td><td><code>c</code></td></tr>
+<tr><td><code>line</code>, <code>ln</code>, <code>l</code></td><td><code>line</code></td><td><code>ln</code></td><td><code>l</code></td></tr>
+<tr><td><code>section</code>, <code>sec</code>, <code>sect</code>, <code>s</code></td><td><code>section</code></td><td><code>sect</code></td><td><code>s</code></td></tr>
+<tr><td><code>page</code>, <code>pag</code>, <code>p</code>, <code>pg</code></td><td><code>page</code></td><td><code>pag</code></td><td><code>p</code></td></tr>
+<tr><td><code>entry</code>, <code>n</code></td><td><code>entry</code></td><td><code>entry</code></td><td><code>n</code></td></tr>
+<tr><td><code>plate</code>, <code>plt</code></td><td><code>plate</code></td><td><code>plate</code></td><td><code>plt</code></td></tr>
+<tr><td><code>folio</code>, <code>fol</code>, <code>f</code></td><td><code>folio</code></td><td><code>fol</code></td><td><code>f</code></td></tr>
+<tr><td><code>face</code>, <code>fac</code></td><td><code>face</code></td><td><code>face</code></td><td><code>fac</code></td></tr>
+<tr><td><code>side</code>, <code>sid</code></td><td><code>side</code></td><td><code>side</code></td><td><code>sid</code></td></tr>
+<tr><td><code>row</code>, <code>rw</code></td><td><code>row</code></td><td><code>row</code></td><td><code>rw</code></td></tr>
+<tr><td><code>block</code>, <code>bl</code></td><td><code>block</code></td><td><code>block</code></td><td><code>bl</code></td></tr>
+<tr><td><code>fragment</code>, <code>frag</code>, <code>fr</code></td><td><code>fragment</code></td><td><code>fr</code></td><td><code>fr</code></td></tr>
+<tr><td><code>volume</code>, <code>vol</code>, <code>v</code></td><td><code>volume</code></td><td><code>vol</code></td><td><code>v</code></td></tr>
+<tr><td><code>part</code>, <code>pt</code></td><td><code>part</code></td><td><code>part</code></td><td><code>pt</code></td></tr>
+<tr><td><code>manuscript</code>, <code>ms</code></td><td><code>manuscript</code></td><td><code>ms</code></td><td><code>ms</code></td></tr>
+<tr><td><code>work</code>, <code>wk</code>, <code>op</code></td><td><code>work</code></td><td><code>work</code></td><td><code>wk</code></td></tr>
+<tr><td><code>chapter</code>, <code>chap</code>, <code>ch</code></td><td><code>chapter</code></td><td><code>chap</code></td><td><code>ch</code></td></tr>
+<tr><td><code>paragraph</code>, <code>para</code>, <code>par</code></td><td><code>paragraph</code></td><td><code>par</code></td><td><code>par</code></td></tr>
+<tr><td><code>clause</code>, <code>cl</code></td><td><code>clause</code></td><td><code>cl</code></td><td><code>cl</code></td></tr>
+<tr><td><code>word</code>, <code>w</code></td><td><code>word</code></td><td><code>word</code></td><td><code>w</code></td></tr>
+<tr><td><code>glyph</code>, <code>g</code></td><td><code>glyph</code></td><td><code>g</code></td><td><code>g</code></td></tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Construct</th><th>Definition</th><th>General Reference</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Cite</code></td><td>An in-text citation referring to a secondary work already listed in the bibliography, with optional locators (page, figure, line, etc.).</td><td><a href="cite.html">🔎 Cite</a></td></tr>
+<tr><td><code>Locus</code></td><td>A cross-reference to a specific location within the text being edited or another text identified by <code>$id:</code>, described by a path of one or more hierarchical levels (block, column, line, etc.).</td><td><a href="locus.html">🔎 Locus</a></td></tr>
+</tbody>
+</table>
+</div>
 
                     </main>
 
